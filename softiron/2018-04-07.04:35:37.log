@@ -1,0 +1,1010 @@
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+[ -x /home/zededa-ci/src/zenbuild/build-tools/bin/dep ] || /usr/bin/go  get github.com/golang/dep/cmd/dep
+cd `dirname src/linuxkit/Gopkg.lock` ; /home/zededa-ci/src/zenbuild/build-tools/bin/dep ensure -v
+Gopkg.lock was already in sync with imports and Gopkg.toml
+(1/52) Wrote github.com/Azure/go-ansiterm@master
+(2/52) Wrote github.com/opencontainers/runtime-spec@v1.0.1
+(3/52) Wrote github.com/google/uuid@0.2
+(4/52) Wrote github.com/golang/protobuf@v1.0.0
+(5/52) Wrote github.com/Azure/azure-sdk-for-go@26132835cbefa2669a306b777f34b929b56aa0a2
+(6/52) Wrote github.com/gorilla/context@v1.1
+(7/52) Wrote github.com/packethost/packngo@f1be085ecd6fca1b0a0e25eda71f208dcfcee5ab
+(8/52) Wrote github.com/pkg/errors@v0.8.0
+(9/52) Wrote github.com/gorilla/mux@v1.6.1
+(10/52) Wrote github.com/Azure/go-autorest@v10.1.2
+(11/52) Wrote github.com/radu-matei/azure-vhd-utils@e52754d5569d2a643a7775f72ff2a6cf524f4c25
+(12/52) Wrote github.com/moby/tool@master
+(13/52) Wrote github.com/radu-matei/azure-sdk-for-go@3b12823551999669c9a325a32472508e0af7978e
+(14/52) Wrote github.com/miekg/pkcs11@master
+(15/52) Wrote github.com/rn/iso9660wrap@master
+(16/52) Wrote github.com/mitchellh/go-ps@master
+(17/52) Wrote github.com/sirupsen/logrus@v1.0.4
+(18/52) Wrote github.com/surma/gocpio@1.1.0
+(19/52) Wrote github.com/gophercloud/gophercloud@master
+(20/52) Wrote github.com/moby/datakit@0.12.1
+(21/52) Wrote cloud.google.com/go@v0.18.0
+(22/52) Wrote github.com/opencontainers/image-spec@v1.0.1
+(23/52) Wrote github.com/xeipuuv/gojsonreference@master
+(24/52) Wrote gopkg.in/yaml.v2@v2
+(25/52) Wrote github.com/dgrijalva/jwt-go@v3.1.0
+(26/52) Wrote github.com/go-ini/ini@v1.32.0
+(27/52) Wrote github.com/docker/go-connections@v0.3.0
+(28/52) Wrote github.com/moby/hyperkit@a285521725f44f3d10ca1042c2c07d3a6e24bed8
+(29/52) Wrote github.com/xeipuuv/gojsonschema@master
+(30/52) Wrote golang.org/x/crypto@master
+(31/52) Wrote github.com/vmware/govmomi@v0.16.0
+(32/52) Wrote github.com/gogo/protobuf@v1.0.0
+(33/52) Wrote github.com/agl/ed25519@master
+(34/52) Wrote github.com/docker/go-p9p@master
+(35/52) Wrote github.com/docker/go@v1.5.1-1
+(36/52) Wrote golang.org/x/oauth2@master
+(37/52) Wrote golang.org/x/sys@master
+(38/52) Wrote github.com/jmespath/go-jmespath@0b12d6b5
+(39/52) Wrote github.com/xeipuuv/gojsonpointer@master
+(40/52) Wrote google.golang.org/appengine@v1.0.0
+(41/52) Wrote github.com/theupdateframework/notary@master
+(42/52) Wrote golang.org/x/net@master
+(43/52) Wrote github.com/linuxkit/linuxkit@master
+(44/52) Wrote github.com/docker/go-units@v0.3.2
+(45/52) Wrote github.com/opencontainers/go-digest@v1.0.0-rc1
+(46/52) Wrote github.com/Microsoft/go-winio@v0.4.7
+(47/52) Wrote github.com/aws/aws-sdk-go@v1.12.79
+(48/52) Wrote github.com/docker/distribution@3800056b8832cf6075e78b282ac010131d8687bc
+(49/52) Wrote github.com/moby/vpnkit@v0.2.0
+(50/52) Wrote google.golang.org/api@master
+(51/52) Wrote github.com/containerd/containerd@v1.0.2
+(52/52) Wrote github.com/docker/docker@ba99c19b593bdb9e7b90793681fe89b0a91781ed
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+Building and pushing "zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b"
+b352f1a612a035f0faca2df279375eae8e69cc6b: Pulling from zededa/ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  14.98MB
+Step 1/29 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/29 : RUN apk update
+ ---> Using cache
+ ---> 7b79758b1495
+Step 3/29 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> 5110a8fcb1f6
+Step 4/29 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> Using cache
+ ---> 36a9ec2b9848
+Step 5/29 : ADD etc /config
+ ---> Using cache
+ ---> 1f66c5c3d7e8
+Step 6/29 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> Using cache
+ ---> c1238718a36f
+Step 7/29 : ADD examples /opt/zededa/examples
+ ---> Using cache
+ ---> ad1ceaf3fdf3
+Step 8/29 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> 2ff25e9e6c37
+Step 9/29 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> 4129a6bfff18
+Step 10/29 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Using cache
+ ---> 31ae56d610a7
+Step 11/29 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Running in 8d7906b2fa84
+Building: 20180314-test-32b8a1e3-2018-04-07.02.30
+ ---> 709b79a086ad
+Removing intermediate container 8d7906b2fa84
+Step 12/29 : RUN go install github.com/zededa/go-provision/cmd/...
+ ---> Running in 65efda4a5330
+ ---> 06caedbb58be
+Removing intermediate container 65efda4a5330
+Step 13/29 : RUN go install github.com/zededa/go-provision/oldcmd/...
+ ---> Running in 754dbc50cdb9
+ ---> 30aae7958b37
+Removing intermediate container 754dbc50cdb9
+Step 14/29 : RUN cd /opt/zededa/bin ; ln -s /go/bin/* .
+ ---> Running in b16dd0ce8205
+ ---> 1c7edde021d1
+Removing intermediate container b16dd0ce8205
+Step 15/29 : FROM zededa/lisp:latest AS lisp
+ ---> 4e6063b7d589
+Step 16/29 : FROM scratch
+ ---> 
+Step 17/29 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> 9768a25cf2ab
+Step 18/29 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> df82ef4c185e
+Step 19/29 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> 73b67994aa0e
+Step 20/29 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> edfdbac016c9
+Step 21/29 : COPY --from=build /config /opt/zededa/examples/config
+ ---> 1812e3a7f093
+Step 22/29 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> 801acad559ae
+Step 23/29 : COPY --from=lisp /lisp /opt/zededa/lisp/
+ ---> 4a7ab30ec98d
+Step 24/29 : COPY --from=lisp /usr/bin/pydoc /usr/bin/smtpd.py /usr/bin/python* /usr/bin/
+ ---> ae20310e9989
+Step 25/29 : COPY --from=lisp /usr/lib/libpython* /usr/lib/libffi.so* /usr/lib/
+ ---> 1e4451698500
+Step 26/29 : COPY --from=lisp /usr/lib/python2.7 /usr/lib/python2.7/
+ ---> d40223b2644b
+Step 27/29 : WORKDIR /opt/zededa/bin
+ ---> 4d784379292b
+Removing intermediate container c04a640e59fe
+Step 28/29 : CMD /bin/ash
+ ---> Running in f2ab8c469a15
+ ---> b87d9157b957
+Removing intermediate container f2ab8c469a15
+Step 29/29 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '32b8a1e3c514a7dae2e27201ca81697b125adb25' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 0281624f8f7d
+ ---> bb4b320597e5
+Removing intermediate container 0281624f8f7d
+Successfully built bb4b320597e5
+Successfully tagged zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b-arm64
+Pushing zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+60a30bd737f2: Preparing
+06152f49a8fc: Preparing
+a0dd9923294b: Preparing
+79f724920aa6: Preparing
+0fb89b97dfac: Preparing
+626232712272: Preparing
+2fbe955e6f42: Preparing
+c52110b5db2f: Preparing
+30d3503cc5a9: Preparing
+90901ec563e0: Preparing
+c52110b5db2f: Waiting
+90901ec563e0: Waiting
+30d3503cc5a9: Waiting
+2fbe955e6f42: Waiting
+626232712272: Waiting
+a0dd9923294b: Pushed
+06152f49a8fc: Pushed
+626232712272: Pushed
+79f724920aa6: Pushed
+2fbe955e6f42: Pushed
+30d3503cc5a9: Pushed
+c52110b5db2f: Pushed
+90901ec563e0: Pushed
+0fb89b97dfac: Pushed
+60a30bd737f2: Pushed
+b352f1a612a035f0faca2df279375eae8e69cc6b-arm64: digest: sha256:308dd04d3ef27c51161894ef522a3e5b28aa76e04ec35f9b631bae55073dd11d size: 2411
+Pushing zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b-arm64 to manifest zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b
+Digest: sha256:37ee507038d8f9c8298b5c58cb624ddd79bbb722ab2e879fe6349022f0eec3c7 743
+Not signing zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b
+Build and push complete, not releasing, all done.
+b352f1a612a035f0faca2df279375eae8e69cc6b: Pulling from zededa/ztools
+Digest: sha256:37ee507038d8f9c8298b5c58cb624ddd79bbb722ab2e879fe6349022f0eec3c7
+Status: Downloaded newer image for zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b
+The push refers to a repository [docker.io/zededa/ztools]
+60a30bd737f2: Preparing
+06152f49a8fc: Preparing
+a0dd9923294b: Preparing
+79f724920aa6: Preparing
+0fb89b97dfac: Preparing
+626232712272: Preparing
+2fbe955e6f42: Preparing
+c52110b5db2f: Preparing
+30d3503cc5a9: Preparing
+90901ec563e0: Preparing
+c52110b5db2f: Waiting
+30d3503cc5a9: Waiting
+90901ec563e0: Waiting
+626232712272: Waiting
+2fbe955e6f42: Waiting
+a0dd9923294b: Layer already exists
+79f724920aa6: Layer already exists
+60a30bd737f2: Layer already exists
+0fb89b97dfac: Layer already exists
+06152f49a8fc: Layer already exists
+2fbe955e6f42: Layer already exists
+626232712272: Layer already exists
+30d3503cc5a9: Layer already exists
+c52110b5db2f: Layer already exists
+90901ec563e0: Layer already exists
+latest: digest: sha256:308dd04d3ef27c51161894ef522a3e5b28aa76e04ec35f9b631bae55073dd11d size: 2411
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/kmod_pfring/Dockerfile.in > pkg/kmod_pfring/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/test-conf/Dockerfile.in > pkg/test-conf/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/mkflash/Dockerfile.in > pkg/mkflash/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/mkimage-iso-efi/Dockerfile.in > pkg/mkimage-iso-efi/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/mkimage-raw-efi//Dockerfile.in > pkg/mkimage-raw-efi//Dockerfile)
+Building and pushing "zededa/grub:a83a89ea3b7f890696e759027bb10a0572248aef"
+a83a89ea3b7f890696e759027bb10a0572248aef: Pulling from zededa/grub
+Digest: sha256:13baa3f5f815be0c6e2fa45e2f78f57fdb98b63dd076e74d9dcd60fde9dab103
+Status: Image is up to date for zededa/grub:a83a89ea3b7f890696e759027bb10a0572248aef
+Building and pushing "zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b"
+07f48fb845ebcbb4327b6493875a846d0e4ffd3b: Pulling from zededa/xen
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/18 : FROM alpine:3.7 as kernel-build
+ ---> f6df4608fa98
+Step 2/18 : RUN apk update
+ ---> Using cache
+ ---> 75ce7b3b6a37
+Step 3/18 : RUN apk add     argp-standalone     automake     bash     bc     binutils-dev     bison     build-base     curl     diffutils     flex     git     gmp-dev     gnupg     installkernel     kmod     libelf-dev     libressl-dev     linux-headers     ncurses-dev     python2     sed     squashfs-tools     tar     xz     xz-dev     zlib-dev
+ ---> Using cache
+ ---> 7d35a1b63081
+Step 4/18 : RUN (echo http://nl.alpinelinux.org/alpine/edge/main ;     echo http://nl.alpinelinux.org/alpine/edge/testing) >> /etc/apk/repositories ;    apk add --no-cache libunwind-dev uboot-tools
+ ---> Using cache
+ ---> b556d901f338
+Step 5/18 : ENV XEN_UBOOT_ADDR 0x81000000
+ ---> Using cache
+ ---> 348ef99ae1b8
+Step 6/18 : ENV XEN_VERSION 4.9.0
+ ---> Using cache
+ ---> 11ccc16d0f86
+Step 7/18 : ENV XEN_SOURCE https://downloads.xenproject.org/release/xen/${XEN_VERSION}/xen-${XEN_VERSION}.tar.gz
+ ---> Using cache
+ ---> 1de4112e1249
+Step 8/18 : RUN [ -f xen-${XEN_VERSION}.tar.gz ] || curl -fsSLO ${XEN_SOURCE} &&     gzip -d xen-${XEN_VERSION}.tar.gz &&     cat xen-${XEN_VERSION}.tar | tar --absolute-names -x && mv /xen-${XEN_VERSION} /xen
+ ---> Using cache
+ ---> 5c39aa818074
+Step 9/18 : COPY xen_config* /xen/
+ ---> 50d959980756
+Step 10/18 : WORKDIR /xen/xen
+ ---> 247234a59b18
+Removing intermediate container 18e0c85a04b8
+Step 11/18 : RUN case $(uname -m) in     x86_64)         XEN_DEF_CONF=/xen/xen/arch/x86/configs/x86_64_defconfig; 	;;     esac ;    cp /xen/xen_config-${XEN_VERSION}-$(uname -m) ${XEN_DEF_CONF};     rm /xen/xen_config* &&     make defconfig &&     make oldconfig &&     mkdir -p /out/boot
+ ---> Running in 138744bb965d
+[91mBusyBox v1.27.2 (2017-11-28 16:17:39 GMT) multi-call binary.
+
+Usage: cp [OPTIONS] SOURCE... DEST
+
+Copy SOURCE(s) to DEST
+
+	-a	Same as -dpR
+	-R,-r	Recurse
+	-d,-P	Preserve symlinks (default if -R)
+	-L	Follow all symlinks
+	-H	Follow symlinks on command line
+	-p	Preserve file attributes if possible
+	-f	Overwrite
+	-i	Prompt before overwrite
+	-l,-s	Create (sym)links
+	-u	Copy only newer files
+[0mmake -f /xen/xen/tools/kconfig/Makefile.kconfig ARCH=arm64 SRCARCH=arm HOSTCC="gcc" HOSTCXX="g++" defconfig
+make[1]: Entering directory '/xen/xen'
+gcc -Wp,-MD,tools/kconfig/.conf.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS  -c -o tools/kconfig/conf.o tools/kconfig/conf.c
+[91mtools/kconfig/conf.c: In function 'check_stdin':
+tools/kconfig/conf.c:77:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("aborted!\n\n"));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c:78:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Console input/output is redirected. "));
+   ^~~~~~
+tools/kconfig/conf.c:79:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_askvalue':
+tools/kconfig/conf.c:89:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("(NEW) "));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_choice':
+tools/kconfig/conf.c:290:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf(_(" (NEW)"));
+     ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'check_conf':
+tools/kconfig/conf.c:438:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      printf(_("*\n* Restart config...\n*\n"));
+      ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'main':
+[0m[91mtools/kconfig/conf.c:640:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      _("\n*** The configuration requires explicit update.\n\n"));
+      ^
+[0m[91mtools/kconfig/conf.c:693:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:697:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:708:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0mgcc -Wp,-MD,tools/kconfig/.zconf.tab.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS -Itools/kconfig -c -o tools/kconfig/zconf.tab.o tools/kconfig/zconf.tab.c
+gcc  -o tools/kconfig/conf tools/kconfig/conf.o tools/kconfig/zconf.tab.o  
+make[1]: Leaving directory '/xen/xen'
+make -f /xen/xen/tools/kconfig/Makefile.kconfig ARCH=arm64 SRCARCH=arm HOSTCC="gcc" HOSTCXX="g++" oldconfig
+make[1]: Entering directory '/xen/xen'
+gcc -Wp,-MD,tools/kconfig/.conf.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS  -c -o tools/kconfig/conf.o tools/kconfig/conf.c
+[91mtools/kconfig/conf.c: In function 'check_stdin':
+[0m[91mtools/kconfig/conf.c:77:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("aborted!\n\n"));
+   ^~~~~~
+tools/kconfig/conf.c:78:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Console input/output is redirected. "));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c:79:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_askvalue':
+tools/kconfig/conf.c:89:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("(NEW) "));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_choice':
+[0m[91mtools/kconfig/conf.c:290:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf(_(" (NEW)"));
+     ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'check_conf':
+[0m[91mtools/kconfig/conf.c:438:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      printf(_("*\n* Restart config...\n*\n"));
+      ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'main':
+[0m[91mtools/kconfig/conf.c:640:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      _("\n*** The configuration requires explicit update.\n\n"));
+      ^
+[0m[91mtools/kconfig/conf.c:693:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:697:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:708:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0mgcc -Wp,-MD,tools/kconfig/.zconf.tab.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS -Itools/kconfig -c -o tools/kconfig/zconf.tab.o tools/kconfig/zconf.tab.c
+gcc  -o tools/kconfig/conf tools/kconfig/conf.o tools/kconfig/zconf.tab.o  
+tools/kconfig/conf -s --oldconfig Kconfig
+make[1]: Leaving directory '/xen/xen'
+ ---> 9872604ccde1
+Removing intermediate container 138744bb965d
+Step 12/18 : RUN make &&     case $(uname -m) in     x86_64)         cp xen.gz /out/boot/xen.gz 	;;     aarch64)         mkimage -A arm64 -T kernel -a $XEN_UBOOT_ADDR -e $XEN_UBOOT_ADDR -C none -d xen /out/boot/xen.uboot ;        cp xen.efi /out/boot/         ;;     esac
+ ---> Running in 61089ac56772
+make -f /xen/xen/tools/kconfig/Makefile.kconfig ARCH=arm64 SRCARCH=arm HOSTCC="gcc" HOSTCXX="g++" silentoldconfig
+make[1]: Entering directory '/xen/xen'
+gcc -Wp,-MD,tools/kconfig/.conf.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS  -c -o tools/kconfig/conf.o tools/kconfig/conf.c
+[91mtools/kconfig/conf.c: In function 'check_stdin':
+tools/kconfig/conf.c:77:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("aborted!\n\n"));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c:78:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Console input/output is redirected. "));
+   ^~~~~~
+tools/kconfig/conf.c:79:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_askvalue':
+tools/kconfig/conf.c:89:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(_("(NEW) "));
+   ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'conf_choice':
+[0m[91mtools/kconfig/conf.c:290:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf(_(" (NEW)"));
+     ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'check_conf':
+tools/kconfig/conf.c:438:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      printf(_("*\n* Restart config...\n*\n"));
+      ^~~~~~
+[0m[91mtools/kconfig/conf.c: In function 'main':
+[0m[91mtools/kconfig/conf.c:640:6: warning: format not a string literal and no format arguments [-Wformat-security]
+      _("\n*** The configuration requires explicit update.\n\n"));
+      ^
+[0m[91mtools/kconfig/conf.c:693:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:697:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+    ^~~~~~~
+[0m[91mtools/kconfig/conf.c:708:4: warning: format not a string literal and no format arguments [-Wformat-security]
+    fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+    ^~~~~~~
+[0mgcc -Wp,-MD,tools/kconfig/.zconf.tab.o.d     -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE -DKBUILD_NO_NLS -Itools/kconfig -c -o tools/kconfig/zconf.tab.o tools/kconfig/zconf.tab.c
+gcc  -o tools/kconfig/conf tools/kconfig/conf.o tools/kconfig/zconf.tab.o  
+tools/kconfig/conf -s --silentoldconfig Kconfig
+make[1]: Leaving directory '/xen/xen'
+make -f Rules.mk _build
+make[1]: Entering directory '/xen/xen'
+make -C tools
+make[2]: Entering directory '/xen/xen/tools'
+make symbols
+make[3]: Entering directory '/xen/xen/tools'
+gcc -Wall -Werror -Wstrict-prototypes -O2 -fomit-frame-pointer -fno-strict-aliasing -Wdeclaration-after-statement -o symbols symbols.c
+make[3]: Leaving directory '/xen/xen/tools'
+make[2]: Leaving directory '/xen/xen/tools'
+make -f /xen/xen/Rules.mk include/xen/compile.h
+make[2]: Entering directory '/xen/xen'
+ Xen 4.9.0
+make[2]: Leaving directory '/xen/xen'
+[ -e include/asm ] || ln -sf asm-arm include/asm
+[ -e arch/arm/efi ] && for f in boot.c runtime.c compat.c efi.h;\
+	do ln -nsf ../../../common/efi/$f arch/arm/efi/; done;\
+	true
+make -f /xen/xen/Rules.mk -C include
+make[2]: Entering directory '/xen/xen/include'
+for i in public/trace.h public/pmu.h public/platform.h public/tmem.h public/physdev.h public/grant_table.h public/vm_event.h public/callback.h public/xen-compat.h public/sched.h public/features.h public/xen.h public/version.h public/event_channel.h public/xenoprof.h public/elfnote.h public/vcpu.h public/xencomm.h public/nmi.h public/kexec.h public/errno.h public/memory.h public/hvm/params.h public/hvm/hvm_op.h public/hvm/hvm_vcpu.h public/hvm/hvm_info_table.h public/hvm/ioreq.h public/hvm/dm_op.h public/hvm/hvm_xs_strings.h public/hvm/e820.h public/hvm/pvdrivers.h public/io/sndif.h public/io/libxenvchan.h public/io/pciif.h public/io/tpmif.h public/io/blkif.h public/io/usbif.h public/io/netif.h public/io/xenbus.h public/io/fbif.h public/io/fsif.h public/io/console.h public/io/displif.h public/io/ring.h public/io/protocols.h public/io/kbdif.h public/io/xs_wire.h public/io/vscsiif.h; do \
+    gcc -x c -ansi -Wall -Werror -include stdint.h \
+          -S -o /dev/null $i || exit 1; \
+    echo $i; \
+done >headers.chk.new
+mv headers.chk.new headers.chk
+rm -f headers99.chk.new
+echo "#include "\"public/io/9pfs.h\" | gcc -x c -std=c99 -Wall -Werror -include stdint.h  -include string.h -S -o /dev/null - || exit $?; echo public/io/9pfs.h >> headers99.chk.new;  echo "#include "\"public/io/pvcalls.h\" | gcc -x c -std=c99 -Wall -Werror -include stdint.h  -include string.h -S -o /dev/null - || exit $?; echo public/io/pvcalls.h >> headers99.chk.new;
+mv headers99.chk.new headers99.chk
+rm -f headers++.chk.new
+if ! g++ -v >/dev/null 2>&1; then                                  \
+    touch headers++.chk.new;                                                     \
+    exit 0;                                                           \
+fi;                                                                   \
+ echo "#include "\"public/domctl.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/domctl.h >> headers++.chk.new;  echo "#include "\"public/trace.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/trace.h >> headers++.chk.new;  echo "#include "\"public/pmu.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/pmu.h >> headers++.chk.new;  echo "#include "\"public/platform.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/platform.h >> headers++.chk.new;  echo "#include "\"public/tmem.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/tmem.h >> headers++.chk.new;  echo "#include "\"public/physdev.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/physdev.h >> headers++.chk.new;  echo "#include "\"public/grant_table.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/grant_table.h >> headers++.chk.new;  echo "#include "\"public/vm_event.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/vm_event.h >> headers++.chk.new;  echo "#include "\"public/callback.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/callback.h >> headers++.chk.new;  echo "#include "\"public/xen-compat.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/xen-compat.h >> headers++.chk.new;  echo "#include "\"public/sched.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/sched.h >> headers++.chk.new;  echo "#include "\"public/features.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/features.h >> headers++.chk.new;  echo "#include "\"public/xen.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/xen.h >> headers++.chk.new;  echo "#include "\"public/version.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/version.h >> headers++.chk.new;  echo "#include "\"public/event_channel.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/event_channel.h >> headers++.chk.new;  echo "#include "\"public/xenoprof.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/xenoprof.h >> headers++.chk.new;  echo "#include "\"public/elfnote.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/elfnote.h >> headers++.chk.new;  echo "#include "\"public/vcpu.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/vcpu.h >> headers++.chk.new;  echo "#include "\"public/xencomm.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/xencomm.h >> headers++.chk.new;  echo "#include "\"public/nmi.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/nmi.h >> headers++.chk.new;  echo "#include "\"public/kexec.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/kexec.h >> headers++.chk.new;  echo "#include "\"public/errno.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/errno.h >> headers++.chk.new;  echo "#include "\"public/sysctl.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/sysctl.h >> headers++.chk.new;  echo "#include "\"public/memory.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/memory.h >> headers++.chk.new;  echo "#include "\"public/hvm/params.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/params.h >> headers++.chk.new;  echo "#include "\"public/hvm/hvm_op.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/hvm_op.h >> headers++.chk.new;  echo "#include "\"public/hvm/hvm_vcpu.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/hvm_vcpu.h >> headers++.chk.new;  echo "#include "\"public/hvm/hvm_info_table.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/hvm_info_table.h >> headers++.chk.new;  echo "#include "\"public/hvm/ioreq.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/ioreq.h >> headers++.chk.new;  echo "#include "\"public/hvm/save.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/save.h >> headers++.chk.new;  echo "#include "\"public/hvm/dm_op.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/dm_op.h >> headers++.chk.new;  echo "#include "\"public/hvm/hvm_xs_strings.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/hvm_xs_strings.h >> headers++.chk.new;  echo "#include "\"public/hvm/e820.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/e820.h >> headers++.chk.new;  echo "#include "\"public/hvm/pvdrivers.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/hvm/pvdrivers.h >> headers++.chk.new;  echo "#include "\"public/io/sndif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/sndif.h >> headers++.chk.new;  echo "#include "\"public/io/libxenvchan.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/libxenvchan.h >> headers++.chk.new;  echo "#include "\"public/io/pciif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/pciif.h >> headers++.chk.new;  echo "#include "\"public/io/tpmif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/tpmif.h >> headers++.chk.new;  echo "#include "\"public/io/blkif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/blkif.h >> headers++.chk.new;  echo "#include "\"public/io/usbif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/usbif.h >> headers++.chk.new;  echo "#include "\"public/io/netif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/netif.h >> headers++.chk.new;  echo "#include "\"public/io/pvcalls.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -include cstring -S -o /dev/null - || exit $?; echo public/io/pvcalls.h >> headers++.chk.new;  echo "#include "\"public/io/xenbus.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/xenbus.h >> headers++.chk.new;  echo "#include "\"public/io/fbif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/fbif.h >> headers++.chk.new;  echo "#include "\"public/io/fsif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/fsif.h >> headers++.chk.new;  echo "#include "\"public/io/9pfs.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -include cstring -S -o /dev/null - || exit $?; echo public/io/9pfs.h >> headers++.chk.new;  echo "#include "\"public/io/console.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/console.h >> headers++.chk.new;  echo "#include "\"public/io/displif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/displif.h >> headers++.chk.new;  echo "#include "\"public/io/ring.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/ring.h >> headers++.chk.new;  echo "#include "\"public/io/protocols.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/protocols.h >> headers++.chk.new;  echo "#include "\"public/io/kbdif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/kbdif.h >> headers++.chk.new;  echo "#include "\"public/io/xs_wire.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/xs_wire.h >> headers++.chk.new;  echo "#include "\"public/io/vscsiif.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/io/vscsiif.h >> headers++.chk.new;  echo "#include "\"public/xsm/flask_op.h\" | g++ -x c++ -std=gnu++98 -Wall -Werror -D__XEN_TOOLS__ -include stdint.h -include public/xen.h  -S -o /dev/null - || exit $?; echo public/xsm/flask_op.h >> headers++.chk.new;
+mv headers++.chk.new headers++.chk
+make[2]: Leaving directory '/xen/xen/include'
+make -f /xen/xen/Rules.mk -C arch/arm asm-offsets.s
+make[2]: Entering directory '/xen/xen/arch/arm'
+gcc -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="asm-offsets.s"' -Wa,--strip-local-absolute -MMD -MF ./.asm-offsets.s.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -S -o asm-offsets.s arm64/asm-offsets.c
+make[2]: Leaving directory '/xen/xen/arch/arm'
+make -f /xen/xen/Rules.mk include/asm-arm/asm-offsets.h
+make[2]: Entering directory '/xen/xen'
+make[2]: Leaving directory '/xen/xen'
+make -f /xen/xen/Rules.mk -C arch/arm /xen/xen/xen
+make[2]: Entering directory '/xen/xen/arch/arm'
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="arm64/head.o"' -Wa,--strip-local-absolute -MMD -MF arm64/.head.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c arm64/head.S -o arm64/head.o
+make -f /xen/xen/Rules.mk -C /xen/xen/common built_in.o
+make[3]: Entering directory '/xen/xen/common'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="bitmap.o"' -Wa,--strip-local-absolute -MMD -MF ./.bitmap.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c bitmap.c -o bitmap.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="bsearch.o"' -Wa,--strip-local-absolute -MMD -MF ./.bsearch.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c bsearch.c -o bsearch.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cpu.o"' -Wa,--strip-local-absolute -MMD -MF ./.cpu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cpu.c -o cpu.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cpupool.o"' -Wa,--strip-local-absolute -MMD -MF ./.cpupool.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cpupool.c -o cpupool.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="device_tree.o"' -Wa,--strip-local-absolute -MMD -MF ./.device_tree.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c device_tree.c -o device_tree.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domctl.o"' -Wa,--strip-local-absolute -MMD -MF ./.domctl.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domctl.c -o domctl.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domain.o"' -Wa,--strip-local-absolute -MMD -MF ./.domain.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domain.c -o domain.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="event_2l.o"' -Wa,--strip-local-absolute -MMD -MF ./.event_2l.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c event_2l.c -o event_2l.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="event_channel.o"' -Wa,--strip-local-absolute -MMD -MF ./.event_channel.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c event_channel.c -o event_channel.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="event_fifo.o"' -Wa,--strip-local-absolute -MMD -MF ./.event_fifo.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c event_fifo.c -o event_fifo.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="grant_table.o"' -Wa,--strip-local-absolute -MMD -MF ./.grant_table.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c grant_table.c -o grant_table.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="guestcopy.o"' -Wa,--strip-local-absolute -MMD -MF ./.guestcopy.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c guestcopy.c -o guestcopy.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="irq.o"' -Wa,--strip-local-absolute -MMD -MF ./.irq.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c irq.c -o irq.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="kernel.o"' -Wa,--strip-local-absolute -MMD -MF ./.kernel.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c kernel.c -o kernel.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="keyhandler.o"' -Wa,--strip-local-absolute -MMD -MF ./.keyhandler.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c keyhandler.c -o keyhandler.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="lib.o"' -Wa,--strip-local-absolute -MMD -MF ./.lib.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c lib.c -o lib.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="lzo.o"' -Wa,--strip-local-absolute -MMD -MF ./.lzo.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c lzo.c -o lzo.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="mem_access.o"' -Wa,--strip-local-absolute -MMD -MF ./.mem_access.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c mem_access.c -o mem_access.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memory.o"' -Wa,--strip-local-absolute -MMD -MF ./.memory.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memory.c -o memory.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="monitor.o"' -Wa,--strip-local-absolute -MMD -MF ./.monitor.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c monitor.c -o monitor.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="multicall.o"' -Wa,--strip-local-absolute -MMD -MF ./.multicall.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c multicall.c -o multicall.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="notifier.o"' -Wa,--strip-local-absolute -MMD -MF ./.notifier.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c notifier.c -o notifier.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="page_alloc.o"' -Wa,--strip-local-absolute -MMD -MF ./.page_alloc.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c page_alloc.c -o page_alloc.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="pdx.o"' -Wa,--strip-local-absolute -MMD -MF ./.pdx.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c pdx.c -o pdx.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="preempt.o"' -Wa,--strip-local-absolute -MMD -MF ./.preempt.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c preempt.c -o preempt.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="random.o"' -Wa,--strip-local-absolute -MMD -MF ./.random.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c random.c -o random.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="rangeset.o"' -Wa,--strip-local-absolute -MMD -MF ./.rangeset.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c rangeset.c -o rangeset.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="radix-tree.o"' -Wa,--strip-local-absolute -MMD -MF ./.radix-tree.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c radix-tree.c -o radix-tree.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="rbtree.o"' -Wa,--strip-local-absolute -MMD -MF ./.rbtree.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c rbtree.c -o rbtree.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="rcupdate.o"' -Wa,--strip-local-absolute -MMD -MF ./.rcupdate.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c rcupdate.c -o rcupdate.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="rwlock.o"' -Wa,--strip-local-absolute -MMD -MF ./.rwlock.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c rwlock.c -o rwlock.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sched_arinc653.o"' -Wa,--strip-local-absolute -MMD -MF ./.sched_arinc653.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sched_arinc653.c -o sched_arinc653.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sched_credit.o"' -Wa,--strip-local-absolute -MMD -MF ./.sched_credit.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sched_credit.c -o sched_credit.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sched_credit2.o"' -Wa,--strip-local-absolute -MMD -MF ./.sched_credit2.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sched_credit2.c -o sched_credit2.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sched_rt.o"' -Wa,--strip-local-absolute -MMD -MF ./.sched_rt.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sched_rt.c -o sched_rt.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sched_null.o"' -Wa,--strip-local-absolute -MMD -MF ./.sched_null.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sched_null.c -o sched_null.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="schedule.o"' -Wa,--strip-local-absolute -MMD -MF ./.schedule.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c schedule.c -o schedule.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="shutdown.o"' -Wa,--strip-local-absolute -MMD -MF ./.shutdown.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c shutdown.c -o shutdown.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="softirq.o"' -Wa,--strip-local-absolute -MMD -MF ./.softirq.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c softirq.c -o softirq.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sort.o"' -Wa,--strip-local-absolute -MMD -MF ./.sort.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sort.c -o sort.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smp.o"' -Wa,--strip-local-absolute -MMD -MF ./.smp.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smp.c -o smp.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="spinlock.o"' -Wa,--strip-local-absolute -MMD -MF ./.spinlock.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c spinlock.c -o spinlock.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="stop_machine.o"' -Wa,--strip-local-absolute -MMD -MF ./.stop_machine.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c stop_machine.c -o stop_machine.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="string.o"' -Wa,--strip-local-absolute -MMD -MF ./.string.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c string.c -o string.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="symbols.o"' -Wa,--strip-local-absolute -MMD -MF ./.symbols.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c symbols.c -o symbols.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sysctl.o"' -Wa,--strip-local-absolute -MMD -MF ./.sysctl.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sysctl.c -o sysctl.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="tasklet.o"' -Wa,--strip-local-absolute -MMD -MF ./.tasklet.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c tasklet.c -o tasklet.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="time.o"' -Wa,--strip-local-absolute -MMD -MF ./.time.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c time.c -o time.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="timer.o"' -Wa,--strip-local-absolute -MMD -MF ./.timer.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c timer.c -o timer.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="trace.o"' -Wa,--strip-local-absolute -MMD -MF ./.trace.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c trace.c -o trace.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="version.o"' -Wa,--strip-local-absolute -MMD -MF ./.version.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c version.c -o version.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="virtual_region.o"' -Wa,--strip-local-absolute -MMD -MF ./.virtual_region.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c virtual_region.c -o virtual_region.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vm_event.o"' -Wa,--strip-local-absolute -MMD -MF ./.vm_event.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vm_event.c -o vm_event.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vmap.o"' -Wa,--strip-local-absolute -MMD -MF ./.vmap.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vmap.c -o vmap.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vsprintf.o"' -Wa,--strip-local-absolute -MMD -MF ./.vsprintf.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vsprintf.c -o vsprintf.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="wait.o"' -Wa,--strip-local-absolute -MMD -MF ./.wait.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c wait.c -o wait.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="xmalloc_tlsf.o"' -Wa,--strip-local-absolute -MMD -MF ./.xmalloc_tlsf.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c xmalloc_tlsf.c -o xmalloc_tlsf.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="tmem.o"' -Wa,--strip-local-absolute -MMD -MF ./.tmem.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c tmem.c -o tmem.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="tmem_xen.o"' -Wa,--strip-local-absolute -MMD -MF ./.tmem_xen.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c tmem_xen.c -o tmem_xen.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="tmem_control.o"' -Wa,--strip-local-absolute -MMD -MF ./.tmem_control.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c tmem_control.c -o tmem_control.o
+make -f /xen/xen/Rules.mk -C libelf built_in.o
+make[4]: Entering directory '/xen/xen/common/libelf'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="libelf-tools.o"' -Wa,--strip-local-absolute -MMD -MF ./.libelf-tools.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -Wno-pointer-sign -c libelf-tools.c -o libelf-tools.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="libelf-loader.o"' -Wa,--strip-local-absolute -MMD -MF ./.libelf-loader.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -Wno-pointer-sign -c libelf-loader.c -o libelf-loader.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="libelf-dominfo.o"' -Wa,--strip-local-absolute -MMD -MF ./.libelf-dominfo.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -Wno-pointer-sign -c libelf-dominfo.c -o libelf-dominfo.o
+ld    -EL  -r -o libelf-temp.o libelf-tools.o libelf-loader.o libelf-dominfo.o
+objcopy --rename-section .text=.init.text --rename-section .data=.init.data libelf-temp.o libelf.o
+ld    -EL  -r -o built_in.o libelf.o
+make[4]: Leaving directory '/xen/xen/common/libelf'
+make -f /xen/xen/Rules.mk -C libfdt built_in.o
+make[4]: Entering directory '/xen/xen/common/libfdt'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt.c -o fdt.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_ro.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_ro.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_ro.c -o fdt_ro.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_wip.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_wip.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_wip.c -o fdt_wip.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_sw.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_sw.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_sw.c -o fdt_sw.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_rw.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_rw.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_rw.c -o fdt_rw.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_strerror.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_strerror.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_strerror.c -o fdt_strerror.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="fdt_empty_tree.o"' -Wa,--strip-local-absolute -MMD -MF ./.fdt_empty_tree.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -I/xen/xen/include/xen/libfdt/ -c fdt_empty_tree.c -o fdt_empty_tree.o
+ld    -EL  -r -o built_in.o fdt.o fdt_ro.o fdt_wip.o fdt_sw.o fdt_rw.o fdt_strerror.o fdt_empty_tree.o
+make[4]: Leaving directory '/xen/xen/common/libfdt'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="gunzip.o"' -Wa,--strip-local-absolute -MMD -MF ./.gunzip.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -DINIT_SECTIONS_ONLY -c gunzip.c -o gunzip.o
+objdump -h gunzip.o | sed -n '/[0-9]/{s,00*,0,g;p;}' | while read idx name sz rest; do \
+	case "$name" in \
+	.*.local) ;; \
+	.text|.text.*|.data|.data.*|.bss) \
+		test $sz != 0 || continue; \
+		echo "Error: size of gunzip.o:$name is 0x$sz" >&2; \
+		exit $(expr $idx + 1);; \
+	esac; \
+done
+objcopy --rename-section .rodata=.init.rodata --rename-section .rodata.str1.1=.init.rodata.str1.1 --rename-section .rodata.str2.1=.init.rodata.str2.1 --rename-section .rodata.str4.1=.init.rodata.str4.1 --rename-section .rodata.cst1=.init.rodata.cst1 --rename-section .rodata.str1.2=.init.rodata.str1.2 --rename-section .rodata.str2.2=.init.rodata.str2.2 --rename-section .rodata.str4.2=.init.rodata.str4.2 --rename-section .rodata.cst2=.init.rodata.cst2 --rename-section .rodata.str1.4=.init.rodata.str1.4 --rename-section .rodata.str2.4=.init.rodata.str2.4 --rename-section .rodata.str4.4=.init.rodata.str4.4 --rename-section .rodata.cst4=.init.rodata.cst4 --rename-section .rodata.str1.8=.init.rodata.str1.8 --rename-section .rodata.str2.8=.init.rodata.str2.8 --rename-section .rodata.str4.8=.init.rodata.str4.8 --rename-section .rodata.cst8=.init.rodata.cst8 --rename-section .rodata.str1.16=.init.rodata.str1.16 --rename-section .rodata.str2.16=.init.rodata.str2.16 --rename-section .rodata.str4.16=.init.rodata.str4.16 --rename-section .rodata.cst16=.init.rodata.cst16 --rename-section .data.rel.local=.init.data.rel.local --rename-section .data.rel.ro.local=.init.data.rel.ro.local gunzip.o gunzip.init.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="warning.o"' -Wa,--strip-local-absolute -MMD -MF ./.warning.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -DINIT_SECTIONS_ONLY -c warning.c -o warning.o
+objdump -h warning.o | sed -n '/[0-9]/{s,00*,0,g;p;}' | while read idx name sz rest; do \
+	case "$name" in \
+	.*.local) ;; \
+	.text|.text.*|.data|.data.*|.bss) \
+		test $sz != 0 || continue; \
+		echo "Error: size of warning.o:$name is 0x$sz" >&2; \
+		exit $(expr $idx + 1);; \
+	esac; \
+done
+objcopy --rename-section .rodata=.init.rodata --rename-section .rodata.str1.1=.init.rodata.str1.1 --rename-section .rodata.str2.1=.init.rodata.str2.1 --rename-section .rodata.str4.1=.init.rodata.str4.1 --rename-section .rodata.cst1=.init.rodata.cst1 --rename-section .rodata.str1.2=.init.rodata.str1.2 --rename-section .rodata.str2.2=.init.rodata.str2.2 --rename-section .rodata.str4.2=.init.rodata.str4.2 --rename-section .rodata.cst2=.init.rodata.cst2 --rename-section .rodata.str1.4=.init.rodata.str1.4 --rename-section .rodata.str2.4=.init.rodata.str2.4 --rename-section .rodata.str4.4=.init.rodata.str4.4 --rename-section .rodata.cst4=.init.rodata.cst4 --rename-section .rodata.str1.8=.init.rodata.str1.8 --rename-section .rodata.str2.8=.init.rodata.str2.8 --rename-section .rodata.str4.8=.init.rodata.str4.8 --rename-section .rodata.cst8=.init.rodata.cst8 --rename-section .rodata.str1.16=.init.rodata.str1.16 --rename-section .rodata.str2.16=.init.rodata.str2.16 --rename-section .rodata.str4.16=.init.rodata.str4.16 --rename-section .rodata.cst16=.init.rodata.cst16 --rename-section .data.rel.local=.init.data.rel.local --rename-section .data.rel.ro.local=.init.data.rel.ro.local warning.o warning.init.o
+ld    -EL  -r -o built_in.o bitmap.o bsearch.o cpu.o cpupool.o device_tree.o domctl.o domain.o event_2l.o event_channel.o event_fifo.o grant_table.o guestcopy.o irq.o kernel.o keyhandler.o lib.o lzo.o mem_access.o memory.o monitor.o multicall.o notifier.o page_alloc.o pdx.o preempt.o random.o rangeset.o radix-tree.o rbtree.o rcupdate.o rwlock.o sched_arinc653.o sched_credit.o sched_credit2.o sched_rt.o sched_null.o schedule.o shutdown.o softirq.o sort.o smp.o spinlock.o stop_machine.o string.o symbols.o sysctl.o tasklet.o time.o timer.o trace.o version.o virtual_region.o vm_event.o vmap.o vsprintf.o wait.o xmalloc_tlsf.o tmem.o tmem_xen.o tmem_control.o libelf/built_in.o libfdt/built_in.o gunzip.init.o warning.init.o
+make[3]: Leaving directory '/xen/xen/common'
+make -f /xen/xen/Rules.mk -C /xen/xen/drivers built_in.o
+make[3]: Entering directory '/xen/xen/drivers'
+make -f /xen/xen/Rules.mk -C char built_in.o
+make[4]: Entering directory '/xen/xen/drivers/char'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="console.o"' -Wa,--strip-local-absolute -MMD -MF ./.console.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c console.c -o console.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="ns16550.o"' -Wa,--strip-local-absolute -MMD -MF ./.ns16550.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c ns16550.c -o ns16550.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cadence-uart.o"' -Wa,--strip-local-absolute -MMD -MF ./.cadence-uart.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cadence-uart.c -o cadence-uart.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="pl011.o"' -Wa,--strip-local-absolute -MMD -MF ./.pl011.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c pl011.c -o pl011.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="arm-uart.o"' -Wa,--strip-local-absolute -MMD -MF ./.arm-uart.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c arm-uart.c -o arm-uart.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="serial.o"' -Wa,--strip-local-absolute -MMD -MF ./.serial.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c serial.c -o serial.o
+ld    -EL  -r -o built_in.o console.o ns16550.o cadence-uart.o pl011.o arm-uart.o serial.o
+make[4]: Leaving directory '/xen/xen/drivers/char'
+make -f /xen/xen/Rules.mk -C passthrough built_in.o
+make[4]: Entering directory '/xen/xen/drivers/passthrough'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="iommu.o"' -Wa,--strip-local-absolute -MMD -MF ./.iommu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c iommu.c -o iommu.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="device_tree.o"' -Wa,--strip-local-absolute -MMD -MF ./.device_tree.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c device_tree.c -o device_tree.o
+make -f /xen/xen/Rules.mk -C arm built_in.o
+make[5]: Entering directory '/xen/xen/drivers/passthrough/arm'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="iommu.o"' -Wa,--strip-local-absolute -MMD -MF ./.iommu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c iommu.c -o iommu.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smmu.o"' -Wa,--strip-local-absolute -MMD -MF ./.smmu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smmu.c -o smmu.o
+ld    -EL  -r -o built_in.o iommu.o smmu.o
+make[5]: Leaving directory '/xen/xen/drivers/passthrough/arm'
+ld    -EL  -r -o built_in.o iommu.o device_tree.o arm/built_in.o
+make[4]: Leaving directory '/xen/xen/drivers/passthrough'
+make -f /xen/xen/Rules.mk -C video built_in.o
+make[4]: Entering directory '/xen/xen/drivers/video'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="font_8x14.o"' -Wa,--strip-local-absolute -MMD -MF ./.font_8x14.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c font_8x14.c -o font_8x14.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="font_8x16.o"' -Wa,--strip-local-absolute -MMD -MF ./.font_8x16.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c font_8x16.c -o font_8x16.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="font_8x8.o"' -Wa,--strip-local-absolute -MMD -MF ./.font_8x8.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c font_8x8.c -o font_8x8.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="lfb.o"' -Wa,--strip-local-absolute -MMD -MF ./.lfb.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c lfb.c -o lfb.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="arm_hdlcd.o"' -Wa,--strip-local-absolute -MMD -MF ./.arm_hdlcd.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c arm_hdlcd.c -o arm_hdlcd.o
+ld    -EL  -r -o built_in.o font_8x14.o font_8x16.o font_8x8.o lfb.o arm_hdlcd.o
+make[4]: Leaving directory '/xen/xen/drivers/video'
+ld    -EL  -r -o built_in.o char/built_in.o passthrough/built_in.o video/built_in.o
+make[3]: Leaving directory '/xen/xen/drivers'
+make -f /xen/xen/Rules.mk -C /xen/xen/xsm built_in.o
+make[3]: Entering directory '/xen/xen/xsm'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="xsm_core.o"' -Wa,--strip-local-absolute -MMD -MF ./.xsm_core.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c xsm_core.c -o xsm_core.o
+ld    -EL  -r -o built_in.o xsm_core.o
+make[3]: Leaving directory '/xen/xen/xsm'
+make -f /xen/xen/Rules.mk -C /xen/xen/arch/arm built_in.o
+make[3]: Entering directory '/xen/xen/arch/arm'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="alternative.o"' -Wa,--strip-local-absolute -MMD -MF ./.alternative.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c alternative.c -o alternative.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="bootfdt.o"' -Wa,--strip-local-absolute -MMD -MF ./.bootfdt.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -DINIT_SECTIONS_ONLY -c bootfdt.c -o bootfdt.o
+objdump -h bootfdt.o | sed -n '/[0-9]/{s,00*,0,g;p;}' | while read idx name sz rest; do \
+	case "$name" in \
+	.*.local) ;; \
+	.text|.text.*|.data|.data.*|.bss) \
+		test $sz != 0 || continue; \
+		echo "Error: size of bootfdt.o:$name is 0x$sz" >&2; \
+		exit $(expr $idx + 1);; \
+	esac; \
+done
+objcopy --rename-section .rodata=.init.rodata --rename-section .rodata.str1.1=.init.rodata.str1.1 --rename-section .rodata.str2.1=.init.rodata.str2.1 --rename-section .rodata.str4.1=.init.rodata.str4.1 --rename-section .rodata.cst1=.init.rodata.cst1 --rename-section .rodata.str1.2=.init.rodata.str1.2 --rename-section .rodata.str2.2=.init.rodata.str2.2 --rename-section .rodata.str4.2=.init.rodata.str4.2 --rename-section .rodata.cst2=.init.rodata.cst2 --rename-section .rodata.str1.4=.init.rodata.str1.4 --rename-section .rodata.str2.4=.init.rodata.str2.4 --rename-section .rodata.str4.4=.init.rodata.str4.4 --rename-section .rodata.cst4=.init.rodata.cst4 --rename-section .rodata.str1.8=.init.rodata.str1.8 --rename-section .rodata.str2.8=.init.rodata.str2.8 --rename-section .rodata.str4.8=.init.rodata.str4.8 --rename-section .rodata.cst8=.init.rodata.cst8 --rename-section .rodata.str1.16=.init.rodata.str1.16 --rename-section .rodata.str2.16=.init.rodata.str2.16 --rename-section .rodata.str4.16=.init.rodata.str4.16 --rename-section .rodata.cst16=.init.rodata.cst16 --rename-section .data.rel.local=.init.data.rel.local --rename-section .data.rel.ro.local=.init.data.rel.ro.local bootfdt.o bootfdt.init.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cpu.o"' -Wa,--strip-local-absolute -MMD -MF ./.cpu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cpu.c -o cpu.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cpuerrata.o"' -Wa,--strip-local-absolute -MMD -MF ./.cpuerrata.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cpuerrata.c -o cpuerrata.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cpufeature.o"' -Wa,--strip-local-absolute -MMD -MF ./.cpufeature.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cpufeature.c -o cpufeature.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="decode.o"' -Wa,--strip-local-absolute -MMD -MF ./.decode.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c decode.c -o decode.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="device.o"' -Wa,--strip-local-absolute -MMD -MF ./.device.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c device.c -o device.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domain.o"' -Wa,--strip-local-absolute -MMD -MF ./.domain.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domain.c -o domain.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domain_build.o"' -Wa,--strip-local-absolute -MMD -MF ./.domain_build.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domain_build.c -o domain_build.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domctl.o"' -Wa,--strip-local-absolute -MMD -MF ./.domctl.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domctl.c -o domctl.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="gic.o"' -Wa,--strip-local-absolute -MMD -MF ./.gic.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c gic.c -o gic.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="gic-v2.o"' -Wa,--strip-local-absolute -MMD -MF ./.gic-v2.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c gic-v2.c -o gic-v2.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="gic-v3.o"' -Wa,--strip-local-absolute -MMD -MF ./.gic-v3.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c gic-v3.c -o gic-v3.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="guestcopy.o"' -Wa,--strip-local-absolute -MMD -MF ./.guestcopy.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c guestcopy.c -o guestcopy.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="hvm.o"' -Wa,--strip-local-absolute -MMD -MF ./.hvm.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c hvm.c -o hvm.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="io.o"' -Wa,--strip-local-absolute -MMD -MF ./.io.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c io.c -o io.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="irq.o"' -Wa,--strip-local-absolute -MMD -MF ./.irq.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c irq.c -o irq.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="kernel.o"' -Wa,--strip-local-absolute -MMD -MF ./.kernel.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c kernel.c -o kernel.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="mem_access.o"' -Wa,--strip-local-absolute -MMD -MF ./.mem_access.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c mem_access.c -o mem_access.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="mm.o"' -Wa,--strip-local-absolute -MMD -MF ./.mm.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c mm.c -o mm.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="monitor.o"' -Wa,--strip-local-absolute -MMD -MF ./.monitor.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c monitor.c -o monitor.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="p2m.o"' -Wa,--strip-local-absolute -MMD -MF ./.p2m.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c p2m.c -o p2m.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="percpu.o"' -Wa,--strip-local-absolute -MMD -MF ./.percpu.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c percpu.c -o percpu.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="platform.o"' -Wa,--strip-local-absolute -MMD -MF ./.platform.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c platform.c -o platform.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="platform_hypercall.o"' -Wa,--strip-local-absolute -MMD -MF ./.platform_hypercall.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c platform_hypercall.c -o platform_hypercall.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="physdev.o"' -Wa,--strip-local-absolute -MMD -MF ./.physdev.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c physdev.c -o physdev.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="processor.o"' -Wa,--strip-local-absolute -MMD -MF ./.processor.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c processor.c -o processor.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="psci.o"' -Wa,--strip-local-absolute -MMD -MF ./.psci.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c psci.c -o psci.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="setup.o"' -Wa,--strip-local-absolute -MMD -MF ./.setup.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c setup.c -o setup.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="shutdown.o"' -Wa,--strip-local-absolute -MMD -MF ./.shutdown.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c shutdown.c -o shutdown.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smc.o"' -Wa,--strip-local-absolute -MMD -MF ./.smc.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smc.S -o smc.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smp.o"' -Wa,--strip-local-absolute -MMD -MF ./.smp.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smp.c -o smp.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smpboot.o"' -Wa,--strip-local-absolute -MMD -MF ./.smpboot.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smpboot.c -o smpboot.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="sysctl.o"' -Wa,--strip-local-absolute -MMD -MF ./.sysctl.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c sysctl.c -o sysctl.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="time.o"' -Wa,--strip-local-absolute -MMD -MF ./.time.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c time.c -o time.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="traps.o"' -Wa,--strip-local-absolute -MMD -MF ./.traps.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c traps.c -o traps.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vgic.o"' -Wa,--strip-local-absolute -MMD -MF ./.vgic.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vgic.c -o vgic.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vgic-v2.o"' -Wa,--strip-local-absolute -MMD -MF ./.vgic-v2.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vgic-v2.c -o vgic-v2.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vgic-v3.o"' -Wa,--strip-local-absolute -MMD -MF ./.vgic-v3.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vgic-v3.c -o vgic-v3.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vm_event.o"' -Wa,--strip-local-absolute -MMD -MF ./.vm_event.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vm_event.c -o vm_event.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vtimer.o"' -Wa,--strip-local-absolute -MMD -MF ./.vtimer.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vtimer.c -o vtimer.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vpsci.o"' -Wa,--strip-local-absolute -MMD -MF ./.vpsci.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vpsci.c -o vpsci.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vuart.o"' -Wa,--strip-local-absolute -MMD -MF ./.vuart.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vuart.c -o vuart.o
+make -f /xen/xen/Rules.mk -C arm64 built_in.o
+make[4]: Entering directory '/xen/xen/arch/arm/arm64'
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="cache.o"' -Wa,--strip-local-absolute -MMD -MF ./.cache.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c cache.S -o cache.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domctl.o"' -Wa,--strip-local-absolute -MMD -MF ./.domctl.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domctl.c -o domctl.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="domain.o"' -Wa,--strip-local-absolute -MMD -MF ./.domain.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c domain.c -o domain.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="entry.o"' -Wa,--strip-local-absolute -MMD -MF ./.entry.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c entry.S -o entry.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="insn.o"' -Wa,--strip-local-absolute -MMD -MF ./.insn.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c insn.c -o insn.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="smpboot.o"' -Wa,--strip-local-absolute -MMD -MF ./.smpboot.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c smpboot.c -o smpboot.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="traps.o"' -Wa,--strip-local-absolute -MMD -MF ./.traps.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c traps.c -o traps.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vfp.o"' -Wa,--strip-local-absolute -MMD -MF ./.vfp.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vfp.c -o vfp.o
+make -f /xen/xen/Rules.mk -C lib built_in.o
+make[5]: Entering directory '/xen/xen/arch/arm/arm64/lib'
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memcpy.o"' -Wa,--strip-local-absolute -MMD -MF ./.memcpy.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memcpy.S -o memcpy.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memcmp.o"' -Wa,--strip-local-absolute -MMD -MF ./.memcmp.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memcmp.S -o memcmp.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memmove.o"' -Wa,--strip-local-absolute -MMD -MF ./.memmove.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memmove.S -o memmove.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memset.o"' -Wa,--strip-local-absolute -MMD -MF ./.memset.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memset.S -o memset.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="memchr.o"' -Wa,--strip-local-absolute -MMD -MF ./.memchr.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c memchr.S -o memchr.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="clear_page.o"' -Wa,--strip-local-absolute -MMD -MF ./.clear_page.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c clear_page.S -o clear_page.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="bitops.o"' -Wa,--strip-local-absolute -MMD -MF ./.bitops.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c bitops.S -o bitops.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="find_next_bit.o"' -Wa,--strip-local-absolute -MMD -MF ./.find_next_bit.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c find_next_bit.c -o find_next_bit.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strchr.o"' -Wa,--strip-local-absolute -MMD -MF ./.strchr.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strchr.S -o strchr.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strcmp.o"' -Wa,--strip-local-absolute -MMD -MF ./.strcmp.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strcmp.S -o strcmp.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strlen.o"' -Wa,--strip-local-absolute -MMD -MF ./.strlen.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strlen.S -o strlen.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strncmp.o"' -Wa,--strip-local-absolute -MMD -MF ./.strncmp.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strncmp.S -o strncmp.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strnlen.o"' -Wa,--strip-local-absolute -MMD -MF ./.strnlen.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strnlen.S -o strnlen.o
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="strrchr.o"' -Wa,--strip-local-absolute -MMD -MF ./.strrchr.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c strrchr.S -o strrchr.o
+ld    -EL  -r -o built_in.o memcpy.o memcmp.o memmove.o memset.o memchr.o clear_page.o bitops.o find_next_bit.o strchr.o strcmp.o strlen.o strncmp.o strnlen.o strrchr.o
+make[5]: Leaving directory '/xen/xen/arch/arm/arm64/lib'
+ld    -EL  -r -o built_in.o cache.o domctl.o domain.o entry.o insn.o smpboot.o traps.o vfp.o lib/built_in.o
+make[4]: Leaving directory '/xen/xen/arch/arm/arm64'
+make -f /xen/xen/Rules.mk -C platforms built_in.o
+make[4]: Entering directory '/xen/xen/arch/arm/platforms'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="vexpress.o"' -Wa,--strip-local-absolute -MMD -MF ./.vexpress.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c vexpress.c -o vexpress.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="seattle.o"' -Wa,--strip-local-absolute -MMD -MF ./.seattle.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c seattle.c -o seattle.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="xgene-storm.o"' -Wa,--strip-local-absolute -MMD -MF ./.xgene-storm.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c xgene-storm.c -o xgene-storm.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="xilinx-zynqmp.o"' -Wa,--strip-local-absolute -MMD -MF ./.xilinx-zynqmp.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c xilinx-zynqmp.c -o xilinx-zynqmp.o
+ld    -EL  -r -o built_in.o vexpress.o seattle.o xgene-storm.o xilinx-zynqmp.o
+make[4]: Leaving directory '/xen/xen/arch/arm/platforms'
+make -f /xen/xen/Rules.mk -C efi built_in.o
+make[4]: Entering directory '/xen/xen/arch/arm/efi'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="boot.o"' -Wa,--strip-local-absolute -MMD -MF ./.boot.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -fshort-wchar -DINIT_SECTIONS_ONLY -c boot.c -o boot.o
+objdump -h boot.o | sed -n '/[0-9]/{s,00*,0,g;p;}' | while read idx name sz rest; do \
+	case "$name" in \
+	.*.local) ;; \
+	.text|.text.*|.data|.data.*|.bss) \
+		test $sz != 0 || continue; \
+		echo "Error: size of boot.o:$name is 0x$sz" >&2; \
+		exit $(expr $idx + 1);; \
+	esac; \
+done
+objcopy --rename-section .rodata=.init.rodata --rename-section .rodata.str1.1=.init.rodata.str1.1 --rename-section .rodata.str2.1=.init.rodata.str2.1 --rename-section .rodata.str4.1=.init.rodata.str4.1 --rename-section .rodata.cst1=.init.rodata.cst1 --rename-section .rodata.str1.2=.init.rodata.str1.2 --rename-section .rodata.str2.2=.init.rodata.str2.2 --rename-section .rodata.str4.2=.init.rodata.str4.2 --rename-section .rodata.cst2=.init.rodata.cst2 --rename-section .rodata.str1.4=.init.rodata.str1.4 --rename-section .rodata.str2.4=.init.rodata.str2.4 --rename-section .rodata.str4.4=.init.rodata.str4.4 --rename-section .rodata.cst4=.init.rodata.cst4 --rename-section .rodata.str1.8=.init.rodata.str1.8 --rename-section .rodata.str2.8=.init.rodata.str2.8 --rename-section .rodata.str4.8=.init.rodata.str4.8 --rename-section .rodata.cst8=.init.rodata.cst8 --rename-section .rodata.str1.16=.init.rodata.str1.16 --rename-section .rodata.str2.16=.init.rodata.str2.16 --rename-section .rodata.str4.16=.init.rodata.str4.16 --rename-section .rodata.cst16=.init.rodata.cst16 --rename-section .data.rel.local=.init.data.rel.local --rename-section .data.rel.ro.local=.init.data.rel.ro.local boot.o boot.init.o
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="runtime.o"' -Wa,--strip-local-absolute -MMD -MF ./.runtime.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -fshort-wchar -c runtime.c -o runtime.o
+ld    -EL  -r -o built_in.o boot.init.o runtime.o
+make[4]: Leaving directory '/xen/xen/arch/arm/efi'
+ld    -EL  -r -o built_in.o alternative.o bootfdt.init.o cpu.o cpuerrata.o cpufeature.o decode.o device.o domain.o domain_build.o domctl.o gic.o gic-v2.o gic-v3.o guestcopy.o hvm.o io.o irq.o kernel.o mem_access.o mm.o monitor.o p2m.o percpu.o platform.o platform_hypercall.o physdev.o processor.o psci.o setup.o shutdown.o smc.o smp.o smpboot.o sysctl.o time.o traps.o vgic.o vgic-v2.o vgic-v3.o vm_event.o vtimer.o vpsci.o vuart.o arm64/built_in.o platforms/built_in.o efi/built_in.o
+make[3]: Leaving directory '/xen/xen/arch/arm'
+ld    -EL  -r -o prelink.o arm64/head.o /xen/xen/common/built_in.o /xen/xen/drivers/built_in.o /xen/xen/xsm/built_in.o /xen/xen/arch/arm/built_in.o
+gcc -P -E -Ui386 -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="xen.lds"' -Wa,--strip-local-absolute -MMD -MF ./.xen.lds.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -o xen.lds xen.lds.S
+sed -e 's/xen\.lds\.o:/xen\.lds:/g' <.xen.lds.d >.xen.lds.d.new
+mv -f .xen.lds.d.new .xen.lds.d
+make -f /xen/xen/Rules.mk -C /xen/xen/common symbols-dummy.o
+make[3]: Entering directory '/xen/xen/common'
+gcc  -DBUILD_ID -fno-strict-aliasing -std=gnu99 -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs   -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="symbols-dummy.o"' -Wa,--strip-local-absolute -MMD -MF ./.symbols-dummy.o.d -mcpu=generic -mgeneral-regs-only  -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c symbols-dummy.c -o symbols-dummy.o
+make[3]: Leaving directory '/xen/xen/common'
+ld    -EL  -T xen.lds -N prelink.o \
+    /xen/xen/common/symbols-dummy.o -o /xen/xen/.xen-syms.0
+nm -pa --format=sysv /xen/xen/.xen-syms.0 \
+	| /xen/xen/tools/symbols  --sysv --sort >/xen/xen/.xen-syms.0.S
+make -f /xen/xen/Rules.mk /xen/xen/.xen-syms.0.o
+make[3]: Entering directory '/xen/xen/arch/arm'
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="/xen/xen/.xen-syms.0.o"' -Wa,--strip-local-absolute -MMD -MF /xen/xen/..xen-syms.0.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c /xen/xen/.xen-syms.0.S -o /xen/xen/.xen-syms.0.o
+make[3]: Leaving directory '/xen/xen/arch/arm'
+ld    -EL  -T xen.lds -N prelink.o \
+    /xen/xen/.xen-syms.0.o -o /xen/xen/.xen-syms.1
+nm -pa --format=sysv /xen/xen/.xen-syms.1 \
+	| /xen/xen/tools/symbols  --sysv --sort >/xen/xen/.xen-syms.1.S
+make -f /xen/xen/Rules.mk /xen/xen/.xen-syms.1.o
+make[3]: Entering directory '/xen/xen/arch/arm'
+gcc -D__ASSEMBLY__ -DBUILD_ID -fno-strict-aliasing -Wall -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-but-set-variable -Wno-unused-local-typedefs -O2 -fomit-frame-pointer -nostdinc -fno-builtin -fno-common -Werror -Wredundant-decls -Wno-pointer-arith -pipe -g -D__XEN__ -include /xen/xen/include/xen/config.h '-D__OBJECT_FILE__="/xen/xen/.xen-syms.1.o"' -Wa,--strip-local-absolute -MMD -MF /xen/xen/..xen-syms.1.o.d -mcpu=generic -mgeneral-regs-only -I/xen/xen/include -fno-stack-protector -fno-exceptions -Wnested-externs -DGCC_HAS_VISIBILITY_ATTRIBUTE -c /xen/xen/.xen-syms.1.S -o /xen/xen/.xen-syms.1.o
+make[3]: Leaving directory '/xen/xen/arch/arm'
+ld    -EL  -T xen.lds -N prelink.o --build-id=sha1 \
+    /xen/xen/.xen-syms.1.o -o /xen/xen/xen-syms
+nm -pa --format=sysv /xen/xen/xen-syms \
+	| /xen/xen/tools/symbols --xensyms --sysv --sort \
+	>/xen/xen/xen-syms.map
+rm -f /xen/xen/.xen-syms.[0-9]*
+objcopy -O binary -S /xen/xen/xen-syms /xen/xen/xen
+ln -sf xen  ../../xen.efi
+make[2]: Leaving directory '/xen/xen/arch/arm'
+make[1]: Leaving directory '/xen/xen'
+Image Name:   
+Created:      Sat Apr  7 02:40:15 2018
+Image Type:   AArch64 Linux Kernel Image (uncompressed)
+Data Size:    721232 Bytes = 704.33 kB = 0.69 MB
+Load Address: 81000000
+Entry Point:  81000000
+ ---> 4d6aee6564d4
+Removing intermediate container 61089ac56772
+Step 13/18 : FROM scratch
+ ---> 
+Step 14/18 : ENTRYPOINT
+ ---> Using cache
+ ---> 9742e2d21ed8
+Step 15/18 : CMD
+ ---> Using cache
+ ---> 1cfa548ae5f2
+Step 16/18 : WORKDIR /boot
+ ---> Using cache
+ ---> 2b537a4091dd
+Step 17/18 : COPY --from=kernel-build /out/* .
+ ---> 51bb0390d894
+Step 18/18 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '901f9add67530be14e93c56700341dc7c7368dbf' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f059c075f015
+ ---> ccde7305e264
+Removing intermediate container f059c075f015
+Successfully built ccde7305e264
+Successfully tagged zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b-arm64
+Pushing zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b-arm64
+The push refers to a repository [docker.io/zededa/xen]
+5e0c3a9afcae: Preparing
+786aad8c3b28: Preparing
+786aad8c3b28: Layer already exists
+5e0c3a9afcae: Pushed
+07f48fb845ebcbb4327b6493875a846d0e4ffd3b-arm64: digest: sha256:a7e74b59102b677a833d2ba60781c936fb10a4463f5209911b2eec1198e50f52 size: 733
+Pushing zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b-arm64 to manifest zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b
+Digest: sha256:c8b8389a2abf741dacda34dc25fd3a29454dd90d0bc9f89e4f6ae41001d76946 741
+Not signing zededa/xen:07f48fb845ebcbb4327b6493875a846d0e4ffd3b
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/kernel:2f3f0ca93049e132867b9f9a836848e6ecc03f4b"
+2f3f0ca93049e132867b9f9a836848e6ecc03f4b: Pulling from zededa/kernel
+Digest: sha256:3eff66f1abc70306b4e0ebae65f8b4df66ab0ed4626ed2046205ff01e5a17d17
+Status: Image is up to date for zededa/kernel:2f3f0ca93049e132867b9f9a836848e6ecc03f4b
+Building and pushing "zededa/kmod_pfring:21d2619aba445c8fdecf2afe1d2201f0ac4db2aa"
+21d2619aba445c8fdecf2afe1d2201f0ac4db2aa: Pulling from zededa/kmod_pfring
+Digest: sha256:4f2c1756085e214680cc6f78d7137773496ac5d997ebaf9eecaba320ccb19d25
+Status: Image is up to date for zededa/kmod_pfring:21d2619aba445c8fdecf2afe1d2201f0ac4db2aa
+Building and pushing "zededa/xen-tools:39c66bfb8fa3128310f9c5b3322fd64819d9e215"
+39c66bfb8fa3128310f9c5b3322fd64819d9e215: Pulling from zededa/xen-tools
+Digest: sha256:2a76e16a316d0bad85b310f2d4d8c6eb5dad5acfb4e5229ed04e7e8179af8add
+Status: Image is up to date for zededa/xen-tools:39c66bfb8fa3128310f9c5b3322fd64819d9e215
+Building and pushing "zededa/dnsmasq:e2de7e6a478850d931724f951f877cd507d77358"
+e2de7e6a478850d931724f951f877cd507d77358: Pulling from zededa/dnsmasq
+Digest: sha256:ffd5aa9dccf23e759478da4589f0a647e333fd6034691cbe8a57bf25d45d2663
+Status: Image is up to date for zededa/dnsmasq:e2de7e6a478850d931724f951f877cd507d77358
+Building and pushing "zededa/gpt-tools:f0be39997551891e81c6edc38acc20f61077287b"
+f0be39997551891e81c6edc38acc20f61077287b: Pulling from zededa/gpt-tools
+Digest: sha256:2b060f749a08dd331a21277d0c1851912ace5d501782f99df36e3a585710f4ae
+Status: Image is up to date for zededa/gpt-tools:f0be39997551891e81c6edc38acc20f61077287b
+Building and pushing "zededa/dom0-ztools:8136078abdf52ea3bb3a489702b2d47d2a30aca6"
+8136078abdf52ea3bb3a489702b2d47d2a30aca6: Pulling from zededa/dom0-ztools
+Digest: sha256:c59e1042d5f259a9c21a3feed536f3894f92c5fc5ba075a28f8d094f87478275
+Status: Image is up to date for zededa/dom0-ztools:8136078abdf52ea3bb3a489702b2d47d2a30aca6
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:739d5c48e4479003f0dbfddd8b98a2028be513deb70af727752905263ac2d53d
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:157d51bbe858847ef6d82ae4719ced5976a9a7098336a4a6e49830d33f868ab3
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:addf826bbc6885c0a28cd8f018f69cadaca4674f"
+addf826bbc6885c0a28cd8f018f69cadaca4674f: Pulling from zededa/wwan
+Digest: sha256:4bbb9cfb02dee943d602a3c344f33c40b0d2c94ff035a0f58336c67b2a9a72bd
+Status: Image is up to date for zededa/wwan:addf826bbc6885c0a28cd8f018f69cadaca4674f
+Building and pushing "zededa/wlan:cfd366430df0620df11b2af7f3d9d63d617a5903"
+cfd366430df0620df11b2af7f3d9d63d617a5903: Pulling from zededa/wlan
+Digest: sha256:35c3b0eaef07370509074cbaf7ddcbd78e64115b22417faeb5bff386fb52481b
+Status: Image is up to date for zededa/wlan:cfd366430df0620df11b2af7f3d9d63d617a5903
+Building and pushing "zededa/watchdog:3e77cbcffbf4f71309bab82500039967bca0d189"
+3e77cbcffbf4f71309bab82500039967bca0d189: Pulling from zededa/watchdog
+Digest: sha256:b8e2bf72873ee5128a0146a25dfeb1d8548d753e9f35f8e760d6e8b33fca0d5c
+Status: Image is up to date for zededa/watchdog:3e77cbcffbf4f71309bab82500039967bca0d189
+Building and pushing "zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9"
+f5d8d01b7c3727b48838b53c3e91835bf58ddde9: Pulling from zededa/zedctr
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  15.36kB
+Step 1/17 : FROM zededa/ztools:latest as ztools
+ ---> bb4b320597e5
+Step 2/17 : FROM zededa/xen-tools:39c66bfb8fa3128310f9c5b3322fd64819d9e215-arm64 as xen-tools
+ ---> 7b0e846d9b20
+Step 3/17 : FROM zededa/dnsmasq:e2de7e6a478850d931724f951f877cd507d77358-arm64 as dnsmasq
+ ---> 1a0a9313ef5f
+Step 4/17 : FROM zededa/gpt-tools:f0be39997551891e81c6edc38acc20f61077287b-arm64 as gpttools
+ ---> bb17a51a6442
+Step 5/17 : FROM zededa/watchdog:3e77cbcffbf4f71309bab82500039967bca0d189-arm64 as watchdog
+ ---> 57e0cb5696a7
+Step 6/17 : FROM alpine:3.6
+ ---> a9277cb286bb
+Step 7/17 : RUN apk add --no-cache     yajl xz bash openssl iptables ip6tables     apk-cron coreutils dmidecode sudo libbz2 libuuid ipset     libpcap libaio logrotate pixman glib curl radvd perl ethtool     openssh-server util-linux e2fsprogs
+ ---> Using cache
+ ---> aab12357737f
+Step 8/17 : RUN ln -s libpcap.so.1 /usr/lib/libpcap.so
+ ---> Using cache
+ ---> 693e6627dc87
+Step 9/17 : RUN ssh-keygen -A ; echo PermitRootLogin yes >> /etc/ssh/sshd_config ; sed -ie '/^root/s#^.*$#root:$6$Ndt1G5AYZFQ8rz7m$7vGZMKKotSYxwxk/.jMfuOCzxw0I3DNedygaQaLF7kYSYsLqiBHhmc8RJSXp8/VxSYPpgYSz/8fkv0hO6I4js.:17477:0:::::#' /etc/shadow
+ ---> Using cache
+ ---> 9517a4f18bda
+Step 10/17 : COPY --from=xen-tools / /
+ ---> Using cache
+ ---> 1ed0df5bae6c
+Step 11/17 : COPY --from=ztools / /
+ ---> 728a786beca9
+Step 12/17 : COPY --from=gpttools / /
+ ---> 3c70d38092b0
+Step 13/17 : COPY --from=dnsmasq /usr/sbin/dnsmasq /opt/zededa/bin/dnsmasq
+ ---> fa6cffad5318
+Step 14/17 : COPY --from=watchdog /usr/sbin /usr/sbin
+ ---> 65215d5d512e
+Step 15/17 : COPY rootfs/ /
+ ---> 13e680ace6ec
+Step 16/17 : CMD /init.sh
+ ---> Running in 55040a468c46
+ ---> 42b1587f116f
+Removing intermediate container 55040a468c46
+Step 17/17 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/log:/var/log/dom0","/:/hostfs"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '901f9add67530be14e93c56700341dc7c7368dbf' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 03eaee3ed6e2
+ ---> 374b98cd02de
+Removing intermediate container 03eaee3ed6e2
+Successfully built 374b98cd02de
+Successfully tagged zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9-arm64
+Pushing zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9-arm64
+The push refers to a repository [docker.io/zededa/zedctr]
+da600d42b6c1: Preparing
+084ef0c0352b: Preparing
+9239fd457d46: Preparing
+3edd81ed8cbc: Preparing
+646ab219d883: Preparing
+85575dda8de4: Preparing
+6acf3da65f7a: Preparing
+f7c20d859743: Preparing
+260ff3d6f370: Preparing
+7678a2257549: Preparing
+199db0687ace: Preparing
+85575dda8de4: Waiting
+260ff3d6f370: Waiting
+6acf3da65f7a: Waiting
+f7c20d859743: Waiting
+7678a2257549: Waiting
+199db0687ace: Waiting
+3edd81ed8cbc: Layer already exists
+85575dda8de4: Layer already exists
+084ef0c0352b: Pushed
+da600d42b6c1: Pushed
+9239fd457d46: Pushed
+6acf3da65f7a: Pushed
+f7c20d859743: Pushed
+7678a2257549: Layer already exists
+199db0687ace: Layer already exists
+260ff3d6f370: Pushed
+646ab219d883: Pushed
+f5d8d01b7c3727b48838b53c3e91835bf58ddde9-arm64: digest: sha256:18e23ba15d1d1977391d2cc4775f5f8958d36b97530e5c1000f9cd501c71c63c size: 2625
+Pushing zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9-arm64 to manifest zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9
+Digest: sha256:4860a3e2678be6e63cdec019705daa07666f931bb69b275851383ae3aa26cc05 743
+Not signing zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f"
+f90db01a283c22ee7ff47f67195fc5673a2e952f: Pulling from zededa/test-conf
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  9.216kB
+Step 1/9 : FROM zededa/zedctr:f5d8d01b7c3727b48838b53c3e91835bf58ddde9-arm64 as zededa
+ ---> 374b98cd02de
+Step 2/9 : FROM linuxkit/alpine:77287352db68b442534c0005edd6ff750c8189f3
+ ---> 31391f83f284
+Step 3/9 : RUN apk add --no-cache   mtools   dosfstools
+ ---> Using cache
+ ---> 0ae7cd1f0290
+Step 4/9 : ADD make-config /
+ ---> 51e22f88ebbf
+Step 5/9 : COPY /conf /conf
+ ---> b63d5dd8cd0c
+Step 6/9 : COPY --from=zededa /opt/zededa/examples/config /conf/
+ ---> ff4e662877fc
+Step 7/9 : WORKDIR /
+ ---> bc92d11b52f6
+Removing intermediate container 311638394d8a
+Step 8/9 : ENTRYPOINT /make-config
+ ---> Running in 145f65027bd8
+ ---> ae3a106d2d70
+Removing intermediate container 145f65027bd8
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '901f9add67530be14e93c56700341dc7c7368dbf' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 96513423a59b
+ ---> 1330137a43c4
+Removing intermediate container 96513423a59b
+Successfully built 1330137a43c4
+Successfully tagged zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f-arm64
+Pushing zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f-arm64
+The push refers to a repository [docker.io/zededa/test-conf]
+7aacccdccc5e: Preparing
+e1bca197ae15: Preparing
+dd323cb7526c: Preparing
+c556f8613b4c: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+9b15bab0a8ca: Waiting
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+2394445224a8: Waiting
+47ca123a65b6: Waiting
+bebd4541248c: Waiting
+e159073689c5: Layer already exists
+2394445224a8: Layer already exists
+e1bca197ae15: Pushed
+dd323cb7526c: Pushed
+47ca123a65b6: Layer already exists
+7aacccdccc5e: Pushed
+c556f8613b4c: Pushed
+bebd4541248c: Layer already exists
+9b15bab0a8ca: Layer already exists
+db638689b318: Layer already exists
+4ade74f8ebf3: Layer already exists
+48730a5560d6: Layer already exists
+199db0687ace: Layer already exists
+81d522e63704: Layer already exists
+f90db01a283c22ee7ff47f67195fc5673a2e952f-arm64: digest: sha256:70d3eb62f18fdf6bff96ab49de5de2dc676e6cdc422c1b06069c983302c6c047 size: 3247
+Pushing zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f-arm64 to manifest zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f
+Digest: sha256:2359b38d7e7dda43b1ea104fc87284f62750cea7d348577df5f5e54f65558343 743
+Not signing zededa/test-conf:f90db01a283c22ee7ff47f67195fc5673a2e952f
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/mkrootfs-ext4:3ac05eda5dc3d0ea7298480b8363e93393effa35"
+3ac05eda5dc3d0ea7298480b8363e93393effa35: Pulling from zededa/mkrootfs-ext4
+Digest: sha256:dd6697e7a8e68892fa5def39fa0a9a0e91949b7d29d50208c51b680af7169b6e
+Status: Image is up to date for zededa/mkrootfs-ext4:3ac05eda5dc3d0ea7298480b8363e93393effa35
+Building and pushing "zededa/mkrootfs-squash:a036fd84fb2fd0bb3d1df9209522af8de0189a75"
+a036fd84fb2fd0bb3d1df9209522af8de0189a75: Pulling from zededa/mkrootfs-squash
+Digest: sha256:9e6abe4716641f2559dc7c94338f9ba2f5819b80057179736accfc9896499958
+Status: Image is up to date for zededa/mkrootfs-squash:a036fd84fb2fd0bb3d1df9209522af8de0189a75
+Building and pushing "zededa/mkflash:c9d56f7b811cfb17b5a4651beea2b4e10819b953"
+c9d56f7b811cfb17b5a4651beea2b4e10819b953: Pulling from zededa/mkflash
+Digest: sha256:ca21e686522e3b76f4297b9ae4971d83e8aa6322ba6075f14065377a757c2410
+Status: Image is up to date for zededa/mkflash:c9d56f7b811cfb17b5a4651beea2b4e10819b953
+Building and pushing "zededa/mkimage-iso-efi:11694010143cc163cb8fe07be51863dfef435970"
+11694010143cc163cb8fe07be51863dfef435970: Pulling from zededa/mkimage-iso-efi
+Digest: sha256:ffee2e235b9a32691907a00aa1a242c18fe174deab0d8dfe3941a18998cf1a73
+Status: Image is up to date for zededa/mkimage-iso-efi:11694010143cc163cb8fe07be51863dfef435970
+Building and pushing "zededa/mkimage-raw-efi:02ce01fe028811c42dff8597dc8427649aae0f4b"
+02ce01fe028811c42dff8597dc8427649aae0f4b: Pulling from zededa/mkimage-raw-efi
+Digest: sha256:8f546fa97aba84140a7d30db8ec9e9d988f81c482c56ff91f9837d04cdfb19c1
+Status: Image is up to date for zededa/mkimage-raw-efi:02ce01fe028811c42dff8597dc8427649aae0f4b
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:d8de31b2b439b28602ea727539340e235c411953de00fee6e51aec919a53e466
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:551ca905d3f137281edee985de9038b7d459b066d1e06fab87e016508b75a464
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
