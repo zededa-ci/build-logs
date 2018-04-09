@@ -1,0 +1,177 @@
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+[ -x /home/zededa-ci/src/zenbuild/build-tools/bin/dep ] || /usr/bin/go  get github.com/golang/dep/cmd/dep
+cd `dirname src/linuxkit/Gopkg.lock` ; /home/zededa-ci/src/zenbuild/build-tools/bin/dep ensure -v
+Gopkg.lock was already in sync with imports and Gopkg.toml
+(1/52) Wrote gopkg.in/yaml.v2@v2
+(2/52) Wrote github.com/golang/protobuf@v1.0.0
+(3/52) Wrote github.com/sirupsen/logrus@v1.0.4
+(4/52) Wrote github.com/go-ini/ini@v1.32.0
+(5/52) Wrote github.com/miekg/pkcs11@master
+(6/52) Wrote github.com/opencontainers/go-digest@v1.0.0-rc1
+(7/52) Wrote github.com/gorilla/context@v1.1
+(8/52) Wrote github.com/docker/go-connections@v0.3.0
+(9/52) Wrote github.com/mitchellh/go-ps@master
+(10/52) Wrote github.com/Azure/go-ansiterm@master
+(11/52) Wrote github.com/docker/go-units@v0.3.2
+(12/52) Wrote github.com/opencontainers/image-spec@v1.0.1
+(13/52) Wrote github.com/docker/go-p9p@master
+(14/52) Wrote github.com/google/uuid@0.2
+(15/52) Wrote github.com/gorilla/mux@v1.6.1
+(16/52) Wrote github.com/Microsoft/go-winio@v0.4.7
+(17/52) Wrote github.com/packethost/packngo@f1be085ecd6fca1b0a0e25eda71f208dcfcee5ab
+(18/52) Wrote github.com/pkg/errors@v0.8.0
+(19/52) Wrote github.com/moby/datakit@0.12.1
+(20/52) Wrote github.com/Azure/go-autorest@v10.1.2
+(21/52) Wrote github.com/opencontainers/runtime-spec@v1.0.1
+(22/52) Wrote github.com/rn/iso9660wrap@master
+(23/52) Wrote github.com/radu-matei/azure-vhd-utils@e52754d5569d2a643a7775f72ff2a6cf524f4c25
+(24/52) Wrote github.com/agl/ed25519@master
+(25/52) Wrote github.com/docker/go@v1.5.1-1
+(26/52) Wrote github.com/dgrijalva/jwt-go@v3.1.0
+(27/52) Wrote github.com/xeipuuv/gojsonpointer@master
+(28/52) Wrote github.com/jmespath/go-jmespath@0b12d6b5
+(29/52) Wrote github.com/moby/tool@master
+(30/52) Wrote github.com/xeipuuv/gojsonreference@master
+(31/52) Wrote github.com/surma/gocpio@1.1.0
+(32/52) Wrote github.com/gophercloud/gophercloud@master
+(33/52) Wrote github.com/xeipuuv/gojsonschema@master
+(34/52) Wrote github.com/gogo/protobuf@v1.0.0
+(35/52) Wrote github.com/moby/hyperkit@a285521725f44f3d10ca1042c2c07d3a6e24bed8
+(36/52) Wrote github.com/radu-matei/azure-sdk-for-go@3b12823551999669c9a325a32472508e0af7978e
+(37/52) Wrote golang.org/x/oauth2@master
+(38/52) Wrote cloud.google.com/go@v0.18.0
+(39/52) Wrote github.com/Azure/azure-sdk-for-go@26132835cbefa2669a306b777f34b929b56aa0a2
+(40/52) Wrote golang.org/x/sys@master
+(41/52) Wrote github.com/vmware/govmomi@v0.16.0
+(42/52) Wrote google.golang.org/appengine@v1.0.0
+(43/52) Wrote github.com/containerd/containerd@v1.0.2
+(44/52) Wrote github.com/docker/distribution@3800056b8832cf6075e78b282ac010131d8687bc
+(45/52) Wrote github.com/theupdateframework/notary@master
+(46/52) Wrote github.com/moby/vpnkit@v0.2.0
+(47/52) Wrote google.golang.org/api@master
+(48/52) Wrote github.com/aws/aws-sdk-go@v1.12.79
+(49/52) Wrote github.com/linuxkit/linuxkit@master
+(50/52) Wrote github.com/docker/docker@ba99c19b593bdb9e7b90793681fe89b0a91781ed
+(51/52) Wrote golang.org/x/crypto@master
+(52/52) Wrote golang.org/x/net@master
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+Building and pushing "zededa/ztools:b352f1a612a035f0faca2df279375eae8e69cc6b"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2018-04-09T12:30:10+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/kmod_pfring/Dockerfile.in > pkg/kmod_pfring/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/test-conf/Dockerfile.in > pkg/test-conf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkflash/Dockerfile.in > pkg/mkflash/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkimage-iso-efi/Dockerfile.in > pkg/mkimage-iso-efi/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkimage-raw-efi//Dockerfile.in > pkg/mkimage-raw-efi//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Building and pushing "zededa/grub:a83a89ea3b7f890696e759027bb10a0572248aef"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:16: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:15: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+[ -x /home/zededa-ci/src/zenbuild/build-tools/bin/dep ] || /usr/bin/go  get github.com/golang/dep/cmd/dep
+cd `dirname src/linuxkit/Gopkg.lock` ; /home/zededa-ci/src/zenbuild/build-tools/bin/dep ensure -v
+Gopkg.lock was already in sync with imports and Gopkg.toml
+(1/52) Wrote github.com/docker/go@v1.5.1-1
+(2/52) Wrote github.com/docker/go-p9p@master
+(3/52) Wrote github.com/go-ini/ini@v1.32.0
+(4/52) Wrote github.com/packethost/packngo@f1be085ecd6fca1b0a0e25eda71f208dcfcee5ab
+(5/52) Wrote github.com/dgrijalva/jwt-go@v3.1.0
+(6/52) Wrote github.com/radu-matei/azure-vhd-utils@e52754d5569d2a643a7775f72ff2a6cf524f4c25
+(7/52) Wrote github.com/docker/go-connections@v0.3.0
+(8/52) Wrote github.com/Azure/go-autorest@v10.1.2
+(9/52) Wrote github.com/docker/go-units@v0.3.2
+(10/52) Wrote github.com/google/uuid@0.2
+(11/52) Wrote github.com/radu-matei/azure-sdk-for-go@3b12823551999669c9a325a32472508e0af7978e
+(12/52) Wrote github.com/pkg/errors@v0.8.0
+(13/52) Wrote github.com/sirupsen/logrus@v1.0.4
+(14/52) Wrote gopkg.in/yaml.v2@v2
+(15/52) Wrote github.com/surma/gocpio@1.1.0
+(16/52) Wrote github.com/gorilla/context@v1.1
+(17/52) Wrote github.com/rn/iso9660wrap@master
+(18/52) Wrote github.com/golang/protobuf@v1.0.0
+(19/52) Wrote github.com/agl/ed25519@master
+(20/52) Wrote github.com/gorilla/mux@v1.6.1
+(21/52) Wrote github.com/Azure/go-ansiterm@master
+(22/52) Wrote github.com/Microsoft/go-winio@v0.4.7
+(23/52) Wrote golang.org/x/oauth2@master
+(24/52) Wrote github.com/xeipuuv/gojsonpointer@master
+(25/52) Wrote github.com/xeipuuv/gojsonreference@master
+(26/52) Wrote golang.org/x/crypto@master
+(27/52) Wrote github.com/xeipuuv/gojsonschema@master
+(28/52) Wrote google.golang.org/appengine@v1.0.0
+(29/52) Wrote golang.org/x/sys@master
+(30/52) Wrote github.com/opencontainers/go-digest@v1.0.0-rc1
+(31/52) Wrote golang.org/x/net@master
+(32/52) Wrote github.com/jmespath/go-jmespath@0b12d6b5
+(33/52) Wrote github.com/miekg/pkcs11@master
+(34/52) Wrote cloud.google.com/go@v0.18.0
+(35/52) Wrote github.com/gogo/protobuf@v1.0.0
+(36/52) Wrote github.com/opencontainers/image-spec@v1.0.1
+(37/52) Wrote github.com/gophercloud/gophercloud@master
+(38/52) Wrote github.com/Azure/azure-sdk-for-go@26132835cbefa2669a306b777f34b929b56aa0a2
+(39/52) Wrote github.com/vmware/govmomi@v0.16.0
+(40/52) Wrote github.com/docker/distribution@3800056b8832cf6075e78b282ac010131d8687bc
+(41/52) Wrote google.golang.org/api@master
+(42/52) Wrote github.com/mitchellh/go-ps@master
+(43/52) Wrote github.com/opencontainers/runtime-spec@v1.0.1
+(44/52) Wrote github.com/moby/datakit@0.12.1
+(45/52) Wrote github.com/containerd/containerd@v1.0.2
+(46/52) Wrote github.com/moby/tool@master
+(47/52) Wrote github.com/moby/hyperkit@a285521725f44f3d10ca1042c2c07d3a6e24bed8
+(48/52) Wrote github.com/theupdateframework/notary@master
+(49/52) Wrote github.com/moby/vpnkit@v0.2.0
+(50/52) Wrote github.com/aws/aws-sdk-go@v1.12.79
+(51/52) Wrote github.com/linuxkit/linuxkit@master
+(52/52) Wrote github.com/docker/docker@ba99c19b593bdb9e7b90793681fe89b0a91781ed
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:12: recipe for target 'build' failed
+make[1]: *** [build] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Makefile:32: recipe for target 'build-pkgs' failed
+make: *** [build-pkgs] Error 2
