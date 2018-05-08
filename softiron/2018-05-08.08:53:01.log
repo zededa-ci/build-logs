@@ -1,0 +1,73 @@
+Already up-to-date.
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+Already up-to-date.
+Building and pushing "zededa/ztools:df7aa73bcb5a5934f8ea5b7b67ca6dce62a85d0a"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/kmod_pfring/Dockerfile.in > pkg/kmod_pfring/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkflash/Dockerfile.in > pkg/mkflash/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkimage-iso-efi/Dockerfile.in > pkg/mkimage-iso-efi/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkimage-raw-efi//Dockerfile.in > pkg/mkimage-raw-efi//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Building and pushing "zededa/grub:8e9e055548f7b965cf6ffd7a0ac3ebab679a01e1"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:16: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:15: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+tee: /dev/tty: No such device or address
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+./parse-pkgs.sh images/installer.yml.in > images/installer.yml
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+./parse-pkgs.sh images/fallback.yml.in > images/fallback.yml
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+./makerootfs.sh images/fallback.yml squash rootfs_aarch64.img
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+Extract kernel image: zededa/kernel:2f3f0ca93049e132867b9f9a836848e6ecc03f4b-arm64
+time="2018-05-08T08:53:13+02:00" level=fatal msg="Failed to extract kernel image and tarball: Failed to create docker image zededa/kernel:2f3f0ca93049e132867b9f9a836848e6ecc03f4b-arm64: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"
+Makefile:114: recipe for target 'rootfs_aarch64.img' failed
+make: *** [rootfs_aarch64.img] Error 125
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
