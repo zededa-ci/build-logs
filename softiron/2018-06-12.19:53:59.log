@@ -1,0 +1,166 @@
+From https://github.com/zededa/zenbuild
+   e7d4777..f876bc0  master       -> origin/master
+   e968fa9..abf3d3e  fixes        -> origin/fixes
+ * [new branch]      fixes-michel -> origin/fixes-michel
+ * [new branch]      fixes-readme -> origin/fixes-readme
+ * [new branch]      ipsec        -> origin/ipsec
+Updating e7d4777..f876bc0
+Fast-forward
+ README.md                                          |  39 ++++---
+ build-tools/src/linuxkit/Gopkg.lock                |  17 ++-
+ build-tools/src/linuxkit/Gopkg.toml                |  17 ++-
+ .../linuxkit/linuxkit/src/cmd/linuxkit/main.go     |  23 ++++
+ .../linuxkit/src/cmd/linuxkit/pkglib/build.go      |   2 +-
+ .../linuxkit/src/cmd/linuxkit/run_hyperkit.go      | 129 ++++++++++++---------
+ .../linuxkit/linuxkit/src/cmd/linuxkit/run_qemu.go |  47 ++++++--
+ .../vendor/github.com/moby/hyperkit/go/disk.go     |  30 ++---
+ .../vendor/github.com/moby/hyperkit/go/hyperkit.go | 116 +++++++++---------
+ .../moby/hyperkit/go/pty_util_fallback.go          |   6 +-
+ .../github.com/moby/tool/src/initrd/initrd.go      |  13 ++-
+ .../vendor/github.com/moby/tool/src/moby/config.go |   3 +-
+ .../vendor/github.com/moby/tool/src/moby/docker.go |   8 +-
+ .../vendor/github.com/moby/tool/src/moby/output.go | 127 +++++++++++++++++---
+ .../{LICENSE.lwt.3.2.0 => LICENSE.lwt.3.1.0}       |   0
+ .../repo/win32/packages/dev/dns-forward.0.10.0     |   1 +
+ .../vpnkit/repo/win32/packages/dev/hvsock.1.0.1    |   1 +
+ .../repo/win32/packages/dev/protocol-9p.0.11.3     |   1 +
+ getimgversion.sh                                   |  13 +++
+ parse-pkgs.sh                                      |   2 +
+ pkg/Makefile                                       |   2 +-
+ pkg/strongswan/Dockerfile                          |  74 ++++++++++++
+ pkg/strongswan/build.yml                           |   3 +
+ pkg/zedctr/Dockerfile.in                           |   2 +
+ pkg/zedctr/trigger                                 |   1 +
+ 25 files changed, 481 insertions(+), 196 deletions(-)
+ rename build-tools/src/linuxkit/vendor/github.com/moby/vpnkit/repo/licenses/{LICENSE.lwt.3.2.0 => LICENSE.lwt.3.1.0} (100%)
+ create mode 120000 build-tools/src/linuxkit/vendor/github.com/moby/vpnkit/repo/win32/packages/dev/dns-forward.0.10.0
+ create mode 120000 build-tools/src/linuxkit/vendor/github.com/moby/vpnkit/repo/win32/packages/dev/hvsock.1.0.1
+ create mode 120000 build-tools/src/linuxkit/vendor/github.com/moby/vpnkit/repo/win32/packages/dev/protocol-9p.0.11.3
+ create mode 100755 getimgversion.sh
+ create mode 100644 pkg/strongswan/Dockerfile
+ create mode 100644 pkg/strongswan/build.yml
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=f876bc024b631c4accb8daf6c1328f181f7524c2" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+From github.com:zededa/go-provision
+   78dd290..4fc6ce5  master               -> origin/master
+   cd5750a..914b335  fixes                -> origin/fixes
+   1d66569..112d90d  img-log              -> origin/img-log
+ * [new branch]      logs                 -> origin/logs
+   3ab1810..763589b  nordmark-pubsub-prep -> origin/nordmark-pubsub-prep
+   c255fc8..2a15217  simplify             -> origin/simplify
+Updating 78dd290..4fc6ce5
+Fast-forward
+ Dockerfile                        |  2 +-
+ cmd/domainmgr/domainmgr.go        |  2 ++
+ cmd/zedagent/handlelookupparam.go | 68 +++++++++++++++++++++++++++------------
+ cmd/zedagent/handlemetrics.go     |  2 +-
+ cmd/zedrouter/acl.go              |  3 ++
+ cmd/zedrouter/lisp.go             |  8 ++---
+ cmd/zedrouter/zedrouter.go        |  2 +-
+ pubsub/pubsub.go                  | 43 +++++++++----------------
+ types/zedroutertypes.go           |  8 +++--
+ watch/watchconfigstatus.go        |  3 +-
+ 10 files changed, 83 insertions(+), 58 deletions(-)
+From github.com:zededa/lisp
+   1b2eade..1f943cf  master     -> origin/master
+   ca4132e..78d4ccf  xtrQ       -> origin/xtrQ
+Updating 1b2eade..1f943cf
+Fast-forward
+ Dockerfile        | 2 +-
+ conf/RL.ztr1      | 2 +-
+ conf/RL.ztr2      | 2 +-
+ conf/RL.ztr3      | 2 +-
+ conf/RL.ztr4      | 2 +-
+ scripts/STOP-LISP | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+Building and pushing "zededa/lisp:9af280df18acc111572e4912dc1150a01c4e3f2c"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2018-06-12T19:55:16+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Building and pushing "zededa/lisp:latest"
+time="2018-06-12T19:55:16+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Building and pushing "zededa/ztools:5d79f9901273d1a86a6914195c6652e0aa63047c"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2018-06-12T19:55:16+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+Building and pushing "zededa/ztools:latest"
+time="2018-06-12T19:55:16+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Building and pushing "zededa/grub:35eb3c470422d1bced11f3457ea8ff432d9f0590"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2018-06-12T19:55:20+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:17: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build
+Building and pushing "zededa/zedctr:5e26a3010a421087197f1c9588791dac02fa1ba4"
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+time="2018-06-12T19:55:21+02:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+exit status 1
+Makefile:17: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:15: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+cd bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+"docker export" requires exactly 1 argument.
+See 'docker export --help'.
+
+Usage:  docker export [OPTIONS] CONTAINER
+
+Export a container's filesystem as a tar archive
+tar: This does not look like a tar archive
+tar: OVMF.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Makefile:99: recipe for target 'bios/OVMF.fd' failed
+make: *** [bios/OVMF.fd] Error 1
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:latest"
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:18: recipe for target 'forcepush' failed
+make: *** [forcepush] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
