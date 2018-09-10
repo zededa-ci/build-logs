@@ -1,0 +1,708 @@
+Already up-to-date.
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+Already up-to-date.
+Already up-to-date.
+Building and pushing "zededa/lisp:7f4dd52e9f814bfbec7bd48f36a58d8ec12e8dff"
+7f4dd52e9f814bfbec7bd48f36a58d8ec12e8dff: Pulling from zededa/lisp
+Digest: sha256:2867c9c151aef6452959dd942ba5321de28d9c8a3fa00af933edb5ad355ce24e
+Status: Image is up to date for zededa/lisp:7f4dd52e9f814bfbec7bd48f36a58d8ec12e8dff
+Building and pushing "zededa/lisp:latest"
+Sending build context to Docker daemon   10.7MB
+Step 1/20 : FROM golang:1.9.1-alpine AS go-build
+ ---> cc52d0ad4cce
+Step 2/20 : RUN apk update
+ ---> Using cache
+ ---> 06dc54679d07
+Step 3/20 : RUN apk add --no-cache git gcc linux-headers libc-dev libpcap-dev
+ ---> Using cache
+ ---> e0b117c95ac3
+Step 4/20 : ADD . /go/src/github.com/zededa/lisp
+ ---> Using cache
+ ---> 4d74b0a1964d
+Step 5/20 : RUN go install github.com/zededa/lisp/cmd/...
+ ---> Using cache
+ ---> ee01c69b7ff6
+Step 6/20 : FROM alpine:3.8
+ ---> def91cb894ef
+Step 7/20 : RUN apk add --no-cache curl gcc linux-headers libc-dev python python-dev libffi-dev openssl-dev libpcap-dev iproute2 tcpdump ethtool ip6tables
+ ---> Using cache
+ ---> 82953511567d
+Step 8/20 : RUN mkdir /lisp
+ ---> Using cache
+ ---> 837e0c33946a
+Step 9/20 : ARG LISP_URL=https://www.dropbox.com/s/ogfu5gaw550rlkq/zededa.tgz
+ ---> Using cache
+ ---> 069a7ed78b4c
+Step 10/20 : RUN cd /lisp ; curl --insecure -L $LISP_URL | gzip -dc | tar -xf -
+ ---> Using cache
+ ---> 25962e7ed21d
+Step 11/20 : ADD scripts/sudo /usr/bin/sudo
+ ---> Using cache
+ ---> be5a30abc303
+Step 12/20 : ADD conf scripts/RESTART-LISP scripts/RUN-LISP.rtr1 scripts/RUN-LISP scripts/STOP-LISP scripts/CONFIG-SVC scripts/RL scripts/pslisp scripts/log-packets scripts/ping-mesh.py /lisp/
+ ---> Using cache
+ ---> 12c71f67e2c8
+Step 13/20 : RUN python /lisp/get-pip.py
+ ---> Using cache
+ ---> ca52c0c114b1
+Step 14/20 : RUN pip install -r /lisp/pip-requirements.txt
+ ---> Using cache
+ ---> 4a81fd6481ad
+Step 15/20 : RUN echo 'PS1="`hostname | cut -d . -f 0` > "' >> /root/.profile
+ ---> Using cache
+ ---> 10a59d016033
+Step 16/20 : COPY --from=go-build /go/bin/dataplane /lisp/lisp-ztr
+ ---> Using cache
+ ---> c70616cdb752
+Step 17/20 : EXPOSE 8080
+ ---> Using cache
+ ---> 8b733a419e0d
+Step 18/20 : WORKDIR /lisp
+ ---> Using cache
+ ---> 4a046b8328fe
+Step 19/20 : CMD ./CONFIG-SVC ; ./RL ; sleep 5 ; tail -f ./logs/*
+ ---> Using cache
+ ---> 1ae91df6c9cf
+Step 20/20 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '785ebabcac0b792532b7155b00b78ea98867c176' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Using cache
+ ---> cb9b86e38b5d
+Successfully built cb9b86e38b5d
+Successfully tagged zededa/lisp:latest-arm64
+Pushing zededa/lisp:latest-arm64
+The push refers to a repository [docker.io/zededa/lisp]
+c0ed9dceb03e: Preparing
+2460ce561105: Preparing
+56d8e29e1251: Preparing
+1c3b5db37693: Preparing
+cea9b2e7dbd4: Preparing
+19029139889c: Preparing
+2944e231c712: Preparing
+10ed7430ba4b: Preparing
+c47b13687581: Preparing
+b43ad2345ba5: Preparing
+cd0a9a09f5aa: Preparing
+10ed7430ba4b: Waiting
+c47b13687581: Waiting
+b43ad2345ba5: Waiting
+cd0a9a09f5aa: Waiting
+19029139889c: Waiting
+2944e231c712: Waiting
+2460ce561105: Layer already exists
+56d8e29e1251: Layer already exists
+cea9b2e7dbd4: Layer already exists
+1c3b5db37693: Layer already exists
+c0ed9dceb03e: Layer already exists
+b43ad2345ba5: Layer already exists
+2944e231c712: Layer already exists
+19029139889c: Layer already exists
+10ed7430ba4b: Layer already exists
+c47b13687581: Layer already exists
+cd0a9a09f5aa: Layer already exists
+latest-arm64: digest: sha256:31b97cadf28d8093a4aac841859a53ad23873b142ad4485852dcd98a8f96481f size: 2621
+Pushing zededa/lisp:latest-arm64 to manifest zededa/lisp:latest
+time="2018-09-10T08:00:21+02:00" level=warning msg="Couldn't find or access image reference \"zededa/lisp:latest-s390x\". Skipping image."
+Digest: sha256:9f1d7c4c32933ba2c2d743b812dc9ddcd0823af2e00cb5904890792785713ea0 743
+Not signing zededa/lisp:latest
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/ztools:13804bcabc27739b13a9417be37a866e8cb10751"
+13804bcabc27739b13a9417be37a866e8cb10751: Pulling from zededa/ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  31.02MB
+Step 1/33 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/33 : RUN apk update
+ ---> Using cache
+ ---> 06dc54679d07
+Step 3/33 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> bcd126094d65
+Step 4/33 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> 573d70ce566a
+Step 5/33 : ADD etc /config
+ ---> 1db0bd1b123d
+Step 6/33 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> d0f92c338eb2
+Step 7/33 : ADD examples /opt/zededa/examples
+ ---> d702bd55b4e0
+Step 8/33 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> abd282fe5a3b
+Step 9/33 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> fdc379216fc2
+Step 10/33 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> 42a0fe1524c1
+Step 11/33 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Running in 3dbb69deed1f
+ ---> 3f2bdcef1e00
+Removing intermediate container 3dbb69deed1f
+Step 12/33 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Running in 4755d6666f25
+ ---> d0cd21aba158
+Removing intermediate container 4755d6666f25
+Step 13/33 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Running in b2a76e500487
+Building: 20180314-test-0d788a98-2018-09-10.06.00
+ ---> 362d513e6b41
+Removing intermediate container b2a76e500487
+Step 14/33 : RUN go install github.com/zededa/go-provision/zedbox/...
+ ---> Running in 0ec9f6f80c93
+ ---> 8a406fbec408
+Removing intermediate container 0ec9f6f80c93
+Step 15/33 : RUN cd /opt/zededa/bin ; ln -s /go/bin/* .
+ ---> Running in f9c6057d1624
+ ---> a6fba2d95e57
+Removing intermediate container f9c6057d1624
+Step 16/33 : RUN cd /opt/zededa/bin ; ln -s zedbox client; ln -s zedbox domainmgr; ln -s zedbox downloader; ln -s zedbox hardwaremodel; ln -s zedbox identitymgr; ln -s zedbox ledmanager; ln -s zedbox logmanager; ln -s zedbox verifier; ln -s zedbox zedagent; ln -s zedbox zedmanager; ln -s zedbox zedrouter; ln -s zedbox ipcmonitor
+ ---> Running in f19542f3bfb1
+ ---> ca6ff3f1574a
+Removing intermediate container f19542f3bfb1
+Step 17/33 : FROM zededa/lisp:latest AS lisp
+ ---> 8c611457d2fd
+Step 18/33 : FROM scratch
+ ---> 
+Step 19/33 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> 53ec20c420ba
+Step 20/33 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> aadf6a44f2d6
+Step 21/33 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> d7f11a1dc836
+Step 22/33 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> d4b9d0aaa328
+Step 23/33 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> e4cb6ebf2d3a
+Step 24/33 : COPY --from=build /config /opt/zededa/examples/config
+ ---> 208b8925a962
+Step 25/33 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> 34ed5e4c2f03
+Step 26/33 : COPY --from=lisp /lisp/lisp-ztr /opt/zededa/bin/
+COPY failed: stat /var/lib/docker/btrfs/subvolumes/88c57bae26d7b920d495a73acd1c4ad7734b9c936116f285a77c0411c468c07c/lisp/lisp-ztr: no such file or directory
+exit status 1
+Building and pushing "zededa/ztools:latest"
+Sending build context to Docker daemon  31.02MB
+Step 1/33 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/33 : RUN apk update
+ ---> Using cache
+ ---> 06dc54679d07
+Step 3/33 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> bcd126094d65
+Step 4/33 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> Using cache
+ ---> 573d70ce566a
+Step 5/33 : ADD etc /config
+ ---> Using cache
+ ---> 1db0bd1b123d
+Step 6/33 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> Using cache
+ ---> d0f92c338eb2
+Step 7/33 : ADD examples /opt/zededa/examples
+ ---> Using cache
+ ---> d702bd55b4e0
+Step 8/33 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> abd282fe5a3b
+Step 9/33 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> fdc379216fc2
+Step 10/33 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> 42a0fe1524c1
+Step 11/33 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Using cache
+ ---> 3f2bdcef1e00
+Step 12/33 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Using cache
+ ---> d0cd21aba158
+Step 13/33 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Using cache
+ ---> 362d513e6b41
+Step 14/33 : RUN go install github.com/zededa/go-provision/zedbox/...
+ ---> Using cache
+ ---> 8a406fbec408
+Step 15/33 : RUN cd /opt/zededa/bin ; ln -s /go/bin/* .
+ ---> Using cache
+ ---> a6fba2d95e57
+Step 16/33 : RUN cd /opt/zededa/bin ; ln -s zedbox client; ln -s zedbox domainmgr; ln -s zedbox downloader; ln -s zedbox hardwaremodel; ln -s zedbox identitymgr; ln -s zedbox ledmanager; ln -s zedbox logmanager; ln -s zedbox verifier; ln -s zedbox zedagent; ln -s zedbox zedmanager; ln -s zedbox zedrouter; ln -s zedbox ipcmonitor
+ ---> Using cache
+ ---> ca6ff3f1574a
+Step 17/33 : FROM zededa/lisp:latest AS lisp
+ ---> 8c611457d2fd
+Step 18/33 : FROM scratch
+ ---> 
+Step 19/33 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> Using cache
+ ---> 53ec20c420ba
+Step 20/33 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> Using cache
+ ---> aadf6a44f2d6
+Step 21/33 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> d7f11a1dc836
+Step 22/33 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> d4b9d0aaa328
+Step 23/33 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> e4cb6ebf2d3a
+Step 24/33 : COPY --from=build /config /opt/zededa/examples/config
+ ---> Using cache
+ ---> 208b8925a962
+Step 25/33 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> Using cache
+ ---> 34ed5e4c2f03
+Step 26/33 : COPY --from=lisp /lisp/lisp-ztr /opt/zededa/bin/
+COPY failed: stat /var/lib/docker/btrfs/subvolumes/590b3cf1a211d37ded12240dbb700e20a66b4bf1202a956c7befefacf9bffdd2/lisp/lisp-ztr: no such file or directory
+exit status 1
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+Building and pushing "zededa/grub:35eb3c470422d1bced11f3457ea8ff432d9f0590"
+35eb3c470422d1bced11f3457ea8ff432d9f0590: Pulling from zededa/grub
+Digest: sha256:fdf260a20b95f4cfdd099d97a66665cbcf562995a3175f86ffa0cb175e17306d
+Status: Image is up to date for zededa/grub:35eb3c470422d1bced11f3457ea8ff432d9f0590
+Building and pushing "zededa/xen:be954dc9ba840dcff92c7edc1823e7e19d12a8ed"
+be954dc9ba840dcff92c7edc1823e7e19d12a8ed: Pulling from zededa/xen
+Digest: sha256:da46da41f4f12e8dc72fe868f6489b83012781895d7ea827124c82e45ecc4732
+Status: Image is up to date for zededa/xen:be954dc9ba840dcff92c7edc1823e7e19d12a8ed
+Building and pushing "zededa/kernel:e2919188af3f6da07e8bc651ecc45b5b3f0f523c"
+e2919188af3f6da07e8bc651ecc45b5b3f0f523c: Pulling from zededa/kernel
+Digest: sha256:03ba7d6f93d29ffe87b52dc13833d6551365f3426837e8ee1872d4a99c2749a1
+Status: Image is up to date for zededa/kernel:e2919188af3f6da07e8bc651ecc45b5b3f0f523c
+Building and pushing "zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2"
+9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2: Pulling from zededa/xen-tools
+Digest: sha256:cf5aa6d9efc4d5bd5876d9bf00d2bb1cfb8a7ebf51d0280c69ec3f70ab06d8b8
+Status: Image is up to date for zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2
+Building and pushing "zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b"
+c5985cdd83998d06255fe115d230a280c6928f1b: Pulling from zededa/dnsmasq
+Digest: sha256:bf728523c5331299ea495a9f1f9ed477a581ad994a7522a7a7934017137a431f
+Status: Image is up to date for zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b
+Building and pushing "zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec"
+8f5ee3b98aa3ea49a9a4231baac9be933d6155ec: Pulling from zededa/strongswan
+Digest: sha256:185d8b1bb5cbd8e49b2c8839a73aa3d101686b536a53a29caeac0396f744a59c
+Status: Image is up to date for zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec
+Building and pushing "zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4"
+fe878611e4e032ea10946cbc9a1c3d5b22349dc4: Pulling from zededa/gpt-tools
+Digest: sha256:c134e091037da8f368e6008b5ed2474dd00e0bfdf60b9eeeb5f3e36b6f093974
+Status: Image is up to date for zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4
+Building and pushing "zededa/dom0-ztools:c6d8f2123c748379add5d3dbbac23e3630131760"
+c6d8f2123c748379add5d3dbbac23e3630131760: Pulling from zededa/dom0-ztools
+Digest: sha256:d0f6b7191469b78e35a9b14f5dcc0f81a3f6717475deb67b505bf4e07e76a27c
+Status: Image is up to date for zededa/dom0-ztools:c6d8f2123c748379add5d3dbbac23e3630131760
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:32f61d2e41a4f5fffb86def714e73d8f8a5296eba1248a9030b61c3d13f9665c
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:e9b7837928b109d39dfe548be2020a0b465c73f7daf742f233df14fc0d41392d
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d"
+5f68442251df0f2625fde14e947f11de2374b72d: Pulling from zededa/wwan
+Digest: sha256:abbe84b89ab6976eac217c465f22cf331f9656471eb763f4ae1f76c389ff6d72
+Status: Image is up to date for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d
+Building and pushing "zededa/wlan:cfd366430df0620df11b2af7f3d9d63d617a5903"
+cfd366430df0620df11b2af7f3d9d63d617a5903: Pulling from zededa/wlan
+Digest: sha256:f20d323b3e38beace2ec05a368bddfbad504867197ef50ded32bcf0dbfc369e1
+Status: Image is up to date for zededa/wlan:cfd366430df0620df11b2af7f3d9d63d617a5903
+Building and pushing "zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173"
+2aea3af274e4928d2eab2b738d0e100ee5362173: Pulling from zededa/watchdog
+Digest: sha256:239f31dd76a4765ba9a526da4d4cd3d03a481029eb655b9b938f47b4f0291391
+Status: Image is up to date for zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173
+Building and pushing "zededa/device-trees:1bca882c64827de08bba9aa7713441b2b4d7ca8d"
+1bca882c64827de08bba9aa7713441b2b4d7ca8d: Pulling from zededa/device-trees
+Digest: sha256:5f8e6aa2e16a8363bbf5cf15868dbf5ef8725684a7682753530ed3059956c213
+Status: Image is up to date for zededa/device-trees:1bca882c64827de08bba9aa7713441b2b4d7ca8d
+Building and pushing "zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f"
+12895f6e4cd20e693dd62112641064720b8e635f: Pulling from zededa/zedctr
+Digest: sha256:8e5d49c1728e0af29256853f2653fc793ee9c0dcdf2bba606d829a783693587a
+Status: Downloaded newer image for zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f
+Building and pushing "zededa/conf:4992a3a63c95b0e446c681a0deaca7a071aba709"
+4992a3a63c95b0e446c681a0deaca7a071aba709: Pulling from zededa/conf
+Digest: sha256:d0233e6db0ed0b03c6dc5e76f4c557b70d36090bb8332ac91d913ec2193fab4f
+Status: Image is up to date for zededa/conf:4992a3a63c95b0e446c681a0deaca7a071aba709
+Building and pushing "zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80"
+5f77cd6a2b87a3a9927593763da1941dbed1ce80: Pulling from zededa/mkrootfs-ext4
+Digest: sha256:bab614e18cfd1f4b85902cd93aa975bb5cf53b6c54f115dd3e24f387b0638701
+Status: Image is up to date for zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80
+Building and pushing "zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212"
+b47d705603f5f0d3765b03cf583e1a7fd287f212: Pulling from zededa/mkrootfs-squash
+Digest: sha256:45b15f740f986bde436073101bf80a44a09ba5a93c68b2020f612131d52209bf
+Status: Image is up to date for zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212
+Building and pushing "zededa/mkflash:d4131c74a9e283a1e4ee5f3aa80b47b538378411"
+d4131c74a9e283a1e4ee5f3aa80b47b538378411: Pulling from zededa/mkflash
+Digest: sha256:5701a9748ba72f18a913caa9f956daf4684b26042930f4be16413c1f7c68c005
+Status: Image is up to date for zededa/mkflash:d4131c74a9e283a1e4ee5f3aa80b47b538378411
+Building and pushing "zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9"
+49a6ff8320ce088460c8acb6f36bc15b15d800e9: Pulling from zededa/mkimage-iso-efi
+Digest: sha256:e32540118e5652ca5869696b1547ce335b37ad29948d6733add55a3edefb51f2
+Status: Image is up to date for zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+Building and pushing "zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f"
+Sending build context to Docker daemon  19.97kB
+Step 1/20 : FROM zededa/ztools:latest as ztools
+ ---> 6341cd92336a
+Step 2/20 : FROM zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2-arm64 as xen-tools
+ ---> 194a0d29c96f
+Step 3/20 : FROM zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b-arm64 as dnsmasq
+ ---> 85ce87902c8e
+Step 4/20 : FROM zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec-arm64 as strongswan
+ ---> 2e11606a1b07
+Step 5/20 : FROM zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4-arm64 as gpttools
+ ---> 245b06fc67fd
+Step 6/20 : FROM zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173-arm64 as watchdog
+ ---> 2682e16114b6
+Step 7/20 : FROM alpine:3.8
+ ---> def91cb894ef
+Step 8/20 : RUN apk add --no-cache     yajl xz bash openssl iptables ip6tables iproute2 dhcpcd     apk-cron coreutils dmidecode sudo libbz2 libuuid ipset     libpcap libaio logrotate pixman glib curl radvd perl ethtool     openssh-server util-linux e2fsprogs libcrypto1.0
+ ---> Running in d6b3d4f4cbac
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/57) Installing apk-cron (1.0-r1)
+(2/57) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(3/57) Installing ncurses-terminfo (6.1_p20180818-r1)
+(4/57) Installing ncurses-libs (6.1_p20180818-r1)
+(5/57) Installing readline (7.0.003-r0)
+(6/57) Installing bash (4.4.19-r1)
+Executing bash-4.4.19-r1.post-install
+(7/57) Installing libattr (2.4.47-r7)
+(8/57) Installing libacl (2.2.52-r5)
+(9/57) Installing coreutils (8.29-r2)
+(10/57) Installing ca-certificates (20171114-r3)
+(11/57) Installing nghttp2-libs (1.32.0-r0)
+(12/57) Installing libssh2 (1.8.0-r3)
+(13/57) Installing libcurl (7.61.0-r0)
+(14/57) Installing curl (7.61.0-r0)
+(15/57) Installing dhcpcd (7.0.7-r0)
+(16/57) Installing dmidecode (3.1-r0)
+(17/57) Installing libuuid (2.32-r0)
+(18/57) Installing libblkid (2.32-r0)
+(19/57) Installing libcom_err (1.44.2-r0)
+(20/57) Installing e2fsprogs-libs (1.44.2-r0)
+(21/57) Installing e2fsprogs (1.44.2-r0)
+(22/57) Installing ethtool (4.16-r0)
+(23/57) Installing libffi (3.2.1-r4)
+(24/57) Installing libintl (0.19.8.1-r2)
+(25/57) Installing libmount (2.32-r0)
+(26/57) Installing pcre (8.42-r0)
+(27/57) Installing glib (2.56.1-r0)
+(28/57) Installing libmnl (1.0.4-r0)
+(29/57) Installing jansson (2.11-r0)
+(30/57) Installing libnftnl-libs (1.1.1-r0)
+(31/57) Installing iptables (1.6.2-r0)
+(32/57) Installing ip6tables (1.6.2-r0)
+(33/57) Installing libelf (0.8.13-r3)
+(34/57) Installing iproute2 (4.13.0-r0)
+Executing iproute2-4.13.0-r0.post-install
+(35/57) Installing ipset (6.38-r0)
+(36/57) Installing libaio (0.3.111-r0)
+(37/57) Installing libbz2 (1.0.6-r6)
+(38/57) Installing libcrypto1.0 (1.0.2o-r2)
+(39/57) Installing libpcap (1.8.1-r1)
+(40/57) Installing popt (1.16-r7)
+(41/57) Installing logrotate (3.14.0-r0)
+(42/57) Installing openssh-keygen (7.7_p1-r3)
+(43/57) Installing openssh-server-common (7.7_p1-r3)
+(44/57) Installing openssh-server (7.7_p1-r3)
+(45/57) Installing libssl1.0 (1.0.2o-r2)
+(46/57) Installing openssl (1.0.2o-r2)
+(47/57) Installing perl (5.26.2-r1)
+(48/57) Installing pixman (0.34.0-r5)
+(49/57) Installing radvd (2.17-r2)
+Executing radvd-2.17-r2.pre-install
+(50/57) Installing sudo (1.8.23-r2)
+(51/57) Installing libsmartcols (2.32-r0)
+(52/57) Installing findmnt (2.32-r0)
+(53/57) Installing libfdisk (2.32-r0)
+(54/57) Installing util-linux (2.32-r0)
+(55/57) Installing xz-libs (5.2.4-r0)
+(56/57) Installing xz (5.2.4-r0)
+(57/57) Installing yajl (2.1.0-r0)
+Executing busybox-1.28.4-r0.trigger
+Executing ca-certificates-20171114-r3.trigger
+Executing glib-2.56.1-r0.trigger
+OK: 70 MiB in 70 packages
+ ---> deea2fbb416a
+Removing intermediate container d6b3d4f4cbac
+Step 9/20 : RUN [ `uname -m` = "aarch64" ] && apk add --no-cache libfdt || :
+ ---> Running in 94fee860092e
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/1) Installing libfdt (1.4.4-r0)
+OK: 70 MiB in 71 packages
+ ---> 46f15bfe408a
+Removing intermediate container 94fee860092e
+Step 10/20 : RUN ln -s libpcap.so.1 /usr/lib/libpcap.so
+ ---> Running in 310ecfe449e0
+ ---> 41563e9c914e
+Removing intermediate container 310ecfe449e0
+Step 11/20 : RUN ssh-keygen -A ; echo PermitRootLogin yes >> /etc/ssh/sshd_config ; sed -ie '/^root/s#^.*$#root:$6$Ndt1G5AYZFQ8rz7m$7vGZMKKotSYxwxk/.jMfuOCzxw0I3DNedygaQaLF7kYSYsLqiBHhmc8RJSXp8/VxSYPpgYSz/8fkv0hO6I4js.:17477:0:::::#' /etc/shadow
+ ---> Running in 2463ad6deda1
+ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519 
+ ---> f576b71eae68
+Removing intermediate container 2463ad6deda1
+Step 12/20 : COPY --from=xen-tools / /
+ ---> e80166199430
+Step 13/20 : COPY --from=ztools / /
+ ---> 852cee6551bd
+Step 14/20 : COPY --from=gpttools / /
+ ---> 2b04f733dee6
+Step 15/20 : COPY --from=dnsmasq /usr/sbin/dnsmasq /opt/zededa/bin/dnsmasq
+ ---> 3341f0c9a383
+Step 16/20 : COPY --from=strongswan / /
+ ---> 1eb4ff20e864
+Step 17/20 : COPY --from=watchdog /usr/sbin /usr/sbin
+ ---> 3f005b12da07
+Step 18/20 : COPY rootfs/ /
+ ---> 8ca5f89106da
+Step 19/20 : CMD /init.sh
+ ---> Running in 76b56f39422e
+ ---> 00cb349c9597
+Removing intermediate container 76b56f39422e
+Step 20/20 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/log:/var/log/dom0","/:/hostfs"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '055ce01634c28f06f630b1796d2442018aa41532' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in d590f1951405
+ ---> 6a3f2546ee73
+Removing intermediate container d590f1951405
+Successfully built 6a3f2546ee73
+Successfully tagged zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-arm64
+Pushing zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-arm64
+The push refers to a repository [docker.io/zededa/zedctr]
+428d50786cc3: Preparing
+c9de2000010b: Preparing
+c2c99f72275e: Preparing
+6626b6b03647: Preparing
+543b981cbc5d: Preparing
+981b7b269978: Preparing
+400d5a602195: Preparing
+bda8d26bf212: Preparing
+c4210cecf62e: Preparing
+95761fc011cf: Preparing
+3866c9efa671: Preparing
+b43ad2345ba5: Preparing
+cd0a9a09f5aa: Preparing
+400d5a602195: Waiting
+bda8d26bf212: Waiting
+c4210cecf62e: Waiting
+95761fc011cf: Waiting
+3866c9efa671: Waiting
+b43ad2345ba5: Waiting
+cd0a9a09f5aa: Waiting
+981b7b269978: Waiting
+428d50786cc3: Layer already exists
+543b981cbc5d: Layer already exists
+c2c99f72275e: Layer already exists
+981b7b269978: Layer already exists
+400d5a602195: Layer already exists
+c9de2000010b: Pushed
+bda8d26bf212: Pushed
+c4210cecf62e: Pushed
+6626b6b03647: Pushed
+b43ad2345ba5: Layer already exists
+cd0a9a09f5aa: Layer already exists
+95761fc011cf: Pushed
+3866c9efa671: Pushed
+12895f6e4cd20e693dd62112641064720b8e635f-arm64: digest: sha256:95fc976fc11b9c652c0edbfd43128bf409ec32f9f0a8a7fe5434e2070eb0d2b2 size: 3047
+Pushing zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-arm64 to manifest zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f
+time="2018-09-10T08:04:45+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-s390x\". Skipping image."
+Digest: sha256:f4ffa145ae25ae52cd12f27a429cda2eaa4ec2a667084ebc657143d8482753ee 743
+Not signing zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f
+Build and push complete, not releasing, all done.
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:49dbaeabe9f8824a80ead247ad6040ebefc3ab3f04130922d8a6fb17a424e0e7
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:3588940b3062300d028e57e3f2a6d6695557b8b43be8a494027da91aaaa5db19
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+cd bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+a3c71eec8843b319bb0b0472aa76da08415565545053adfd0c84f00ea0ab0e2a
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+tee: /dev/tty: No such device or address
+12895f6e4cd20e693dd62112641064720b8e635f-arm64: Pulling from zededa/zedctr
+Digest: sha256:95fc976fc11b9c652c0edbfd43128bf409ec32f9f0a8a7fe5434e2070eb0d2b2
+Status: Image is up to date for zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-arm64
+DOCKER_ARCH_TAG="arm64" ./parse-pkgs.sh images/installer.yml.in > images/installer.yml
+# the following is a horrible hack that needs to go away ASAP
+if [ "aarch64" != `uname -m` ] ; then \
+           sed -e '/source:/s#rootfs.img#rootfs_aarch64.img#' \
+               -e '/command:/s#/dev/sda#/dev/vda#' -i.orig images/installer.yml ;\
+   echo "WARNING: We are assembling a aarch64 image on `uname -m`. Things may break." ;\
+        fi
+DOCKER_ARCH_TAG="arm64" ./parse-pkgs.sh images/rootfs.yml.in > images/rootfs.yml
+# the following is a horrible hack that needs to go away ASAP
+if [ "aarch64" != `uname -m` ] ; then \
+           sed -e '/source:/s#rootfs.img#rootfs_aarch64.img#' \
+               -e '/command:/s#/dev/sda#/dev/vda#' -i.orig images/rootfs.yml ;\
+   echo "WARNING: We are assembling a aarch64 image on `uname -m`. Things may break." ;\
+        fi
+./makerootfs.sh images/rootfs.yml squash rootfs_aarch64.img
+Extract kernel image: zededa/kernel:e2919188af3f6da07e8bc651ecc45b5b3f0f523c-arm64
+Add init containers:
+Process init image: zededa/grub:35eb3c470422d1bced11f3457ea8ff432d9f0590-arm64
+Process init image: zededa/device-trees:1bca882c64827de08bba9aa7713441b2b4d7ca8d-arm64
+Process init image: zededa/xen:be954dc9ba840dcff92c7edc1823e7e19d12a8ed-arm64
+Process init image: zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4-arm64
+Process init image: zededa/dom0-ztools:c6d8f2123c748379add5d3dbbac23e3630131760-arm64
+Process init image: linuxkit/init:v0.5
+Process init image: linuxkit/runc:v0.5
+Process init image: linuxkit/containerd:v0.5
+Process init image: linuxkit/getty:v0.5
+Add onboot containers:
+  Create OCI config for linuxkit/sysctl:v0.5
+  Create OCI config for linuxkit/modprobe:v0.5
+Add service containers:
+  Create OCI config for linuxkit/openntpd:v0.5
+  Create OCI config for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d-arm64
+  Create OCI config for zededa/wlan:cfd366430df0620df11b2af7f3d9d63d617a5903-arm64
+  Create OCI config for zededa/zedctr:12895f6e4cd20e693dd62112641064720b8e635f-arm64
+Add files:
+  /containers/services/zededa-tools/lower/opt/zededa/bin/versioninfo
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[\                                                           ]   200/14669   1%[======-                                                     ]  1700/14669  11%[=======|                                                    ]  1900/14669  12%[===================\                                        ]  4900/14669  33%[===============================================-            ] 11800/14669  80%[===========================================================\] 14669/14669 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 162041.58 Kbytes (158.24 Mbytes)
+	31.06% of uncompressed filesystem size (521639.67 Kbytes)
+Inode table size 152368 bytes (148.80 Kbytes)
+	26.32% of uncompressed inode table size (578959 bytes)
+Directory table size 154817 bytes (151.19 Kbytes)
+	44.93% of uncompressed directory table size (344602 bytes)
+Number of duplicate files found 2549
+Number of inodes 15418
+Number of files 11489
+Number of fragments 711
+Number of symbolic links  2689
+Number of device nodes 7
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1233
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+./makeiso.sh images/installer.yml installer_aarch64.iso
+Extract kernel image: zededa/kernel:e2919188af3f6da07e8bc651ecc45b5b3f0f523c-arm64
+Add init containers:
+Process init image: zededa/grub:35eb3c470422d1bced11f3457ea8ff432d9f0590-arm64
+Process init image: zededa/device-trees:1bca882c64827de08bba9aa7713441b2b4d7ca8d-arm64
+Process init image: zededa/xen:be954dc9ba840dcff92c7edc1823e7e19d12a8ed-arm64
+Process init image: linuxkit/init:v0.5
+Process init image: linuxkit/runc:v0.5
+Process init image: linuxkit/getty:v0.5
+Add onboot containers:
+  Create OCI config for zededa/mkflash:d4131c74a9e283a1e4ee5f3aa80b47b538378411-arm64
+Add files:
+  /parts/config.img
+  /parts/rootfs.img
+time="2018-09-10T08:07:34+02:00" level=fatal msg="failed to add filesystem parts: open rootfs.img: no such file or directory"
+xorriso 1.4.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:linuxkit-efi.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data,  860g free
+Added to ISO image: directory '/'='/tmp/efi'
+xorriso : UPDATE : 4596 files added in 1 seconds
+xorriso : UPDATE : 4596 files added in 1 seconds
+libisofs: NOTE : Cannot arrange content of data files in surely reproducible way
+xorriso : UPDATE :  15.99% done
+ISO image produced: 99927 sectors
+Written to medium : 99927 sectors at LBA 0
+Writing to 'stdio:linuxkit-efi.iso' completed successfully.
+
+tar c rootfs_aarch64.img config.img | ./makeflash.sh -C 8192 fallback_aarch64.raw
+1+0 records in
+1+0 records out
+1 byte copied, 0.0122015 s, 0.1 kB/s
++ IMGFILE=/output.img
++ NUMPARTS=9
++ mkdir -p /parts
++ [ -t 0 ]
++ cd /parts
++ bsdtar xzf -
++ ESP_FILE=/tmp/efifs.img
++ cut -f1 -d 
++ echo /parts/rootfs_aarch64.img
++ IMGA_FILE=/parts/rootfs_aarch64.img
++ CONF_FILE=/parts/config.img
++ mount -o loop /parts/rootfs_aarch64.img /mnt
+mount: mounting /dev/loop0 on /mnt failed: Invalid argument
+Makefile:152: recipe for target 'fallback_aarch64.raw' failed
+make: *** [fallback_aarch64.raw] Error 111
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:latest"
+Sending build context to Docker daemon  517.3MB
+Step 1/9 : FROM alpine:edge
+ ---> 698b28d4f8d1
+Step 2/9 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git
+ ---> Using cache
+ ---> 5b21459beb8b
+Step 3/9 : COPY . /bits/
+ ---> Using cache
+ ---> c5f345eda82a
+Step 4/9 : COPY OVMF.fd /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> e342e4ec1c5c
+Step 5/9 : COPY runme.sh /
+ ---> Using cache
+ ---> c300c2ff8dc7
+Step 6/9 : RUN touch /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> 85b9a3f966f3
+Step 7/9 : WORKDIR /bits
+ ---> Using cache
+ ---> b59a8adaf13d
+Step 8/9 : ENTRYPOINT /runme.sh
+ ---> Using cache
+ ---> a2c4b6771d85
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '055ce01634c28f06f630b1796d2442018aa41532' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Using cache
+ ---> d17d912abb7d
+Successfully built d17d912abb7d
+Successfully tagged zededa/zenix:latest-arm64
+Pushing zededa/zenix:latest-arm64
+The push refers to a repository [docker.io/zededa/zenix]
+96feea203423: Preparing
+c96588d795bb: Preparing
+5ef670ff3c99: Preparing
+841a93c06d96: Preparing
+18d6c5bbfc56: Preparing
+7f4507898901: Preparing
+2a2e682c36db: Preparing
+7f4507898901: Waiting
+2a2e682c36db: Waiting
+841a93c06d96: Layer already exists
+18d6c5bbfc56: Layer already exists
+5ef670ff3c99: Layer already exists
+c96588d795bb: Layer already exists
+96feea203423: Layer already exists
+7f4507898901: Layer already exists
+2a2e682c36db: Layer already exists
+latest-arm64: digest: sha256:1fe795f8427c0b01612b0e97d907c67b96dfd4d6d6a493a2b465f735eb38e1e7 size: 1787
+Pushing zededa/zenix:latest-arm64 to manifest zededa/zenix:latest
+time="2018-09-10T08:08:33+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:latest-s390x\". Skipping image."
+Digest: sha256:cf4fccb3e1d0f19e971e933a83f4e74d0137871ad5aebc4ff7b3e45cbd42f0c6 743
+Not signing zededa/zenix:latest
+Build and push complete, not releasing, all done.
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
