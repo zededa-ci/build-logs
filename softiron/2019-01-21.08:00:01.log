@@ -1,0 +1,93 @@
+Already up-to-date.
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+Already up-to-date.
+Already up-to-date.
+Building and pushing "zededa/lisp:4bd88ce08634e61060bc7abc8d7b0c1fb25d117d"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Building and pushing "zededa/lisp:latest"
+time="2019-01-21T08:00:03+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+Building and pushing "zededa/ztools:1fe3c7b1b86ae20ea2cdb92ffe009aba26713c2c"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2019-01-21T08:00:03+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Building and pushing "zededa/ztools:latest"
+time="2019-01-21T08:00:04+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build (enabling debugging)
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build (enabling debugging)
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build (enabling debugging)
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build (enabling debugging)
+Building and pushing "zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:19: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:latest plugin - disabling it in the final build (enabling debugging)
+Building and pushing "zededa/zedctr:e7bb5a3dbe7c8c45a564c8533e76c46e05ab11e2"
+time="2019-01-21T08:00:10+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+Makefile:19: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:15: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+cd bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+"docker export" requires exactly 1 argument.
+See 'docker export --help'.
+
+Usage:  docker export [OPTIONS] CONTAINER
+
+Export a container's filesystem as a tar archive
+tar: This does not look like a tar archive
+tar: OVMF.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Makefile:92: recipe for target 'bios/OVMF.fd' failed
+make: *** [bios/OVMF.fd] Error 1
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:latest"
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:18: recipe for target 'forcepush' failed
+make: *** [forcepush] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
