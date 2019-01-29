@@ -1,0 +1,1413 @@
+From https://github.com/zededa/zenbuild
+   1cd9c64..f1e9474  master     -> origin/master
+   376916f..ab622f3  bldScript  -> origin/bldScript
+Updating 1cd9c64..f1e9474
+Fast-forward
+ Makefile            | 29 ++++++++++++++++++++---------
+ build-pkgs/Makefile |  2 +-
+ parse-pkgs.sh       |  4 ++--
+ pkg/Makefile        |  5 +++--
+ 4 files changed, 26 insertions(+), 14 deletions(-)
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+From github.com:zededa/go-provision
+   fc22821c..056dd69a  master                 -> origin/master
+ * [new branch]        1.2                    -> origin/1.2
+   8284c02c..2017e242  fixes                  -> origin/fixes
+ * [new branch]        kalyan-macosCompile    -> origin/kalyan-macosCompile
+   db1d0784..9ec63179  kalyan-networkInstance -> origin/kalyan-networkInstance
+ * [new branch]        revert-274-kalyan-macosCompile -> origin/revert-274-kalyan-macosCompile
+   446503dd..3e18ec57  simplify               -> origin/simplify
+ * [new tag]           1.2.0                  -> 1.2.0
+Updating fc22821c..056dd69a
+Fast-forward
+ Dockerfile                                         |    19 +-
+ Gopkg.lock                                         |   186 +-
+ Gopkg.toml                                         |     4 +
+ Makefile                                           |     7 +-
+ cast/cast.go                                       |    12 +
+ cmd/zedagent/handlemetrics.go                      |     2 +
+ cmd/zedagent/handlenetworkinstance.go              |   625 +
+ cmd/zedagent/handlenetworkobject.go                |     4 +-
+ cmd/zedagent/handlenetworkservice.go               |    26 -
+ cmd/zedagent/zedagent.go                           |    69 +-
+ cmd/zedrouter/ipsec.go                             |     2 +-
+ cmd/zedrouter/networkobject.go                     |    30 +-
+ cmd/zedrouter/zedrouter.go                         |     6 +-
+ .../exporter/ocagent/LICENSE                       |   201 +
+ .../exporter/ocagent/common.go                     |    38 +
+ .../exporter/ocagent/nodeinfo.go                   |    41 +
+ .../exporter/ocagent/ocagent.go                    |   299 +
+ .../exporter/ocagent/options.go                    |    80 +
+ .../exporter/ocagent/transform_spans.go            |   162 +
+ .../exporter/ocagent/version.go                    |    17 +
+ .../github.com/Azure/azure-sdk-for-go/LICENSE      |   202 +
+ .../github.com/Azure/azure-sdk-for-go/NOTICE       |     5 +
+ .../Azure/azure-sdk-for-go/storage/appendblob.go   |    91 +
+ .../azure-sdk-for-go/storage/authorization.go      |   246 +
+ .../Azure/azure-sdk-for-go/storage/blob.go         |   632 +
+ .../Azure/azure-sdk-for-go/storage/blobsasuri.go   |   170 +
+ .../azure-sdk-for-go/storage/blobserviceclient.go  |   182 +
+ .../Azure/azure-sdk-for-go/storage/blockblob.go    |   270 +
+ .../Azure/azure-sdk-for-go/storage/client.go       |   924 +
+ .../Azure/azure-sdk-for-go/storage/commonsasuri.go |    38 +
+ .../Azure/azure-sdk-for-go/storage/container.go    |   620 +
+ .../Azure/azure-sdk-for-go/storage/copyblob.go     |   237 +
+ .../Azure/azure-sdk-for-go/storage/directory.go    |   238 +
+ .../Azure/azure-sdk-for-go/storage/entity.go       |   453 +
+ .../Azure/azure-sdk-for-go/storage/file.go         |   476 +
+ .../azure-sdk-for-go/storage/fileserviceclient.go  |   338 +
+ .../Azure/azure-sdk-for-go/storage/leaseblob.go    |   201 +
+ .../Azure/azure-sdk-for-go/storage/message.go      |   167 +
+ .../Azure/azure-sdk-for-go/storage/odata.go        |    47 +
+ .../Azure/azure-sdk-for-go/storage/pageblob.go     |   204 +
+ .../Azure/azure-sdk-for-go/storage/queue.go        |   441 +
+ .../Azure/azure-sdk-for-go/storage/queuesasuri.go  |   146 +
+ .../azure-sdk-for-go/storage/queueserviceclient.go |    42 +
+ .../Azure/azure-sdk-for-go/storage/share.go        |   216 +
+ .../azure-sdk-for-go/storage/storagepolicy.go      |    61 +
+ .../azure-sdk-for-go/storage/storageservice.go     |   131 +
+ .../Azure/azure-sdk-for-go/storage/table.go        |   419 +
+ .../Azure/azure-sdk-for-go/storage/table_batch.go  |   316 +
+ .../azure-sdk-for-go/storage/tableserviceclient.go |   204 +
+ .../Azure/azure-sdk-for-go/storage/util.go         |   239 +
+ .../Azure/azure-sdk-for-go/storage/version.go      |    19 +
+ src/vendor/github.com/Azure/go-autorest/LICENSE    |   191 +
+ .../Azure/go-autorest/autorest/adal/config.go      |    91 +
+ .../Azure/go-autorest/autorest/adal/devicetoken.go |   242 +
+ .../Azure/go-autorest/autorest/adal/persist.go     |    73 +
+ .../Azure/go-autorest/autorest/adal/sender.go      |    60 +
+ .../Azure/go-autorest/autorest/adal/token.go       |   985 +
+ .../Azure/go-autorest/autorest/adal/version.go     |    45 +
+ .../Azure/go-autorest/autorest/authorization.go    |   260 +
+ .../Azure/go-autorest/autorest/autorest.go         |   150 +
+ .../Azure/go-autorest/autorest/azure/async.go      |   992 +
+ .../Azure/go-autorest/autorest/azure/azure.go      |   326 +
+ .../go-autorest/autorest/azure/environments.go     |   191 +
+ .../autorest/azure/metadata_environment.go         |   245 +
+ .../Azure/go-autorest/autorest/azure/rp.go         |   200 +
+ .../Azure/go-autorest/autorest/client.go           |   270 +
+ .../Azure/go-autorest/autorest/date/date.go        |    96 +
+ .../Azure/go-autorest/autorest/date/time.go        |   103 +
+ .../Azure/go-autorest/autorest/date/timerfc1123.go |   100 +
+ .../Azure/go-autorest/autorest/date/unixtime.go    |   123 +
+ .../Azure/go-autorest/autorest/date/utility.go     |    25 +
+ .../github.com/Azure/go-autorest/autorest/error.go |    98 +
+ .../Azure/go-autorest/autorest/preparer.go         |   480 +
+ .../Azure/go-autorest/autorest/responder.go        |   250 +
+ .../Azure/go-autorest/autorest/retriablerequest.go |    52 +
+ .../go-autorest/autorest/retriablerequest_1.7.go   |    54 +
+ .../go-autorest/autorest/retriablerequest_1.8.go   |    66 +
+ .../Azure/go-autorest/autorest/sender.go           |   326 +
+ .../Azure/go-autorest/autorest/utility.go          |   228 +
+ .../Azure/go-autorest/autorest/version.go          |    41 +
+ .../github.com/Azure/go-autorest/logger/logger.go  |   328 +
+ .../Azure/go-autorest/tracing/tracing.go           |   190 +
+ .../opencensus-proto/AUTHORS                       |     1 +
+ .../opencensus-proto/LICENSE                       |   202 +
+ .../gen-go/agent/common/v1/common.pb.go            |   356 +
+ .../gen-go/agent/trace/v1/trace_service.pb.go      |   443 +
+ .../gen-go/resource/v1/resource.pb.go              |    99 +
+ .../opencensus-proto/gen-go/trace/v1/trace.pb.go   |  1654 +
+ .../gen-go/trace/v1/trace_config.pb.go             |   406 +
+ src/vendor/github.com/dgrijalva/jwt-go/LICENSE     |     8 +
+ src/vendor/github.com/dgrijalva/jwt-go/claims.go   |   134 +
+ src/vendor/github.com/dgrijalva/jwt-go/doc.go      |     4 +
+ src/vendor/github.com/dgrijalva/jwt-go/ecdsa.go    |   148 +
+ .../github.com/dgrijalva/jwt-go/ecdsa_utils.go     |    67 +
+ src/vendor/github.com/dgrijalva/jwt-go/errors.go   |    59 +
+ src/vendor/github.com/dgrijalva/jwt-go/hmac.go     |    95 +
+ .../github.com/dgrijalva/jwt-go/map_claims.go      |    94 +
+ src/vendor/github.com/dgrijalva/jwt-go/none.go     |    52 +
+ src/vendor/github.com/dgrijalva/jwt-go/parser.go   |   148 +
+ src/vendor/github.com/dgrijalva/jwt-go/rsa.go      |   101 +
+ src/vendor/github.com/dgrijalva/jwt-go/rsa_pss.go  |   126 +
+ .../github.com/dgrijalva/jwt-go/rsa_utils.go       |   101 +
+ .../github.com/dgrijalva/jwt-go/signing_method.go  |    35 +
+ src/vendor/github.com/dgrijalva/jwt-go/token.go    |   108 +
+ .../eriknordmark/netlink/devlink_linux.go          |   167 +
+ .../github.com/eriknordmark/netlink/filter.go      |    45 -
+ .../eriknordmark/netlink/filter_linux.go           |    35 +-
+ .../eriknordmark/netlink/genetlink_linux.go        |     3 +
+ src/vendor/github.com/eriknordmark/netlink/link.go |    17 +-
+ .../github.com/eriknordmark/netlink/link_linux.go  |    27 +-
+ .../github.com/eriknordmark/netlink/neigh_linux.go |    58 +-
+ .../github.com/eriknordmark/netlink/xfrm_policy.go |     5 +-
+ .../eriknordmark/netlink/xfrm_policy_linux.go      |     8 +
+ .../github.com/eriknordmark/netlink/xfrm_state.go  |     5 +-
+ .../eriknordmark/netlink/xfrm_state_linux.go       |     8 +
+ .../golang/protobuf/ptypes/wrappers/wrappers.pb.go |   443 +
+ src/vendor/github.com/satori/uuid/LICENSE          |    20 +
+ src/vendor/github.com/satori/uuid/codec.go         |   206 +
+ src/vendor/github.com/satori/uuid/generator.go     |   239 +
+ src/vendor/github.com/satori/uuid/sql.go           |    78 +
+ src/vendor/github.com/satori/uuid/uuid.go          |   161 +
+ .../vishvananda/netlink/nl/devlink_linux.go        |    39 +
+ .../vishvananda/netlink/nl/link_linux.go           |     8 +
+ .../github.com/vishvananda/netlink/nl/nl_linux.go  |     9 +-
+ .../vishvananda/netlink/nl/xfrm_linux.go           |    60 +-
+ .../github.com/zededa/api/zconfig/devcommon.pb.go  |    14 +-
+ .../github.com/zededa/api/zconfig/devconfig.pb.go  |   157 +-
+ .../github.com/zededa/api/zconfig/netcmn.pb.go     |    83 +-
+ .../github.com/zededa/api/zconfig/netconfig.pb.go  |    71 +-
+ .../github.com/zededa/api/zconfig/storage.pb.go    |    20 +-
+ src/vendor/github.com/zededa/api/zconfig/vm.pb.go  |    66 +-
+ src/vendor/github.com/zededa/api/zmet/zmet.pb.go   |   619 +-
+ .../zededa/shared/libs/zedUpload/awsutil/s3api.go  |    25 +-
+ .../zededa/shared/libs/zedUpload/awsutil/s3sync.go |    68 +-
+ .../shared/libs/zedUpload/azureutil/azure.go       |   154 +
+ .../libs/zedUpload/{dnld.go => datastore.go}       |    26 +-
+ .../zedUpload/{dnld_aws.go => datastore_aws.go}    |   110 +-
+ .../shared/libs/zedUpload/datastore_azure.go       |   156 +
+ .../zededa/shared/libs/zedUpload/datastore_http.go |   230 +
+ .../zedUpload/{dnld_req.go => datastore_req.go}    |    34 +
+ .../zedUpload/{dnld_sftp.go => datastore_sftp.go}  |    83 +-
+ .../zededa/shared/libs/zedUpload/httputil/http.go  |   231 +
+ .../drona/sftp => libs/zedUpload/sftputil}/sftp.go |   113 +-
+ src/vendor/go.opencensus.io/AUTHORS                |     1 +
+ src/vendor/go.opencensus.io/LICENSE                |   202 +
+ src/vendor/go.opencensus.io/exemplar/exemplar.go   |    78 +
+ src/vendor/go.opencensus.io/internal/internal.go   |    37 +
+ src/vendor/go.opencensus.io/internal/sanitize.go   |    50 +
+ .../internal/tagencoding/tagencoding.go            |    72 +
+ .../go.opencensus.io/internal/traceinternals.go    |    52 +
+ src/vendor/go.opencensus.io/opencensus.go          |    21 +
+ .../go.opencensus.io/plugin/ochttp/client.go       |   117 +
+ .../go.opencensus.io/plugin/ochttp/client_stats.go |   135 +
+ src/vendor/go.opencensus.io/plugin/ochttp/doc.go   |    19 +
+ .../plugin/ochttp/propagation/b3/b3.go             |   123 +
+ .../ochttp/propagation/tracecontext/propagation.go |   187 +
+ src/vendor/go.opencensus.io/plugin/ochttp/route.go |    51 +
+ .../go.opencensus.io/plugin/ochttp/server.go       |   440 +
+ .../plugin/ochttp/span_annotating_client_trace.go  |   169 +
+ src/vendor/go.opencensus.io/plugin/ochttp/stats.go |   265 +
+ src/vendor/go.opencensus.io/plugin/ochttp/trace.go |   228 +
+ src/vendor/go.opencensus.io/stats/doc.go           |    69 +
+ .../go.opencensus.io/stats/internal/record.go      |    25 +
+ .../go.opencensus.io/stats/internal/validation.go  |    28 +
+ src/vendor/go.opencensus.io/stats/measure.go       |   123 +
+ .../go.opencensus.io/stats/measure_float64.go      |    36 +
+ src/vendor/go.opencensus.io/stats/measure_int64.go |    36 +
+ src/vendor/go.opencensus.io/stats/record.go        |    69 +
+ src/vendor/go.opencensus.io/stats/units.go         |    25 +
+ .../go.opencensus.io/stats/view/aggregation.go     |   120 +
+ .../stats/view/aggregation_data.go                 |   235 +
+ .../go.opencensus.io/stats/view/collector.go       |    87 +
+ src/vendor/go.opencensus.io/stats/view/doc.go      |    47 +
+ src/vendor/go.opencensus.io/stats/view/export.go   |    58 +
+ src/vendor/go.opencensus.io/stats/view/view.go     |   185 +
+ src/vendor/go.opencensus.io/stats/view/worker.go   |   229 +
+ .../go.opencensus.io/stats/view/worker_commands.go |   183 +
+ src/vendor/go.opencensus.io/tag/context.go         |    67 +
+ src/vendor/go.opencensus.io/tag/doc.go             |    26 +
+ src/vendor/go.opencensus.io/tag/key.go             |    35 +
+ src/vendor/go.opencensus.io/tag/map.go             |   197 +
+ src/vendor/go.opencensus.io/tag/map_codec.go       |   234 +
+ src/vendor/go.opencensus.io/tag/profile_19.go      |    31 +
+ src/vendor/go.opencensus.io/tag/profile_not19.go   |    23 +
+ src/vendor/go.opencensus.io/tag/validate.go        |    56 +
+ src/vendor/go.opencensus.io/trace/basetypes.go     |   114 +
+ src/vendor/go.opencensus.io/trace/config.go        |    48 +
+ src/vendor/go.opencensus.io/trace/doc.go           |    53 +
+ src/vendor/go.opencensus.io/trace/exemplar.go      |    43 +
+ src/vendor/go.opencensus.io/trace/export.go        |    90 +
+ .../go.opencensus.io/trace/internal/internal.go    |    21 +
+ .../trace/propagation/propagation.go               |   108 +
+ src/vendor/go.opencensus.io/trace/sampling.go      |    75 +
+ src/vendor/go.opencensus.io/trace/spanbucket.go    |   130 +
+ src/vendor/go.opencensus.io/trace/spanstore.go     |   306 +
+ src/vendor/go.opencensus.io/trace/status_codes.go  |    37 +
+ src/vendor/go.opencensus.io/trace/trace.go         |   516 +
+ src/vendor/go.opencensus.io/trace/trace_go11.go    |    32 +
+ src/vendor/go.opencensus.io/trace/trace_nongo11.go |    25 +
+ .../trace/tracestate/tracestate.go                 |   147 +
+ src/vendor/golang.org/x/net/AUTHORS                |     3 +
+ src/vendor/golang.org/x/net/CONTRIBUTORS           |     3 +
+ src/vendor/golang.org/x/net/LICENSE                |    27 +
+ src/vendor/golang.org/x/net/PATENTS                |    22 +
+ src/vendor/golang.org/x/net/context/context.go     |    56 +
+ src/vendor/golang.org/x/net/context/go17.go        |    72 +
+ src/vendor/golang.org/x/net/context/go19.go        |    20 +
+ src/vendor/golang.org/x/net/context/pre_go17.go    |   300 +
+ src/vendor/golang.org/x/net/context/pre_go19.go    |   109 +
+ src/vendor/golang.org/x/net/html/atom/atom.go      |    78 +
+ src/vendor/golang.org/x/net/html/atom/gen.go       |   712 +
+ src/vendor/golang.org/x/net/html/atom/table.go     |   783 +
+ src/vendor/golang.org/x/net/html/const.go          |   112 +
+ src/vendor/golang.org/x/net/html/doc.go            |   106 +
+ src/vendor/golang.org/x/net/html/doctype.go        |   156 +
+ src/vendor/golang.org/x/net/html/entity.go         |  2253 +
+ src/vendor/golang.org/x/net/html/escape.go         |   258 +
+ src/vendor/golang.org/x/net/html/foreign.go        |   226 +
+ src/vendor/golang.org/x/net/html/node.go           |   220 +
+ src/vendor/golang.org/x/net/html/parse.go          |  2327 +
+ src/vendor/golang.org/x/net/html/render.go         |   271 +
+ src/vendor/golang.org/x/net/html/token.go          |  1219 +
+ src/vendor/golang.org/x/net/http/httpguts/guts.go  |    50 +
+ .../golang.org/x/net/http/httpguts/httplex.go      |   346 +
+ src/vendor/golang.org/x/net/http2/ciphers.go       |   641 +
+ .../golang.org/x/net/http2/client_conn_pool.go     |   282 +
+ src/vendor/golang.org/x/net/http2/databuffer.go    |   146 +
+ src/vendor/golang.org/x/net/http2/errors.go        |   133 +
+ src/vendor/golang.org/x/net/http2/flow.go          |    50 +
+ src/vendor/golang.org/x/net/http2/frame.go         |  1614 +
+ src/vendor/golang.org/x/net/http2/go111.go         |    29 +
+ src/vendor/golang.org/x/net/http2/gotrack.go       |   170 +
+ src/vendor/golang.org/x/net/http2/headermap.go     |    88 +
+ src/vendor/golang.org/x/net/http2/hpack/encode.go  |   240 +
+ src/vendor/golang.org/x/net/http2/hpack/hpack.go   |   504 +
+ src/vendor/golang.org/x/net/http2/hpack/huffman.go |   222 +
+ src/vendor/golang.org/x/net/http2/hpack/tables.go  |   479 +
+ src/vendor/golang.org/x/net/http2/http2.go         |   384 +
+ src/vendor/golang.org/x/net/http2/not_go111.go     |    20 +
+ src/vendor/golang.org/x/net/http2/pipe.go          |   163 +
+ src/vendor/golang.org/x/net/http2/server.go        |  2895 +
+ src/vendor/golang.org/x/net/http2/transport.go     |  2603 +
+ src/vendor/golang.org/x/net/http2/write.go         |   365 +
+ src/vendor/golang.org/x/net/http2/writesched.go    |   242 +
+ .../golang.org/x/net/http2/writesched_priority.go  |   452 +
+ .../golang.org/x/net/http2/writesched_random.go    |    72 +
+ src/vendor/golang.org/x/net/idna/idna.go           |   732 +
+ src/vendor/golang.org/x/net/idna/punycode.go       |   203 +
+ src/vendor/golang.org/x/net/idna/tables.go         |  4557 ++
+ src/vendor/golang.org/x/net/idna/trie.go           |    72 +
+ src/vendor/golang.org/x/net/idna/trieval.go        |   119 +
+ .../x/net/internal/timeseries/timeseries.go        |   525 +
+ src/vendor/golang.org/x/net/trace/events.go        |   532 +
+ src/vendor/golang.org/x/net/trace/histogram.go     |   365 +
+ src/vendor/golang.org/x/net/trace/trace.go         |  1130 +
+ src/vendor/golang.org/x/sync/AUTHORS               |     3 +
+ src/vendor/golang.org/x/sync/CONTRIBUTORS          |     3 +
+ src/vendor/golang.org/x/sync/LICENSE               |    27 +
+ src/vendor/golang.org/x/sync/PATENTS               |    22 +
+ .../golang.org/x/sync/semaphore/semaphore.go       |   127 +
+ src/vendor/golang.org/x/text/AUTHORS               |     3 +
+ src/vendor/golang.org/x/text/CONTRIBUTORS          |     3 +
+ src/vendor/golang.org/x/text/LICENSE               |    27 +
+ src/vendor/golang.org/x/text/PATENTS               |    22 +
+ .../golang.org/x/text/collate/build/builder.go     |   702 +
+ .../golang.org/x/text/collate/build/colelem.go     |   294 +
+ .../golang.org/x/text/collate/build/contract.go    |   309 +
+ .../golang.org/x/text/collate/build/order.go       |   393 +
+ .../golang.org/x/text/collate/build/table.go       |    81 +
+ src/vendor/golang.org/x/text/collate/build/trie.go |   290 +
+ src/vendor/golang.org/x/text/collate/collate.go    |   403 +
+ src/vendor/golang.org/x/text/collate/index.go      |    32 +
+ src/vendor/golang.org/x/text/collate/maketables.go |   553 +
+ src/vendor/golang.org/x/text/collate/option.go     |   239 +
+ src/vendor/golang.org/x/text/collate/sort.go       |    81 +
+ src/vendor/golang.org/x/text/collate/tables.go     | 73789 +++++++++++++++++++
+ .../golang.org/x/text/internal/colltab/collelem.go |   371 +
+ .../golang.org/x/text/internal/colltab/colltab.go  |   105 +
+ .../golang.org/x/text/internal/colltab/contract.go |   145 +
+ .../golang.org/x/text/internal/colltab/iter.go     |   178 +
+ .../golang.org/x/text/internal/colltab/numeric.go  |   236 +
+ .../golang.org/x/text/internal/colltab/table.go    |   275 +
+ .../golang.org/x/text/internal/colltab/trie.go     |   159 +
+ .../golang.org/x/text/internal/colltab/weighter.go |    31 +
+ src/vendor/golang.org/x/text/internal/gen/code.go  |   369 +
+ src/vendor/golang.org/x/text/internal/gen/gen.go   |   333 +
+ src/vendor/golang.org/x/text/internal/tag/tag.go   |   100 +
+ .../golang.org/x/text/internal/triegen/compact.go  |    58 +
+ .../golang.org/x/text/internal/triegen/print.go    |   251 +
+ .../golang.org/x/text/internal/triegen/triegen.go  |   494 +
+ src/vendor/golang.org/x/text/internal/ucd/ucd.go   |   371 +
+ src/vendor/golang.org/x/text/language/common.go    |    16 +
+ src/vendor/golang.org/x/text/language/coverage.go  |   197 +
+ src/vendor/golang.org/x/text/language/doc.go       |   102 +
+ src/vendor/golang.org/x/text/language/gen.go       |  1712 +
+ .../golang.org/x/text/language/gen_common.go       |    20 +
+ src/vendor/golang.org/x/text/language/gen_index.go |   162 +
+ src/vendor/golang.org/x/text/language/go1_1.go     |    38 +
+ src/vendor/golang.org/x/text/language/go1_2.go     |    11 +
+ src/vendor/golang.org/x/text/language/index.go     |   783 +
+ src/vendor/golang.org/x/text/language/language.go  |   907 +
+ src/vendor/golang.org/x/text/language/lookup.go    |   396 +
+ src/vendor/golang.org/x/text/language/match.go     |   933 +
+ src/vendor/golang.org/x/text/language/parse.go     |   859 +
+ src/vendor/golang.org/x/text/language/tables.go    |  3686 +
+ src/vendor/golang.org/x/text/language/tags.go      |   143 +
+ .../golang.org/x/text/secure/bidirule/bidirule.go  |   336 +
+ .../x/text/secure/bidirule/bidirule10.0.0.go       |    11 +
+ .../x/text/secure/bidirule/bidirule9.0.0.go        |    14 +
+ .../golang.org/x/text/transform/transform.go       |   705 +
+ src/vendor/golang.org/x/text/unicode/bidi/bidi.go  |   198 +
+ .../golang.org/x/text/unicode/bidi/bracket.go      |   335 +
+ src/vendor/golang.org/x/text/unicode/bidi/core.go  |  1058 +
+ src/vendor/golang.org/x/text/unicode/bidi/gen.go   |   133 +
+ .../golang.org/x/text/unicode/bidi/gen_ranges.go   |    57 +
+ .../golang.org/x/text/unicode/bidi/gen_trieval.go  |    64 +
+ src/vendor/golang.org/x/text/unicode/bidi/prop.go  |   206 +
+ .../golang.org/x/text/unicode/bidi/tables10.0.0.go |  1815 +
+ .../golang.org/x/text/unicode/bidi/tables9.0.0.go  |  1781 +
+ .../golang.org/x/text/unicode/bidi/trieval.go      |    60 +
+ src/vendor/golang.org/x/text/unicode/cldr/base.go  |   105 +
+ src/vendor/golang.org/x/text/unicode/cldr/cldr.go  |   130 +
+ .../golang.org/x/text/unicode/cldr/collate.go      |   359 +
+ .../golang.org/x/text/unicode/cldr/decode.go       |   171 +
+ .../golang.org/x/text/unicode/cldr/makexml.go      |   400 +
+ .../golang.org/x/text/unicode/cldr/resolve.go      |   602 +
+ src/vendor/golang.org/x/text/unicode/cldr/slice.go |   144 +
+ src/vendor/golang.org/x/text/unicode/cldr/xml.go   |  1494 +
+ .../golang.org/x/text/unicode/norm/composition.go  |   508 +
+ .../golang.org/x/text/unicode/norm/forminfo.go     |   259 +
+ src/vendor/golang.org/x/text/unicode/norm/input.go |   109 +
+ src/vendor/golang.org/x/text/unicode/norm/iter.go  |   457 +
+ .../golang.org/x/text/unicode/norm/maketables.go   |   976 +
+ .../golang.org/x/text/unicode/norm/normalize.go    |   609 +
+ .../golang.org/x/text/unicode/norm/readwriter.go   |   125 +
+ .../golang.org/x/text/unicode/norm/tables10.0.0.go |  7653 ++
+ .../golang.org/x/text/unicode/norm/tables9.0.0.go  |  7633 ++
+ .../golang.org/x/text/unicode/norm/transform.go    |    88 +
+ src/vendor/golang.org/x/text/unicode/norm/trie.go  |    54 +
+ .../golang.org/x/text/unicode/norm/triegen.go      |   117 +
+ .../golang.org/x/text/unicode/rangetable/gen.go    |   115 +
+ .../golang.org/x/text/unicode/rangetable/merge.go  |   260 +
+ .../x/text/unicode/rangetable/rangetable.go        |    70 +
+ .../x/text/unicode/rangetable/tables10.0.0.go      |  6378 ++
+ .../x/text/unicode/rangetable/tables9.0.0.go       |  5737 ++
+ src/vendor/google.golang.org/api/AUTHORS           |    10 +
+ src/vendor/google.golang.org/api/CONTRIBUTORS      |    55 +
+ src/vendor/google.golang.org/api/LICENSE           |    27 +
+ .../api/googleapi/internal/uritemplates/LICENSE    |    18 +
+ .../api/support/bundler/bundler.go                 |   349 +
+ src/vendor/google.golang.org/genproto/LICENSE      |   202 +
+ .../genproto/googleapis/rpc/status/status.pb.go    |   156 +
+ src/vendor/google.golang.org/grpc/AUTHORS          |     1 +
+ src/vendor/google.golang.org/grpc/LICENSE          |   202 +
+ src/vendor/google.golang.org/grpc/backoff.go       |    38 +
+ src/vendor/google.golang.org/grpc/balancer.go      |   391 +
+ .../google.golang.org/grpc/balancer/balancer.go    |   303 +
+ .../grpc/balancer/base/balancer.go                 |   171 +
+ .../google.golang.org/grpc/balancer/base/base.go   |    64 +
+ .../grpc/balancer/roundrobin/roundrobin.go         |    79 +
+ .../grpc/balancer_conn_wrappers.go                 |   328 +
+ .../google.golang.org/grpc/balancer_v1_wrapper.go  |   326 +
+ .../binarylog/grpc_binarylog_v1/binarylog.pb.go    |   900 +
+ src/vendor/google.golang.org/grpc/call.go          |    74 +
+ src/vendor/google.golang.org/grpc/clientconn.go    |  1449 +
+ src/vendor/google.golang.org/grpc/codec.go         |    50 +
+ .../google.golang.org/grpc/codes/code_string.go    |    62 +
+ src/vendor/google.golang.org/grpc/codes/codes.go   |   197 +
+ .../grpc/connectivity/connectivity.go              |    73 +
+ .../grpc/credentials/credentials.go                |   328 +
+ .../grpc/credentials/internal/syscallconn.go       |    61 +
+ .../credentials/internal/syscallconn_appengine.go  |    30 +
+ src/vendor/google.golang.org/grpc/dialoptions.go   |   492 +
+ src/vendor/google.golang.org/grpc/doc.go           |    24 +
+ .../google.golang.org/grpc/encoding/encoding.go    |   118 +
+ .../google.golang.org/grpc/encoding/proto/proto.go |   110 +
+ .../google.golang.org/grpc/grpclog/grpclog.go      |   126 +
+ .../google.golang.org/grpc/grpclog/logger.go       |    85 +
+ .../google.golang.org/grpc/grpclog/loggerv2.go     |   195 +
+ src/vendor/google.golang.org/grpc/interceptor.go   |    77 +
+ .../grpc/internal/backoff/backoff.go               |    78 +
+ .../grpc/internal/binarylog/binarylog.go           |   167 +
+ .../grpc/internal/binarylog/binarylog_testutil.go  |    42 +
+ .../grpc/internal/binarylog/env_config.go          |   210 +
+ .../grpc/internal/binarylog/method_logger.go       |   426 +
+ .../grpc/internal/binarylog/sink.go                |   162 +
+ .../grpc/internal/binarylog/util.go                |    41 +
+ .../grpc/internal/channelz/funcs.go                |   699 +
+ .../grpc/internal/channelz/types.go                |   702 +
+ .../grpc/internal/channelz/types_linux.go          |    53 +
+ .../grpc/internal/channelz/types_nonlinux.go       |    44 +
+ .../grpc/internal/channelz/util_linux.go           |    39 +
+ .../grpc/internal/channelz/util_nonlinux.go        |    26 +
+ .../grpc/internal/envconfig/envconfig.go           |    70 +
+ .../grpc/internal/grpcrand/grpcrand.go             |    56 +
+ .../grpc/internal/grpcsync/event.go                |    61 +
+ .../google.golang.org/grpc/internal/internal.go    |    50 +
+ .../grpc/internal/syscall/syscall_linux.go         |   114 +
+ .../grpc/internal/syscall/syscall_nonlinux.go      |    63 +
+ .../grpc/internal/transport/bdp_estimator.go       |   141 +
+ .../grpc/internal/transport/controlbuf.go          |   852 +
+ .../grpc/internal/transport/defaults.go            |    49 +
+ .../grpc/internal/transport/flowcontrol.go         |   218 +
+ .../grpc/internal/transport/handler_server.go      |   449 +
+ .../grpc/internal/transport/http2_client.go        |  1380 +
+ .../grpc/internal/transport/http2_server.go        |  1180 +
+ .../grpc/internal/transport/http_util.go           |   623 +
+ .../grpc/internal/transport/log.go                 |    44 +
+ .../grpc/internal/transport/transport.go           |   758 +
+ .../google.golang.org/grpc/keepalive/keepalive.go  |    83 +
+ .../google.golang.org/grpc/metadata/metadata.go    |   209 +
+ .../google.golang.org/grpc/naming/dns_resolver.go  |   293 +
+ src/vendor/google.golang.org/grpc/naming/naming.go |    69 +
+ src/vendor/google.golang.org/grpc/peer/peer.go     |    51 +
+ .../google.golang.org/grpc/picker_wrapper.go       |   180 +
+ src/vendor/google.golang.org/grpc/pickfirst.go     |   110 +
+ src/vendor/google.golang.org/grpc/proxy.go         |   152 +
+ .../grpc/resolver/dns/dns_resolver.go              |   436 +
+ .../grpc/resolver/passthrough/passthrough.go       |    57 +
+ .../google.golang.org/grpc/resolver/resolver.go    |   158 +
+ .../grpc/resolver_conn_wrapper.go                  |   155 +
+ src/vendor/google.golang.org/grpc/rpc_util.go      |   816 +
+ src/vendor/google.golang.org/grpc/server.go        |  1486 +
+ .../google.golang.org/grpc/service_config.go       |   372 +
+ .../google.golang.org/grpc/stats/handlers.go       |    63 +
+ src/vendor/google.golang.org/grpc/stats/stats.go   |   295 +
+ src/vendor/google.golang.org/grpc/status/status.go |   210 +
+ src/vendor/google.golang.org/grpc/stream.go        |  1486 +
+ src/vendor/google.golang.org/grpc/tap/tap.go       |    51 +
+ src/vendor/google.golang.org/grpc/trace.go         |   113 +
+ src/vendor/google.golang.org/grpc/version.go       |    22 +
+ types/domainmgrtypes.go                            |     4 +-
+ types/zedroutertypes.go                            |    26 +-
+ 433 files changed, 215235 insertions(+), 802 deletions(-)
+ create mode 100644 cmd/zedagent/handlenetworkinstance.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/LICENSE
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/common.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/nodeinfo.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/ocagent.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/options.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/transform_spans.go
+ create mode 100644 src/vendor/contrib.go.opencensus.io/exporter/ocagent/version.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/LICENSE
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/NOTICE
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/appendblob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/authorization.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/blob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/blobsasuri.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/blobserviceclient.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/blockblob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/client.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/commonsasuri.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/container.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/copyblob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/directory.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/entity.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/file.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/fileserviceclient.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/leaseblob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/message.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/odata.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/pageblob.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/queue.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/queuesasuri.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/queueserviceclient.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/share.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/storagepolicy.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/storageservice.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/table.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/table_batch.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/tableserviceclient.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/util.go
+ create mode 100644 src/vendor/github.com/Azure/azure-sdk-for-go/storage/version.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/LICENSE
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/config.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/devicetoken.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/persist.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/sender.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/token.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/adal/version.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/authorization.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/autorest.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/azure/async.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/azure/azure.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/azure/environments.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/azure/metadata_environment.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/azure/rp.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/client.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/date/date.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/date/time.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/date/timerfc1123.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/date/unixtime.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/date/utility.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/error.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/preparer.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/responder.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/retriablerequest.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/retriablerequest_1.7.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/retriablerequest_1.8.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/sender.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/utility.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/autorest/version.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/logger/logger.go
+ create mode 100644 src/vendor/github.com/Azure/go-autorest/tracing/tracing.go
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/AUTHORS
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/LICENSE
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/gen-go/agent/common/v1/common.pb.go
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/gen-go/agent/trace/v1/trace_service.pb.go
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/gen-go/resource/v1/resource.pb.go
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/gen-go/trace/v1/trace.pb.go
+ create mode 100644 src/vendor/github.com/census-instrumentation/opencensus-proto/gen-go/trace/v1/trace_config.pb.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/LICENSE
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/claims.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/doc.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/ecdsa.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/ecdsa_utils.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/errors.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/hmac.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/map_claims.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/none.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/parser.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/rsa.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/rsa_pss.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/rsa_utils.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/signing_method.go
+ create mode 100644 src/vendor/github.com/dgrijalva/jwt-go/token.go
+ create mode 100644 src/vendor/github.com/eriknordmark/netlink/devlink_linux.go
+ create mode 100644 src/vendor/github.com/golang/protobuf/ptypes/wrappers/wrappers.pb.go
+ create mode 100644 src/vendor/github.com/satori/uuid/LICENSE
+ create mode 100644 src/vendor/github.com/satori/uuid/codec.go
+ create mode 100644 src/vendor/github.com/satori/uuid/generator.go
+ create mode 100644 src/vendor/github.com/satori/uuid/sql.go
+ create mode 100644 src/vendor/github.com/satori/uuid/uuid.go
+ create mode 100644 src/vendor/github.com/vishvananda/netlink/nl/devlink_linux.go
+ create mode 100644 src/vendor/github.com/zededa/shared/libs/zedUpload/azureutil/azure.go
+ rename src/vendor/github.com/zededa/shared/libs/zedUpload/{dnld.go => datastore.go} (87%)
+ rename src/vendor/github.com/zededa/shared/libs/zedUpload/{dnld_aws.go => datastore_aws.go} (58%)
+ create mode 100644 src/vendor/github.com/zededa/shared/libs/zedUpload/datastore_azure.go
+ create mode 100644 src/vendor/github.com/zededa/shared/libs/zedUpload/datastore_http.go
+ rename src/vendor/github.com/zededa/shared/libs/zedUpload/{dnld_req.go => datastore_req.go} (88%)
+ rename src/vendor/github.com/zededa/shared/libs/zedUpload/{dnld_sftp.go => datastore_sftp.go} (67%)
+ create mode 100644 src/vendor/github.com/zededa/shared/libs/zedUpload/httputil/http.go
+ rename src/vendor/github.com/zededa/shared/{srvs/drona/sftp => libs/zedUpload/sftputil}/sftp.go (62%)
+ create mode 100644 src/vendor/go.opencensus.io/AUTHORS
+ create mode 100644 src/vendor/go.opencensus.io/LICENSE
+ create mode 100644 src/vendor/go.opencensus.io/exemplar/exemplar.go
+ create mode 100644 src/vendor/go.opencensus.io/internal/internal.go
+ create mode 100644 src/vendor/go.opencensus.io/internal/sanitize.go
+ create mode 100644 src/vendor/go.opencensus.io/internal/tagencoding/tagencoding.go
+ create mode 100644 src/vendor/go.opencensus.io/internal/traceinternals.go
+ create mode 100644 src/vendor/go.opencensus.io/opencensus.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/client.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/client_stats.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/doc.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/propagation/b3/b3.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/propagation/tracecontext/propagation.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/route.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/server.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/span_annotating_client_trace.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/stats.go
+ create mode 100644 src/vendor/go.opencensus.io/plugin/ochttp/trace.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/doc.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/internal/record.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/internal/validation.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/measure.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/measure_float64.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/measure_int64.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/record.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/units.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/aggregation.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/aggregation_data.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/collector.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/doc.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/export.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/view.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/worker.go
+ create mode 100644 src/vendor/go.opencensus.io/stats/view/worker_commands.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/context.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/doc.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/key.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/map.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/map_codec.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/profile_19.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/profile_not19.go
+ create mode 100644 src/vendor/go.opencensus.io/tag/validate.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/basetypes.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/config.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/doc.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/exemplar.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/export.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/internal/internal.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/propagation/propagation.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/sampling.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/spanbucket.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/spanstore.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/status_codes.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/trace.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/trace_go11.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/trace_nongo11.go
+ create mode 100644 src/vendor/go.opencensus.io/trace/tracestate/tracestate.go
+ create mode 100644 src/vendor/golang.org/x/net/AUTHORS
+ create mode 100644 src/vendor/golang.org/x/net/CONTRIBUTORS
+ create mode 100644 src/vendor/golang.org/x/net/LICENSE
+ create mode 100644 src/vendor/golang.org/x/net/PATENTS
+ create mode 100644 src/vendor/golang.org/x/net/context/context.go
+ create mode 100644 src/vendor/golang.org/x/net/context/go17.go
+ create mode 100644 src/vendor/golang.org/x/net/context/go19.go
+ create mode 100644 src/vendor/golang.org/x/net/context/pre_go17.go
+ create mode 100644 src/vendor/golang.org/x/net/context/pre_go19.go
+ create mode 100644 src/vendor/golang.org/x/net/html/atom/atom.go
+ create mode 100644 src/vendor/golang.org/x/net/html/atom/gen.go
+ create mode 100644 src/vendor/golang.org/x/net/html/atom/table.go
+ create mode 100644 src/vendor/golang.org/x/net/html/const.go
+ create mode 100644 src/vendor/golang.org/x/net/html/doc.go
+ create mode 100644 src/vendor/golang.org/x/net/html/doctype.go
+ create mode 100644 src/vendor/golang.org/x/net/html/entity.go
+ create mode 100644 src/vendor/golang.org/x/net/html/escape.go
+ create mode 100644 src/vendor/golang.org/x/net/html/foreign.go
+ create mode 100644 src/vendor/golang.org/x/net/html/node.go
+ create mode 100644 src/vendor/golang.org/x/net/html/parse.go
+ create mode 100644 src/vendor/golang.org/x/net/html/render.go
+ create mode 100644 src/vendor/golang.org/x/net/html/token.go
+ create mode 100644 src/vendor/golang.org/x/net/http/httpguts/guts.go
+ create mode 100644 src/vendor/golang.org/x/net/http/httpguts/httplex.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/ciphers.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/client_conn_pool.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/databuffer.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/errors.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/flow.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/frame.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/go111.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/gotrack.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/headermap.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/hpack/encode.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/hpack/hpack.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/hpack/huffman.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/hpack/tables.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/http2.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/not_go111.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/pipe.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/server.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/transport.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/write.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/writesched.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/writesched_priority.go
+ create mode 100644 src/vendor/golang.org/x/net/http2/writesched_random.go
+ create mode 100644 src/vendor/golang.org/x/net/idna/idna.go
+ create mode 100644 src/vendor/golang.org/x/net/idna/punycode.go
+ create mode 100644 src/vendor/golang.org/x/net/idna/tables.go
+ create mode 100644 src/vendor/golang.org/x/net/idna/trie.go
+ create mode 100644 src/vendor/golang.org/x/net/idna/trieval.go
+ create mode 100644 src/vendor/golang.org/x/net/internal/timeseries/timeseries.go
+ create mode 100644 src/vendor/golang.org/x/net/trace/events.go
+ create mode 100644 src/vendor/golang.org/x/net/trace/histogram.go
+ create mode 100644 src/vendor/golang.org/x/net/trace/trace.go
+ create mode 100644 src/vendor/golang.org/x/sync/AUTHORS
+ create mode 100644 src/vendor/golang.org/x/sync/CONTRIBUTORS
+ create mode 100644 src/vendor/golang.org/x/sync/LICENSE
+ create mode 100644 src/vendor/golang.org/x/sync/PATENTS
+ create mode 100644 src/vendor/golang.org/x/sync/semaphore/semaphore.go
+ create mode 100644 src/vendor/golang.org/x/text/AUTHORS
+ create mode 100644 src/vendor/golang.org/x/text/CONTRIBUTORS
+ create mode 100644 src/vendor/golang.org/x/text/LICENSE
+ create mode 100644 src/vendor/golang.org/x/text/PATENTS
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/builder.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/colelem.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/contract.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/order.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/table.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/build/trie.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/collate.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/index.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/maketables.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/option.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/sort.go
+ create mode 100644 src/vendor/golang.org/x/text/collate/tables.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/collelem.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/colltab.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/contract.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/iter.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/numeric.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/table.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/trie.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/colltab/weighter.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/gen/code.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/gen/gen.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/tag/tag.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/triegen/compact.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/triegen/print.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/triegen/triegen.go
+ create mode 100644 src/vendor/golang.org/x/text/internal/ucd/ucd.go
+ create mode 100644 src/vendor/golang.org/x/text/language/common.go
+ create mode 100644 src/vendor/golang.org/x/text/language/coverage.go
+ create mode 100644 src/vendor/golang.org/x/text/language/doc.go
+ create mode 100644 src/vendor/golang.org/x/text/language/gen.go
+ create mode 100644 src/vendor/golang.org/x/text/language/gen_common.go
+ create mode 100644 src/vendor/golang.org/x/text/language/gen_index.go
+ create mode 100644 src/vendor/golang.org/x/text/language/go1_1.go
+ create mode 100644 src/vendor/golang.org/x/text/language/go1_2.go
+ create mode 100644 src/vendor/golang.org/x/text/language/index.go
+ create mode 100644 src/vendor/golang.org/x/text/language/language.go
+ create mode 100644 src/vendor/golang.org/x/text/language/lookup.go
+ create mode 100644 src/vendor/golang.org/x/text/language/match.go
+ create mode 100644 src/vendor/golang.org/x/text/language/parse.go
+ create mode 100644 src/vendor/golang.org/x/text/language/tables.go
+ create mode 100644 src/vendor/golang.org/x/text/language/tags.go
+ create mode 100644 src/vendor/golang.org/x/text/secure/bidirule/bidirule.go
+ create mode 100644 src/vendor/golang.org/x/text/secure/bidirule/bidirule10.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/secure/bidirule/bidirule9.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/transform/transform.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/bidi.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/bracket.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/core.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/gen.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/gen_ranges.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/gen_trieval.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/prop.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/tables10.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/tables9.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/bidi/trieval.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/base.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/cldr.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/collate.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/decode.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/makexml.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/resolve.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/slice.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/cldr/xml.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/composition.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/forminfo.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/input.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/iter.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/maketables.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/normalize.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/readwriter.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/tables10.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/tables9.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/transform.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/trie.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/norm/triegen.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/rangetable/gen.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/rangetable/merge.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/rangetable/rangetable.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/rangetable/tables10.0.0.go
+ create mode 100644 src/vendor/golang.org/x/text/unicode/rangetable/tables9.0.0.go
+ create mode 100644 src/vendor/google.golang.org/api/AUTHORS
+ create mode 100644 src/vendor/google.golang.org/api/CONTRIBUTORS
+ create mode 100644 src/vendor/google.golang.org/api/LICENSE
+ create mode 100644 src/vendor/google.golang.org/api/googleapi/internal/uritemplates/LICENSE
+ create mode 100644 src/vendor/google.golang.org/api/support/bundler/bundler.go
+ create mode 100644 src/vendor/google.golang.org/genproto/LICENSE
+ create mode 100644 src/vendor/google.golang.org/genproto/googleapis/rpc/status/status.pb.go
+ create mode 100644 src/vendor/google.golang.org/grpc/AUTHORS
+ create mode 100644 src/vendor/google.golang.org/grpc/LICENSE
+ create mode 100644 src/vendor/google.golang.org/grpc/backoff.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer/balancer.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer/base/balancer.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer/base/base.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer/roundrobin/roundrobin.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer_conn_wrappers.go
+ create mode 100644 src/vendor/google.golang.org/grpc/balancer_v1_wrapper.go
+ create mode 100644 src/vendor/google.golang.org/grpc/binarylog/grpc_binarylog_v1/binarylog.pb.go
+ create mode 100644 src/vendor/google.golang.org/grpc/call.go
+ create mode 100644 src/vendor/google.golang.org/grpc/clientconn.go
+ create mode 100644 src/vendor/google.golang.org/grpc/codec.go
+ create mode 100644 src/vendor/google.golang.org/grpc/codes/code_string.go
+ create mode 100644 src/vendor/google.golang.org/grpc/codes/codes.go
+ create mode 100644 src/vendor/google.golang.org/grpc/connectivity/connectivity.go
+ create mode 100644 src/vendor/google.golang.org/grpc/credentials/credentials.go
+ create mode 100644 src/vendor/google.golang.org/grpc/credentials/internal/syscallconn.go
+ create mode 100644 src/vendor/google.golang.org/grpc/credentials/internal/syscallconn_appengine.go
+ create mode 100644 src/vendor/google.golang.org/grpc/dialoptions.go
+ create mode 100644 src/vendor/google.golang.org/grpc/doc.go
+ create mode 100644 src/vendor/google.golang.org/grpc/encoding/encoding.go
+ create mode 100644 src/vendor/google.golang.org/grpc/encoding/proto/proto.go
+ create mode 100644 src/vendor/google.golang.org/grpc/grpclog/grpclog.go
+ create mode 100644 src/vendor/google.golang.org/grpc/grpclog/logger.go
+ create mode 100644 src/vendor/google.golang.org/grpc/grpclog/loggerv2.go
+ create mode 100644 src/vendor/google.golang.org/grpc/interceptor.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/backoff/backoff.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/binarylog.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/binarylog_testutil.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/env_config.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/method_logger.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/sink.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/binarylog/util.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/funcs.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/types.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/types_linux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/types_nonlinux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/util_linux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/channelz/util_nonlinux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/envconfig/envconfig.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/grpcrand/grpcrand.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/grpcsync/event.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/internal.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/syscall/syscall_linux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/syscall/syscall_nonlinux.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/bdp_estimator.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/controlbuf.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/defaults.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/flowcontrol.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/handler_server.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/http2_client.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/http2_server.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/http_util.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/log.go
+ create mode 100644 src/vendor/google.golang.org/grpc/internal/transport/transport.go
+ create mode 100644 src/vendor/google.golang.org/grpc/keepalive/keepalive.go
+ create mode 100644 src/vendor/google.golang.org/grpc/metadata/metadata.go
+ create mode 100644 src/vendor/google.golang.org/grpc/naming/dns_resolver.go
+ create mode 100644 src/vendor/google.golang.org/grpc/naming/naming.go
+ create mode 100644 src/vendor/google.golang.org/grpc/peer/peer.go
+ create mode 100644 src/vendor/google.golang.org/grpc/picker_wrapper.go
+ create mode 100644 src/vendor/google.golang.org/grpc/pickfirst.go
+ create mode 100644 src/vendor/google.golang.org/grpc/proxy.go
+ create mode 100644 src/vendor/google.golang.org/grpc/resolver/dns/dns_resolver.go
+ create mode 100644 src/vendor/google.golang.org/grpc/resolver/passthrough/passthrough.go
+ create mode 100644 src/vendor/google.golang.org/grpc/resolver/resolver.go
+ create mode 100644 src/vendor/google.golang.org/grpc/resolver_conn_wrapper.go
+ create mode 100644 src/vendor/google.golang.org/grpc/rpc_util.go
+ create mode 100644 src/vendor/google.golang.org/grpc/server.go
+ create mode 100644 src/vendor/google.golang.org/grpc/service_config.go
+ create mode 100644 src/vendor/google.golang.org/grpc/stats/handlers.go
+ create mode 100644 src/vendor/google.golang.org/grpc/stats/stats.go
+ create mode 100644 src/vendor/google.golang.org/grpc/status/status.go
+ create mode 100644 src/vendor/google.golang.org/grpc/stream.go
+ create mode 100644 src/vendor/google.golang.org/grpc/tap/tap.go
+ create mode 100644 src/vendor/google.golang.org/grpc/trace.go
+ create mode 100644 src/vendor/google.golang.org/grpc/version.go
+From github.com:zededa/lisp
+ * [new branch]      1.2        -> origin/1.2
+ * [new tag]         1.2.0      -> 1.2.0
+Already up-to-date.
+Building and pushing "zededa/lisp:4bd88ce08634e61060bc7abc8d7b0c1fb25d117d"
+4bd88ce08634e61060bc7abc8d7b0c1fb25d117d: Pulling from zededa/lisp
+Digest: sha256:38dc301df5674271853d74ce3fd968aa363016b297aeac4f484c47708ea84b99
+Status: Image is up to date for zededa/lisp:4bd88ce08634e61060bc7abc8d7b0c1fb25d117d
+Building and pushing "zededa/lisp:latest"
+Sending build context to Docker daemon   13.2MB
+Step 1/20 : FROM golang:1.9.1-alpine AS go-build
+ ---> cc52d0ad4cce
+Step 2/20 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/20 : RUN apk add --no-cache git gcc linux-headers libc-dev libpcap-dev
+ ---> Using cache
+ ---> b0f64166d21e
+Step 4/20 : ADD . /go/src/github.com/zededa/lisp
+ ---> 48d721794d77
+Step 5/20 : RUN go install github.com/zededa/lisp/cmd/...
+ ---> Running in f1c6472f8cde
+ ---> 04a008a294be
+Removing intermediate container f1c6472f8cde
+Step 6/20 : FROM alpine:3.8
+ ---> 0db038343fbd
+Step 7/20 : RUN apk add --no-cache curl gcc linux-headers libc-dev python python-dev libffi-dev openssl-dev libpcap-dev iproute2 tcpdump ethtool ip6tables
+ ---> Using cache
+ ---> bcf4d3168a8c
+Step 8/20 : RUN mkdir /lisp
+ ---> Using cache
+ ---> 1dcd57abf0c4
+Step 9/20 : ARG LISP_URL=https://www.dropbox.com/s/ogfu5gaw550rlkq/zededa.tgz
+ ---> Using cache
+ ---> 5733279436e6
+Step 10/20 : RUN cd /lisp ; curl --insecure -L $LISP_URL | gzip -dc | tar -xf -
+ ---> Using cache
+ ---> c1d6d16c6372
+Step 11/20 : ADD scripts/sudo /usr/bin/sudo
+ ---> Using cache
+ ---> eabb4c18faa7
+Step 12/20 : ADD conf scripts/RESTART-LISP scripts/RUN-LISP.rtr1 scripts/RUN-LISP scripts/STOP-LISP scripts/CONFIG-SVC scripts/RL scripts/pslisp scripts/log-packets scripts/ping-mesh.py /lisp/
+ ---> Using cache
+ ---> e15f1d2975d1
+Step 13/20 : RUN python /lisp/get-pip.py
+ ---> Using cache
+ ---> 2236be20e457
+Step 14/20 : RUN pip install -r /lisp/pip-requirements.txt
+ ---> Using cache
+ ---> bb5a918d3fbf
+Step 15/20 : RUN echo 'PS1="`hostname | cut -d . -f 0` > "' >> /root/.profile
+ ---> Using cache
+ ---> 5042f58441be
+Step 16/20 : COPY --from=go-build /go/bin/dataplane /lisp/lisp-ztr
+ ---> Using cache
+ ---> 9eb378ed01ae
+Step 17/20 : EXPOSE 8080
+ ---> Using cache
+ ---> 108c240478dd
+Step 18/20 : WORKDIR /lisp
+ ---> Using cache
+ ---> c900a0718c14
+Step 19/20 : CMD ./CONFIG-SVC ; ./RL ; sleep 5 ; tail -f ./logs/*
+ ---> Using cache
+ ---> e07e2c4b282b
+Step 20/20 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'f8f2cba08166884c5b9341eb605db1d5d84f6550' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Using cache
+ ---> f0831d283c19
+Successfully built f0831d283c19
+Successfully tagged zededa/lisp:latest-arm64
+Pushing zededa/lisp:latest-arm64
+The push refers to a repository [docker.io/zededa/lisp]
+5c5887b821e5: Preparing
+f93eeb35af34: Preparing
+e7d4a8597f47: Preparing
+e8783d15fe29: Preparing
+9006511ab46c: Preparing
+9c4d2799ed46: Preparing
+7e3f18692e09: Preparing
+9ff7fbdbace6: Preparing
+3dd8a25d3e1b: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+9ff7fbdbace6: Waiting
+9c4d2799ed46: Waiting
+7e3f18692e09: Waiting
+3dd8a25d3e1b: Waiting
+92d7b4d0b33c: Waiting
+82fe62b38ba2: Waiting
+f93eeb35af34: Layer already exists
+e7d4a8597f47: Layer already exists
+e8783d15fe29: Layer already exists
+5c5887b821e5: Layer already exists
+9006511ab46c: Layer already exists
+9c4d2799ed46: Layer already exists
+7e3f18692e09: Layer already exists
+9ff7fbdbace6: Layer already exists
+82fe62b38ba2: Layer already exists
+3dd8a25d3e1b: Layer already exists
+92d7b4d0b33c: Layer already exists
+latest-arm64: digest: sha256:c8ea7d880f87774ce6976ebd3955e171b6cb48ec7ce548380f46c4f23e36affc size: 2621
+Pushing zededa/lisp:latest-arm64 to manifest zededa/lisp:latest
+time="2019-01-29T08:00:53+01:00" level=warning msg="Couldn't find or access image reference \"zededa/lisp:latest-s390x\". Skipping image."
+Digest: sha256:cd7c7232e91176eb181517b991a0299d63a2e6120f5d3028debf6a7f3fabb52c 743
+Not signing zededa/lisp:latest
+Tagging zededa/lisp:latest-arm64 as zededa/lisp:1.2.0-arm64
+Pushing zededa/lisp:1.2.0-arm64
+The push refers to a repository [docker.io/zededa/lisp]
+5c5887b821e5: Preparing
+f93eeb35af34: Preparing
+e7d4a8597f47: Preparing
+e8783d15fe29: Preparing
+9006511ab46c: Preparing
+9c4d2799ed46: Preparing
+7e3f18692e09: Preparing
+9ff7fbdbace6: Preparing
+3dd8a25d3e1b: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+7e3f18692e09: Waiting
+9ff7fbdbace6: Waiting
+3dd8a25d3e1b: Waiting
+82fe62b38ba2: Waiting
+92d7b4d0b33c: Waiting
+9c4d2799ed46: Waiting
+e7d4a8597f47: Layer already exists
+e8783d15fe29: Layer already exists
+5c5887b821e5: Layer already exists
+9006511ab46c: Layer already exists
+f93eeb35af34: Layer already exists
+9c4d2799ed46: Layer already exists
+7e3f18692e09: Layer already exists
+9ff7fbdbace6: Layer already exists
+3dd8a25d3e1b: Layer already exists
+82fe62b38ba2: Layer already exists
+92d7b4d0b33c: Layer already exists
+1.2.0-arm64: digest: sha256:c8ea7d880f87774ce6976ebd3955e171b6cb48ec7ce548380f46c4f23e36affc size: 2621
+Pushing zededa/lisp:1.2.0-arm64 to manifest zededa/lisp:1.2.0
+time="2019-01-29T08:01:04+01:00" level=warning msg="Couldn't find or access image reference \"zededa/lisp:1.2.0-s390x\". Skipping image."
+Digest: sha256:b1b288764b8a55265375a9caf302dcfe6222aa2eb546ac7a9c9763f5e12a1099 743
+Not signing zededa/lisp:1.2.0
+Build, push and release of "1.2.0" complete, all done.
+Building and pushing "zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec"
+Error response from daemon: manifest for zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec not found
+No image pulled, continuing with build
+Sending build context to Docker daemon   61.6MB
+Step 1/30 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/30 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/30 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> d1eee840b78f
+Step 4/30 : ENV CGO_ENABLED 1
+ ---> Running in d19ea58b2d1e
+ ---> 43f5b37f3ea0
+Removing intermediate container d19ea58b2d1e
+Step 5/30 : ARG GOARCH=
+ ---> Running in 5a73cb82f951
+ ---> 2f6ef9c7a071
+Removing intermediate container 5a73cb82f951
+Step 6/30 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Running in a850f4b2e658
+ ---> a88acb4b4a36
+Removing intermediate container a850f4b2e658
+Step 7/30 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Running in 93e9d5c64fc6
+ ---> 088a47cef319
+Removing intermediate container 93e9d5c64fc6
+Step 8/30 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> 60a816775150
+Step 9/30 : ADD etc /config
+ ---> 42d53c7fa841
+Step 10/30 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> 510d552a5dc5
+Step 11/30 : ADD examples /opt/zededa/examples
+ ---> 04b9c6ffdee4
+Step 12/30 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> d40f377e86cd
+Step 13/30 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> c113444df629
+Step 14/30 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> dc0c6b71c501
+Step 15/30 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Running in 3ae5b09ddbe4
+ ---> 0d0e2c5f7b18
+Removing intermediate container 3ae5b09ddbe4
+Step 16/30 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Running in 1a8ec21ae29d
+ ---> 4fff27badb37
+Removing intermediate container 1a8ec21ae29d
+Step 17/30 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Running in 07e60040a83c
+Building: 20180314-test-056dd69a-2019-01-29.07.02
+ ---> 26f80ca26a9e
+Removing intermediate container 07e60040a83c
+Step 18/30 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc)           ;    go install github.com/zededa/go-provision/zedbox/...               ;    if [ -f /go/bin/*/zedbox ] ; then mv /go/bin/*/zedbox /go/bin ; fi
+ ---> Running in c462db5ea05f
+ ---> ba765893547a
+Removing intermediate container c462db5ea05f
+Step 19/30 : RUN ln -s /go/bin/zedbox /opt/zededa/bin/zedbox ;    for app in         client domainmgr downloader hardwaremodel identitymgr ledmanager       logmanager verifier zedagent zedmanager zedrouter ipcmonitor nim       waitforaddr diag baseosmgr wstunnelclient ;    do ln -s zedbox /opt/zededa/bin/$app ; done
+ ---> Running in e634ddf764af
+ ---> a0c8d76b0f42
+Removing intermediate container e634ddf764af
+Step 20/30 : FROM scratch
+ ---> 
+Step 21/30 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> a117985407a2
+Step 22/30 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> 9117c2766959
+Step 23/30 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> ac055d0a5a15
+Step 24/30 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> 6532172d2277
+Step 25/30 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> 01f0b39d3998
+Step 26/30 : COPY --from=build /config /opt/zededa/examples/config
+ ---> a29050972549
+Step 27/30 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> 937cbcc8e4ff
+Step 28/30 : WORKDIR /opt/zededa/bin
+ ---> 068f89628345
+Removing intermediate container ad31811a2dbd
+Step 29/30 : CMD /bin/ash
+ ---> Running in 8c1cf23a13c3
+ ---> 095468ce8641
+Removing intermediate container 8c1cf23a13c3
+Step 30/30 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '056dd69a8ceab0d49880b7541f3f45fae66cfdab' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 4b70c32c7698
+ ---> ce9b3944e291
+Removing intermediate container 4b70c32c7698
+Successfully built ce9b3944e291
+Successfully tagged zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec-arm64
+Pushing zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+49de92324f72: Preparing
+37d1aafd8fe9: Preparing
+6be3246eeda5: Preparing
+cc1054974db3: Preparing
+fd640cb4f8fd: Preparing
+ec335c9072ef: Preparing
+cd89f17a8052: Preparing
+ec335c9072ef: Waiting
+cd89f17a8052: Waiting
+cc1054974db3: Pushed
+37d1aafd8fe9: Pushed
+fd640cb4f8fd: Pushed
+6be3246eeda5: Pushed
+ec335c9072ef: Pushed
+cd89f17a8052: Pushed
+49de92324f72: Pushed
+9882bacbd420810977e4b06b1830fc9b0aab0eec-arm64: digest: sha256:88b0ac6851d4f30a6c07d098c9a563e98cc2211426a99e9b60f7afaf71133ee5 size: 1776
+Pushing zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec-arm64 to manifest zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec
+time="2019-01-29T08:04:15+01:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec-amd64\". Skipping image."
+time="2019-01-29T08:04:19+01:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec-s390x\". Skipping image."
+Digest: sha256:42bf044dde52a1849a8efc8660c76d78546715cb95844e56255bd88f85c580bd 434
+Not signing zededa/ztools:9882bacbd420810977e4b06b1830fc9b0aab0eec
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/ztools:latest"
+Sending build context to Docker daemon   61.6MB
+Step 1/30 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/30 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/30 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> d1eee840b78f
+Step 4/30 : ENV CGO_ENABLED 1
+ ---> Using cache
+ ---> 43f5b37f3ea0
+Step 5/30 : ARG GOARCH=
+ ---> Using cache
+ ---> 2f6ef9c7a071
+Step 6/30 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Using cache
+ ---> a88acb4b4a36
+Step 7/30 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Using cache
+ ---> 088a47cef319
+Step 8/30 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> Using cache
+ ---> 60a816775150
+Step 9/30 : ADD etc /config
+ ---> Using cache
+ ---> 42d53c7fa841
+Step 10/30 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> Using cache
+ ---> 510d552a5dc5
+Step 11/30 : ADD examples /opt/zededa/examples
+ ---> Using cache
+ ---> 04b9c6ffdee4
+Step 12/30 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> d40f377e86cd
+Step 13/30 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> c113444df629
+Step 14/30 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> dc0c6b71c501
+Step 15/30 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Using cache
+ ---> 0d0e2c5f7b18
+Step 16/30 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Using cache
+ ---> 4fff27badb37
+Step 17/30 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Using cache
+ ---> 26f80ca26a9e
+Step 18/30 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc)           ;    go install github.com/zededa/go-provision/zedbox/...               ;    if [ -f /go/bin/*/zedbox ] ; then mv /go/bin/*/zedbox /go/bin ; fi
+ ---> Using cache
+ ---> ba765893547a
+Step 19/30 : RUN ln -s /go/bin/zedbox /opt/zededa/bin/zedbox ;    for app in         client domainmgr downloader hardwaremodel identitymgr ledmanager       logmanager verifier zedagent zedmanager zedrouter ipcmonitor nim       waitforaddr diag baseosmgr wstunnelclient ;    do ln -s zedbox /opt/zededa/bin/$app ; done
+ ---> Using cache
+ ---> a0c8d76b0f42
+Step 20/30 : FROM scratch
+ ---> 
+Step 21/30 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> Using cache
+ ---> a117985407a2
+Step 22/30 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> Using cache
+ ---> 9117c2766959
+Step 23/30 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> ac055d0a5a15
+Step 24/30 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> 6532172d2277
+Step 25/30 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> 01f0b39d3998
+Step 26/30 : COPY --from=build /config /opt/zededa/examples/config
+ ---> Using cache
+ ---> a29050972549
+Step 27/30 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> Using cache
+ ---> 937cbcc8e4ff
+Step 28/30 : WORKDIR /opt/zededa/bin
+ ---> Using cache
+ ---> 068f89628345
+Step 29/30 : CMD /bin/ash
+ ---> Using cache
+ ---> 095468ce8641
+Step 30/30 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '056dd69a8ceab0d49880b7541f3f45fae66cfdab' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Using cache
+ ---> ce9b3944e291
+Successfully built ce9b3944e291
+Successfully tagged zededa/ztools:latest-arm64
+Pushing zededa/ztools:latest-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+49de92324f72: Preparing
+37d1aafd8fe9: Preparing
+6be3246eeda5: Preparing
+cc1054974db3: Preparing
+fd640cb4f8fd: Preparing
+ec335c9072ef: Preparing
+cd89f17a8052: Preparing
+ec335c9072ef: Waiting
+cd89f17a8052: Waiting
+6be3246eeda5: Layer already exists
+49de92324f72: Layer already exists
+cc1054974db3: Layer already exists
+fd640cb4f8fd: Layer already exists
+37d1aafd8fe9: Layer already exists
+ec335c9072ef: Layer already exists
+cd89f17a8052: Layer already exists
+latest-arm64: digest: sha256:88b0ac6851d4f30a6c07d098c9a563e98cc2211426a99e9b60f7afaf71133ee5 size: 1776
+Pushing zededa/ztools:latest-arm64 to manifest zededa/ztools:latest
+time="2019-01-29T08:04:37+01:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:latest-s390x\". Skipping image."
+Digest: sha256:298751b98b9c0d81e80b9ae0ad708f63b0dcb7c2f765d0265b316d8e443ab7a5 743
+Not signing zededa/ztools:latest
+Build and push complete, not releasing, all done.
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+(cd ..; ./parse-pkgs.sh pkg/zisp/Dockerfile.in > pkg/zisp/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+Building and pushing "zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b"
+97e7b1404e7c9d141eddb58294fcff019f61571b: Pulling from zededa/grub
+Digest: sha256:604e3c16ebc56d34d825d62c7e5ea537f4ab1f3711ce62ce7999066188689327
+Status: Image is up to date for zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b
+Building and pushing "zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99"
+f51bf3d17fad15b71242befbddec96e177132a99: Pulling from zededa/xen
+Digest: sha256:532e96d37e91dd64b70f8fcc266bdaaf7db6340df39d29a984b603758f938d12
+Status: Image is up to date for zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99
+Building and pushing "zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315"
+7cfa13614bb99a84030db209b6c9a0696c7d3315: Pulling from zededa/kernel
+Digest: sha256:d483cb69f54df3645889e00e51ee70883b825e2d35c41e347c2e77fb113ae83e
+Status: Image is up to date for zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315
+Building and pushing "zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569"
+1d8c22ae31c42d767ba648b186db4ea967a9c569: Pulling from zededa/fw
+Digest: sha256:66b64c2c17b500e5614e8c153939a6cef0b44acc5ca2dc72b46304c7183c5518
+Status: Image is up to date for zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569
+Building and pushing "zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2"
+9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2: Pulling from zededa/xen-tools
+Digest: sha256:265c27a8d9914768ae4460edb4d1f71a282ddcee5ac7436d2e6dab976361c6b9
+Status: Image is up to date for zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2
+Building and pushing "zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b"
+c5985cdd83998d06255fe115d230a280c6928f1b: Pulling from zededa/dnsmasq
+Digest: sha256:4240f81065dc70471862372cac9205a2ecca6133e7d84d4ecb5fcdd449d6acfb
+Status: Image is up to date for zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b
+Building and pushing "zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec"
+8f5ee3b98aa3ea49a9a4231baac9be933d6155ec: Pulling from zededa/strongswan
+Digest: sha256:92b46f743d6415bd68a11b1ca65bf0da756a739c89a95236d76ef12246abee29
+Status: Image is up to date for zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec
+Building and pushing "zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4"
+fe878611e4e032ea10946cbc9a1c3d5b22349dc4: Pulling from zededa/gpt-tools
+Digest: sha256:00d2500aef758299c747b32e5e44df1780082322ded3f2d95cd8c86ebf5fe5d0
+Status: Image is up to date for zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4
+Building and pushing "zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d"
+b53cd1b5785c128371a5997e3a6e16007718c12d: Pulling from zededa/dom0-ztools
+Digest: sha256:0fe0e0423546d1a215a1f6472adc6c112c116d5448ab66e629897ccd084bf345
+Status: Image is up to date for zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:a959cb378d1082428da70d3a605d250801349224be0ffce3c5e0c07e397b9ddc
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:8379202b48196d10ec12a07365e606042625b91fe71be03d30bcf768e54a7c3e
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d"
+5f68442251df0f2625fde14e947f11de2374b72d: Pulling from zededa/wwan
+Digest: sha256:190e3690756d125633c31bccade56ad7178b121dd6d7d04d9c2789e05d05c030
+Status: Image is up to date for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d
+Building and pushing "zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97"
+8aa66e76c276b97d1141801d3f461e2b3f8f8f97: Pulling from zededa/wlan
+Digest: sha256:72c42a18b2769cf5e9c5c92b659f016ecb8fdda740f77199d5e92885fb200867
+Status: Image is up to date for zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97
+Building and pushing "zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272"
+5adb10a552c07513159777bd022ac58e23d59272: Pulling from zededa/rngd
+Digest: sha256:b593f4088b8338af7e16e1a7640d617ddea7d905e3fcae61d1261241abfe0f49
+Status: Image is up to date for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272
+Building and pushing "zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173"
+2aea3af274e4928d2eab2b738d0e100ee5362173: Pulling from zededa/watchdog
+Digest: sha256:65f2f1761d68d241c812044e9cca72b783f5af3939dfc1c93e3c87835862382e
+Status: Image is up to date for zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173
+Building and pushing "zededa/guacd:1bdc3c8ca55db141372b1a12daf7d12c04866eed"
+1bdc3c8ca55db141372b1a12daf7d12c04866eed: Pulling from zededa/guacd
+Digest: sha256:19d9af9a758061d678830d27e964f3beef89fd9ad5d0a3f4abc867b9026af26b
+Status: Image is up to date for zededa/guacd:1bdc3c8ca55db141372b1a12daf7d12c04866eed
+Building and pushing "zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9"
+18377dd0bc3c33a1602e94a4c43aa0b3c51badb9: Pulling from zededa/device-trees
+Digest: sha256:00279cb016ebb97994354578aa49eb672c52c9071657236642e6d1a81b3567bb
+Status: Image is up to date for zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9
+Building and pushing "zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687"
+3aeeaf4e04f450283d49220eb7e82262b4531687: Pulling from zededa/debug
+Digest: sha256:81c4c7882f12b793a70809942dedf29e3dca96531a9b0005377945d4860e6d10
+Status: Image is up to date for zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687
+Building and pushing "zededa/zisp:e8f5d2ad9fa4a0af649d9a2d8f3461c678d7c211"
+e8f5d2ad9fa4a0af649d9a2d8f3461c678d7c211: Pulling from zededa/zisp
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  4.096kB
+Step 1/4 : FROM scratch-arm64
+pull access denied for scratch-arm64, repository does not exist or may require 'docker login'
+exit status 1
+Makefile:20: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using scratch instead
+Building and pushing "zededa/zedctr:d509dfbe651aeb392ac6bb3f8e6e110362694e26"
+Sending build context to Docker daemon  20.99kB
+Step 1/27 : FROM zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687-arm64 as ztools
+ ---> 256db766104a
+Step 2/27 : FROM scratch-arm64 as lisp
+pull access denied for scratch-arm64, repository does not exist or may require 'docker login'
+exit status 1
+Makefile:20: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:ff498d9924491a7e57ed69c60946bce57195dd51539a5db8dc4e8a91a6667941
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:8efe69ed0db579dd3cfdf7ddcfc095acdcc0548531ae2136ff01bb6c050d8d19
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make: *** No rule to make target 'publish'.  Stop.
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:latest"
+Sending build context to Docker daemon  1.314GB
+Step 1/9 : FROM alpine:edge
+ ---> a7881f1d3b63
+Step 2/9 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git
+ ---> Using cache
+ ---> 28213d73834a
+Step 3/9 : COPY . /bits/
+ ---> Using cache
+ ---> 16fbcdcf987f
+Step 4/9 : COPY OVMF.fd /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> 02794b6bc49a
+Step 5/9 : COPY runme.sh /
+ ---> Using cache
+ ---> 95d2d28f5bc6
+Step 6/9 : RUN touch /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> cd4aecb7bdf7
+Step 7/9 : WORKDIR /bits
+ ---> Using cache
+ ---> 693f53d72839
+Step 8/9 : ENTRYPOINT /runme.sh
+ ---> Using cache
+ ---> d5b966e18ad4
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'f1e9474249c02107b447aef47d89116885c5950d' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 87ce79c25d1f
+ ---> 83082a887e53
+Removing intermediate container 87ce79c25d1f
+Successfully built 83082a887e53
+Successfully tagged zededa/zenix:latest-arm64
+Pushing zededa/zenix:latest-arm64
+The push refers to a repository [docker.io/zededa/zenix]
+98a596036f57: Preparing
+c96588d795bb: Preparing
+7989889f26ec: Preparing
+7eb3ea1d6185: Preparing
+97b4fe4534d2: Preparing
+d4d04a8204b5: Preparing
+2a2e682c36db: Preparing
+d4d04a8204b5: Waiting
+2a2e682c36db: Waiting
+c96588d795bb: Layer already exists
+98a596036f57: Layer already exists
+7eb3ea1d6185: Layer already exists
+7989889f26ec: Layer already exists
+97b4fe4534d2: Layer already exists
+d4d04a8204b5: Layer already exists
+2a2e682c36db: Layer already exists
+latest-arm64: digest: sha256:b04c41858ce7a608f8700c99d7ec6ba3c9d20fe9c9c3bb3227a7418cd81e1d09 size: 1788
+Pushing zededa/zenix:latest-arm64 to manifest zededa/zenix:latest
+time="2019-01-29T08:07:35+01:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:latest-s390x\". Skipping image."
+Digest: sha256:dbe6cc7a687adb96280c15391be6c34ca81a35b7b1065fc9798404280a982c38 743
+Not signing zededa/zenix:latest
+Build and push complete, not releasing, all done.
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
