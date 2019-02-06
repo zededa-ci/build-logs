@@ -1,0 +1,2336 @@
+From https://github.com/zededa/zenbuild
+   e75ea2d..14e79e8  master     -> origin/master
+   987c2a3..e5781ed  fixes      -> origin/fixes
+Updating e75ea2d..14e79e8
+Fast-forward
+ Makefile                                  |   2 +-
+ parse-pkgs.sh                             |   2 +-
+ pkg/Makefile                              |   2 +-
+ pkg/guacd/0001-alpine-stacksize-fix.patch |  24 ++++++++++++++++++++++++
+ pkg/guacd/Dockerfile                      |   9 +++++++--
+ pkg/guacd/guacamole-server-0.9.14.tar.gz  | Bin 881346 -> 0 bytes
+ pkg/zisp/Dockerfile.in                    |   4 ----
+ pkg/zisp/build.yml                        |   2 --
+ 8 files changed, 34 insertions(+), 11 deletions(-)
+ create mode 100644 pkg/guacd/0001-alpine-stacksize-fix.patch
+ delete mode 100644 pkg/guacd/guacamole-server-0.9.14.tar.gz
+ delete mode 100644 pkg/zisp/Dockerfile.in
+ delete mode 100644 pkg/zisp/build.yml
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+From github.com:zededa/go-provision
+   673b7bc6..737d90c3  master                 -> origin/master
+   1714c20d..06dd9e35  fixes                  -> origin/fixes
+   b10b38f1..d1811b10  kalyan-networkInstance -> origin/kalyan-networkInstance
+Updating 673b7bc6..737d90c3
+Fast-forward
+ Gopkg.lock                                         |   8 +-
+ cmd/downloader/downloader.go                       | 121 ++--
+ cmd/zedrouter/zedrouter.go                         |   4 +-
+ src/vendor/github.com/zededa/api/zmet/zlog.pb.go   |   2 +
+ src/vendor/github.com/zededa/api/zmet/zmet.pb.go   | 646 ++++++++++++---------
+ .../zededa/shared/libs/zedUpload/datastore_http.go |  19 +-
+ 6 files changed, 448 insertions(+), 352 deletions(-)
+From github.com:zededa/lisp
+   f8f2cba..47cc28f  master     -> origin/master
+Updating f8f2cba..47cc28f
+Fast-forward
+ Dockerfile | 21 +++++++++++++--------
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+Building and pushing "zededa/lisp:1ada83e484412c9ad76ff2d9386561fce8301596"
+1ada83e484412c9ad76ff2d9386561fce8301596: Pulling from zededa/lisp
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   13.2MB
+Step 1/24 : FROM golang:1.9.1-alpine AS go-build
+ ---> cc52d0ad4cce
+Step 2/24 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/24 : RUN apk add --no-cache git gcc linux-headers libc-dev libpcap-dev
+ ---> Using cache
+ ---> b0f64166d21e
+Step 4/24 : ADD . /go/src/github.com/zededa/lisp
+ ---> 0180b07690f2
+Step 5/24 : RUN go install github.com/zededa/lisp/cmd/...
+ ---> Running in 83ee9048f63b
+ ---> 7de248c1d782
+Removing intermediate container 83ee9048f63b
+Step 6/24 : FROM alpine:3.8 AS lisp-build
+ ---> 0db038343fbd
+Step 7/24 : ENV LISP_VERSION release-0.488
+ ---> Running in 1313f12b9daf
+ ---> dd9572270e46
+Removing intermediate container 1313f12b9daf
+Step 8/24 : RUN apk add --no-cache py2-pyflakes py2-setuptools && ln -s pyflakes-2 /usr/bin/pyflakes
+ ---> Running in 4abf5c4d80d3
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/12) Installing libbz2 (1.0.6-r6)
+(2/12) Installing expat (2.2.5-r0)
+(3/12) Installing libffi (3.2.1-r4)
+(4/12) Installing gdbm (1.13-r1)
+(5/12) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(6/12) Installing ncurses-terminfo (6.1_p20180818-r1)
+(7/12) Installing ncurses-libs (6.1_p20180818-r1)
+(8/12) Installing readline (7.0.003-r0)
+(9/12) Installing sqlite-libs (3.25.3-r0)
+(10/12) Installing python2 (2.7.15-r1)
+(11/12) Installing py2-pyflakes (1.6.0-r3)
+(12/12) Installing py-setuptools (39.1.0-r0)
+Executing busybox-1.28.4-r2.trigger
+OK: 55 MiB in 25 packages
+ ---> de9975fa460e
+Removing intermediate container 4abf5c4d80d3
+Step 9/24 : ADD https://github.com/farinacci/lispers.net/archive/${LISP_VERSION}.tar.gz /tmp/
+
+ ---> b9f4d5360e43
+Step 10/24 : RUN tar -C /tmp -xzvf /tmp/${LISP_VERSION}.tar.gz
+ ---> Running in 0d215f58e3f3
+lispers.net-release-0.488/
+lispers.net-release-0.488/.gitignore
+lispers.net-release-0.488/CODEOWNERS
+lispers.net-release-0.488/GOVERNANCE
+lispers.net-release-0.488/LICENSE
+lispers.net-release-0.488/NOTICE
+lispers.net-release-0.488/README
+lispers.net-release-0.488/apps/
+lispers.net-release-0.488/apps/README
+lispers.net-release-0.488/apps/lisp-add-mc.py
+lispers.net-release-0.488/apps/lisp-join.py
+lispers.net-release-0.488/apps/lisp-map-cache.py
+lispers.net-release-0.488/apps/lisp-news-receiver.py
+lispers.net-release-0.488/apps/lisp-news-sender.py
+lispers.net-release-0.488/apps/lisp-onoff.py
+lispers.net-release-0.488/apps/lisp-provision-site.py
+lispers.net-release-0.488/apps/lisp-provision-vpn.py
+lispers.net-release-0.488/apps/lisp-provision-xtr.py
+lispers.net-release-0.488/apps/lisp-sys-info.py
+lispers.net-release-0.488/apps/lisp-watch-pps.py
+lispers.net-release-0.488/apps/loc8tr.py
+lispers.net-release-0.488/apps/make-crypto-eid.py
+lispers.net-release-0.488/apps/make-eid-hash.py
+lispers.net-release-0.488/apps/ping-from-eeid.py
+lispers.net-release-0.488/build/
+lispers.net-release-0.488/build/Dockerfile
+lispers.net-release-0.488/build/README
+lispers.net-release-0.488/build/RL.docker
+lispers.net-release-0.488/build/commit-release
+lispers.net-release-0.488/build/latest
+lispers.net-release-0.488/build/make-apps-release.py
+lispers.net-release-0.488/build/make-release.py
+lispers.net-release-0.488/build/py-depend/
+lispers.net-release-0.488/build/py-depend/get-pip.py
+lispers.net-release-0.488/build/py-depend/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/py-depend/lispers.net-test-install.py
+lispers.net-release-0.488/build/py-depend/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.486/
+lispers.net-release-0.488/build/release-0.486/RESTART-LISP
+lispers.net-release-0.488/build/release-0.486/RL-template
+lispers.net-release-0.488/build/release-0.486/RUN-LISP
+lispers.net-release-0.488/build/release-0.486/STOP-LISP
+lispers.net-release-0.488/build/release-0.486/bin/
+lispers.net-release-0.488/build/release-0.486/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.486/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.486/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.486/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.486/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.486/get-pip.py
+lispers.net-release-0.488/build/release-0.486/how-to-install.txt
+lispers.net-release-0.488/build/release-0.486/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.486/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.486/lisp-version.txt
+lispers.net-release-0.488/build/release-0.486/lisp.config.example
+lispers.net-release-0.488/build/release-0.486/lispapi.txt
+lispers.net-release-0.488/build/release-0.486/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.486/lispers.net-x86-release-0.486.tgz
+lispers.net-release-0.488/build/release-0.486/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.486/log-packets
+lispers.net-release-0.488/build/release-0.486/ob/
+lispers.net-release-0.488/build/release-0.486/ob/chacha.py
+lispers.net-release-0.488/build/release-0.486/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp.py
+lispers.net-release-0.488/build/release-0.486/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.486/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.486/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.486/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.486/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.486/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.486/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.486/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.486/pslisp
+lispers.net-release-0.488/build/release-0.486/release-notes.txt
+lispers.net-release-0.488/build/release-0.486/src/
+lispers.net-release-0.488/build/release-0.486/src/chacha.py
+lispers.net-release-0.488/build/release-0.486/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.486/src/lisp.py
+lispers.net-release-0.488/build/release-0.486/src/lispapi.py
+lispers.net-release-0.488/build/release-0.486/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.486/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.486/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.486/src/poly1305.py
+lispers.net-release-0.488/build/release-0.486/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.486/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.487/
+lispers.net-release-0.488/build/release-0.487/RESTART-LISP
+lispers.net-release-0.488/build/release-0.487/RL-template
+lispers.net-release-0.488/build/release-0.487/RUN-LISP
+lispers.net-release-0.488/build/release-0.487/STOP-LISP
+lispers.net-release-0.488/build/release-0.487/bin/
+lispers.net-release-0.488/build/release-0.487/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.487/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.487/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.487/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.487/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.487/get-pip.py
+lispers.net-release-0.488/build/release-0.487/how-to-install.txt
+lispers.net-release-0.488/build/release-0.487/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.487/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.487/lisp-version.txt
+lispers.net-release-0.488/build/release-0.487/lisp.config.example
+lispers.net-release-0.488/build/release-0.487/lispapi.txt
+lispers.net-release-0.488/build/release-0.487/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.487/lispers.net-x86-release-0.487.tgz
+lispers.net-release-0.488/build/release-0.487/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.487/log-packets
+lispers.net-release-0.488/build/release-0.487/ob/
+lispers.net-release-0.488/build/release-0.487/ob/chacha.py
+lispers.net-release-0.488/build/release-0.487/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp.py
+lispers.net-release-0.488/build/release-0.487/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.487/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.487/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.487/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.487/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.487/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.487/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.487/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.487/pslisp
+lispers.net-release-0.488/build/release-0.487/release-notes.txt
+lispers.net-release-0.488/build/release-0.487/src/
+lispers.net-release-0.488/build/release-0.487/src/chacha.py
+lispers.net-release-0.488/build/release-0.487/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.487/src/lisp.py
+lispers.net-release-0.488/build/release-0.487/src/lispapi.py
+lispers.net-release-0.488/build/release-0.487/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.487/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.487/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.487/src/poly1305.py
+lispers.net-release-0.488/build/release-0.487/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.487/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.488/
+lispers.net-release-0.488/build/release-0.488/RESTART-LISP
+lispers.net-release-0.488/build/release-0.488/RL-template
+lispers.net-release-0.488/build/release-0.488/RUN-LISP
+lispers.net-release-0.488/build/release-0.488/STOP-LISP
+lispers.net-release-0.488/build/release-0.488/bin/
+lispers.net-release-0.488/build/release-0.488/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.488/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.488/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.488/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.488/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.488/get-pip.py
+lispers.net-release-0.488/build/release-0.488/how-to-install.txt
+lispers.net-release-0.488/build/release-0.488/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.488/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.488/lisp-version.txt
+lispers.net-release-0.488/build/release-0.488/lisp.config.example
+lispers.net-release-0.488/build/release-0.488/lispapi.txt
+lispers.net-release-0.488/build/release-0.488/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.488/lispers.net-x86-release-0.488.tgz
+lispers.net-release-0.488/build/release-0.488/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.488/log-packets
+lispers.net-release-0.488/build/release-0.488/ob/
+lispers.net-release-0.488/build/release-0.488/ob/chacha.py
+lispers.net-release-0.488/build/release-0.488/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp.py
+lispers.net-release-0.488/build/release-0.488/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.488/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.488/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.488/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.488/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.488/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.488/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.488/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.488/pslisp
+lispers.net-release-0.488/build/release-0.488/release-notes.txt
+lispers.net-release-0.488/build/release-0.488/src/
+lispers.net-release-0.488/build/release-0.488/src/chacha.py
+lispers.net-release-0.488/build/release-0.488/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.488/src/lisp.py
+lispers.net-release-0.488/build/release-0.488/src/lispapi.py
+lispers.net-release-0.488/build/release-0.488/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.488/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.488/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.488/src/poly1305.py
+lispers.net-release-0.488/build/release-0.488/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.488/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-notes.txt
+lispers.net-release-0.488/build/stable
+lispers.net-release-0.488/docs/
+lispers.net-release-0.488/docs/README
+lispers.net-release-0.488/docs/feature-list.txt
+lispers.net-release-0.488/docs/how-to-install.txt
+lispers.net-release-0.488/docs/how-to-use-apps.txt
+lispers.net-release-0.488/docs/lisp-ipc-data-plane.txt
+lispers.net-release-0.488/docs/lisp-runs-on.pdf
+lispers.net-release-0.488/docs/lisp.config.ddt
+lispers.net-release-0.488/docs/lisp.config.decent-xtr-her
+lispers.net-release-0.488/docs/lisp.config.decent-xtr-underlay
+lispers.net-release-0.488/docs/lisp.config.example
+lispers.net-release-0.488/docs/lisp.config.mrms
+lispers.net-release-0.488/docs/lisp.config.ms-ddt
+lispers.net-release-0.488/docs/lisp.config.petr
+lispers.net-release-0.488/docs/lisp.config.pitr
+lispers.net-release-0.488/docs/lisp.config.rtr
+lispers.net-release-0.488/docs/lisp.config.xtr
+lispers.net-release-0.488/docs/lisp.config.xtr-L2
+lispers.net-release-0.488/docs/lisp.config.xtr-crypto
+lispers.net-release-0.488/docs/lisp.config.xtr-mobility
+lispers.net-release-0.488/docs/lisp.config.xtr-multi-tenant
+lispers.net-release-0.488/docs/lisp.config.xtr-multicast
+lispers.net-release-0.488/docs/lisp.config.xtr-nat
+lispers.net-release-0.488/docs/loc8tr.pdf
+lispers.net-release-0.488/docs/release-history.pdf
+lispers.net-release-0.488/lisp/
+lispers.net-release-0.488/lisp/README
+lispers.net-release-0.488/lisp/RESTART-LISP
+lispers.net-release-0.488/lisp/RL-template
+lispers.net-release-0.488/lisp/RUN-LISP
+lispers.net-release-0.488/lisp/STOP-LISP
+lispers.net-release-0.488/lisp/build-xtr
+lispers.net-release-0.488/lisp/chacha.py
+lispers.net-release-0.488/lisp/ipc.go
+lispers.net-release-0.488/lisp/is-lisp-running.py
+lispers.net-release-0.488/lisp/lisp-cert.pem
+lispers.net-release-0.488/lisp/lisp-cert.pem.default
+lispers.net-release-0.488/lisp/lisp-core.py
+lispers.net-release-0.488/lisp/lisp-ddt.py
+lispers.net-release-0.488/lisp/lisp-etr.py
+lispers.net-release-0.488/lisp/lisp-get-bits.py
+lispers.net-release-0.488/lisp/lisp-itr.py
+lispers.net-release-0.488/lisp/lisp-lig.py
+lispers.net-release-0.488/lisp/lisp-log-packets.py
+lispers.net-release-0.488/lisp/lisp-mr.py
+lispers.net-release-0.488/lisp/lisp-ms.py
+lispers.net-release-0.488/lisp/lisp-rig.py
+lispers.net-release-0.488/lisp/lisp-rtr.py
+lispers.net-release-0.488/lisp/lisp-save-logs.py
+lispers.net-release-0.488/lisp/lisp.go
+lispers.net-release-0.488/lisp/lisp.py
+lispers.net-release-0.488/lisp/lispapi.py
+lispers.net-release-0.488/lisp/lispapi.txt
+lispers.net-release-0.488/lisp/lispconfig.py
+lispers.net-release-0.488/lisp/lispers.net-geo.html
+lispers.net-release-0.488/lisp/lml.go
+lispers.net-release-0.488/lisp/log-packets
+lispers.net-release-0.488/lisp/poly1305.py
+lispers.net-release-0.488/lisp/pslisp
+lispers.net-release-0.488/lisp/remove-lisp-iptables.py
+lispers.net-release-0.488/lisp/remove-lisp-locks.py
+lispers.net-release-0.488/lisp/xtr.go
+ ---> d074b6566c00
+Removing intermediate container 0d215f58e3f3
+Step 11/24 : RUN cd /tmp/lispers.net-${LISP_VERSION}/build &&     sed -ie '/obfuscate_on = True/s/True/False/' make-release.py &&     python make-release.py dev &&     mkdir /lisp ; tar -C /lisp -xzvf latest/lispers.net.tgz
+ ---> Running in 98644acdbedd
+Build does not support cpu type aarch64
+[91mtar: can't change directory to '/lisp': No such file or directory
+[0mThe command '/bin/sh -c cd /tmp/lispers.net-${LISP_VERSION}/build &&     sed -ie '/obfuscate_on = True/s/True/False/' make-release.py &&     python make-release.py dev &&     mkdir /lisp ; tar -C /lisp -xzvf latest/lispers.net.tgz' returned a non-zero code: 1
+exit status 1
+Building and pushing "zededa/lisp:latest"
+Sending build context to Docker daemon   13.2MB
+Step 1/24 : FROM golang:1.9.1-alpine AS go-build
+ ---> cc52d0ad4cce
+Step 2/24 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/24 : RUN apk add --no-cache git gcc linux-headers libc-dev libpcap-dev
+ ---> Using cache
+ ---> b0f64166d21e
+Step 4/24 : ADD . /go/src/github.com/zededa/lisp
+ ---> Using cache
+ ---> 0180b07690f2
+Step 5/24 : RUN go install github.com/zededa/lisp/cmd/...
+ ---> Using cache
+ ---> 7de248c1d782
+Step 6/24 : FROM alpine:3.8 AS lisp-build
+ ---> 0db038343fbd
+Step 7/24 : ENV LISP_VERSION release-0.488
+ ---> Using cache
+ ---> dd9572270e46
+Step 8/24 : RUN apk add --no-cache py2-pyflakes py2-setuptools && ln -s pyflakes-2 /usr/bin/pyflakes
+ ---> Using cache
+ ---> de9975fa460e
+Step 9/24 : ADD https://github.com/farinacci/lispers.net/archive/${LISP_VERSION}.tar.gz /tmp/
+
+ ---> Using cache
+ ---> b9f4d5360e43
+Step 10/24 : RUN tar -C /tmp -xzvf /tmp/${LISP_VERSION}.tar.gz
+ ---> Using cache
+ ---> d074b6566c00
+Step 11/24 : RUN cd /tmp/lispers.net-${LISP_VERSION}/build &&     sed -ie '/obfuscate_on = True/s/True/False/' make-release.py &&     python make-release.py dev &&     mkdir /lisp ; tar -C /lisp -xzvf latest/lispers.net.tgz
+ ---> Running in 6e46e4d16500
+Build does not support cpu type aarch64
+[91mtar: can't change directory to '/lisp': No such file or directory
+[0mThe command '/bin/sh -c cd /tmp/lispers.net-${LISP_VERSION}/build &&     sed -ie '/obfuscate_on = True/s/True/False/' make-release.py &&     python make-release.py dev &&     mkdir /lisp ; tar -C /lisp -xzvf latest/lispers.net.tgz' returned a non-zero code: 1
+exit status 1
+Building and pushing "zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666"
+65f3ba91b09caad1aee66bbe79215b49b112e666: Pulling from zededa/ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  69.55MB
+Step 1/31 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/31 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/31 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> d1eee840b78f
+Step 4/31 : ENV CGO_ENABLED 1
+ ---> Using cache
+ ---> 43f5b37f3ea0
+Step 5/31 : ARG GOARCH=
+ ---> Using cache
+ ---> 2f6ef9c7a071
+Step 6/31 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Using cache
+ ---> a88acb4b4a36
+Step 7/31 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Using cache
+ ---> 088a47cef319
+Step 8/31 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> ebae042c13a9
+Step 9/31 : ADD etc /config
+ ---> 9771aa5d35bc
+Step 10/31 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> 9d1789a596e8
+Step 11/31 : ADD examples /opt/zededa/examples
+ ---> 849d52d2ecca
+Step 12/31 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> 4e12e45ccc57
+Step 13/31 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> 8c12bfe174f4
+Step 14/31 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> 1c4badae88b8
+Step 15/31 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Running in 827a50efd5aa
+ ---> be00d5bca2f5
+Removing intermediate container 827a50efd5aa
+Step 16/31 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Running in 591635fb8386
+ ---> b9ee56edf267
+Removing intermediate container 591635fb8386
+Step 17/31 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Running in 54eeeb46e8fb
+Building: 20180314-test-737d90c3-2019-02-06.07.01
+ ---> 40c356b9fc1b
+Removing intermediate container 54eeeb46e8fb
+Step 18/31 : RUN echo "Running go tool vet" &&     cd /go/src/github.com/zededa/go-provision/ &&     for f in $(ls | egrep -v '(src|oldcmd)');     do        result=$(go tool vet $f 2>&1 );       returnCode=$?;       noFilesChecked=$(echo $result | grep "no files checked");        if [[ $returnCode -ne 0 && -z "$noFilesChecked" ]];        then           printf "\n***FAILED: go tool vet $f\n\n $result\n\n";           exit 1;        fi;     done;
+ ---> Running in efb673743909
+Running go tool vet
+ ---> 9b05ae25aa8c
+Removing intermediate container efb673743909
+Step 19/31 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc)           ;    go install github.com/zededa/go-provision/zedbox/... &&     if [ -f /go/bin/*/zedbox ] ; then mv /go/bin/*/zedbox /go/bin ; fi
+ ---> Running in 56e30acabc22
+ ---> deb5d0a98027
+Removing intermediate container 56e30acabc22
+Step 20/31 : RUN ln -s /go/bin/zedbox /opt/zededa/bin/zedbox ;    for app in         client domainmgr downloader hardwaremodel identitymgr ledmanager       logmanager verifier zedagent zedmanager zedrouter ipcmonitor nim       waitforaddr diag baseosmgr wstunnelclient conntrack;    do ln -s zedbox /opt/zededa/bin/$app ; done
+ ---> Running in 361a56531dfc
+ ---> 97bba19d91d7
+Removing intermediate container 361a56531dfc
+Step 21/31 : FROM scratch
+ ---> 
+Step 22/31 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> eadaaf72d6c0
+Step 23/31 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> 494db07733ba
+Step 24/31 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> 1c15bbd1a3a1
+Step 25/31 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> b5b7c88924d8
+Step 26/31 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> f8c6ec914f7e
+Step 27/31 : COPY --from=build /config /opt/zededa/examples/config
+ ---> 26f761601690
+Step 28/31 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> 12c176c3133d
+Step 29/31 : WORKDIR /opt/zededa/bin
+ ---> f35956f5efd3
+Removing intermediate container f51115a7f49b
+Step 30/31 : CMD /bin/ash
+ ---> Running in 0527ac73be97
+ ---> 6f049b6b2d3f
+Removing intermediate container 0527ac73be97
+Step 31/31 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '737d90c3aebf95bccc74c2bc46fcea3d63bab8b4' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in ede7384f1a31
+ ---> 2d89f9f072a4
+Removing intermediate container ede7384f1a31
+[91m[WARNING]: Empty continuation line found in:
+    RUN echo "Running go tool vet" &&     cd /go/src/github.com/zededa/go-provision/ &&     for f in $(ls | egrep -v '(src|oldcmd)');     do        result=$(go tool vet $f 2>&1 );       returnCode=$?;       noFilesChecked=$(echo $result | grep "no files checked");        if [[ $returnCode -ne 0 && -z "$noFilesChecked" ]];        then           printf "\n***FAILED: go tool vet $f\n\n $result\n\n";           exit 1;        fi;     done;
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mSuccessfully built 2d89f9f072a4
+Successfully tagged zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666-arm64
+Pushing zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+186a49533f90: Preparing
+33ffd29922ca: Preparing
+05c89e66e78c: Preparing
+ac03eac881d2: Preparing
+63666a801c18: Preparing
+b2d3eb56bea9: Preparing
+97c200199859: Preparing
+b2d3eb56bea9: Waiting
+97c200199859: Waiting
+33ffd29922ca: Pushed
+63666a801c18: Pushed
+ac03eac881d2: Pushed
+05c89e66e78c: Pushed
+b2d3eb56bea9: Pushed
+97c200199859: Pushed
+186a49533f90: Pushed
+65f3ba91b09caad1aee66bbe79215b49b112e666-arm64: digest: sha256:1cbccdf0a10af71bafa6b60ef5ef4dd22330706fb8bfd98ab5860983dd034534 size: 1775
+Pushing zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666-arm64 to manifest zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666
+time="2019-02-06T08:03:48+01:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666-s390x\". Skipping image."
+Digest: sha256:ce61faa73e5b7515ece1ce543b8d8e510d336d1c1df3f04e264c97894d71da25 743
+Not signing zededa/ztools:65f3ba91b09caad1aee66bbe79215b49b112e666
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/ztools:latest"
+Sending build context to Docker daemon  69.55MB
+Step 1/31 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/31 : RUN apk update
+ ---> Using cache
+ ---> d0d319b88ab5
+Step 3/31 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> d1eee840b78f
+Step 4/31 : ENV CGO_ENABLED 1
+ ---> Using cache
+ ---> 43f5b37f3ea0
+Step 5/31 : ARG GOARCH=
+ ---> Using cache
+ ---> 2f6ef9c7a071
+Step 6/31 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Using cache
+ ---> a88acb4b4a36
+Step 7/31 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Using cache
+ ---> 088a47cef319
+Step 8/31 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> Using cache
+ ---> ebae042c13a9
+Step 9/31 : ADD etc /config
+ ---> Using cache
+ ---> 9771aa5d35bc
+Step 10/31 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh /opt/zededa/bin/
+ ---> Using cache
+ ---> 9d1789a596e8
+Step 11/31 : ADD examples /opt/zededa/examples
+ ---> Using cache
+ ---> 849d52d2ecca
+Step 12/31 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> 4e12e45ccc57
+Step 13/31 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> 8c12bfe174f4
+Step 14/31 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> 1c4badae88b8
+Step 15/31 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Using cache
+ ---> be00d5bca2f5
+Step 16/31 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Using cache
+ ---> b9ee56edf267
+Step 17/31 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Using cache
+ ---> 40c356b9fc1b
+Step 18/31 : RUN echo "Running go tool vet" &&     cd /go/src/github.com/zededa/go-provision/ &&     for f in $(ls | egrep -v '(src|oldcmd)');     do        result=$(go tool vet $f 2>&1 );       returnCode=$?;       noFilesChecked=$(echo $result | grep "no files checked");        if [[ $returnCode -ne 0 && -z "$noFilesChecked" ]];        then           printf "\n***FAILED: go tool vet $f\n\n $result\n\n";           exit 1;        fi;     done;
+ ---> Using cache
+ ---> 9b05ae25aa8c
+Step 19/31 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc)           ;    go install github.com/zededa/go-provision/zedbox/... &&     if [ -f /go/bin/*/zedbox ] ; then mv /go/bin/*/zedbox /go/bin ; fi
+ ---> Using cache
+ ---> deb5d0a98027
+Step 20/31 : RUN ln -s /go/bin/zedbox /opt/zededa/bin/zedbox ;    for app in         client domainmgr downloader hardwaremodel identitymgr ledmanager       logmanager verifier zedagent zedmanager zedrouter ipcmonitor nim       waitforaddr diag baseosmgr wstunnelclient conntrack;    do ln -s zedbox /opt/zededa/bin/$app ; done
+ ---> Using cache
+ ---> 97bba19d91d7
+Step 21/31 : FROM scratch
+ ---> 
+Step 22/31 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> Using cache
+ ---> eadaaf72d6c0
+Step 23/31 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> Using cache
+ ---> 494db07733ba
+Step 24/31 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> Using cache
+ ---> 1c15bbd1a3a1
+Step 25/31 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> Using cache
+ ---> b5b7c88924d8
+Step 26/31 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> Using cache
+ ---> f8c6ec914f7e
+Step 27/31 : COPY --from=build /config /opt/zededa/examples/config
+ ---> Using cache
+ ---> 26f761601690
+Step 28/31 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> Using cache
+ ---> 12c176c3133d
+Step 29/31 : WORKDIR /opt/zededa/bin
+ ---> Using cache
+ ---> f35956f5efd3
+Step 30/31 : CMD /bin/ash
+ ---> Using cache
+ ---> 6f049b6b2d3f
+Step 31/31 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '737d90c3aebf95bccc74c2bc46fcea3d63bab8b4' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Using cache
+ ---> 2d89f9f072a4
+[91m[WARNING]: Empty continuation line found in:
+    RUN echo "Running go tool vet" &&     cd /go/src/github.com/zededa/go-provision/ &&     for f in $(ls | egrep -v '(src|oldcmd)');     do        result=$(go tool vet $f 2>&1 );       returnCode=$?;       noFilesChecked=$(echo $result | grep "no files checked");        if [[ $returnCode -ne 0 && -z "$noFilesChecked" ]];        then           printf "\n***FAILED: go tool vet $f\n\n $result\n\n";           exit 1;        fi;     done;
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mSuccessfully built 2d89f9f072a4
+Successfully tagged zededa/ztools:latest-arm64
+Pushing zededa/ztools:latest-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+186a49533f90: Preparing
+33ffd29922ca: Preparing
+05c89e66e78c: Preparing
+ac03eac881d2: Preparing
+63666a801c18: Preparing
+b2d3eb56bea9: Preparing
+97c200199859: Preparing
+33ffd29922ca: Layer already exists
+05c89e66e78c: Layer already exists
+186a49533f90: Layer already exists
+ac03eac881d2: Layer already exists
+63666a801c18: Layer already exists
+97c200199859: Layer already exists
+b2d3eb56bea9: Layer already exists
+latest-arm64: digest: sha256:1cbccdf0a10af71bafa6b60ef5ef4dd22330706fb8bfd98ab5860983dd034534 size: 1775
+Pushing zededa/ztools:latest-arm64 to manifest zededa/ztools:latest
+time="2019-02-06T08:04:08+01:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:latest-s390x\". Skipping image."
+Digest: sha256:70f1bc0b3e7b66827bc4e5ceda4b672c1a7baee3a461b797045156835dafe466 743
+Not signing zededa/ztools:latest
+Build and push complete, not releasing, all done.
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using  instead
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using  instead
+(cd ..; ./parse-pkgs.sh pkg/zedctr/Dockerfile.in > pkg/zedctr/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using  instead
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using  instead
+Building and pushing "zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b"
+97e7b1404e7c9d141eddb58294fcff019f61571b: Pulling from zededa/grub
+Digest: sha256:604e3c16ebc56d34d825d62c7e5ea537f4ab1f3711ce62ce7999066188689327
+Status: Image is up to date for zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b
+Building and pushing "zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99"
+f51bf3d17fad15b71242befbddec96e177132a99: Pulling from zededa/xen
+Digest: sha256:532e96d37e91dd64b70f8fcc266bdaaf7db6340df39d29a984b603758f938d12
+Status: Image is up to date for zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99
+Building and pushing "zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315"
+7cfa13614bb99a84030db209b6c9a0696c7d3315: Pulling from zededa/kernel
+Digest: sha256:d483cb69f54df3645889e00e51ee70883b825e2d35c41e347c2e77fb113ae83e
+Status: Image is up to date for zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315
+Building and pushing "zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569"
+1d8c22ae31c42d767ba648b186db4ea967a9c569: Pulling from zededa/fw
+Digest: sha256:66b64c2c17b500e5614e8c153939a6cef0b44acc5ca2dc72b46304c7183c5518
+Status: Image is up to date for zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569
+Building and pushing "zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2"
+9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2: Pulling from zededa/xen-tools
+Digest: sha256:265c27a8d9914768ae4460edb4d1f71a282ddcee5ac7436d2e6dab976361c6b9
+Status: Image is up to date for zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2
+Building and pushing "zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b"
+c5985cdd83998d06255fe115d230a280c6928f1b: Pulling from zededa/dnsmasq
+Digest: sha256:4240f81065dc70471862372cac9205a2ecca6133e7d84d4ecb5fcdd449d6acfb
+Status: Image is up to date for zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b
+Building and pushing "zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec"
+8f5ee3b98aa3ea49a9a4231baac9be933d6155ec: Pulling from zededa/strongswan
+Digest: sha256:92b46f743d6415bd68a11b1ca65bf0da756a739c89a95236d76ef12246abee29
+Status: Image is up to date for zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec
+Building and pushing "zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4"
+fe878611e4e032ea10946cbc9a1c3d5b22349dc4: Pulling from zededa/gpt-tools
+Digest: sha256:00d2500aef758299c747b32e5e44df1780082322ded3f2d95cd8c86ebf5fe5d0
+Status: Image is up to date for zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4
+Building and pushing "zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d"
+b53cd1b5785c128371a5997e3a6e16007718c12d: Pulling from zededa/dom0-ztools
+Digest: sha256:0fe0e0423546d1a215a1f6472adc6c112c116d5448ab66e629897ccd084bf345
+Status: Image is up to date for zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:a959cb378d1082428da70d3a605d250801349224be0ffce3c5e0c07e397b9ddc
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:8379202b48196d10ec12a07365e606042625b91fe71be03d30bcf768e54a7c3e
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d"
+5f68442251df0f2625fde14e947f11de2374b72d: Pulling from zededa/wwan
+Digest: sha256:190e3690756d125633c31bccade56ad7178b121dd6d7d04d9c2789e05d05c030
+Status: Image is up to date for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d
+Building and pushing "zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97"
+8aa66e76c276b97d1141801d3f461e2b3f8f8f97: Pulling from zededa/wlan
+Digest: sha256:72c42a18b2769cf5e9c5c92b659f016ecb8fdda740f77199d5e92885fb200867
+Status: Image is up to date for zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97
+Building and pushing "zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272"
+5adb10a552c07513159777bd022ac58e23d59272: Pulling from zededa/rngd
+Digest: sha256:b593f4088b8338af7e16e1a7640d617ddea7d905e3fcae61d1261241abfe0f49
+Status: Image is up to date for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272
+Building and pushing "zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173"
+2aea3af274e4928d2eab2b738d0e100ee5362173: Pulling from zededa/watchdog
+Digest: sha256:65f2f1761d68d241c812044e9cca72b783f5af3939dfc1c93e3c87835862382e
+Status: Image is up to date for zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173
+Building and pushing "zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96"
+85a2add30bae37777d3d4f3f17a528fe8db88e96: Pulling from zededa/guacd
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  432.6kB
+Step 1/15 : FROM alpine:3.8 as build
+ ---> 0db038343fbd
+Step 2/15 : ENV GUACD_VERSION 1.0.0
+ ---> Running in b8e585936225
+ ---> 8afcb98dc8f2
+Removing intermediate container b8e585936225
+Step 3/15 : ADD http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/1.0.0/source/guacamole-server-${GUACD_VERSION}.tar.gz /${GUACD_VERSION}.tar.gz
+
+ ---> e90b1c8b2e1f
+Step 4/15 : ADD 0001-alpine-stacksize-fix.patch /
+ ---> c29f306bd994
+Step 5/15 : ADD uuid-1.6.2.tar.gz /
+ ---> d08ee770efda
+Step 6/15 : RUN apk add cairo-dev jpeg-dev libpng-dev gcc make libc-dev openssl-dev libvncserver-dev file
+ ---> Running in daad4277fbb0
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/130) Installing expat (2.2.5-r0)
+(2/130) Installing libbz2 (1.0.6-r6)
+(3/130) Installing libpng (1.6.34-r1)
+(4/130) Installing freetype (2.9.1-r1)
+(5/130) Installing fontconfig (2.12.6-r1)
+(6/130) Installing pkgconf (1.5.3-r0)
+(7/130) Installing expat-dev (2.2.5-r0)
+(8/130) Installing zlib-dev (1.2.11-r1)
+(9/130) Installing libpng-dev (1.6.34-r1)
+(10/130) Installing freetype-dev (2.9.1-r1)
+(11/130) Installing fontconfig-dev (2.12.6-r1)
+(12/130) Installing libxau (1.0.8-r2)
+(13/130) Installing libbsd (0.8.6-r2)
+(14/130) Installing libxdmcp (1.1.2-r4)
+(15/130) Installing libxcb (1.13-r2)
+(16/130) Installing libx11 (1.6.6-r0)
+(17/130) Installing libxrender (0.9.10-r2)
+(18/130) Installing renderproto (0.11.1-r4)
+(19/130) Installing xproto (7.0.31-r1)
+(20/130) Installing libxau-dev (1.0.8-r2)
+(21/130) Installing xcb-proto (1.13-r2)
+(22/130) Installing libpthread-stubs (0.3-r5)
+(23/130) Installing libxdmcp-dev (1.1.2-r4)
+(24/130) Installing libxcb-dev (1.13-r2)
+(25/130) Installing xextproto (7.3.0-r2)
+(26/130) Installing xf86bigfontproto-dev (1.2.0-r5)
+(27/130) Installing xtrans (1.3.5-r1)
+(28/130) Installing inputproto (2.3.2-r1)
+(29/130) Installing kbproto (1.0.7-r2)
+(30/130) Installing libx11-dev (1.6.6-r0)
+(31/130) Installing libxrender-dev (0.9.10-r2)
+(32/130) Installing pixman (0.34.0-r5)
+(33/130) Installing pixman-dev (0.34.0-r5)
+(34/130) Installing util-macros (1.19.1-r1)
+(35/130) Installing xcb-util (0.4.0-r1)
+(36/130) Installing xcb-util-dev (0.4.0-r1)
+(37/130) Installing libxext (1.3.3-r2)
+(38/130) Installing libxext-dev (1.3.3-r2)
+(39/130) Installing cairo (1.14.12-r2)
+(40/130) Installing libffi (3.2.1-r4)
+(41/130) Installing libintl (0.19.8.1-r2)
+(42/130) Installing libuuid (2.32-r0)
+(43/130) Installing libblkid (2.32-r0)
+(44/130) Installing libmount (2.32-r0)
+(45/130) Installing pcre (8.42-r0)
+(46/130) Installing glib (2.56.1-r0)
+(47/130) Installing cairo-tools (1.14.12-r2)
+(48/130) Installing cairo-gobject (1.14.12-r2)
+(49/130) Installing perl (5.26.3-r0)
+(50/130) Installing gdbm (1.13-r1)
+(51/130) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(52/130) Installing ncurses-terminfo (6.1_p20180818-r1)
+(53/130) Installing ncurses-libs (6.1_p20180818-r1)
+(54/130) Installing readline (7.0.003-r0)
+(55/130) Installing sqlite-libs (3.25.3-r0)
+(56/130) Installing python2 (2.7.15-r1)
+(57/130) Installing libgcc (6.4.0-r9)
+(58/130) Installing libstdc++ (6.4.0-r9)
+(59/130) Installing gettext-asprintf (0.19.8.1-r2)
+(60/130) Installing libunistring (0.9.7-r0)
+(61/130) Installing gettext-libs (0.19.8.1-r2)
+(62/130) Installing libgomp (6.4.0-r9)
+(63/130) Installing libxml2 (2.9.8-r1)
+(64/130) Installing gettext (0.19.8.1-r2)
+(65/130) Installing gettext-dev (0.19.8.1-r2)
+(66/130) Installing bzip2-dev (1.0.6-r6)
+(67/130) Installing libffi-dev (3.2.1-r4)
+(68/130) Installing libfdisk (2.32-r0)
+(69/130) Installing libsmartcols (2.32-r0)
+(70/130) Installing util-linux-dev (2.32-r0)
+(71/130) Installing libpcre16 (8.42-r0)
+(72/130) Installing libpcre32 (8.42-r0)
+(73/130) Installing libpcrecpp (8.42-r0)
+(74/130) Installing pcre-dev (8.42-r0)
+(75/130) Installing glib-dev (2.56.1-r0)
+(76/130) Installing cairo-dev (1.14.12-r2)
+(77/130) Installing libmagic (5.32-r0)
+(78/130) Installing file (5.32-r0)
+(79/130) Installing binutils (2.30-r5)
+(80/130) Installing gmp (6.1.2-r1)
+(81/130) Installing isl (0.18-r0)
+(82/130) Installing libatomic (6.4.0-r9)
+(83/130) Installing mpfr3 (3.1.5-r1)
+(84/130) Installing mpc1 (1.0.3-r1)
+(85/130) Installing gcc (6.4.0-r9)
+(86/130) Installing libjpeg-turbo (1.5.3-r4)
+(87/130) Installing libjpeg-turbo-dev (1.5.3-r4)
+(88/130) Installing jpeg-dev (8-r6)
+(89/130) Installing musl-dev (1.1.19-r10)
+(90/130) Installing libc-dev (0.7.1-r0)
+(91/130) Installing libgpg-error (1.30-r0)
+(92/130) Installing libgpg-error-dev (1.30-r0)
+(93/130) Installing libgcrypt (1.8.3-r0)
+(94/130) Installing libgcrypt-dev (1.8.3-r0)
+(95/130) Installing nettle (3.4-r1)
+(96/130) Installing p11-kit (0.23.10-r0)
+(97/130) Installing libtasn1 (4.13-r0)
+(98/130) Installing gnutls (3.6.2-r0)
+(99/130) Installing gnutls-c++ (3.6.2-r0)
+(100/130) Installing libgmpxx (6.1.2-r1)
+(101/130) Installing gmp-dev (6.1.2-r1)
+(102/130) Installing nettle-dev (3.4-r1)
+(103/130) Installing libtasn1-dev (4.13-r0)
+(104/130) Installing p11-kit-dev (0.23.10-r0)
+(105/130) Installing gnutls-dev (3.6.2-r0)
+(106/130) Installing libice (1.0.9-r2)
+(107/130) Installing libice-dev (1.0.9-r2)
+(108/130) Installing damageproto (1.2.1-r3)
+(109/130) Installing fixesproto (5.0-r2)
+(110/130) Installing libxdamage (1.1.4-r1)
+(111/130) Installing libxfixes (5.0.3-r1)
+(112/130) Installing libxfixes-dev (5.0.3-r1)
+(113/130) Installing libxdamage-dev (1.1.4-r1)
+(114/130) Installing libxi (1.7.9-r1)
+(115/130) Installing libxi-dev (1.7.9-r1)
+(116/130) Installing libxinerama (1.1.3-r1)
+(117/130) Installing xineramaproto (1.2.1-r3)
+(118/130) Installing libxinerama-dev (1.1.3-r1)
+(119/130) Installing randrproto (1.5.0-r2)
+(120/130) Installing libxrandr (1.5.1-r1)
+(121/130) Installing libxrandr-dev (1.5.1-r1)
+(122/130) Installing libxtst (1.2.3-r1)
+(123/130) Installing recordproto (1.14.2-r2)
+(124/130) Installing libxtst-dev (1.2.3-r1)
+(125/130) Installing libvncserver (0.9.11-r2)
+(126/130) Installing libvncserver-dev (0.9.11-r2)
+(127/130) Installing make (4.2.1-r2)
+(128/130) Installing libcrypto1.0 (1.0.2q-r0)
+(129/130) Installing libssl1.0 (1.0.2q-r0)
+(130/130) Installing openssl-dev (1.0.2q-r0)
+Executing busybox-1.28.4-r2.trigger
+Executing glib-2.56.1-r0.trigger
+No schema files found: doing nothing.
+OK: 264 MiB in 143 packages
+ ---> ac787456dc67
+Removing intermediate container daad4277fbb0
+Step 7/15 : RUN cd /uuid-1.6.2 ; ./configure --prefix=/usr/ && make && make install
+ ---> Running in fbc92cd322da
+[91mshtool:echo:Warning: unable to determine terminal sequence for bold mode
+[0mConfiguring OSSP uuid (Universally Unique Identifier), version 1.6.2 (04-Jul-2008)
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether compiler option(s) -pipe work... yes
+checking for compilation debug mode... disabled
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether to build against external Dmalloc library... no
+checking build system type... aarch64-unknown-linux-musl
+checking host system type... aarch64-unknown-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/aarch64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/aarch64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... no
+checking for /usr/aarch64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/aarch64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for g++... no
+checking for c++... no
+checking for gpp... no
+checking for aCC... no
+checking for CC... no
+checking for cxx... no
+checking for cc++... no
+checking for cl.exe... no
+checking for FCC... no
+checking for KCC... no
+checking for RCC... no
+checking for xlC_r... no
+checking for xlC... no
+checking whether we are using the GNU C++ compiler... no
+checking whether g++ accepts -g... no
+checking for gethostname in -lnsl... no
+checking for gethostbyname in -lnsl... no
+checking for accept in -lsocket... no
+checking for va_copy() function... yes
+checking for sys/types.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for netdb.h... yes
+checking for ifaddrs.h... yes
+checking for net/if.h... yes
+checking for net/if_dl.h... no
+checking for net/if_arp.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for struct timeval... yes
+checking for getifaddrs... yes
+checking for nanosleep... yes
+checking for Sleep... no
+checking for gettimeofday... yes
+checking for clock_gettime... yes
+checking for long long... yes
+checking for long double... yes
+checking size of char... 1
+checking size of unsigned char... 1
+checking size of short... 2
+checking size of unsigned short... 2
+checking size of int... 4
+checking size of unsigned int... 4
+checking size of long... 8
+checking size of unsigned long... 8
+checking size of long long... 8
+checking size of unsigned long long... 8
+checking whether to build DCE 1.1 backward compatibility API... (cached) no
+checking whether to build C++ bindings to C API... (cached) no
+checking whether to build Perl bindings to C API... (cached) no
+checking whether to build Perl compatibility API... (cached) no
+checking for perl... /usr/bin/perl
+checking whether to build PHP bindings to C API... (cached) no
+checking for php5... no
+checking for php... no
+checking whether to build PostgreSQL bindings to C API... (cached) no
+checking for pg_config... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating uuid-config
+config.status: creating uuid.pc
+config.status: creating uuid.h
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing adjustment commands
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid.c  -fPIC -DPIC -o .libs/uuid.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid.c -o uuid.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_md5.c  -fPIC -DPIC -o .libs/uuid_md5.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_md5.c -o uuid_md5.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_sha1.c  -fPIC -DPIC -o .libs/uuid_sha1.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_sha1.c -o uuid_sha1.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_prng.c  -fPIC -DPIC -o .libs/uuid_prng.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_prng.c -o uuid_prng.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_mac.c  -fPIC -DPIC -o .libs/uuid_mac.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_mac.c -o uuid_mac.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_time.c  -fPIC -DPIC -o .libs/uuid_time.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_time.c -o uuid_time.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_ui64.c  -fPIC -DPIC -o .libs/uuid_ui64.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_ui64.c -o uuid_ui64.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_ui128.c  -fPIC -DPIC -o .libs/uuid_ui128.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_ui128.c -o uuid_ui128.o >/dev/null 2>&1
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_str.c  -fPIC -DPIC -o .libs/uuid_str.o
+libtool: compile:  gcc -I. -I. -DHAVE_CONFIG_H -O2 -pipe -c uuid_str.c -o uuid_str.o >/dev/null 2>&1
+libtool: link: gcc -shared  .libs/uuid.o .libs/uuid_md5.o .libs/uuid_sha1.o .libs/uuid_prng.o .libs/uuid_mac.o .libs/uuid_time.o .libs/uuid_ui64.o .libs/uuid_ui128.o .libs/uuid_str.o      -Wl,-soname -Wl,libuuid.so.16 -o .libs/libuuid.so.16.0.22
+libtool: link: (cd ".libs" && rm -f "libuuid.so.16" && ln -s "libuuid.so.16.0.22" "libuuid.so.16")
+libtool: link: (cd ".libs" && rm -f "libuuid.so" && ln -s "libuuid.so.16.0.22" "libuuid.so")
+libtool: link: ar cru .libs/libuuid.a  uuid.o uuid_md5.o uuid_sha1.o uuid_prng.o uuid_mac.o uuid_time.o uuid_ui64.o uuid_ui128.o uuid_str.o
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mlibtool: link: ranlib .libs/libuuid.a
+libtool: link: ( cd ".libs" && rm -f "libuuid.la" && ln -s "../libuuid.la" "libuuid.la" )
+gcc -I. -I.  -DHAVE_CONFIG_H -O2 -pipe -c uuid_cli.c
+libtool: link: gcc -o .libs/uuid uuid_cli.o  ./.libs/libuuid.so
+./shtool mkdir -f -p -m 755 /usr
+./shtool mkdir -f -p -m 755 /usr/bin
+./shtool mkdir -f -p -m 755 /usr/include
+./shtool mkdir -f -p -m 755 /usr/lib/pkgconfig
+./shtool mkdir -f -p -m 755 /usr/share/man/man3
+./shtool mkdir -f -p -m 755 /usr/share/man/man1
+./shtool install -c -m 755 uuid-config /usr/bin/
+./shtool install -c -m 644 ./uuid-config.1 /usr/share/man/man1/
+./shtool install -c -m 644 ./uuid.pc /usr/lib/pkgconfig/
+./shtool install -c -m 644 uuid.h /usr/include/
+./shtool install -c -m 644 ./uuid.3 /usr/share/man/man3/
+libtool: install: ./shtool install -c -m 644 .libs/libuuid.so.16.0.22 /usr/lib/libuuid.so.16.0.22
+libtool: install: (cd /usr/lib && { ln -s -f libuuid.so.16.0.22 libuuid.so.16 || { rm -f libuuid.so.16 && ln -s libuuid.so.16.0.22 libuuid.so.16; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libuuid.so.16.0.22 libuuid.so || { rm -f libuuid.so && ln -s libuuid.so.16.0.22 libuuid.so; }; })
+libtool: install: ./shtool install -c -m 644 .libs/libuuid.lai /usr/lib/libuuid.la
+libtool: install: ./shtool install -c -m 644 .libs/libuuid.a /usr/lib/libuuid.a
+libtool: install: chmod 644 /usr/lib/libuuid.a
+libtool: install: ranlib /usr/lib/libuuid.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+libtool: install: ./shtool install -c -m 755 -s .libs/uuid /usr/bin/uuid
+./shtool install -c -m 644 ./uuid.1 /usr/share/man/man1/
+ ---> 98124cc54422
+Removing intermediate container fbc92cd322da
+Step 8/15 : RUN tar xzvf ${GUACD_VERSION}.tar.gz ;    patch -p0 < /0001-alpine-stacksize-fix.patch ;    cd /guacamole-server-${GUACD_VERSION} ;    ./configure --prefix=/usr/ --with-vnc --disable-guacenc --disable-dependency-tracking &&      make && make install
+ ---> Running in d9a9ad0528d9
+guacamole-server-1.0.0/
+guacamole-server-1.0.0/depcomp
+guacamole-server-1.0.0/bin/
+guacamole-server-1.0.0/bin/guacctl
+guacamole-server-1.0.0/compile
+guacamole-server-1.0.0/configure.ac
+guacamole-server-1.0.0/config.h.in
+guacamole-server-1.0.0/missing
+guacamole-server-1.0.0/ltmain.sh
+guacamole-server-1.0.0/tests/
+guacamole-server-1.0.0/tests/protocol/
+guacamole-server-1.0.0/tests/protocol/instruction_write.c
+guacamole-server-1.0.0/tests/protocol/suite.h
+guacamole-server-1.0.0/tests/protocol/suite.c
+guacamole-server-1.0.0/tests/protocol/instruction_parse.c
+guacamole-server-1.0.0/tests/protocol/nest_write.c
+guacamole-server-1.0.0/tests/protocol/base64_decode.c
+guacamole-server-1.0.0/tests/protocol/instruction_read.c
+guacamole-server-1.0.0/tests/util/
+guacamole-server-1.0.0/tests/util/guac_pool.c
+guacamole-server-1.0.0/tests/util/util_suite.c
+guacamole-server-1.0.0/tests/util/util_suite.h
+guacamole-server-1.0.0/tests/util/guac_unicode.c
+guacamole-server-1.0.0/tests/client/
+guacamole-server-1.0.0/tests/client/client_suite.c
+guacamole-server-1.0.0/tests/client/buffer_pool.c
+guacamole-server-1.0.0/tests/client/layer_pool.c
+guacamole-server-1.0.0/tests/client/client_suite.h
+guacamole-server-1.0.0/tests/Makefile.in
+guacamole-server-1.0.0/tests/common/
+guacamole-server-1.0.0/tests/common/common_suite.h
+guacamole-server-1.0.0/tests/common/guac_rect.c
+guacamole-server-1.0.0/tests/common/guac_string.c
+guacamole-server-1.0.0/tests/common/common_suite.c
+guacamole-server-1.0.0/tests/common/guac_iconv.c
+guacamole-server-1.0.0/tests/test_libguac.c
+guacamole-server-1.0.0/tests/Makefile.am
+guacamole-server-1.0.0/doc/
+guacamole-server-1.0.0/doc/Doxyfile.in
+guacamole-server-1.0.0/.dockerignore
+guacamole-server-1.0.0/aclocal.m4
+guacamole-server-1.0.0/README
+guacamole-server-1.0.0/config.sub
+guacamole-server-1.0.0/config.guess
+guacamole-server-1.0.0/src/
+guacamole-server-1.0.0/src/common-ssh/
+guacamole-server-1.0.0/src/common-ssh/common-ssh/
+guacamole-server-1.0.0/src/common-ssh/common-ssh/user.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/sftp.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/dsa-compat.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/buffer.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/key.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/ssh.h
+guacamole-server-1.0.0/src/common-ssh/common-ssh/rsa-compat.h
+guacamole-server-1.0.0/src/common-ssh/key.c
+guacamole-server-1.0.0/src/common-ssh/dsa-compat.c
+guacamole-server-1.0.0/src/common-ssh/rsa-compat.c
+guacamole-server-1.0.0/src/common-ssh/user.c
+guacamole-server-1.0.0/src/common-ssh/Makefile.in
+guacamole-server-1.0.0/src/common-ssh/sftp.c
+guacamole-server-1.0.0/src/common-ssh/ssh.c
+guacamole-server-1.0.0/src/common-ssh/Makefile.am
+guacamole-server-1.0.0/src/common-ssh/buffer.c
+guacamole-server-1.0.0/src/guaclog/
+guacamole-server-1.0.0/src/guaclog/interpret.c
+guacamole-server-1.0.0/src/guaclog/guaclog.h
+guacamole-server-1.0.0/src/guaclog/instructions.h
+guacamole-server-1.0.0/src/guaclog/state.h
+guacamole-server-1.0.0/src/guaclog/log.h
+guacamole-server-1.0.0/src/guaclog/instruction-key.c
+guacamole-server-1.0.0/src/guaclog/interpret.h
+guacamole-server-1.0.0/src/guaclog/state.c
+guacamole-server-1.0.0/src/guaclog/guaclog.c
+guacamole-server-1.0.0/src/guaclog/man/
+guacamole-server-1.0.0/src/guaclog/man/guaclog.1.in
+guacamole-server-1.0.0/src/guaclog/keydef.c
+guacamole-server-1.0.0/src/guaclog/log.c
+guacamole-server-1.0.0/src/guaclog/Makefile.in
+guacamole-server-1.0.0/src/guaclog/instructions.c
+guacamole-server-1.0.0/src/guaclog/Makefile.am
+guacamole-server-1.0.0/src/guaclog/keydef.h
+guacamole-server-1.0.0/src/guacd/
+guacamole-server-1.0.0/src/guacd/proc.c
+guacamole-server-1.0.0/src/guacd/proc-map.h
+guacamole-server-1.0.0/src/guacd/conf-file.h
+guacamole-server-1.0.0/src/guacd/conf-parse.c
+guacamole-server-1.0.0/src/guacd/daemon.c
+guacamole-server-1.0.0/src/guacd/conf-parse.h
+guacamole-server-1.0.0/src/guacd/log.h
+guacamole-server-1.0.0/src/guacd/conf-args.h
+guacamole-server-1.0.0/src/guacd/init.d/
+guacamole-server-1.0.0/src/guacd/init.d/guacd.in
+guacamole-server-1.0.0/src/guacd/man/
+guacamole-server-1.0.0/src/guacd/man/guacd.conf.5.in
+guacamole-server-1.0.0/src/guacd/man/guacd.8.in
+guacamole-server-1.0.0/src/guacd/log.c
+guacamole-server-1.0.0/src/guacd/Makefile.in
+guacamole-server-1.0.0/src/guacd/conf-args.c
+guacamole-server-1.0.0/src/guacd/conf.h
+guacamole-server-1.0.0/src/guacd/conf-file.c
+guacamole-server-1.0.0/src/guacd/move-fd.h
+guacamole-server-1.0.0/src/guacd/connection.c
+guacamole-server-1.0.0/src/guacd/connection.h
+guacamole-server-1.0.0/src/guacd/systemd/
+guacamole-server-1.0.0/src/guacd/systemd/guacd.service.in
+guacamole-server-1.0.0/src/guacd/proc.h
+guacamole-server-1.0.0/src/guacd/proc-map.c
+guacamole-server-1.0.0/src/guacd/move-fd.c
+guacamole-server-1.0.0/src/guacd/Makefile.am
+guacamole-server-1.0.0/src/guacd-docker/
+guacamole-server-1.0.0/src/guacd-docker/bin/
+guacamole-server-1.0.0/src/guacd-docker/bin/link-freerdp-plugins.sh
+guacamole-server-1.0.0/src/guacd-docker/bin/build-guacd.sh
+guacamole-server-1.0.0/src/guacd-docker/bin/list-dependencies.sh
+guacamole-server-1.0.0/src/guacd-docker/README.md
+guacamole-server-1.0.0/src/pulse/
+guacamole-server-1.0.0/src/pulse/pulse/
+guacamole-server-1.0.0/src/pulse/pulse/pulse.h
+guacamole-server-1.0.0/src/pulse/pulse.c
+guacamole-server-1.0.0/src/pulse/Makefile.in
+guacamole-server-1.0.0/src/pulse/Makefile.am
+guacamole-server-1.0.0/src/protocols/
+guacamole-server-1.0.0/src/protocols/vnc/
+guacamole-server-1.0.0/src/protocols/vnc/clipboard.c
+guacamole-server-1.0.0/src/protocols/vnc/cursor.h
+guacamole-server-1.0.0/src/protocols/vnc/input.h
+guacamole-server-1.0.0/src/protocols/vnc/display.c
+guacamole-server-1.0.0/src/protocols/vnc/user.h
+guacamole-server-1.0.0/src/protocols/vnc/log.h
+guacamole-server-1.0.0/src/protocols/vnc/sftp.h
+guacamole-server-1.0.0/src/protocols/vnc/auth.h
+guacamole-server-1.0.0/src/protocols/vnc/auth.c
+guacamole-server-1.0.0/src/protocols/vnc/vnc.h
+guacamole-server-1.0.0/src/protocols/vnc/log.c
+guacamole-server-1.0.0/src/protocols/vnc/user.c
+guacamole-server-1.0.0/src/protocols/vnc/input.c
+guacamole-server-1.0.0/src/protocols/vnc/clipboard.h
+guacamole-server-1.0.0/src/protocols/vnc/Makefile.in
+guacamole-server-1.0.0/src/protocols/vnc/cursor.c
+guacamole-server-1.0.0/src/protocols/vnc/settings.h
+guacamole-server-1.0.0/src/protocols/vnc/settings.c
+guacamole-server-1.0.0/src/protocols/vnc/display.h
+guacamole-server-1.0.0/src/protocols/vnc/client.h
+guacamole-server-1.0.0/src/protocols/vnc/vnc.c
+guacamole-server-1.0.0/src/protocols/vnc/sftp.c
+guacamole-server-1.0.0/src/protocols/vnc/client.c
+guacamole-server-1.0.0/src/protocols/vnc/Makefile.am
+guacamole-server-1.0.0/src/protocols/rdp/
+guacamole-server-1.0.0/src/protocols/rdp/rdp_gdi.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_rail.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_gdi.h
+guacamole-server-1.0.0/src/protocols/rdp/error.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_rail.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_bitmap.h
+guacamole-server-1.0.0/src/protocols/rdp/error.h
+guacamole-server-1.0.0/src/protocols/rdp/dvc.c
+guacamole-server-1.0.0/src/protocols/rdp/input.h
+guacamole-server-1.0.0/src/protocols/rdp/audio_input.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_cliprdr.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_print_job.h
+guacamole-server-1.0.0/src/protocols/rdp/keyboard.h
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/generate.pl
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/fr_ch_qwertz.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/en_gb_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/failsafe.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/es_es_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/pt_br_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/en_us_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/sv_se_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/base.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/it_it_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/fr_fr_azerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/tr_tr_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/ja_jp_qwerty.keymap
+guacamole-server-1.0.0/src/protocols/rdp/keymaps/de_de_qwertz.keymap
+guacamole-server-1.0.0/src/protocols/rdp/unicode.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_settings.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_fs.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_bitmap.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_color.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_keymap.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_settings.c
+guacamole-server-1.0.0/src/protocols/rdp/user.h
+guacamole-server-1.0.0/src/protocols/rdp/sftp.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_pointer.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_glyph.h
+guacamole-server-1.0.0/src/protocols/rdp/unicode.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_disp.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_stream.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_svc.c
+guacamole-server-1.0.0/src/protocols/rdp/keyboard.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_fs.h
+guacamole-server-1.0.0/src/protocols/rdp/resolution.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_color.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpsnd/
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpsnd/rdpsnd_service.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpsnd/rdpsnd_messages.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpsnd/rdpsnd_service.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpsnd/rdpsnd_messages.c
+guacamole-server-1.0.0/src/protocols/rdp/audio_input.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_svc/
+guacamole-server-1.0.0/src/protocols/rdp/guac_svc/svc_service.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_svc/svc_service.h
+guacamole-server-1.0.0/src/protocols/rdp/user.c
+guacamole-server-1.0.0/src/protocols/rdp/resolution.c
+guacamole-server-1.0.0/src/protocols/rdp/input.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_glyph.c
+guacamole-server-1.0.0/src/protocols/rdp/Makefile.in
+guacamole-server-1.0.0/src/protocols/rdp/rdp_cliprdr.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_print_job.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_vol_info.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_service.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_service.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_service.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_file_info.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_printer.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_printer.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_file_info.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_dir_info.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_vol_info.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_fs_messages_dir_info.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_messages.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_messages.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_rdpdr/rdpdr_service.h
+guacamole-server-1.0.0/src/protocols/rdp/client.h
+guacamole-server-1.0.0/src/protocols/rdp/decompose.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp.c
+guacamole-server-1.0.0/src/protocols/rdp/sftp.c
+guacamole-server-1.0.0/src/protocols/rdp/ptr_string.c
+guacamole-server-1.0.0/src/protocols/rdp/decompose.h
+guacamole-server-1.0.0/src/protocols/rdp/client.c
+guacamole-server-1.0.0/src/protocols/rdp/rdp_keymap.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_stream.c
+guacamole-server-1.0.0/src/protocols/rdp/compat/
+guacamole-server-1.0.0/src/protocols/rdp/compat/rail.h
+guacamole-server-1.0.0/src/protocols/rdp/compat/winpr-stream.h
+guacamole-server-1.0.0/src/protocols/rdp/compat/client-cliprdr.h
+guacamole-server-1.0.0/src/protocols/rdp/compat/winpr-stream.c
+guacamole-server-1.0.0/src/protocols/rdp/compat/winpr-wtypes.h
+guacamole-server-1.0.0/src/protocols/rdp/dvc.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_disp.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_ai/
+guacamole-server-1.0.0/src/protocols/rdp/guac_ai/ai_service.c
+guacamole-server-1.0.0/src/protocols/rdp/guac_ai/ai_service.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_ai/ai_messages.h
+guacamole-server-1.0.0/src/protocols/rdp/guac_ai/ai_messages.c
+guacamole-server-1.0.0/src/protocols/rdp/ptr_string.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_svc.h
+guacamole-server-1.0.0/src/protocols/rdp/Makefile.am
+guacamole-server-1.0.0/src/protocols/rdp/rdp_pointer.h
+guacamole-server-1.0.0/src/protocols/rdp/rdp_status.h
+guacamole-server-1.0.0/src/protocols/ssh/
+guacamole-server-1.0.0/src/protocols/ssh/clipboard.c
+guacamole-server-1.0.0/src/protocols/ssh/input.h
+guacamole-server-1.0.0/src/protocols/ssh/user.h
+guacamole-server-1.0.0/src/protocols/ssh/ssh_agent.h
+guacamole-server-1.0.0/src/protocols/ssh/sftp.h
+guacamole-server-1.0.0/src/protocols/ssh/user.c
+guacamole-server-1.0.0/src/protocols/ssh/input.c
+guacamole-server-1.0.0/src/protocols/ssh/clipboard.h
+guacamole-server-1.0.0/src/protocols/ssh/Makefile.in
+guacamole-server-1.0.0/src/protocols/ssh/settings.h
+guacamole-server-1.0.0/src/protocols/ssh/settings.c
+guacamole-server-1.0.0/src/protocols/ssh/ttymode.h
+guacamole-server-1.0.0/src/protocols/ssh/ttymode.c
+guacamole-server-1.0.0/src/protocols/ssh/client.h
+guacamole-server-1.0.0/src/protocols/ssh/ssh.h
+guacamole-server-1.0.0/src/protocols/ssh/sftp.c
+guacamole-server-1.0.0/src/protocols/ssh/client.c
+guacamole-server-1.0.0/src/protocols/ssh/ssh.c
+guacamole-server-1.0.0/src/protocols/ssh/Makefile.am
+guacamole-server-1.0.0/src/protocols/ssh/ssh_agent.c
+guacamole-server-1.0.0/src/protocols/telnet/
+guacamole-server-1.0.0/src/protocols/telnet/clipboard.c
+guacamole-server-1.0.0/src/protocols/telnet/input.h
+guacamole-server-1.0.0/src/protocols/telnet/user.h
+guacamole-server-1.0.0/src/protocols/telnet/user.c
+guacamole-server-1.0.0/src/protocols/telnet/input.c
+guacamole-server-1.0.0/src/protocols/telnet/clipboard.h
+guacamole-server-1.0.0/src/protocols/telnet/Makefile.in
+guacamole-server-1.0.0/src/protocols/telnet/settings.h
+guacamole-server-1.0.0/src/protocols/telnet/settings.c
+guacamole-server-1.0.0/src/protocols/telnet/telnet.h
+guacamole-server-1.0.0/src/protocols/telnet/client.h
+guacamole-server-1.0.0/src/protocols/telnet/client.c
+guacamole-server-1.0.0/src/protocols/telnet/Makefile.am
+guacamole-server-1.0.0/src/protocols/telnet/telnet.c
+guacamole-server-1.0.0/src/libguac/
+guacamole-server-1.0.0/src/libguac/encode-webp.c
+guacamole-server-1.0.0/src/libguac/wait-fd.c
+guacamole-server-1.0.0/src/libguac/error.c
+guacamole-server-1.0.0/src/libguac/socket-tee.c
+guacamole-server-1.0.0/src/libguac/encode-webp.h
+guacamole-server-1.0.0/src/libguac/parser.c
+guacamole-server-1.0.0/src/libguac/id.h
+guacamole-server-1.0.0/src/libguac/socket-fd.c
+guacamole-server-1.0.0/src/libguac/id.c
+guacamole-server-1.0.0/src/libguac/raw_encoder.c
+guacamole-server-1.0.0/src/libguac/palette.h
+guacamole-server-1.0.0/src/libguac/protocol.c
+guacamole-server-1.0.0/src/libguac/hash.c
+guacamole-server-1.0.0/src/libguac/timestamp.c
+guacamole-server-1.0.0/src/libguac/unicode.c
+guacamole-server-1.0.0/src/libguac/encode-jpeg.c
+guacamole-server-1.0.0/src/libguac/socket-wsa.c
+guacamole-server-1.0.0/src/libguac/user-handshake.c
+guacamole-server-1.0.0/src/libguac/encode-png.h
+guacamole-server-1.0.0/src/libguac/encode-png.c
+guacamole-server-1.0.0/src/libguac/wait-fd.h
+guacamole-server-1.0.0/src/libguac/user-handlers.h
+guacamole-server-1.0.0/src/libguac/socket.c
+guacamole-server-1.0.0/src/libguac/socket-ssl.c
+guacamole-server-1.0.0/src/libguac/user.c
+guacamole-server-1.0.0/src/libguac/raw_encoder.h
+guacamole-server-1.0.0/src/libguac/Makefile.in
+guacamole-server-1.0.0/src/libguac/palette.c
+guacamole-server-1.0.0/src/libguac/socket-broadcast.c
+guacamole-server-1.0.0/src/libguac/guacamole/
+guacamole-server-1.0.0/src/libguac/guacamole/socket-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/error.h
+guacamole-server-1.0.0/src/libguac/guacamole/hash.h
+guacamole-server-1.0.0/src/libguac/guacamole/user-constants.h
+guacamole-server-1.0.0/src/libguac/guacamole/protocol.h
+guacamole-server-1.0.0/src/libguac/guacamole/unicode.h
+guacamole-server-1.0.0/src/libguac/guacamole/plugin-constants.h
+guacamole-server-1.0.0/src/libguac/guacamole/client-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/audio-fntypes.h
+guacamole-server-1.0.0/src/libguac/guacamole/user-fntypes.h
+guacamole-server-1.0.0/src/libguac/guacamole/layer.h
+guacamole-server-1.0.0/src/libguac/guacamole/error-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/user.h
+guacamole-server-1.0.0/src/libguac/guacamole/parser-constants.h
+guacamole-server-1.0.0/src/libguac/guacamole/socket.h
+guacamole-server-1.0.0/src/libguac/guacamole/object.h
+guacamole-server-1.0.0/src/libguac/guacamole/timestamp.h
+guacamole-server-1.0.0/src/libguac/guacamole/socket-constants.h
+guacamole-server-1.0.0/src/libguac/guacamole/layer-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/parser-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/user-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/pool.h
+guacamole-server-1.0.0/src/libguac/guacamole/protocol-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/client-constants.h
+guacamole-server-1.0.0/src/libguac/guacamole/audio.h
+guacamole-server-1.0.0/src/libguac/guacamole/audio-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/socket-fntypes.h
+guacamole-server-1.0.0/src/libguac/guacamole/parser.h
+guacamole-server-1.0.0/src/libguac/guacamole/stream.h
+guacamole-server-1.0.0/src/libguac/guacamole/client.h
+guacamole-server-1.0.0/src/libguac/guacamole/pool-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/plugin.h
+guacamole-server-1.0.0/src/libguac/guacamole/client-fntypes.h
+guacamole-server-1.0.0/src/libguac/guacamole/socket-ssl.h
+guacamole-server-1.0.0/src/libguac/guacamole/timestamp-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/stream-types.h
+guacamole-server-1.0.0/src/libguac/guacamole/socket-wsa.h
+guacamole-server-1.0.0/src/libguac/guacamole/object-types.h
+guacamole-server-1.0.0/src/libguac/audio.c
+guacamole-server-1.0.0/src/libguac/encode-jpeg.h
+guacamole-server-1.0.0/src/libguac/client.c
+guacamole-server-1.0.0/src/libguac/user-handlers.c
+guacamole-server-1.0.0/src/libguac/pool.c
+guacamole-server-1.0.0/src/libguac/socket-nest.c
+guacamole-server-1.0.0/src/libguac/Makefile.am
+guacamole-server-1.0.0/src/guacenc/
+guacamole-server-1.0.0/src/guacenc/guacenc.h
+guacamole-server-1.0.0/src/guacenc/instruction-shade.c
+guacamole-server-1.0.0/src/guacenc/instruction-size.c
+guacamole-server-1.0.0/src/guacenc/instruction-dispose.c
+guacamole-server-1.0.0/src/guacenc/png.h
+guacamole-server-1.0.0/src/guacenc/image-stream.h
+guacamole-server-1.0.0/src/guacenc/webp.c
+guacamole-server-1.0.0/src/guacenc/cursor.h
+guacamole-server-1.0.0/src/guacenc/instructions.h
+guacamole-server-1.0.0/src/guacenc/instruction-rect.c
+guacamole-server-1.0.0/src/guacenc/display.c
+guacamole-server-1.0.0/src/guacenc/layer.h
+guacamole-server-1.0.0/src/guacenc/display-flatten.c
+guacamole-server-1.0.0/src/guacenc/log.h
+guacamole-server-1.0.0/src/guacenc/png.c
+guacamole-server-1.0.0/src/guacenc/webp.h
+guacamole-server-1.0.0/src/guacenc/jpeg.c
+guacamole-server-1.0.0/src/guacenc/ffmpeg-compat.c
+guacamole-server-1.0.0/src/guacenc/instruction-copy.c
+guacamole-server-1.0.0/src/guacenc/instruction-cursor.c
+guacamole-server-1.0.0/src/guacenc/instruction-mouse.c
+guacamole-server-1.0.0/src/guacenc/man/
+guacamole-server-1.0.0/src/guacenc/man/guacenc.1.in
+guacamole-server-1.0.0/src/guacenc/guacenc.c
+guacamole-server-1.0.0/src/guacenc/log.c
+guacamole-server-1.0.0/src/guacenc/instruction-sync.c
+guacamole-server-1.0.0/src/guacenc/display-sync.c
+guacamole-server-1.0.0/src/guacenc/jpeg.h
+guacamole-server-1.0.0/src/guacenc/Makefile.in
+guacamole-server-1.0.0/src/guacenc/cursor.c
+guacamole-server-1.0.0/src/guacenc/buffer.h
+guacamole-server-1.0.0/src/guacenc/instructions.c
+guacamole-server-1.0.0/src/guacenc/video.h
+guacamole-server-1.0.0/src/guacenc/display.h
+guacamole-server-1.0.0/src/guacenc/instruction-transfer.c
+guacamole-server-1.0.0/src/guacenc/display-buffers.c
+guacamole-server-1.0.0/src/guacenc/parse.h
+guacamole-server-1.0.0/src/guacenc/ffmpeg-compat.h
+guacamole-server-1.0.0/src/guacenc/instruction-end.c
+guacamole-server-1.0.0/src/guacenc/encode.h
+guacamole-server-1.0.0/src/guacenc/instruction-img.c
+guacamole-server-1.0.0/src/guacenc/instruction-cfill.c
+guacamole-server-1.0.0/src/guacenc/encode.c
+guacamole-server-1.0.0/src/guacenc/image-stream.c
+guacamole-server-1.0.0/src/guacenc/layer.c
+guacamole-server-1.0.0/src/guacenc/display-layers.c
+guacamole-server-1.0.0/src/guacenc/display-image-streams.c
+guacamole-server-1.0.0/src/guacenc/parse.c
+guacamole-server-1.0.0/src/guacenc/video.c
+guacamole-server-1.0.0/src/guacenc/instruction-move.c
+guacamole-server-1.0.0/src/guacenc/instruction-blob.c
+guacamole-server-1.0.0/src/guacenc/Makefile.am
+guacamole-server-1.0.0/src/guacenc/buffer.c
+guacamole-server-1.0.0/src/terminal/
+guacamole-server-1.0.0/src/terminal/scrollbar.c
+guacamole-server-1.0.0/src/terminal/display.c
+guacamole-server-1.0.0/src/terminal/common.c
+guacamole-server-1.0.0/src/terminal/xparsecolor.c
+guacamole-server-1.0.0/src/terminal/terminal.c
+guacamole-server-1.0.0/src/terminal/Makefile.in
+guacamole-server-1.0.0/src/terminal/named-colors.c
+guacamole-server-1.0.0/src/terminal/palette.c
+guacamole-server-1.0.0/src/terminal/typescript.c
+guacamole-server-1.0.0/src/terminal/terminal/
+guacamole-server-1.0.0/src/terminal/terminal/terminal_handlers.h
+guacamole-server-1.0.0/src/terminal/terminal/named-colors.h
+guacamole-server-1.0.0/src/terminal/terminal/xparsecolor.h
+guacamole-server-1.0.0/src/terminal/terminal/common.h
+guacamole-server-1.0.0/src/terminal/terminal/palette.h
+guacamole-server-1.0.0/src/terminal/terminal/terminal.h
+guacamole-server-1.0.0/src/terminal/terminal/types.h
+guacamole-server-1.0.0/src/terminal/terminal/buffer.h
+guacamole-server-1.0.0/src/terminal/terminal/display.h
+guacamole-server-1.0.0/src/terminal/terminal/typescript.h
+guacamole-server-1.0.0/src/terminal/terminal/char_mappings.h
+guacamole-server-1.0.0/src/terminal/terminal/scrollbar.h
+guacamole-server-1.0.0/src/terminal/char_mappings.c
+guacamole-server-1.0.0/src/terminal/terminal_handlers.c
+guacamole-server-1.0.0/src/terminal/Makefile.am
+guacamole-server-1.0.0/src/terminal/buffer.c
+guacamole-server-1.0.0/src/common/
+guacamole-server-1.0.0/src/common/iconv.c
+guacamole-server-1.0.0/src/common/clipboard.c
+guacamole-server-1.0.0/src/common/blank_cursor.c
+guacamole-server-1.0.0/src/common/dot_cursor.c
+guacamole-server-1.0.0/src/common/pointer_cursor.c
+guacamole-server-1.0.0/src/common/display.c
+guacamole-server-1.0.0/src/common/rect.c
+guacamole-server-1.0.0/src/common/list.c
+guacamole-server-1.0.0/src/common/surface.c
+guacamole-server-1.0.0/src/common/json.c
+guacamole-server-1.0.0/src/common/Makefile.in
+guacamole-server-1.0.0/src/common/cursor.c
+guacamole-server-1.0.0/src/common/ibar_cursor.c
+guacamole-server-1.0.0/src/common/string.c
+guacamole-server-1.0.0/src/common/io.c
+guacamole-server-1.0.0/src/common/common/
+guacamole-server-1.0.0/src/common/common/list.h
+guacamole-server-1.0.0/src/common/common/cursor.h
+guacamole-server-1.0.0/src/common/common/blank_cursor.h
+guacamole-server-1.0.0/src/common/common/ibar_cursor.h
+guacamole-server-1.0.0/src/common/common/json.h
+guacamole-server-1.0.0/src/common/common/recording.h
+guacamole-server-1.0.0/src/common/common/iconv.h
+guacamole-server-1.0.0/src/common/common/pointer_cursor.h
+guacamole-server-1.0.0/src/common/common/surface.h
+guacamole-server-1.0.0/src/common/common/string.h
+guacamole-server-1.0.0/src/common/common/clipboard.h
+guacamole-server-1.0.0/src/common/common/rect.h
+guacamole-server-1.0.0/src/common/common/dot_cursor.h
+guacamole-server-1.0.0/src/common/common/display.h
+guacamole-server-1.0.0/src/common/common/io.h
+guacamole-server-1.0.0/src/common/recording.c
+guacamole-server-1.0.0/src/common/Makefile.am
+guacamole-server-1.0.0/NOTICE
+guacamole-server-1.0.0/Makefile.in
+guacamole-server-1.0.0/Dockerfile
+guacamole-server-1.0.0/CONTRIBUTING
+guacamole-server-1.0.0/m4/
+guacamole-server-1.0.0/m4/lt~obsolete.m4
+guacamole-server-1.0.0/m4/ltversion.m4
+guacamole-server-1.0.0/m4/ltsugar.m4
+guacamole-server-1.0.0/m4/ltoptions.m4
+guacamole-server-1.0.0/m4/libtool.m4
+guacamole-server-1.0.0/configure
+guacamole-server-1.0.0/Makefile.am
+guacamole-server-1.0.0/LICENSE
+guacamole-server-1.0.0/install-sh
+guacamole-server-1.0.0/test-driver
+patching file guacamole-server-1.0.0/src/guacd/daemon.c
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/aarch64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/aarch64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/aarch64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/aarch64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) none
+checking for gcc option to accept ISO C99... none needed
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking cairo/cairo.h usability... yes
+checking cairo/cairo.h presence... yes
+checking for cairo/cairo.h... yes
+checking pngstruct.h usability... no
+checking pngstruct.h presence... no
+checking for pngstruct.h... no
+checking for cos in -lm... yes
+checking for png_write_png in -lpng... yes
+checking for jpeg_start_compress in -ljpeg... yes
+checking for cairo_create in -lcairo... yes
+checking for pthread_create in -lpthread... yes
+checking for dlopen in -ldl... yes
+checking for uuid_make in -lossp-uuid... no
+checking for uuid_make in -luuid... yes
+checking ossp/uuid.h usability... no
+checking ossp/uuid.h presence... no
+checking for ossp/uuid.h... no
+checking whether uuid_make is declared... yes
+checking for CU_run_test in -lcunit... no
+checking for clock_gettime... yes
+checking for gettimeofday... yes
+checking for memmove... yes
+checking for memset... yes
+checking for select... yes
+checking for strdup... yes
+checking for nanosleep... yes
+checking whether png_get_io_ptr is declared... yes
+checking whether cairo_format_stride_for_width is declared... yes
+checking whether poll is declared... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for AVCODEC... no
+checking for AVUTIL... no
+checking for SWSCALE... no
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for SSL_CTX_new in -lssl... yes
+checking whether DSA_SIG_get0 is declared... no
+checking whether DSA_get0_pqg is declared... no
+checking whether DSA_get0_key is declared... no
+checking whether RSA_get0_key is declared... no
+checking whether libssl requires threading callbacks... yes
+checking for main in -lwsock32... no
+checking vorbis/vorbisenc.h usability... no
+checking vorbis/vorbisenc.h presence... no
+checking for vorbis/vorbisenc.h... no
+checking for ogg_stream_init in -logg... no
+checking for vorbis_block_init in -lvorbis... no
+checking for vorbis_encode_init in -lvorbisenc... no
+[91mconfigure: WARNING:
+  --------------------------------------------
+   Unable to find libogg / libvorbis / libvorbisenc.
+   Sound will not be encoded with Ogg Vorbis.
+  --------------------------------------------
+[0mchecking for pa_context_new in -lpulse... no
+[91mconfigure: WARNING:
+  --------------------------------------------
+   Unable to find libpulse
+   Sound support for VNC will be disabled
+  --------------------------------------------
+[0mchecking for PANGO... no
+checking for PANGOCAIRO... no
+checking for rfbInitClient in -lvncclient... yes
+checking for rfbClient.destHost... yes
+checking for rfbClient.destPort... yes
+checking whether listenForIncomingConnectionsNoFork is declared... yes
+checking for freerdp_new in -lfreerdp-core... no
+checking for freerdp_new in -lfreerdp... no
+[91mconfigure: WARNING:
+  --------------------------------------------
+   Unable to find libfreerdp-core / libfreerdp
+   RDP will be disabled.
+  --------------------------------------------
+[0mchecking for libssh2_session_init_ex in -lssh2... no
+checking for telnet_init in -ltelnet... no
+checking webp/encode.h usability... no
+checking webp/encode.h presence... no
+checking for webp/encode.h... no
+checking for WebPEncode in -lwebp... no
+[91mconfigure: WARNING:
+  --------------------------------------------
+   Unable to find libwebp.
+   Images will not be encoded using WebP.
+  --------------------------------------------
+[0mchecking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Doxyfile
+config.status: creating tests/Makefile
+config.status: creating src/common/Makefile
+config.status: creating src/common-ssh/Makefile
+config.status: creating src/terminal/Makefile
+config.status: creating src/libguac/Makefile
+config.status: creating src/guacd/Makefile
+config.status: creating src/guacd/man/guacd.8
+config.status: creating src/guacd/man/guacd.conf.5
+config.status: creating src/guacenc/Makefile
+config.status: creating src/guacenc/man/guacenc.1
+config.status: creating src/guaclog/Makefile
+config.status: creating src/guaclog/man/guaclog.1
+config.status: creating src/pulse/Makefile
+config.status: creating src/protocols/rdp/Makefile
+config.status: creating src/protocols/ssh/Makefile
+config.status: creating src/protocols/telnet/Makefile
+config.status: creating src/protocols/vnc/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+------------------------------------------------
+guacamole-server version 1.0.0
+------------------------------------------------
+
+   Library status:
+
+     freerdp ............. no
+     pango ............... no
+     libavcodec .......... no
+     libavutil ........... no
+     libssh2 ............. no
+     libssl .............. yes
+     libswscale .......... no
+     libtelnet ........... no
+     libVNCServer ........ yes
+     libvorbis ........... no
+     libpulse ............ no
+     libwebp ............. no
+     wsock32 ............. no
+
+   Protocol support:
+
+      RDP ....... no
+      SSH ....... no
+      Telnet .... no
+      VNC ....... yes
+
+   Services / tools:
+
+      guacd ...... yes
+      guacenc .... no
+      guaclog .... yes
+
+   Init scripts: no
+   Systemd units: no
+
+Type "make" to compile guacamole-server.
+
+make  all-recursive
+make[1]: Entering directory '/guacamole-server-1.0.0'
+Making all in src/libguac
+make[2]: Entering directory '/guacamole-server-1.0.0/src/libguac'
+  CC       libguac_la-audio.lo
+  CC       libguac_la-client.lo
+  CC       libguac_la-encode-jpeg.lo
+  CC       libguac_la-encode-png.lo
+  CC       libguac_la-error.lo
+  CC       libguac_la-hash.lo
+  CC       libguac_la-id.lo
+  CC       libguac_la-palette.lo
+  CC       libguac_la-parser.lo
+  CC       libguac_la-pool.lo
+  CC       libguac_la-protocol.lo
+  CC       libguac_la-raw_encoder.lo
+  CC       libguac_la-socket.lo
+  CC       libguac_la-socket-broadcast.lo
+  CC       libguac_la-socket-fd.lo
+  CC       libguac_la-socket-nest.lo
+  CC       libguac_la-socket-tee.lo
+  CC       libguac_la-timestamp.lo
+  CC       libguac_la-unicode.lo
+  CC       libguac_la-user.lo
+  CC       libguac_la-user-handlers.lo
+  CC       libguac_la-user-handshake.lo
+  CC       libguac_la-wait-fd.lo
+  CC       libguac_la-socket-ssl.lo
+  CCLD     libguac.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[2]: Leaving directory '/guacamole-server-1.0.0/src/libguac'
+Making all in src/common
+make[2]: Entering directory '/guacamole-server-1.0.0/src/common'
+  CC       libguac_common_la-io.lo
+  CC       libguac_common_la-blank_cursor.lo
+  CC       libguac_common_la-clipboard.lo
+  CC       libguac_common_la-cursor.lo
+  CC       libguac_common_la-display.lo
+  CC       libguac_common_la-dot_cursor.lo
+  CC       libguac_common_la-ibar_cursor.lo
+  CC       libguac_common_la-iconv.lo
+  CC       libguac_common_la-json.lo
+  CC       libguac_common_la-list.lo
+  CC       libguac_common_la-pointer_cursor.lo
+  CC       libguac_common_la-recording.lo
+  CC       libguac_common_la-rect.lo
+  CC       libguac_common_la-string.lo
+  CC       libguac_common_la-surface.lo
+  CCLD     libguac_common.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[2]: Leaving directory '/guacamole-server-1.0.0/src/common'
+Making all in tests
+make[2]: Entering directory '/guacamole-server-1.0.0/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/guacamole-server-1.0.0/tests'
+Making all in src/protocols/vnc
+make[2]: Entering directory '/guacamole-server-1.0.0/src/protocols/vnc'
+  CC       libguac_client_vnc_la-auth.lo
+  CC       libguac_client_vnc_la-client.lo
+  CC       libguac_client_vnc_la-clipboard.lo
+  CC       libguac_client_vnc_la-cursor.lo
+  CC       libguac_client_vnc_la-display.lo
+  CC       libguac_client_vnc_la-input.lo
+  CC       libguac_client_vnc_la-log.lo
+  CC       libguac_client_vnc_la-settings.lo
+  CC       libguac_client_vnc_la-user.lo
+  CC       libguac_client_vnc_la-vnc.lo
+  CCLD     libguac-client-vnc.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[2]: Leaving directory '/guacamole-server-1.0.0/src/protocols/vnc'
+Making all in src/guacd
+make[2]: Entering directory '/guacamole-server-1.0.0/src/guacd'
+  CC       guacd-conf-args.o
+  CC       guacd-conf-file.o
+  CC       guacd-conf-parse.o
+  CC       guacd-connection.o
+  CC       guacd-daemon.o
+  CC       guacd-log.o
+  CC       guacd-move-fd.o
+  CC       guacd-proc.o
+  CC       guacd-proc-map.o
+  CCLD     guacd
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/guacd'
+Making all in src/guaclog
+make[2]: Entering directory '/guacamole-server-1.0.0/src/guaclog'
+  CC       guaclog-guaclog.o
+  CC       guaclog-instructions.o
+  CC       guaclog-instruction-key.o
+  CC       guaclog-interpret.o
+  CC       guaclog-keydef.o
+  CC       guaclog-log.o
+  CC       guaclog-state.o
+  CCLD     guaclog
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/guaclog'
+make[2]: Entering directory '/guacamole-server-1.0.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/guacamole-server-1.0.0'
+make[1]: Leaving directory '/guacamole-server-1.0.0'
+Making install in src/libguac
+make[1]: Entering directory '/guacamole-server-1.0.0/src/libguac'
+make[2]: Entering directory '/guacamole-server-1.0.0/src/libguac'
+ ../.././install-sh -c -d '/usr/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libguac.la '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libguac.so.16.0.0 /usr/lib/libguac.so.16.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libguac.so.16.0.0 libguac.so.16 || { rm -f libguac.so.16 && ln -s libguac.so.16.0.0 libguac.so.16; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libguac.so.16.0.0 libguac.so || { rm -f libguac.so && ln -s libguac.so.16.0.0 libguac.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac.lai /usr/lib/libguac.la
+libtool: install: /usr/bin/install -c .libs/libguac.a /usr/lib/libguac.a
+libtool: install: chmod 644 /usr/lib/libguac.a
+libtool: install: ranlib /usr/lib/libguac.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ ../.././install-sh -c -d '/usr/include/guacamole'
+ /usr/bin/install -c -m 644 guacamole/audio.h guacamole/audio-fntypes.h guacamole/audio-types.h guacamole/client-constants.h guacamole/client.h guacamole/client-fntypes.h guacamole/client-types.h guacamole/error.h guacamole/error-types.h guacamole/hash.h guacamole/layer.h guacamole/layer-types.h guacamole/object.h guacamole/object-types.h guacamole/parser-constants.h guacamole/parser.h guacamole/parser-types.h guacamole/plugin-constants.h guacamole/plugin.h guacamole/pool.h guacamole/pool-types.h guacamole/protocol.h guacamole/protocol-types.h guacamole/socket-constants.h guacamole/socket.h guacamole/socket-fntypes.h guacamole/socket-types.h guacamole/stream.h guacamole/stream-types.h guacamole/timestamp.h guacamole/timestamp-types.h guacamole/unicode.h guacamole/user.h guacamole/user-constants.h guacamole/user-fntypes.h guacamole/user-types.h guacamole/socket-ssl.h '/usr/include/guacamole'
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/libguac'
+make[1]: Leaving directory '/guacamole-server-1.0.0/src/libguac'
+Making install in src/common
+make[1]: Entering directory '/guacamole-server-1.0.0/src/common'
+make[2]: Entering directory '/guacamole-server-1.0.0/src/common'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/common'
+make[1]: Leaving directory '/guacamole-server-1.0.0/src/common'
+Making install in tests
+make[1]: Entering directory '/guacamole-server-1.0.0/tests'
+make[2]: Entering directory '/guacamole-server-1.0.0/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/guacamole-server-1.0.0/tests'
+make[1]: Leaving directory '/guacamole-server-1.0.0/tests'
+Making install in src/protocols/vnc
+make[1]: Entering directory '/guacamole-server-1.0.0/src/protocols/vnc'
+make[2]: Entering directory '/guacamole-server-1.0.0/src/protocols/vnc'
+ ../../.././install-sh -c -d '/usr/lib'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libguac-client-vnc.la '/usr/lib'
+[91mlibtool: warning: relinking 'libguac-client-vnc.la'
+[0mlibtool: install: (cd /guacamole-server-1.0.0/src/protocols/vnc; /bin/sh "/guacamole-server-1.0.0/libtool"  --silent --tag CC --mode=relink gcc -Werror -Wall -pedantic -Iinclude -I../../../src/common -I../../../src/common-ssh -I../../../src/libguac -I../../../src/pulse -g -O2 -version-info 0:0:0 -lcairo -lvncclient -o libguac-client-vnc.la -rpath /usr/lib libguac_client_vnc_la-auth.lo libguac_client_vnc_la-client.lo libguac_client_vnc_la-clipboard.lo libguac_client_vnc_la-cursor.lo libguac_client_vnc_la-display.lo libguac_client_vnc_la-input.lo libguac_client_vnc_la-log.lo libguac_client_vnc_la-settings.lo libguac_client_vnc_la-user.lo libguac_client_vnc_la-vnc.lo ../../../src/common/libguac_common.la ../../../src/libguac/libguac.la )
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.so.0.0.0T /usr/lib/libguac-client-vnc.so.0.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libguac-client-vnc.so.0.0.0 libguac-client-vnc.so.0 || { rm -f libguac-client-vnc.so.0 && ln -s libguac-client-vnc.so.0.0.0 libguac-client-vnc.so.0; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libguac-client-vnc.so.0.0.0 libguac-client-vnc.so || { rm -f libguac-client-vnc.so && ln -s libguac-client-vnc.so.0.0.0 libguac-client-vnc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.lai /usr/lib/libguac-client-vnc.la
+libtool: install: /usr/bin/install -c .libs/libguac-client-vnc.a /usr/lib/libguac-client-vnc.a
+libtool: install: chmod 644 /usr/lib/libguac-client-vnc.a
+libtool: install: ranlib /usr/lib/libguac-client-vnc.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/protocols/vnc'
+make[1]: Leaving directory '/guacamole-server-1.0.0/src/protocols/vnc'
+Making install in src/guacd
+make[1]: Entering directory '/guacamole-server-1.0.0/src/guacd'
+make[2]: Entering directory '/guacamole-server-1.0.0/src/guacd'
+ ../.././install-sh -c -d '/usr/sbin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c guacd '/usr/sbin'
+libtool: install: /usr/bin/install -c .libs/guacd /usr/sbin/guacd
+ ../.././install-sh -c -d '/usr/share/man/man5'
+ /usr/bin/install -c -m 644 man/guacd.conf.5 '/usr/share/man/man5'
+ ../.././install-sh -c -d '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 man/guacd.8 '/usr/share/man/man8'
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/guacd'
+make[1]: Leaving directory '/guacamole-server-1.0.0/src/guacd'
+Making install in src/guaclog
+make[1]: Entering directory '/guacamole-server-1.0.0/src/guaclog'
+make[2]: Entering directory '/guacamole-server-1.0.0/src/guaclog'
+ ../.././install-sh -c -d '/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c guaclog '/usr/bin'
+libtool: install: /usr/bin/install -c .libs/guaclog /usr/bin/guaclog
+ ../.././install-sh -c -d '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 man/guaclog.1 '/usr/share/man/man1'
+make[2]: Leaving directory '/guacamole-server-1.0.0/src/guaclog'
+make[1]: Leaving directory '/guacamole-server-1.0.0/src/guaclog'
+make[1]: Entering directory '/guacamole-server-1.0.0'
+make[2]: Entering directory '/guacamole-server-1.0.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/guacamole-server-1.0.0'
+make[1]: Leaving directory '/guacamole-server-1.0.0'
+ ---> 3af49f675517
+Removing intermediate container d9a9ad0528d9
+Step 9/15 : FROM alpine:3.8
+ ---> 0db038343fbd
+Step 10/15 : RUN apk add cairo jpeg libpng openssl libvncserver
+ ---> Running in b4f01729318b
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/30) Installing libxau (1.0.8-r2)
+(2/30) Installing libbsd (0.8.6-r2)
+(3/30) Installing libxdmcp (1.1.2-r4)
+(4/30) Installing libxcb (1.13-r2)
+(5/30) Installing libx11 (1.6.6-r0)
+(6/30) Installing libxext (1.3.3-r2)
+(7/30) Installing libxrender (0.9.10-r2)
+(8/30) Installing expat (2.2.5-r0)
+(9/30) Installing libbz2 (1.0.6-r6)
+(10/30) Installing libpng (1.6.34-r1)
+(11/30) Installing freetype (2.9.1-r1)
+(12/30) Installing fontconfig (2.12.6-r1)
+(13/30) Installing pixman (0.34.0-r5)
+(14/30) Installing cairo (1.14.12-r2)
+(15/30) Installing libjpeg-turbo (1.5.3-r4)
+(16/30) Installing libjpeg-turbo-utils (1.5.3-r4)
+(17/30) Installing jpeg (8-r6)
+(18/30) Installing libgpg-error (1.30-r0)
+(19/30) Installing libgcrypt (1.8.3-r0)
+(20/30) Installing gmp (6.1.2-r1)
+(21/30) Installing nettle (3.4-r1)
+(22/30) Installing libffi (3.2.1-r4)
+(23/30) Installing p11-kit (0.23.10-r0)
+(24/30) Installing libtasn1 (4.13-r0)
+(25/30) Installing libunistring (0.9.7-r0)
+(26/30) Installing gnutls (3.6.2-r0)
+(27/30) Installing libvncserver (0.9.11-r2)
+(28/30) Installing libcrypto1.0 (1.0.2q-r0)
+(29/30) Installing libssl1.0 (1.0.2q-r0)
+(30/30) Installing openssl (1.0.2q-r0)
+Executing busybox-1.28.4-r2.trigger
+OK: 20 MiB in 43 packages
+ ---> a3ca23a5944a
+Removing intermediate container b4f01729318b
+Step 11/15 : COPY --from=build /usr/sbin/guacd /usr/sbin/guacd
+ ---> 02c67ba5be25
+Step 12/15 : COPY --from=build /usr/lib/libguac.so.* /usr/lib/libuuid.so.* /usr/lib/libguac-client-vnc* /usr/lib/
+ ---> d85bc95579d9
+Step 13/15 : ENTRYPOINT
+ ---> Running in 168bfc225b31
+ ---> 3afceb30dcde
+Removing intermediate container 168bfc225b31
+Step 14/15 : CMD /usr/sbin/guacd -l 4822 -b 0.0.0.0 -L trace -f
+ ---> Running in 239dd791710a
+ ---> eec499403282
+Removing intermediate container 239dd791710a
+Step 15/15 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/config:/config"],"net":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '14e79e85e57a240b50d18f5dcad73e8bca6a27dd' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in db6f8f283e52
+ ---> ad554d4a4dce
+Removing intermediate container db6f8f283e52
+Successfully built ad554d4a4dce
+Successfully tagged zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96-arm64
+Pushing zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96-arm64
+The push refers to a repository [docker.io/zededa/guacd]
+58d4f36d706b: Preparing
+5fbb84d807a7: Preparing
+e18451c5cfaf: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+82fe62b38ba2: Mounted from zededa/zedctr
+92d7b4d0b33c: Mounted from zededa/zedctr
+5fbb84d807a7: Pushed
+58d4f36d706b: Pushed
+e18451c5cfaf: Pushed
+85a2add30bae37777d3d4f3f17a528fe8db88e96-arm64: digest: sha256:f7760d06ec374fe94f4e4dbcea29b0998993487ce7b85a98bc5cbcea31a11999 size: 1365
+Pushing zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96-arm64 to manifest zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96
+time="2019-02-06T08:07:40+01:00" level=warning msg="Couldn't find or access image reference \"zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96-s390x\". Skipping image."
+Digest: sha256:b5eb381535d817d1576fd0204e20f75f0d03aa8ebff49613065132c830e8f853 743
+Not signing zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96
+Build and push complete, not releasing, all done.
+Building and pushing "zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9"
+18377dd0bc3c33a1602e94a4c43aa0b3c51badb9: Pulling from zededa/device-trees
+Digest: sha256:00279cb016ebb97994354578aa49eb672c52c9071657236642e6d1a81b3567bb
+Status: Image is up to date for zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9
+Building and pushing "zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687"
+3aeeaf4e04f450283d49220eb7e82262b4531687: Pulling from zededa/debug
+Digest: sha256:81c4c7882f12b793a70809942dedf29e3dca96531a9b0005377945d4860e6d10
+Status: Image is up to date for zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687
+Building and pushing "zededa/zedctr:d509dfbe651aeb392ac6bb3f8e6e110362694e26"
+d509dfbe651aeb392ac6bb3f8e6e110362694e26: Pulling from zededa/zedctr
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  20.99kB
+Step 1/27 : FROM zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687-arm64 as ztools
+ ---> 256db766104a
+Step 2/27 : FROM -arm64 as lisp
+invalid reference format
+exit status 1
+Makefile:20: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+WARNING: couldn't fetch zededa/ztools:snapshot plugin - using zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687 instead
+WARNING: couldn't fetch zededa/lisp:snapshot plugin - using  instead
+Building and pushing "zededa/zedctr:d509dfbe651aeb392ac6bb3f8e6e110362694e26"
+Sending build context to Docker daemon  20.99kB
+Step 1/27 : FROM zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687-arm64 as ztools
+ ---> 256db766104a
+Step 2/27 : FROM -arm64 as lisp
+invalid reference format
+exit status 1
+Makefile:20: recipe for target 'push' failed
+make: *** [push] Error 1
+make: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:ff498d9924491a7e57ed69c60946bce57195dd51539a5db8dc4e8a91a6667941
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:8efe69ed0db579dd3cfdf7ddcfc095acdcc0548531ae2136ff01bb6c050d8d19
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make: *** No rule to make target 'publish'.  Stop.
+make: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:latest"
+Sending build context to Docker daemon  1.314GB
+Step 1/9 : FROM alpine:edge
+ ---> a7881f1d3b63
+Step 2/9 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git
+ ---> Using cache
+ ---> 28213d73834a
+Step 3/9 : COPY . /bits/
+ ---> Using cache
+ ---> 16fbcdcf987f
+Step 4/9 : COPY OVMF.fd /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> 02794b6bc49a
+Step 5/9 : COPY runme.sh /
+ ---> Using cache
+ ---> 95d2d28f5bc6
+Step 6/9 : RUN touch /bits/bios/OVMF.fd
+ ---> Using cache
+ ---> cd4aecb7bdf7
+Step 7/9 : WORKDIR /bits
+ ---> Using cache
+ ---> 693f53d72839
+Step 8/9 : ENTRYPOINT /runme.sh
+ ---> Using cache
+ ---> d5b966e18ad4
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '14e79e85e57a240b50d18f5dcad73e8bca6a27dd' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 6120f1f77d8d
+ ---> 0e160a1454d1
+Removing intermediate container 6120f1f77d8d
+Successfully built 0e160a1454d1
+Successfully tagged zededa/zenix:latest-arm64
+Pushing zededa/zenix:latest-arm64
+The push refers to a repository [docker.io/zededa/zenix]
+98a596036f57: Preparing
+c96588d795bb: Preparing
+7989889f26ec: Preparing
+7eb3ea1d6185: Preparing
+97b4fe4534d2: Preparing
+d4d04a8204b5: Preparing
+2a2e682c36db: Preparing
+d4d04a8204b5: Waiting
+2a2e682c36db: Waiting
+7eb3ea1d6185: Layer already exists
+98a596036f57: Layer already exists
+c96588d795bb: Layer already exists
+7989889f26ec: Layer already exists
+97b4fe4534d2: Layer already exists
+d4d04a8204b5: Layer already exists
+2a2e682c36db: Layer already exists
+latest-arm64: digest: sha256:50ead1e1c5e7687575633c9772628550a5713b11ad16de417c2cdb7cda20efa7 size: 1788
+Pushing zededa/zenix:latest-arm64 to manifest zededa/zenix:latest
+time="2019-02-06T08:08:49+01:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:latest-s390x\". Skipping image."
+Digest: sha256:9eee2bd76657fbcb547b57c53d47e71069c9e312d8efa9df0b425458f3477657 743
+Not signing zededa/zenix:latest
+Build and push complete, not releasing, all done.
+make: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
