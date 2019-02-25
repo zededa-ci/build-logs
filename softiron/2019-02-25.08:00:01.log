@@ -1,0 +1,497 @@
+Cloning into '/tmp/zenbuild'...
+make: Entering directory '/tmp/zenbuild'
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+WARNING: couldn't fetch the latest zededa/ztools:snapshot-arm64 - may be using stale cache
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+WARNING: couldn't fetch the latest zededa/lisp:snapshot-arm64 - may be using stale cache
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+WARNING: couldn't fetch the latest zededa/ztools:snapshot-arm64 - may be using stale cache
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+WARNING: couldn't fetch the latest zededa/lisp:snapshot-arm64 - may be using stale cache
+make -C build-tools all
+make[1]: Entering directory '/tmp/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=1195bd81b8019cfa8512893c8610b6786488f866" -o /tmp/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=1195bd81b8019cfa8512893c8610b6786488f866" -o /tmp/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/tmp/zenbuild/build-tools'
+make: Leaving directory '/tmp/zenbuild'
+From github.com:zededa/lisp
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.2.2      -> 1.2.2
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+--- /dev/fd/63	2019-02-25 08:01:37.100953254 +0100
++++ /dev/fd/62	2019-02-25 08:01:37.100953254 +0100
+@@ -1,75 +1,25 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.2.2
+-1.2.2-amd64
+ 1.2.2-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+Building the following tags: origin/master (latest tag is 1.4.0)
+HEAD is now at 6d87def Tweaking LISP build
+Building and pushing "zededa/lisp:452ca74b5a6b02cac87a3bf613b8413c37f09f0b"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2019-02-25T08:01:37+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+From github.com:zededa/go-provision
+   24cc57d2..81e5736e  fixes      -> origin/fixes
+ * [new tag]           0.1.0      -> 0.1.0
+ * [new tag]           0.10.0     -> 0.10.0
+ * [new tag]           0.10.1     -> 0.10.1
+ * [new tag]           0.11.0     -> 0.11.0
+ * [new tag]           0.11.1     -> 0.11.1
+ * [new tag]           0.12.0     -> 0.12.0
+ * [new tag]           0.13.0     -> 0.13.0
+ * [new tag]           0.14.0     -> 0.14.0
+ * [new tag]           0.14.1     -> 0.14.1
+ * [new tag]           0.15.0     -> 0.15.0
+ * [new tag]           0.16.0     -> 0.16.0
+ * [new tag]           0.16.1     -> 0.16.1
+ * [new tag]           0.17.0     -> 0.17.0
+ * [new tag]           0.18.0     -> 0.18.0
+ * [new tag]           0.3.0      -> 0.3.0
+ * [new tag]           0.3.1      -> 0.3.1
+ * [new tag]           0.4.0      -> 0.4.0
+ * [new tag]           0.5.0      -> 0.5.0
+ * [new tag]           0.6.0      -> 0.6.0
+ * [new tag]           0.7.0      -> 0.7.0
+ * [new tag]           0.8.0      -> 0.8.0
+ * [new tag]           0.8.1      -> 0.8.1
+ * [new tag]           0.9.0      -> 0.9.0
+ * [new tag]           0.9.1      -> 0.9.1
+ * [new tag]           0.9.2      -> 0.9.2
+ * [new tag]           1.0.0      -> 1.0.0
+ * [new tag]           1.1.0      -> 1.1.0
+ * [new tag]           1.2.0      -> 1.2.0
+ * [new tag]           1.3.0      -> 1.3.0
+ * [new tag]           1.3.1      -> 1.3.1
+ * [new tag]           1.3.2      -> 1.3.2
+ * [new tag]           1.3.3      -> 1.3.3
+ * [new tag]           1.4.0      -> 1.4.0
+ * [new tag]           1.4.1      -> 1.4.1
+ * [new tag]           1.4.2      -> 1.4.2
+--- /dev/fd/63	2019-02-25 08:01:39.020963543 +0100
++++ /dev/fd/62	2019-02-25 08:01:39.020963543 +0100
+@@ -1,106 +1,35 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+-0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+-1.4.2
+-1.4.2-amd64
++1.4.1-arm64
++1.4.2-arm64
+Building the following tags: 1.4.1
+1.4.2 (latest tag is 1.4.2)
+HEAD is now at 39ca20fa Merge pull request #312 from zededa/kalyan-networkInstance
+Building and pushing "zededa/ztools:1.4.1"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2019-02-25T08:01:39+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+HEAD is now at 24cc57d2 Merge pull request #316 from zededa/aclfixes
+Building and pushing "zededa/ztools:1.4.2"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2019-02-25T08:01:39+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+From https://github.com/zededa/zenbuild
+ * [new tag]         0.1.0      -> 0.1.0
+ * [new tag]         0.1.1      -> 0.1.1
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.10.1     -> 0.10.1
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.14.1     -> 0.14.1
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.16.1     -> 0.16.1
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.3.0      -> 0.3.0
+ * [new tag]         0.3.1      -> 0.3.1
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.8.1      -> 0.8.1
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         0.9.1      -> 0.9.1
+ * [new tag]         0.9.2      -> 0.9.2
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.1      -> 1.3.1
+ * [new tag]         1.3.2      -> 1.3.2
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.4.2      -> 1.4.2
+--- /dev/fd/63	2019-02-25 08:01:40.810973135 +0100
++++ /dev/fd/62	2019-02-25 08:01:40.810973135 +0100
+@@ -1,106 +1,36 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+ 0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+-1.4.2
+-1.4.2-amd64
++1.4.1-arm64
++1.4.2-arm64
+Building the following tags: 1.4.1
+1.4.2 (latest tag is 1.4.2)
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+HEAD is now at 5d7b624 Merge commit '1195bd81b8019cfa8512893c8610b6786488f866' into 1.4
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=5d7b62487bdf02a1545f11c8a324841df4c51a88" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=5d7b62487bdf02a1545f11c8a324841df4c51a88" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="--hash 1.4.1  " push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:1.4.1"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+time="2019-02-25T08:03:01+01:00" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory" 
+context canceled
+exit status 1
+Makefile:16: recipe for target 'push' failed
+make[1]: *** [push] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Makefile:58: recipe for target 'build-pkgs' failed
+make: *** [build-pkgs] Error 2
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+HEAD is now at 50d20e6 Release 1.4.2
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=50d20e63cc8ba86be7ea018929a21502a182c6f8" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=50d20e63cc8ba86be7ea018929a21502a182c6f8" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="--hash 1.4.2 --release latest" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:1.4.2"
+Warning: failed to get default registry endpoint from daemon (Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?). Using system default: https://index.docker.io/v1/
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+No image pulled, continuing with build
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+exit status 1
+Makefile:16: recipe for target 'push' failed
+make[1]: *** [push] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Makefile:58: recipe for target 'build-pkgs' failed
+make: *** [build-pkgs] Error 2
+FINISHED
