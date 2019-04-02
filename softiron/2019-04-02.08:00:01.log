@@ -1,0 +1,3165 @@
+Cloning into '/tmp/zenbuild'...
+make: Entering directory '/tmp/zenbuild'
+Error response from daemon: manifest for zededa/ztools:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.1-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/ztools:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.1-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+make -C build-tools all
+make[1]: Entering directory '/tmp/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /tmp/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /tmp/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/tmp/zenbuild/build-tools'
+make: Leaving directory '/tmp/zenbuild'
+From github.com:zededa/lisp
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.2.2      -> 1.2.2
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.5.0      -> 1.5.0
+ * [new tag]         2.1        -> 2.1
+ * [new tag]         2.1.0      -> 2.1.0
+--- /dev/fd/63	2019-04-02 08:01:59.463638343 +0200
++++ /dev/fd/62	2019-04-02 08:01:59.463638343 +0200
+@@ -1,84 +1,28 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.2.2
+-1.2.2-amd64
+ 1.2.2-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
+Building the following tags:  origin/master (latest tag is 2.1.0)
+HEAD is now at 3aa3395 Merge pull request #33 from gkodali-zededa/master
+Building and pushing "zededa/lisp:8490c3bfbf870bad45d25c54b6fd2e4f146c83e6"
+8490c3bfbf870bad45d25c54b6fd2e4f146c83e6: Pulling from zededa/lisp
+Digest: sha256:2478b77de9341a5283dbaa80c52208cd52bd67c75084e7c1cb09fd1fce42c6bf
+Status: Image is up to date for zededa/lisp:8490c3bfbf870bad45d25c54b6fd2e4f146c83e6
+From github.com:zededa/go-provision
+   95108c7f..7f22320d  2.1        -> origin/2.1
+   94f25e9e..da681656  fixes      -> origin/fixes
+ * [new tag]           0.1.0      -> 0.1.0
+ * [new tag]           0.10.0     -> 0.10.0
+ * [new tag]           0.10.1     -> 0.10.1
+ * [new tag]           0.11.0     -> 0.11.0
+ * [new tag]           0.11.1     -> 0.11.1
+ * [new tag]           0.12.0     -> 0.12.0
+ * [new tag]           0.13.0     -> 0.13.0
+ * [new tag]           0.14.0     -> 0.14.0
+ * [new tag]           0.14.1     -> 0.14.1
+ * [new tag]           0.15.0     -> 0.15.0
+ * [new tag]           0.16.0     -> 0.16.0
+ * [new tag]           0.16.1     -> 0.16.1
+ * [new tag]           0.17.0     -> 0.17.0
+ * [new tag]           0.18.0     -> 0.18.0
+ * [new tag]           0.3.0      -> 0.3.0
+ * [new tag]           0.3.1      -> 0.3.1
+ * [new tag]           0.4.0      -> 0.4.0
+ * [new tag]           0.5.0      -> 0.5.0
+ * [new tag]           0.6.0      -> 0.6.0
+ * [new tag]           0.7.0      -> 0.7.0
+ * [new tag]           0.8.0      -> 0.8.0
+ * [new tag]           0.8.1      -> 0.8.1
+ * [new tag]           0.9.0      -> 0.9.0
+ * [new tag]           0.9.1      -> 0.9.1
+ * [new tag]           0.9.2      -> 0.9.2
+ * [new tag]           1.0.0      -> 1.0.0
+ * [new tag]           1.1.0      -> 1.1.0
+ * [new tag]           1.2.0      -> 1.2.0
+ * [new tag]           1.3.0      -> 1.3.0
+ * [new tag]           1.3.1      -> 1.3.1
+ * [new tag]           1.3.2      -> 1.3.2
+ * [new tag]           1.3.3      -> 1.3.3
+ * [new tag]           1.4.0      -> 1.4.0
+ * [new tag]           1.4.1      -> 1.4.1
+ * [new tag]           1.4.2      -> 1.4.2
+ * [new tag]           1.5.0      -> 1.5.0
+ * [new tag]           1.5.1      -> 1.5.1
+ * [new tag]           2.1.0      -> 2.1.0
+ * [new tag]           2.1.1      -> 2.1.1
+--- /dev/fd/63	2019-04-02 08:02:05.963674058 +0200
++++ /dev/fd/62	2019-04-02 08:02:05.963674058 +0200
+@@ -1,117 +1,39 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+-0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.4.2
+-1.4.2-amd64
+ 1.4.2-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-1.5.1
+-1.5.1-amd64
+ 1.5.1-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
++2.1.1-arm64
+Building the following tags: 2.1.1 origin/master (latest tag is 2.1.1)
+HEAD is now at 7f22320d Merge pull request #335 from zededa/fixes
+Building and pushing "zededa/ztools:2.1.1"
+2.1.1: Pulling from zededa/ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  74.83MB
+Step 1/30 : FROM golang:1.9.1-alpine AS build
+ ---> cc52d0ad4cce
+Step 2/30 : RUN apk update
+ ---> Using cache
+ ---> a112fe57102d
+Step 3/30 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux
+ ---> Using cache
+ ---> 405c5f4d1731
+Step 4/30 : ENV CGO_ENABLED 1
+ ---> Using cache
+ ---> e6e43bfe6c30
+Step 5/30 : ARG GOARCH=
+ ---> Using cache
+ ---> d244c159097f
+Step 6/30 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Using cache
+ ---> 0bc471d88e04
+Step 7/30 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Using cache
+ ---> a3f52f897b28
+Step 8/30 : ADD ./ /go/src/github.com/zededa/go-provision/
+ ---> 42b964fe6270
+Step 9/30 : ADD etc /config
+ ---> 4e42c53b9aef
+Step 10/30 : ADD scripts/device-steps.sh scripts/find-uplink.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh scripts/watchdog-report.sh /opt/zededa/bin/
+ ---> 6567aa81dfc3
+Step 11/30 : ADD examples /opt/zededa/examples
+ ---> 54aa3ad8d89f
+Step 12/30 : ADD AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> dd10bfd1c1a2
+Step 13/30 : ADD DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> c369af8411a0
+Step 14/30 : ADD lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> 2f947ff4e16e
+Step 15/30 : RUN (cd ./src/github.com/zededa/go-provision/; scripts/getversion.sh >/opt/zededa/bin/versioninfo)
+ ---> Running in e95f72c6efe6
+ ---> e92b7e87fe07
+Removing intermediate container e95f72c6efe6
+Step 16/30 : RUN cp /opt/zededa/bin/versioninfo /opt/zededa/bin/versioninfo.1
+ ---> Running in 52e1c8d19ee9
+ ---> fe6046d0ce7b
+Removing intermediate container 52e1c8d19ee9
+Step 17/30 : RUN echo Building: `cat /opt/zededa/bin/versioninfo`
+ ---> Running in c36f550f72ee
+Building: 20180314-test--7f22320d-2019-04-02.06.03
+ ---> 6cc50194c23b
+Removing intermediate container c36f550f72ee
+Step 18/30 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc)           ;    go install github.com/zededa/go-provision/zedbox/... &&     echo "Running go vet" && go vet ./... &&     if [ -f /go/bin/*/zedbox ] ; then mv /go/bin/*/zedbox /go/bin ; fi
+ ---> Running in f2f9226c8a0c
+Running go vet
+ ---> 78aa6fef868f
+Removing intermediate container f2f9226c8a0c
+Step 19/30 : RUN ln -s /go/bin/zedbox /opt/zededa/bin/zedbox ;    for app in         client domainmgr downloader hardwaremodel identitymgr ledmanager       logmanager verifier zedagent zedmanager zedrouter ipcmonitor nim       waitforaddr diag baseosmgr wstunnelclient conntrack;    do ln -s zedbox /opt/zededa/bin/$app ; done
+ ---> Running in 6b3e56875a22
+ ---> b7c2cb8e55a3
+Removing intermediate container 6b3e56875a22
+Step 20/30 : FROM scratch
+ ---> 
+Step 21/30 : COPY --from=build /opt/zededa/bin /opt/zededa/bin
+ ---> 634f06a5f742
+Step 22/30 : COPY --from=build /opt/zededa/examples /opt/zededa/examples
+ ---> ea647cf1e428
+Step 23/30 : COPY --from=build /var/tmp/zededa/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> 7670e710dcbb
+Step 24/30 : COPY --from=build /var/tmp/zededa/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> 2aa7073eb028
+Step 25/30 : COPY --from=build /var/tmp/zededa/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> f3b37be9b67c
+Step 26/30 : COPY --from=build /config /opt/zededa/examples/config
+ ---> b84476b545bb
+Step 27/30 : COPY --from=build /go/bin/* /opt/zededa/bin/
+ ---> 6589bf294970
+Step 28/30 : WORKDIR /opt/zededa/bin
+ ---> 7eec08ca4ad8
+Removing intermediate container 780d23b51acc
+Step 29/30 : CMD /bin/ash
+ ---> Running in 604d508852cf
+ ---> 0f7a34fac036
+Removing intermediate container 604d508852cf
+Step 30/30 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '7f22320ded6a8c5da2eec9e325334c16c4b1c157' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in e76a34773e94
+ ---> 3e0f3f12a631
+Removing intermediate container e76a34773e94
+Successfully built 3e0f3f12a631
+Successfully tagged zededa/ztools:2.1.1-arm64
+Pushing zededa/ztools:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+c6cd3f517df8: Preparing
+a09a1bc42eb4: Preparing
+1b8a33a0a385: Preparing
+e8b30e6e8512: Preparing
+7869bf8c0570: Preparing
+7746ce82196c: Preparing
+7c31005473ee: Preparing
+7746ce82196c: Waiting
+7c31005473ee: Waiting
+a09a1bc42eb4: Pushed
+1b8a33a0a385: Pushed
+7869bf8c0570: Pushed
+e8b30e6e8512: Pushed
+7746ce82196c: Pushed
+7c31005473ee: Pushed
+c6cd3f517df8: Pushed
+2.1.1-arm64: digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f size: 1775
+Pushing zededa/ztools:2.1.1-arm64 to manifest zededa/ztools:2.1.1
+time="2019-04-02T08:05:14+02:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:2.1.1-s390x\". Skipping image."
+Digest: sha256:2c9c9663abb037af493075e4ac2e2713a75104aa2e454f74350ac30676aec4a5 743
+Not signing zededa/ztools:2.1.1
+Tagging zededa/ztools:2.1.1-arm64 as zededa/ztools:latest-arm64
+Pushing zededa/ztools:latest-arm64
+The push refers to a repository [docker.io/zededa/ztools]
+c6cd3f517df8: Preparing
+a09a1bc42eb4: Preparing
+1b8a33a0a385: Preparing
+e8b30e6e8512: Preparing
+7869bf8c0570: Preparing
+7746ce82196c: Preparing
+7c31005473ee: Preparing
+7c31005473ee: Waiting
+7746ce82196c: Waiting
+c6cd3f517df8: Layer already exists
+7869bf8c0570: Layer already exists
+1b8a33a0a385: Layer already exists
+a09a1bc42eb4: Layer already exists
+e8b30e6e8512: Layer already exists
+7746ce82196c: Layer already exists
+7c31005473ee: Layer already exists
+latest-arm64: digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f size: 1775
+Pushing zededa/ztools:latest-arm64 to manifest zededa/ztools:latest
+time="2019-04-02T08:05:25+02:00" level=warning msg="Couldn't find or access image reference \"zededa/ztools:latest-s390x\". Skipping image."
+Digest: sha256:2c9c9663abb037af493075e4ac2e2713a75104aa2e454f74350ac30676aec4a5 743
+Not signing zededa/ztools:latest
+Build, push and release of "latest" complete, all done.
+HEAD is now at 7f22320d Merge pull request #335 from zededa/fixes
+Building and pushing "zededa/ztools:3155ca245f82d71e47414d1ea65769810e07b27e"
+3155ca245f82d71e47414d1ea65769810e07b27e: Pulling from zededa/ztools
+Digest: sha256:c33377e35d7e0b2761b52487b6cc339938a37451d9e4fd75ecf14c66fcb23319
+Status: Image is up to date for zededa/ztools:3155ca245f82d71e47414d1ea65769810e07b27e
+From https://github.com/zededa/zenbuild
+   7e0795f..bd3a087  master     -> origin/master
+   7e0795f..bd3a087  2.1        -> origin/2.1
+ * [new tag]         0.1.0      -> 0.1.0
+ * [new tag]         0.1.1      -> 0.1.1
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.10.1     -> 0.10.1
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.14.1     -> 0.14.1
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.16.1     -> 0.16.1
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.3.0      -> 0.3.0
+ * [new tag]         0.3.1      -> 0.3.1
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.8.1      -> 0.8.1
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         0.9.1      -> 0.9.1
+ * [new tag]         0.9.2      -> 0.9.2
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.1      -> 1.3.1
+ * [new tag]         1.3.2      -> 1.3.2
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.4.2      -> 1.4.2
+ * [new tag]         1.5.0      -> 1.5.0
+ * [new tag]         1.5.1      -> 1.5.1
+ * [new tag]         2.1.0      -> 2.1.0
+ * [new tag]         2.1.1      -> 2.1.1
+--- /dev/fd/63	2019-04-02 08:05:30.554798095 +0200
++++ /dev/fd/62	2019-04-02 08:05:30.554798095 +0200
+@@ -1,117 +1,40 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+ 0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.4.2
+-1.4.2-amd64
+ 1.4.2-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-1.5.1
+-1.5.1-amd64
+ 1.5.1-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
++2.1.1-arm64
+Building the following tags: 2.1.1 origin/master (latest tag is 2.1.1)
+Removing bios/
+Removing build-pkgs/zenix/Makefile
+Removing build-pkgs/zenix/OVMF.fd
+Removing build-pkgs/zenix/config.img
+Removing build-pkgs/zenix/fallback_aarch64.img
+Removing build-pkgs/zenix/installer.yml
+Removing build-pkgs/zenix/installer_aarch64.iso
+Removing build-pkgs/zenix/installer_aarch64.raw
+Removing build-pkgs/zenix/rootfs.yml
+Removing build-pkgs/zenix/rootfs_aarch64.img
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing config.img
+Removing fallback_aarch64.img
+Removing fallback_aarch64.qcow2
+Removing images/installer.yml
+Removing images/installer.yml.orig
+Removing images/rootfs.yml
+Removing images/rootfs.yml.orig
+Removing installer_aarch64.iso
+Removing installer_aarch64.raw
+Removing pkg/mkconf/Dockerfile
+Removing pkg/qrexec-dom0/Dockerfile
+Removing pkg/qrexec-lib/Dockerfile
+Removing rootfs_aarch64.img
+HEAD is now at bd3a087 Updating onboarding cert
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="--hash 2.1.1 --release latest" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:2.1.1"
+2.1.1: Pulling from zededa/build-pkgs_abuild
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  3.072kB
+Step 1/14 : FROM alpine:3.6 as build
+ ---> 65fe3a2cb465
+Step 2/14 : RUN apk add --no-cache     alpine-sdk
+ ---> Using cache
+ ---> dbf1f4c22060
+Step 3/14 : RUN adduser -D zbuild
+ ---> Using cache
+ ---> 00982e6ed934
+Step 4/14 : RUN mkdir -p /var/cache/distfiles
+ ---> Using cache
+ ---> 3b3eba69e092
+Step 5/14 : RUN chgrp abuild /var/cache/distfiles
+ ---> Using cache
+ ---> b0edcf678042
+Step 6/14 : RUN chmod g+w /var/cache/distfiles
+ ---> Using cache
+ ---> 75a1649a3542
+Step 7/14 : RUN addgroup zbuild abuild
+ ---> Using cache
+ ---> d600fd6627d5
+Step 8/14 : USER zbuild
+ ---> Using cache
+ ---> 793b506d844c
+Step 9/14 : WORKDIR /home/zbuild
+ ---> Using cache
+ ---> fd770e66d534
+Step 10/14 : RUN git config --global user.name "Zededa Alpine Packaging Team"
+ ---> Using cache
+ ---> ffa7559a85a1
+Step 11/14 : RUN git config --global user.email "opensource@zededa.com"
+ ---> Using cache
+ ---> 6d9f91a3a3d6
+Step 12/14 : RUN git clone git://git.alpinelinux.org/aports
+ ---> Using cache
+ ---> 264b451e293d
+Step 13/14 : RUN abuild-keygen -a -i
+ ---> Using cache
+ ---> 64f0e0dbe50a
+Step 14/14 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 2653e3b40b1c
+ ---> 72a08b8dff49
+Removing intermediate container 2653e3b40b1c
+Successfully built 72a08b8dff49
+Successfully tagged zededa/build-pkgs_abuild:2.1.1-arm64
+Pushing zededa/build-pkgs_abuild:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/build-pkgs_abuild]
+c3bc3a65cbb4: Preparing
+a273ba4768e6: Preparing
+44494e439902: Preparing
+619a144cef83: Preparing
+ff46d10e4fec: Preparing
+d09d42937182: Preparing
+cf6e590e2675: Preparing
+23c672618af4: Preparing
+b3bee2d5bf72: Preparing
+d09d42937182: Waiting
+cf6e590e2675: Waiting
+23c672618af4: Waiting
+b3bee2d5bf72: Waiting
+ff46d10e4fec: Layer already exists
+619a144cef83: Layer already exists
+44494e439902: Layer already exists
+c3bc3a65cbb4: Layer already exists
+a273ba4768e6: Layer already exists
+23c672618af4: Layer already exists
+b3bee2d5bf72: Layer already exists
+d09d42937182: Layer already exists
+cf6e590e2675: Layer already exists
+2.1.1-arm64: digest: sha256:9fa4ca3f94f0ea358ebf4fe2812370a58215a57d30c1fa14c032a11c7bbe31a7 size: 2197
+Pushing zededa/build-pkgs_abuild:2.1.1-arm64 to manifest zededa/build-pkgs_abuild:2.1.1
+time="2019-04-02T08:07:31+02:00" level=warning msg="Couldn't find or access image reference \"zededa/build-pkgs_abuild:2.1.1-s390x\". Skipping image."
+Digest: sha256:bc4dbaec020d88660bca5e57de46cae5d0d0e819f4c9b0c5de50fbeb7ece9292 743
+Not signing zededa/build-pkgs_abuild:2.1.1
+Tagging zededa/build-pkgs_abuild:2.1.1-arm64 as zededa/build-pkgs_abuild:latest-arm64
+Pushing zededa/build-pkgs_abuild:latest-arm64
+The push refers to a repository [docker.io/zededa/build-pkgs_abuild]
+c3bc3a65cbb4: Preparing
+a273ba4768e6: Preparing
+44494e439902: Preparing
+619a144cef83: Preparing
+ff46d10e4fec: Preparing
+d09d42937182: Preparing
+cf6e590e2675: Preparing
+23c672618af4: Preparing
+b3bee2d5bf72: Preparing
+23c672618af4: Waiting
+b3bee2d5bf72: Waiting
+cf6e590e2675: Waiting
+d09d42937182: Waiting
+c3bc3a65cbb4: Layer already exists
+ff46d10e4fec: Layer already exists
+44494e439902: Layer already exists
+a273ba4768e6: Layer already exists
+619a144cef83: Layer already exists
+cf6e590e2675: Layer already exists
+d09d42937182: Layer already exists
+b3bee2d5bf72: Layer already exists
+23c672618af4: Layer already exists
+latest-arm64: digest: sha256:9fa4ca3f94f0ea358ebf4fe2812370a58215a57d30c1fa14c032a11c7bbe31a7 size: 2197
+Pushing zededa/build-pkgs_abuild:latest-arm64 to manifest zededa/build-pkgs_abuild:latest
+time="2019-04-02T08:07:41+02:00" level=warning msg="Couldn't find or access image reference \"zededa/build-pkgs_abuild:latest-s390x\". Skipping image."
+Digest: sha256:bc4dbaec020d88660bca5e57de46cae5d0d0e819f4c9b0c5de50fbeb7ece9292 743
+Not signing zededa/build-pkgs_abuild:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/build-pkgs_uefi:2.1.1"
+2.1.1: Pulling from zededa/build-pkgs_uefi
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  6.144kB
+Step 1/15 : ARG BUILD_CONTAINER=alpine:3.7
+ ---> 
+Step 2/15 : FROM ${BUILD_CONTAINER} as build
+ ---> e9be492ac087
+Step 3/15 : RUN apk add --no-cache curl make gcc g++ python libuuid iasl nasm util-linux-dev bash
+ ---> Using cache
+ ---> d6d75b2fe476
+Step 4/15 : RUN mkdir /ws ; curl -L https://github.com/tianocore/edk2/archive/vUDK2018.tar.gz | tar --strip-components 1 -C /ws -xzf -
+ ---> Using cache
+ ---> 5ad6f6b317b6
+Step 5/15 : WORKDIR /ws
+ ---> Using cache
+ ---> 092b04ab41f1
+Step 6/15 : ENV BUILD_ARGS_aarch64 -b RELEASE -t GCC5 -a AARCH64 -p ArmVirtPkg/ArmVirtQemu.dsc
+ ---> Using cache
+ ---> a9ae186d3ffd
+Step 7/15 : ENV BUILD_ARGS_x86_64 -b RELEASE -t GCC5 -a X64 -p OvmfPkg/OvmfPkgX64.dsc
+ ---> Using cache
+ ---> 1b64c71416a7
+Step 8/15 : COPY patch /ws/patch
+ ---> Using cache
+ ---> d6f4fee9150e
+Step 9/15 : RUN bash -c 'patch -p0 < patch/*'
+ ---> Using cache
+ ---> 7857660cb11f
+Step 10/15 : RUN make -C BaseTools
+ ---> Using cache
+ ---> 76f0bb948e00
+Step 11/15 : RUN bash -c ". edksetup.sh ; build \$BUILD_ARGS_"`uname -m`
+ ---> Using cache
+ ---> ff8a4acf4be2
+Step 12/15 : RUN cp Build/OvmfX64/RELEASE_*/FV/OVMF*.fd . 2>/dev/null ||     (cp Build/ArmVirtQemu-AARCH64/RELEASE_GCC5/FV/QEMU_EFI.fd OVMF.fd ;     cp Build/ArmVirtQemu-AARCH64/RELEASE_GCC5/FV/QEMU_VARS.fd OVMF_VARS.fd)
+ ---> Using cache
+ ---> 45612bf233f7
+Step 13/15 : FROM scratch
+ ---> 
+Step 14/15 : COPY --from=build /ws/OVMF*.fd /
+ ---> Using cache
+ ---> f937a103ecfd
+Step 15/15 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 5468bbe1655c
+ ---> e323b7180515
+Removing intermediate container 5468bbe1655c
+Successfully built e323b7180515
+Successfully tagged zededa/build-pkgs_uefi:2.1.1-arm64
+Pushing zededa/build-pkgs_uefi:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/build-pkgs_uefi]
+dc7dcc680cdb: Preparing
+dc7dcc680cdb: Layer already exists
+2.1.1-arm64: digest: sha256:adee626aafd5621c032bf49d1ea9a1da7956381a0a14d6179c2e28cc6581beb0 size: 527
+Pushing zededa/build-pkgs_uefi:2.1.1-arm64 to manifest zededa/build-pkgs_uefi:2.1.1
+time="2019-04-02T08:08:04+02:00" level=warning msg="Couldn't find or access image reference \"zededa/build-pkgs_uefi:2.1.1-s390x\". Skipping image."
+Digest: sha256:2f3bfbffdb9ec43f9fff7e3b36f858b7ed1f7cd2322092e82092fc385be79a5b 741
+Not signing zededa/build-pkgs_uefi:2.1.1
+Tagging zededa/build-pkgs_uefi:2.1.1-arm64 as zededa/build-pkgs_uefi:latest-arm64
+Pushing zededa/build-pkgs_uefi:latest-arm64
+The push refers to a repository [docker.io/zededa/build-pkgs_uefi]
+dc7dcc680cdb: Preparing
+dc7dcc680cdb: Layer already exists
+latest-arm64: digest: sha256:adee626aafd5621c032bf49d1ea9a1da7956381a0a14d6179c2e28cc6581beb0 size: 527
+Pushing zededa/build-pkgs_uefi:latest-arm64 to manifest zededa/build-pkgs_uefi:latest
+time="2019-04-02T08:08:14+02:00" level=warning msg="Couldn't find or access image reference \"zededa/build-pkgs_uefi:latest-s390x\". Skipping image."
+Digest: sha256:2f3bfbffdb9ec43f9fff7e3b36f858b7ed1f7cd2322092e82092fc385be79a5b 741
+Not signing zededa/build-pkgs_uefi:latest
+Build, push and release of "latest" complete, all done.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make -C pkg LINUXKIT_HASH="--hash 2.1.1 --release latest" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+Building and pushing "zededa/grub:2.1.1"
+2.1.1: Pulling from zededa/grub
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  237.1kB
+Step 1/18 : FROM linuxkit/alpine:8b53d842a47fce43464e15f65ee2f68b82542330 AS grub-build
+ ---> 3845c352aaeb
+Step 2/18 : RUN apk add   automake   make   bison   gettext   flex   gcc   git   libtool   libc-dev   linux-headers   python3   autoconf
+ ---> Using cache
+ ---> 094511bf9cbf
+Step 3/18 : RUN ln -s python3 /usr/bin/python
+ ---> Using cache
+ ---> 9d695fa749b8
+Step 4/18 : ENV GRUB_MODULES_PORT "part_gpt fat ext2 iso9660 squash4 gzio linux acpi normal cpio crypto disk boot crc64 gpt search_disk_uuid verify xzio xfs video gfxterm efi_gop gptprio chain probe reboot regexp smbios part_msdos"
+ ---> Using cache
+ ---> 6583a608f093
+Step 5/18 : ENV GRUB_MODULES_x86_64 "multiboot2 efi_uga"
+ ---> Using cache
+ ---> d453a42b6dff
+Step 6/18 : ENV GRUB_MODULES_aarch64 "xen_boot"
+ ---> Using cache
+ ---> a6fedb7d395b
+Step 7/18 : ENV GRUB_COMMIT 71f9e4ac44142af52c3fc1860436cf9e432bf764
+ ---> Using cache
+ ---> 97fb0c9b45e4
+Step 8/18 : ENV GRUB_REPO git://git.sv.gnu.org/grub.git
+ ---> Using cache
+ ---> 64cbe9bb5b5e
+Step 9/18 : COPY patches/* /patches/
+ ---> Using cache
+ ---> 1e9b69b285b6
+Step 10/18 : RUN mkdir /grub-lib &&   set -e &&   git clone ${GRUB_REPO} &&   cd grub &&   git checkout -b grub-build ${GRUB_COMMIT} &&   for patch in /patches/*.patch; do     echo "Applying $patch";     patch -p1 < "$patch";   done &&   ./autogen.sh &&   ./configure --libdir=/grub-lib --with-platform=efi CFLAGS="-Os -Wno-unused-value" &&   make -j "$(getconf _NPROCESSORS_ONLN)" &&   make install
+ ---> Using cache
+ ---> 1e59bb88aaf6
+Step 11/18 : RUN cd grub ; case $(uname -m) in   x86_64)     ./grub-mkimage -O x86_64-efi -d /grub-lib/grub/x86_64-efi -o /grub-lib/BOOTX64.EFI -p /EFI/BOOT ${GRUB_MODULES_PORT} ${GRUB_MODULES_x86_64} ;    ;;   aarch64)     ./grub-mkimage -O arm64-efi -d /grub-lib/grub/arm64-efi -o /grub-lib/BOOTAA64.EFI -p /EFI/BOOT ${GRUB_MODULES_PORT} ${GRUB_MODULES_aarch64} ;    ln -s BOOTAA64.EFI /grub-lib/BOOTX64.EFI ;    ;;   esac
+ ---> Using cache
+ ---> 0de57b165645
+Step 12/18 : FROM scratch
+ ---> 
+Step 13/18 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 14/18 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 15/18 : WORKDIR /EFI/BOOT
+ ---> Using cache
+ ---> 958bb2da14e2
+Step 16/18 : COPY --from=grub-build /grub-lib/BOOT*.EFI ./
+ ---> Using cache
+ ---> b9a8460b2f9d
+Step 17/18 : COPY rootfs.cfg grub.cfg
+ ---> Using cache
+ ---> 45e2a6937fca
+Step 18/18 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f5323e11b989
+ ---> d7bc788aa0a8
+Removing intermediate container f5323e11b989
+Successfully built d7bc788aa0a8
+Successfully tagged zededa/grub:2.1.1-arm64
+Pushing zededa/grub:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/grub]
+da1516e13396: Preparing
+b6b8561a1e3e: Preparing
+d777e910a530: Preparing
+da1516e13396: Layer already exists
+b6b8561a1e3e: Layer already exists
+d777e910a530: Layer already exists
+2.1.1-arm64: digest: sha256:6a2cc7428782cc7468af24e4b1849d27caef117dac511413ccc7a8f04329a3e3 size: 942
+Pushing zededa/grub:2.1.1-arm64 to manifest zededa/grub:2.1.1
+time="2019-04-02T08:08:57+02:00" level=warning msg="Couldn't find or access image reference \"zededa/grub:2.1.1-s390x\". Skipping image."
+Digest: sha256:6248b405ab73f4f5ff93efb9762fb6c9b6867b4af3a5214e7d1733a8e7eae251 741
+Not signing zededa/grub:2.1.1
+Tagging zededa/grub:2.1.1-arm64 as zededa/grub:latest-arm64
+Pushing zededa/grub:latest-arm64
+The push refers to a repository [docker.io/zededa/grub]
+da1516e13396: Preparing
+b6b8561a1e3e: Preparing
+d777e910a530: Preparing
+da1516e13396: Layer already exists
+d777e910a530: Layer already exists
+b6b8561a1e3e: Layer already exists
+latest-arm64: digest: sha256:6a2cc7428782cc7468af24e4b1849d27caef117dac511413ccc7a8f04329a3e3 size: 942
+Pushing zededa/grub:latest-arm64 to manifest zededa/grub:latest
+time="2019-04-02T08:09:06+02:00" level=warning msg="Couldn't find or access image reference \"zededa/grub:latest-s390x\". Skipping image."
+Digest: sha256:6248b405ab73f4f5ff93efb9762fb6c9b6867b4af3a5214e7d1733a8e7eae251 741
+Not signing zededa/grub:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/xen:2.1.1"
+2.1.1: Pulling from zededa/xen
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  5.632kB
+Step 1/17 : FROM alpine:3.7 as kernel-build
+ ---> e9be492ac087
+Step 2/17 : RUN apk update
+ ---> Using cache
+ ---> f944ca632f57
+Step 3/17 : RUN apk add     argp-standalone     automake     bash     bc     binutils-dev     bison     build-base     curl     diffutils     flex     git     gmp-dev     gnupg     installkernel     kmod     libelf-dev     libressl-dev     linux-headers     ncurses-dev     python2     sed     squashfs-tools     tar     xz     xz-dev     zlib-dev     libunwind-dev
+ ---> Using cache
+ ---> 6c456e2b5334
+Step 4/17 : ENV XEN_UBOOT_ADDR 0x81000000
+ ---> Using cache
+ ---> 721bf077416b
+Step 5/17 : ENV XEN_VERSION 4.11.0
+ ---> Using cache
+ ---> c16b9f0d1736
+Step 6/17 : ENV XEN_SOURCE https://downloads.xenproject.org/release/xen/${XEN_VERSION}/xen-${XEN_VERSION}.tar.gz
+ ---> Using cache
+ ---> 31a70e784958
+Step 7/17 : RUN [ -f xen-${XEN_VERSION}.tar.gz ] || curl -fsSLO ${XEN_SOURCE} &&     gzip -d xen-${XEN_VERSION}.tar.gz &&     cat xen-${XEN_VERSION}.tar | tar --absolute-names -x && mv /xen-${XEN_VERSION} /xen
+ ---> Using cache
+ ---> 83aa9971bd5c
+Step 8/17 : COPY xen_config* /xen/
+ ---> Using cache
+ ---> 0cc0423d1d3f
+Step 9/17 : WORKDIR /xen/xen
+ ---> Using cache
+ ---> 88c3cbcf75d8
+Step 10/17 : RUN case $(uname -m) in     x86_64)         XEN_DEF_CONF=/xen/xen/arch/x86/configs/x86_64_defconfig; 	;;     esac ;    cp /xen/xen_config-${XEN_VERSION}-$(uname -m) ${XEN_DEF_CONF};     rm /xen/xen_config* &&     make defconfig &&     make oldconfig &&     mkdir -p /out/boot
+ ---> Using cache
+ ---> 4740d9095513
+Step 11/17 : RUN make &&     case $(uname -m) in     x86_64)         cp xen.gz /out/boot/xen.gz 	;;     aarch64)         (cd /tmp ; wget -O - ftp://ftp.denx.de/pub/u-boot/u-boot-2018.09.tar.bz2 | tar xjf - ; cd u-boot-* ; make defconfig ; make tools-all) ;        /tmp/u-boot-*/tools/mkimage -A arm64 -T kernel -a $XEN_UBOOT_ADDR -e $XEN_UBOOT_ADDR -C none -d xen /out/boot/xen.uboot ;        cp xen.efi /out/boot/         ;;     esac
+ ---> Using cache
+ ---> 99d52e82405b
+Step 12/17 : FROM scratch
+ ---> 
+Step 13/17 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 14/17 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 15/17 : WORKDIR /boot
+ ---> Using cache
+ ---> da7aeaf796b6
+Step 16/17 : COPY --from=kernel-build /out/* .
+ ---> Using cache
+ ---> 4f0994cbcbcb
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 934a6feeb56e
+ ---> 45e20880baf8
+Removing intermediate container 934a6feeb56e
+Successfully built 45e20880baf8
+Successfully tagged zededa/xen:2.1.1-arm64
+Pushing zededa/xen:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/xen]
+603f9593e8aa: Preparing
+5e563b91d7ba: Preparing
+5e563b91d7ba: Layer already exists
+603f9593e8aa: Layer already exists
+2.1.1-arm64: digest: sha256:2d1abbaf6d115f23e47968d57d50592fba53d2cf2ec7cd4592d5709d730a4174 size: 733
+Pushing zededa/xen:2.1.1-arm64 to manifest zededa/xen:2.1.1
+time="2019-04-02T08:09:28+02:00" level=warning msg="Couldn't find or access image reference \"zededa/xen:2.1.1-s390x\". Skipping image."
+Digest: sha256:aad5db5de02ad416f46ea65e29e40f0fc991f2b2f563734379d63f4e76e6c2ee 741
+Not signing zededa/xen:2.1.1
+Tagging zededa/xen:2.1.1-arm64 as zededa/xen:latest-arm64
+Pushing zededa/xen:latest-arm64
+The push refers to a repository [docker.io/zededa/xen]
+603f9593e8aa: Preparing
+5e563b91d7ba: Preparing
+5e563b91d7ba: Layer already exists
+603f9593e8aa: Layer already exists
+latest-arm64: digest: sha256:2d1abbaf6d115f23e47968d57d50592fba53d2cf2ec7cd4592d5709d730a4174 size: 733
+Pushing zededa/xen:latest-arm64 to manifest zededa/xen:latest
+time="2019-04-02T08:09:38+02:00" level=warning msg="Couldn't find or access image reference \"zededa/xen:latest-s390x\". Skipping image."
+Digest: sha256:aad5db5de02ad416f46ea65e29e40f0fc991f2b2f563734379d63f4e76e6c2ee 741
+Not signing zededa/xen:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/kernel:2.1.1"
+2.1.1: Pulling from zededa/kernel
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  1.415MB
+Step 1/33 : FROM alpine:3.6 as kernel-build
+ ---> 65fe3a2cb465
+Step 2/33 : RUN apk update
+ ---> Using cache
+ ---> 0b17d82507ca
+Step 3/33 : RUN apk add     argp-standalone     automake     bash     bc     binutils-dev     bison     build-base     curl     diffutils     flex     git     gmp-dev     gnupg     installkernel     kmod     libelf-dev     libressl-dev     linux-headers     ncurses-dev     python2     findutils     sed     squashfs-tools     tar     xz     xz-dev     zlib-dev
+ ---> Using cache
+ ---> 6cbc1e7e0ba3
+Step 4/33 : RUN [ $(uname -m) == x86_64 ] && apk add libunwind-dev || true
+ ---> Using cache
+ ---> 82fc2d9dd36d
+Step 5/33 : ENV KERNEL_VERSION_aarch64 4.19.5
+ ---> Using cache
+ ---> ec8954903f93
+Step 6/33 : ENV KERNEL_SERIES_aarch64 4.19.x
+ ---> Using cache
+ ---> 737c41c23eee
+Step 7/33 : ENV KERNEL_VERSION_x86_64 4.9.51
+ ---> Using cache
+ ---> 3302271a6c74
+Step 8/33 : ENV KERNEL_SERIES_x86_64 4.9.x
+ ---> Using cache
+ ---> 427ea362362f
+Step 9/33 : ENV KERNEL_SOURCE https://www.kernel.org/pub/linux/kernel/v4.x/linux-\${KERNEL_VERSION}.tar.xz
+ ---> Using cache
+ ---> ccf20fc9bbc5
+Step 10/33 : ENV KERNEL_SHA256_SUMS https://www.kernel.org/pub/linux/kernel/v4.x/sha256sums.asc
+ ---> Using cache
+ ---> 7f440df45963
+Step 11/33 : ENV KERNEL_PGP2_SIGN https://www.kernel.org/pub/linux/kernel/v4.x/linux-\${KERNEL_VERSION}.tar.sign
+ ---> Using cache
+ ---> f898ba28727f
+Step 12/33 : ENV IXGBE_URL https://sourceforge.net/projects/e1000/files/ixgbe%20stable/
+ ---> Using cache
+ ---> 15cfcae86cc7
+Step 13/33 : ENV IXGBE_VERSION 5.3.7
+ ---> Using cache
+ ---> 72537da98d57
+Step 14/33 : SHELL /bin/sh -c export KERNEL_VERSION=$(eval echo \$KERNEL_VERSION_$(uname -m)) ; export KERNEL_SERIES=$(eval echo \$KERNEL_SERIES_$(uname -m)) ; eval KERNEL_SOURCE=$KERNEL_SOURCE ; eval export KERNEL_PGP2_SIGN=$KERNEL_PGP2_SIGN ; /bin/sh -c "$1" -
+ ---> Using cache
+ ---> e50b08524ce1
+Step 15/33 : COPY / /
+ ---> Using cache
+ ---> 45b5126c4526
+Step 16/33 : RUN curl -fsSLO ${KERNEL_SHA256_SUMS} &&     gpg2 -q --import keys.asc &&     gpg2 --verify sha256sums.asc &&     KERNEL_SHA256=$(grep linux-${KERNEL_VERSION}.tar.xz sha256sums.asc | cut -d ' ' -f 1) &&     [ -f linux-${KERNEL_VERSION}.tar.xz ] || curl -fsSLO ${KERNEL_SOURCE} &&     echo "${KERNEL_SHA256}  linux-${KERNEL_VERSION}.tar.xz" | sha256sum -c - &&     xz -d linux-${KERNEL_VERSION}.tar.xz &&     curl -fsSLO ${KERNEL_PGP2_SIGN} &&     gpg2 --verify linux-${KERNEL_VERSION}.tar.sign linux-${KERNEL_VERSION}.tar &&     cat linux-${KERNEL_VERSION}.tar | tar --absolute-names -x && mv /linux-${KERNEL_VERSION} /linux
+ ---> Using cache
+ ---> 58202a89331c
+Step 17/33 : WORKDIR /linux
+ ---> Using cache
+ ---> c35f15f815c9
+Step 18/33 : RUN set -e && for patch in /patches-${KERNEL_SERIES}/*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> 8163e178a70f
+Step 19/33 : RUN tar -C /tmp -xzvf /ixgbe-${IXGBE_VERSION}.tgz &&     rm -rf /linux/drivers/net/ethernet/intel/ixgbe &&     cp -r /tmp/ixgbe-${IXGBE_VERSION}/src /linux/drivers/net/ethernet/intel/ixgbe
+ ---> Using cache
+ ---> 9ae0cdcff5ad
+Step 20/33 : RUN mkdir /out
+ ---> Using cache
+ ---> 20e8fef3dcc5
+Step 21/33 : RUN case $(uname -m) in     x86_64)         KERNEL_DEF_CONF=/linux/arch/x86/configs/x86_64_defconfig;         ;;     aarch64)         KERNEL_DEF_CONF=/linux/arch/arm64/configs/defconfig;         ;;     esac  &&     cp /kernel_config-${KERNEL_SERIES}-$(uname -m) ${KERNEL_DEF_CONF};     if [ -n "${EXTRA}" ]; then         sed -i "s/CONFIG_LOCALVERSION=\"-linuxkit\"/CONFIG_LOCALVERSION=\"-linuxkit${EXTRA}\"/" ${KERNEL_DEF_CONF};         if [ "${EXTRA}" = "-dbg" ]; then             sed -i 's/CONFIG_PANIC_ON_OOPS=y/# CONFIG_PANIC_ON_OOPS is not set/' ${KERNEL_DEF_CONF};         fi &&         cat /kernel_config${EXTRA} >> ${KERNEL_DEF_CONF};     fi &&     make defconfig &&     make oldconfig &&     if [ -z "${EXTRA}" ]; then diff .config ${KERNEL_DEF_CONF}; fi
+ ---> Using cache
+ ---> 8265f36d5b01
+Step 22/33 : RUN make -j "$(getconf _NPROCESSORS_ONLN)" KCFLAGS="-fno-pie" &&     case $(uname -m) in     x86_64)         cp arch/x86_64/boot/bzImage /out/kernel;         ;;     aarch64)         cp arch/arm64/boot/Image.gz /out/kernel;         ;;     esac &&     cp System.map /out &&     ([ "${EXTRA}" = "-dbg" ] && cp vmlinux /out || true)
+ ---> Using cache
+ ---> a3cc44730906
+Step 23/33 : RUN make INSTALL_MOD_PATH=/tmp/kernel-modules modules_install &&     ( DVER=$(basename $(find /tmp/kernel-modules/lib/modules/ -mindepth 1 -maxdepth 1)) &&       cd /tmp/kernel-modules/lib/modules/$DVER &&       rm build source &&       ln -s /usr/src/linux-headers-$DVER build ) &&     ( cd /tmp/kernel-modules && tar cf /out/kernel.tar lib )
+ ---> Using cache
+ ---> bc448b32b896
+Step 24/33 : RUN mkdir -p /tmp/kernel-headers/usr &&     make INSTALL_HDR_PATH=/tmp/kernel-headers/usr headers_install &&     ( cd /tmp/kernel-headers && tar cf /out/kernel-headers.tar usr )
+ ---> Using cache
+ ---> 787e66bd9063
+Step 25/33 : RUN DVER=$(basename $(find /tmp/kernel-modules/lib/modules/ -mindepth 1 -maxdepth 1)) &&     dir=/tmp/usr/src/linux-headers-$DVER &&     mkdir -p $dir &&     cp /linux/.config $dir &&     cp /linux/Module.symvers $dir &&     find . -path './include/*' -prune -o            -path './arch/*/include' -prune -o            -path './scripts/*' -prune -o            -type f \( -name 'Makefile*' -o -name 'Kconfig*' -o -name 'Kbuild*' -o                       -name '*.lds' -o -name '*.pl' -o -name '*.sh' \) |          tar cf - -T - | (cd $dir; tar xf -) &&     ( cd /tmp && tar cf /out/kernel-dev.tar usr/src )
+ ---> Using cache
+ ---> a2a715fa7dee
+Step 26/33 : RUN printf "KERNEL_SOURCE=${KERNEL_SOURCE}\n" > /out/kernel-source-info
+ ---> Using cache
+ ---> ed5f407b0ebd
+Step 27/33 : RUN if [ "${KERNEL_SERIES}" != "4.4.x" -a $(uname -m) != aarch64 ]; then        mkdir -p /build/perf &&        make -C tools/perf LDFLAGS=-static O=/build/perf &&        strip /build/perf/perf &&        cp /build/perf/perf /out;      fi
+ ---> Using cache
+ ---> a06fa5847da0
+Step 28/33 : FROM scratch
+ ---> 
+Step 29/33 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 30/33 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 31/33 : WORKDIR /
+ ---> Using cache
+ ---> 54782277bbf2
+Step 32/33 : COPY --from=kernel-build /out/* /
+ ---> Using cache
+ ---> 5fe274a3f750
+Step 33/33 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 1e2c1e856cd0
+ ---> 5d71ecc59ddf
+Removing intermediate container 1e2c1e856cd0
+Successfully built 5d71ecc59ddf
+Successfully tagged zededa/kernel:2.1.1-arm64
+Pushing zededa/kernel:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/kernel]
+ea509837f648: Preparing
+ea509837f648: Layer already exists
+2.1.1-arm64: digest: sha256:15400d481ad38fbd840c1d6b3ee8fe90bcc90f9631e7b590dbff19fd9eb8dfa3 size: 529
+Pushing zededa/kernel:2.1.1-arm64 to manifest zededa/kernel:2.1.1
+time="2019-04-02T08:10:09+02:00" level=warning msg="Couldn't find or access image reference \"zededa/kernel:2.1.1-s390x\". Skipping image."
+Digest: sha256:9e7e4df51e628dd0178b393f82b0fe4dd60c1804045847efb05100c67a9d7e6e 741
+Not signing zededa/kernel:2.1.1
+Tagging zededa/kernel:2.1.1-arm64 as zededa/kernel:latest-arm64
+Pushing zededa/kernel:latest-arm64
+The push refers to a repository [docker.io/zededa/kernel]
+ea509837f648: Preparing
+ea509837f648: Layer already exists
+latest-arm64: digest: sha256:15400d481ad38fbd840c1d6b3ee8fe90bcc90f9631e7b590dbff19fd9eb8dfa3 size: 529
+Pushing zededa/kernel:latest-arm64 to manifest zededa/kernel:latest
+time="2019-04-02T08:10:19+02:00" level=warning msg="Couldn't find or access image reference \"zededa/kernel:latest-s390x\". Skipping image."
+Digest: sha256:9e7e4df51e628dd0178b393f82b0fe4dd60c1804045847efb05100c67a9d7e6e 741
+Not signing zededa/kernel:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/fw:2.1.1"
+2.1.1: Pulling from zededa/fw
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  12.34MB
+Step 1/13 : FROM alpine:3.8 as build
+ ---> 0db038343fbd
+Step 2/13 : WORKDIR /
+ ---> Using cache
+ ---> 85981395f7a8
+Step 3/13 : RUN apk add --no-cache     linux-firmware-other     linux-firmware-ath10k     linux-firmware-mrvl     linux-firmware-rtlwifi     linux-firmware-other
+ ---> Using cache
+ ---> a396cb4a4900
+Step 4/13 : FROM scratch
+ ---> 
+Step 5/13 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 6/13 : WORKDIR /
+ ---> Using cache
+ ---> b8cb9fd070c1
+Step 7/13 : COPY ath10k /lib/firmware/ath10k
+ ---> Using cache
+ ---> cbd23c97b7ce
+Step 8/13 : COPY ti-connectivity /lib/firmware/ti-connectivity
+ ---> Using cache
+ ---> 8d45a01e2186
+Step 9/13 : COPY --from=build /lib/firmware/mrvl /lib/firmware/mrvl
+ ---> Using cache
+ ---> 5fb456380ea8
+Step 10/13 : COPY --from=build /lib/firmware/rt2870.bin /lib/firmware/rt2870.bin
+ ---> Using cache
+ ---> 38df3b1765a0
+Step 11/13 : COPY --from=build /lib/firmware/rtlwifi /lib/firmware/rtlwifi
+ ---> Using cache
+ ---> 2f43aa5973f5
+Step 12/13 : COPY --from=build /lib/firmware/iwlwifi-8265* /lib/firmware/
+ ---> Using cache
+ ---> 9e6dffbdca1d
+Step 13/13 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 6dc86677eeed
+ ---> 0c4cf3da1551
+Removing intermediate container 6dc86677eeed
+Successfully built 0c4cf3da1551
+Successfully tagged zededa/fw:2.1.1-arm64
+Pushing zededa/fw:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/fw]
+ed4e3909ea4d: Preparing
+8ae59d570b43: Preparing
+5e75c2178437: Preparing
+17060a24bc6b: Preparing
+805c944ad845: Preparing
+8ed38389a244: Preparing
+8ed38389a244: Waiting
+5e75c2178437: Layer already exists
+ed4e3909ea4d: Layer already exists
+8ae59d570b43: Layer already exists
+805c944ad845: Layer already exists
+17060a24bc6b: Layer already exists
+8ed38389a244: Layer already exists
+2.1.1-arm64: digest: sha256:36aaef39064200d3c1942c13643811a6fe9966ea1820032b74fe062a3529a021 size: 1579
+Pushing zededa/fw:2.1.1-arm64 to manifest zededa/fw:2.1.1
+time="2019-04-02T08:10:38+02:00" level=warning msg="Couldn't find or access image reference \"zededa/fw:2.1.1-s390x\". Skipping image."
+Digest: sha256:6a2d23109066eab88181aeefafa67d14019cff6c232b52733f604347013b3413 743
+Not signing zededa/fw:2.1.1
+Tagging zededa/fw:2.1.1-arm64 as zededa/fw:latest-arm64
+Pushing zededa/fw:latest-arm64
+The push refers to a repository [docker.io/zededa/fw]
+ed4e3909ea4d: Preparing
+8ae59d570b43: Preparing
+5e75c2178437: Preparing
+17060a24bc6b: Preparing
+805c944ad845: Preparing
+8ed38389a244: Preparing
+8ed38389a244: Waiting
+5e75c2178437: Layer already exists
+ed4e3909ea4d: Layer already exists
+805c944ad845: Layer already exists
+8ae59d570b43: Layer already exists
+17060a24bc6b: Layer already exists
+8ed38389a244: Layer already exists
+latest-arm64: digest: sha256:36aaef39064200d3c1942c13643811a6fe9966ea1820032b74fe062a3529a021 size: 1579
+Pushing zededa/fw:latest-arm64 to manifest zededa/fw:latest
+time="2019-04-02T08:10:49+02:00" level=warning msg="Couldn't find or access image reference \"zededa/fw:latest-s390x\". Skipping image."
+Digest: sha256:6a2d23109066eab88181aeefafa67d14019cff6c232b52733f604347013b3413 743
+Not signing zededa/fw:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/xen-tools:2.1.1"
+2.1.1: Pulling from zededa/xen-tools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  8.192kB
+Step 1/22 : FROM alpine:3.8 as kernel-build
+ ---> 0db038343fbd
+Step 2/22 : RUN apk add --no-cache     	    gcc make libc-dev dev86 xz-dev perl bash python-dev 	    gettext iasl util-linux-dev ncurses-dev glib-dev 	    pixman-dev libaio-dev yajl-dev argp-standalone 	    linux-headers git patch texinfo curl tar
+ ---> Using cache
+ ---> 2fdc9dcedc9d
+Step 3/22 : RUN [ `uname -m` = "aarch64" ] && apk add --no-cache dtc-dev || :
+ ---> Using cache
+ ---> 4715aa37382d
+Step 4/22 : WORKDIR /
+ ---> Using cache
+ ---> 7e240c9e70d6
+Step 5/22 : COPY alpine.patch /
+ ---> Using cache
+ ---> b36e2d0d97b7
+Step 6/22 : RUN patch -p1 < alpine.patch
+ ---> Using cache
+ ---> a14037f9deff
+Step 7/22 : ENV XEN_VERSION 4.11.0
+ ---> Using cache
+ ---> 31a67b4fe646
+Step 8/22 : ENV XEN_SOURCE https://downloads.xenproject.org/release/xen/${XEN_VERSION}/xen-${XEN_VERSION}.tar.gz
+ ---> Using cache
+ ---> 9bb65400a3e8
+Step 9/22 : RUN [ -f xen-${XEN_VERSION}.tar.gz ] || curl -fsSLO ${XEN_SOURCE} &&     gzip -d xen-${XEN_VERSION}.tar.gz &&     cat xen-${XEN_VERSION}.tar | tar --absolute-names -x && mv /xen-${XEN_VERSION} /xen
+ ---> Using cache
+ ---> 56a9a7d69237
+Step 10/22 : COPY patches-${XEN_VERSION} /patches
+ ---> Using cache
+ ---> 943c52c1ff08
+Step 11/22 : WORKDIR /xen
+ ---> Using cache
+ ---> ba4489593dec
+Step 12/22 : RUN set -e && for patch in /patches/*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> a515c6742cc9
+Step 13/22 : RUN mkdir -p /out
+ ---> Using cache
+ ---> f6069b7fca63
+Step 14/22 : WORKDIR /xen
+ ---> Using cache
+ ---> 67edaf33357e
+Step 15/22 : RUN ./configure --prefix=/usr --disable-xen --disable-qemu-traditional --disable-docs --disable-stubdom
+ ---> Using cache
+ ---> af9a22980ef7
+Step 16/22 : RUN make && make dist
+ ---> Using cache
+ ---> 760b598cbad2
+Step 17/22 : RUN dist/install.sh /out
+ ---> Using cache
+ ---> 65d506ba2af5
+Step 18/22 : FROM scratch
+ ---> 
+Step 19/22 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 20/22 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 21/22 : COPY --from=kernel-build /out/ /
+ ---> Using cache
+ ---> a15a3e365d2f
+Step 22/22 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 30c05c300a24
+ ---> 5a4944bbe086
+Removing intermediate container 30c05c300a24
+Successfully built 5a4944bbe086
+Successfully tagged zededa/xen-tools:2.1.1-arm64
+Pushing zededa/xen-tools:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/xen-tools]
+db0845c2c0ff: Preparing
+db0845c2c0ff: Layer already exists
+2.1.1-arm64: digest: sha256:87497237d2264fbf1756cf0ff63750a55960d398af79fe54335ecf7a6f6bf52a size: 529
+Pushing zededa/xen-tools:2.1.1-arm64 to manifest zededa/xen-tools:2.1.1
+time="2019-04-02T08:11:09+02:00" level=warning msg="Couldn't find or access image reference \"zededa/xen-tools:2.1.1-s390x\". Skipping image."
+Digest: sha256:0d14b969ad33436fbd9ebc75f8f79143d7b57ab7d5644070dc764b8ca87869ea 741
+Not signing zededa/xen-tools:2.1.1
+Tagging zededa/xen-tools:2.1.1-arm64 as zededa/xen-tools:latest-arm64
+Pushing zededa/xen-tools:latest-arm64
+The push refers to a repository [docker.io/zededa/xen-tools]
+db0845c2c0ff: Preparing
+db0845c2c0ff: Layer already exists
+latest-arm64: digest: sha256:87497237d2264fbf1756cf0ff63750a55960d398af79fe54335ecf7a6f6bf52a size: 529
+Pushing zededa/xen-tools:latest-arm64 to manifest zededa/xen-tools:latest
+time="2019-04-02T08:11:18+02:00" level=warning msg="Couldn't find or access image reference \"zededa/xen-tools:latest-s390x\". Skipping image."
+Digest: sha256:0d14b969ad33436fbd9ebc75f8f79143d7b57ab7d5644070dc764b8ca87869ea 741
+Not signing zededa/xen-tools:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/dnsmasq:2.1.1"
+2.1.1: Pulling from zededa/dnsmasq
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  714.8kB
+Step 1/18 : FROM linuxkit/alpine:4d13c6209a679fc7c4e850f144b7aef879914d01 as build
+ ---> 55bf4864f089
+Step 2/18 : ENV DNSMASQ_VERSION 2.78
+ ---> Using cache
+ ---> 0ec10dd32992
+Step 3/18 : RUN apk add --no-cache     gcc     make     patch     libc-dev     linux-headers     tar
+ ---> Using cache
+ ---> d0dacd63ba9b
+Step 4/18 : RUN mkdir -p /dnsmasq/patches
+ ---> Using cache
+ ---> 5de70b4c0428
+Step 5/18 : COPY dnsmasq-${DNSMASQ_VERSION}.tar.gz /dnsmasq
+ ---> Using cache
+ ---> f3fd396eafdf
+Step 6/18 : COPY patches/* /dnsmasq/patches/
+ ---> Using cache
+ ---> adcd6fe3bc29
+Step 7/18 : WORKDIR /dnsmasq
+ ---> Using cache
+ ---> 0131493747fa
+Step 8/18 : RUN tar xvzf dnsmasq-${DNSMASQ_VERSION}.tar.gz
+ ---> Using cache
+ ---> 5940a9e2ad79
+Step 9/18 : WORKDIR /dnsmasq/dnsmasq-${DNSMASQ_VERSION}
+ ---> Using cache
+ ---> a755de3c0e61
+Step 10/18 : RUN set -e && for patch in ../patches/*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> c280816fc553
+Step 11/18 : RUN make
+ ---> Using cache
+ ---> 007be68d81e0
+Step 12/18 : RUN make install DESTDIR=/out PREFIX=/usr
+ ---> Using cache
+ ---> c5525824e681
+Step 13/18 : FROM scratch
+ ---> 
+Step 14/18 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 15/18 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 16/18 : WORKDIR /
+ ---> Using cache
+ ---> 54782277bbf2
+Step 17/18 : COPY --from=build /out ./
+ ---> Using cache
+ ---> 52a0a4360607
+Step 18/18 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 06e1cbeff9ba
+ ---> 1b2d862319a9
+Removing intermediate container 06e1cbeff9ba
+Successfully built 1b2d862319a9
+Successfully tagged zededa/dnsmasq:2.1.1-arm64
+Pushing zededa/dnsmasq:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/dnsmasq]
+3e3f365174ed: Preparing
+3e3f365174ed: Layer already exists
+2.1.1-arm64: digest: sha256:acff3ae89c64b51f6a65e6946658f4451d47303e6e44c31ed32d03ef44651fd5 size: 527
+Pushing zededa/dnsmasq:2.1.1-arm64 to manifest zededa/dnsmasq:2.1.1
+time="2019-04-02T08:11:37+02:00" level=warning msg="Couldn't find or access image reference \"zededa/dnsmasq:2.1.1-s390x\". Skipping image."
+Digest: sha256:077fa85f6e3ffdba8ce6fa11a6288edcf3c2d80ce5645c1f63ab95a71453136e 741
+Not signing zededa/dnsmasq:2.1.1
+Tagging zededa/dnsmasq:2.1.1-arm64 as zededa/dnsmasq:latest-arm64
+Pushing zededa/dnsmasq:latest-arm64
+The push refers to a repository [docker.io/zededa/dnsmasq]
+3e3f365174ed: Preparing
+3e3f365174ed: Layer already exists
+latest-arm64: digest: sha256:acff3ae89c64b51f6a65e6946658f4451d47303e6e44c31ed32d03ef44651fd5 size: 527
+Pushing zededa/dnsmasq:latest-arm64 to manifest zededa/dnsmasq:latest
+time="2019-04-02T08:11:47+02:00" level=warning msg="Couldn't find or access image reference \"zededa/dnsmasq:latest-s390x\". Skipping image."
+Digest: sha256:077fa85f6e3ffdba8ce6fa11a6288edcf3c2d80ce5645c1f63ab95a71453136e 741
+Not signing zededa/dnsmasq:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/strongswan:2.1.1"
+2.1.1: Pulling from zededa/strongswan
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  7.933MB
+Step 1/22 : FROM linuxkit/alpine:4d13c6209a679fc7c4e850f144b7aef879914d01 as build
+ ---> 55bf4864f089
+Step 2/22 : ENV STRONGSWAN_RELEASE https://download.strongswan.org/strongswan.tar.bz2
+ ---> Using cache
+ ---> d0f309e21c16
+Step 3/22 : ENV CONFIGURE_OPTS_x86_64 --enable-aesni
+ ---> Using cache
+ ---> 5714f27d7233
+Step 4/22 : ENV CONFIGURE_OPTS --prefix=/usr             --sysconfdir=/etc             --libexecdir=/usr/lib             --with-ipsecdir=/usr/lib/strongswan             --enable-chapoly             --enable-cmd             --enable-curl             --disable-dhcp             --enable-eap-dynamic             --enable-eap-identity             --enable-eap-md5             --enable-eap-mschapv2             --enable-eap-radius             --enable-eap-tls             --disable-farp             --enable-files             --enable-gcm             --enable-md4             --enable-newhope             --enable-ntru             --enable-openssl             --enable-sha3             --enable-shared             --enable-aes             --disable-des             --disable-gmp             --disable-hmac             --enable-ikev1             --disable-md5             --disable-rc2             --enable-sha1             --enable-sha2             --disable-static
+ ---> Using cache
+ ---> 3553d3004273
+Step 5/22 : RUN apk add --no-cache     gcc     make     patch     libc-dev     linux-headers     tar
+ ---> Using cache
+ ---> 183d195db662
+Step 6/22 : WORKDIR /tmp/strongswan
+ ---> Using cache
+ ---> 22eb6fe8645e
+Step 7/22 : RUN mkdir -p /tmp/strongswan
+ ---> Using cache
+ ---> df84a4fa21a2
+Step 8/22 : RUN mkdir -p /out
+ ---> Using cache
+ ---> a1d3ca44a01e
+Step 9/22 : RUN apk --update add build-base             ca-certificates             iptables             iproute2 	    openssl             openssl-dev
+ ---> Using cache
+ ---> 6ffe071baac9
+Step 10/22 : COPY curl-7.61.1.tar.bz2 /tmp/curl-7.61.1.tar.bz2
+ ---> Using cache
+ ---> b5b4231ab93d
+Step 11/22 : RUN tar -C /tmp -xjvf /tmp/curl-7.61.1.tar.bz2 ; cd /tmp/curl-7.61.1 ; ./configure --prefix=/usr ; make install
+ ---> Using cache
+ ---> b6582c34152a
+Step 12/22 : COPY strongswan.tar.bz2 /tmp/strongswan/strongswan.tar.bz2
+ ---> Using cache
+ ---> b68c20abf20e
+Step 13/22 : RUN tar --strip-components=1 -C /tmp/strongswan -xjf /tmp/strongswan/strongswan.tar.bz2
+ ---> Using cache
+ ---> eb59e7eae983
+Step 14/22 : RUN eval ./configure $CONFIGURE_OPTS \$CONFIGURE_OPTS_`uname -m`
+ ---> Using cache
+ ---> fc9077bb52d9
+Step 15/22 : RUN make
+ ---> Using cache
+ ---> 38c37e5231d5
+Step 16/22 : RUN make install DESTDIR=/out
+ ---> Using cache
+ ---> fc4f85f53fc0
+Step 17/22 : FROM scratch
+ ---> 
+Step 18/22 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 19/22 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 20/22 : WORKDIR /
+ ---> Using cache
+ ---> 54782277bbf2
+Step 21/22 : COPY --from=build /out ./
+ ---> Using cache
+ ---> fcee8656facd
+Step 22/22 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f249667f92df
+ ---> 4710a5b3d956
+Removing intermediate container f249667f92df
+Successfully built 4710a5b3d956
+Successfully tagged zededa/strongswan:2.1.1-arm64
+Pushing zededa/strongswan:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/strongswan]
+47deaabf4beb: Preparing
+47deaabf4beb: Layer already exists
+2.1.1-arm64: digest: sha256:d45071d9926214b2f3d8d40859abe9745aabf28f5f0c49b5adf8c4db9ebad62e size: 529
+Pushing zededa/strongswan:2.1.1-arm64 to manifest zededa/strongswan:2.1.1
+time="2019-04-02T08:12:09+02:00" level=warning msg="Couldn't find or access image reference \"zededa/strongswan:2.1.1-s390x\". Skipping image."
+Digest: sha256:a3c281872aebcd6d5edc7fecc61bccda84ccc433b8b9d022aa6bbd15e7adc879 741
+Not signing zededa/strongswan:2.1.1
+Tagging zededa/strongswan:2.1.1-arm64 as zededa/strongswan:latest-arm64
+Pushing zededa/strongswan:latest-arm64
+The push refers to a repository [docker.io/zededa/strongswan]
+47deaabf4beb: Preparing
+47deaabf4beb: Layer already exists
+latest-arm64: digest: sha256:d45071d9926214b2f3d8d40859abe9745aabf28f5f0c49b5adf8c4db9ebad62e size: 529
+Pushing zededa/strongswan:latest-arm64 to manifest zededa/strongswan:latest
+time="2019-04-02T08:12:19+02:00" level=warning msg="Couldn't find or access image reference \"zededa/strongswan:latest-s390x\". Skipping image."
+Digest: sha256:a3c281872aebcd6d5edc7fecc61bccda84ccc433b8b9d022aa6bbd15e7adc879 741
+Not signing zededa/strongswan:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/gpt-tools:2.1.1"
+2.1.1: Pulling from zededa/gpt-tools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  1.533MB
+Step 1/37 : FROM linuxkit/alpine:4d13c6209a679fc7c4e850f144b7aef879914d01 as build
+ ---> 55bf4864f089
+Step 2/37 : ENV POPT_VERSION 1.16
+ ---> Using cache
+ ---> c48ca87f69d2
+Step 3/37 : ENV GPTFDISK_VERSION 1.0.3
+ ---> Using cache
+ ---> 05cfb671909d
+Step 4/37 : ENV VBOOT_REPO https://chromium.googlesource.com/chromiumos/platform/vboot_reference
+ ---> Using cache
+ ---> 32e022a88a75
+Step 5/37 : ENV VBOOT_COMMIT e0b3841863281a3fc3b188bfbab55d401fabdc73
+ ---> Using cache
+ ---> 4d85a846628f
+Step 6/37 : RUN apk add --no-cache     gcc     make     patch     libc-dev     util-linux-dev     linux-headers     openssl-dev     g++     tar
+ ---> Using cache
+ ---> dda63a2eb068
+Step 7/37 : RUN mkdir /out
+ ---> Using cache
+ ---> 5e39b041b492
+Step 8/37 : WORKDIR /
+ ---> Using cache
+ ---> c82b56540b3f
+Step 9/37 : RUN mkdir /popt
+ ---> Using cache
+ ---> a424d04b7370
+Step 10/37 : COPY popt-${POPT_VERSION}.tar.gz /popt
+ ---> Using cache
+ ---> 3287c8f4d6d8
+Step 11/37 : WORKDIR /popt
+ ---> Using cache
+ ---> b15aa0a42aaa
+Step 12/37 : RUN tar xvzf popt-${POPT_VERSION}.tar.gz
+ ---> Using cache
+ ---> 317adea20958
+Step 13/37 : WORKDIR /popt/popt-${POPT_VERSION}
+ ---> Using cache
+ ---> 8a224596e140
+Step 14/37 : COPY patches/popt* /popt
+ ---> Using cache
+ ---> 487a2c45ce26
+Step 15/37 : RUN for patch in /popt/*patch ; do patch -p1 < $patch ; done
+ ---> Using cache
+ ---> 15647ed76dea
+Step 16/37 : RUN ./configure && make && make install
+ ---> Using cache
+ ---> 860c18b0de6d
+Step 17/37 : WORKDIR /
+ ---> Using cache
+ ---> 048befba6361
+Step 18/37 : RUN mkdir -p /sgdisk/patches
+ ---> Using cache
+ ---> 5a6ad41d74e8
+Step 19/37 : COPY gptfdisk-${GPTFDISK_VERSION}.tar.gz /sgdisk
+ ---> Using cache
+ ---> d55c8b0c2e7e
+Step 20/37 : COPY patches/* /sgdisk/patches/
+ ---> Using cache
+ ---> 5d376e9e7858
+Step 21/37 : WORKDIR /sgdisk
+ ---> Using cache
+ ---> 7195816584fb
+Step 22/37 : RUN tar xvzf gptfdisk-${GPTFDISK_VERSION}.tar.gz
+ ---> Using cache
+ ---> 39a9e1cb3bb0
+Step 23/37 : WORKDIR /sgdisk/gptfdisk-${GPTFDISK_VERSION}
+ ---> Using cache
+ ---> 27fce267f5f3
+Step 24/37 : RUN set -e && for patch in ../patches/sgdisk-*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> e96dd2ca4449
+Step 25/37 : RUN make LDFLAGS=-static sgdisk
+ ---> Using cache
+ ---> cbc7f35c7eeb
+Step 26/37 : RUN cp sgdisk /out/sgdisk
+ ---> Using cache
+ ---> b186a47136b6
+Step 27/37 : WORKDIR /
+ ---> Using cache
+ ---> 58a56db822bf
+Step 28/37 : COPY vboot_reference-${VBOOT_COMMIT}.tar.gz /
+ ---> Using cache
+ ---> 54ccb4b63f46
+Step 29/37 : RUN tar xvzf vboot_reference-${VBOOT_COMMIT}.tar.gz
+ ---> Using cache
+ ---> 1a387f2a2afd
+Step 30/37 : WORKDIR /vboot_reference
+ ---> Using cache
+ ---> 95b51c5e13ff
+Step 31/37 : RUN make cgpt LDFLAGS=-static
+ ---> Using cache
+ ---> a26cb1af50b2
+Step 32/37 : RUN cp build/cgpt/cgpt /out/cgpt
+ ---> Using cache
+ ---> 5b42841f219f
+Step 33/37 : FROM scratch
+ ---> 
+Step 34/37 : COPY --from=build /out/sgdisk /usr/bin/sgdisk
+ ---> Using cache
+ ---> d3c4675c5ba2
+Step 35/37 : COPY --from=build /out/cgpt /usr/bin/cgpt
+ ---> Using cache
+ ---> c36256105300
+Step 36/37 : COPY files/zboot /usr/bin/zboot
+ ---> Using cache
+ ---> bf4db8eb2c40
+Step 37/37 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in cf8e9a2abd0f
+ ---> 507a8f6c847d
+Removing intermediate container cf8e9a2abd0f
+Successfully built 507a8f6c847d
+Successfully tagged zededa/gpt-tools:2.1.1-arm64
+Pushing zededa/gpt-tools:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/gpt-tools]
+6e0841c2e84e: Preparing
+fd6c05f8deb5: Preparing
+34ec61e75420: Preparing
+34ec61e75420: Layer already exists
+fd6c05f8deb5: Layer already exists
+6e0841c2e84e: Layer already exists
+2.1.1-arm64: digest: sha256:4ac8a46d2971e226879bf7554ba08dbc8b93aa64061cf084ada683dc34280a2e size: 946
+Pushing zededa/gpt-tools:2.1.1-arm64 to manifest zededa/gpt-tools:2.1.1
+time="2019-04-02T08:12:39+02:00" level=warning msg="Couldn't find or access image reference \"zededa/gpt-tools:2.1.1-s390x\". Skipping image."
+Digest: sha256:09c22975363a024178057e98925f448287dcfb52046f768af33bf182d3f0d0ba 741
+Not signing zededa/gpt-tools:2.1.1
+Tagging zededa/gpt-tools:2.1.1-arm64 as zededa/gpt-tools:latest-arm64
+Pushing zededa/gpt-tools:latest-arm64
+The push refers to a repository [docker.io/zededa/gpt-tools]
+6e0841c2e84e: Preparing
+fd6c05f8deb5: Preparing
+34ec61e75420: Preparing
+fd6c05f8deb5: Layer already exists
+34ec61e75420: Layer already exists
+6e0841c2e84e: Layer already exists
+latest-arm64: digest: sha256:4ac8a46d2971e226879bf7554ba08dbc8b93aa64061cf084ada683dc34280a2e size: 946
+Pushing zededa/gpt-tools:latest-arm64 to manifest zededa/gpt-tools:latest
+time="2019-04-02T08:12:50+02:00" level=warning msg="Couldn't find or access image reference \"zededa/gpt-tools:latest-s390x\". Skipping image."
+Digest: sha256:09c22975363a024178057e98925f448287dcfb52046f768af33bf182d3f0d0ba 741
+Not signing zededa/gpt-tools:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/dom0-ztools:2.1.1"
+2.1.1: Pulling from zededa/dom0-ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/3 : FROM scratch
+ ---> 
+Step 2/3 : ADD zen /bin/
+ ---> Using cache
+ ---> 3c3aab14effb
+Step 3/3 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f6728cf96283
+ ---> 513df1bbde19
+Removing intermediate container f6728cf96283
+Successfully built 513df1bbde19
+Successfully tagged zededa/dom0-ztools:2.1.1-arm64
+Pushing zededa/dom0-ztools:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/dom0-ztools]
+6405caaaced8: Preparing
+6405caaaced8: Layer already exists
+2.1.1-arm64: digest: sha256:a560d618d3b3f0820ddf56caab324bd5b1a6eda2827ebc89b3528dc892dd3461 size: 524
+Pushing zededa/dom0-ztools:2.1.1-arm64 to manifest zededa/dom0-ztools:2.1.1
+time="2019-04-02T08:13:07+02:00" level=warning msg="Couldn't find or access image reference \"zededa/dom0-ztools:2.1.1-s390x\". Skipping image."
+Digest: sha256:c1df28a85264d92144b3cd9c1c9bb01f2d348d2c861e8c9542865cac257060f4 741
+Not signing zededa/dom0-ztools:2.1.1
+Tagging zededa/dom0-ztools:2.1.1-arm64 as zededa/dom0-ztools:latest-arm64
+Pushing zededa/dom0-ztools:latest-arm64
+The push refers to a repository [docker.io/zededa/dom0-ztools]
+6405caaaced8: Preparing
+6405caaaced8: Layer already exists
+latest-arm64: digest: sha256:a560d618d3b3f0820ddf56caab324bd5b1a6eda2827ebc89b3528dc892dd3461 size: 524
+Pushing zededa/dom0-ztools:latest-arm64 to manifest zededa/dom0-ztools:latest
+time="2019-04-02T08:13:17+02:00" level=warning msg="Couldn't find or access image reference \"zededa/dom0-ztools:latest-s390x\". Skipping image."
+Digest: sha256:c1df28a85264d92144b3cd9c1c9bb01f2d348d2c861e8c9542865cac257060f4 741
+Not signing zededa/dom0-ztools:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/qrexec-lib:2.1.1"
+2.1.1: Pulling from zededa/qrexec-lib
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  6.144kB
+Step 1/29 : FROM zededa/xen-tools:2.1.1-arm64 as xentools
+ ---> 5a4944bbe086
+Step 2/29 : FROM alpine:3.6 as build
+ ---> 65fe3a2cb465
+Step 3/29 : RUN apk add --no-cache     gcc     make     libc-dev     linux-headers     git
+ ---> Using cache
+ ---> f1c08f8411db
+Step 4/29 : COPY --from=xentools / /
+ ---> Using cache
+ ---> 51382d2a8ef2
+Step 5/29 : RUN git clone https://github.com/QubesOS/qubes-core-vchan-xen qubes-core-vchan-xen
+ ---> Using cache
+ ---> b8bdf9efd753
+Step 6/29 : RUN git clone https://github.com/Zededa/qubes-linux-utils qubes-util-linux
+ ---> Using cache
+ ---> eb624454a1df
+Step 7/29 : RUN mkdir /out
+ ---> Using cache
+ ---> a476814b36ae
+Step 8/29 : RUN mkdir -p /out/usr/lib
+ ---> Using cache
+ ---> f58c833575e4
+Step 9/29 : RUN mkdir -p /out/usr/include
+ ---> Using cache
+ ---> 5c2fbdb87754
+Step 10/29 : RUN mkdir -p /out/usr/share/pkgconfig
+ ---> Using cache
+ ---> 69574fc188ab
+Step 11/29 : WORKDIR /qubes-core-vchan-xen/u2mfn
+ ---> Using cache
+ ---> 3c48c8d1016f
+Step 12/29 : RUN make
+ ---> Using cache
+ ---> 75e26b9c46d5
+Step 13/29 : RUN cp libu2mfn.so /out/usr/lib
+ ---> Using cache
+ ---> 133f5433f687
+Step 14/29 : WORKDIR /qubes-core-vchan-xen/vchan
+ ---> Using cache
+ ---> 2a85fab73bf1
+Step 15/29 : RUN make -f Makefile.linux
+ ---> Using cache
+ ---> 66718adff307
+Step 16/29 : RUN cp libvchan-xen.so /usr/lib
+ ---> Using cache
+ ---> 38ed87de99f3
+Step 17/29 : RUN cp vchan-xen.pc /usr/share/pkgconfig
+ ---> Using cache
+ ---> a3787a7e43a1
+Step 18/29 : RUN cp libvchan.h /usr/include
+ ---> Using cache
+ ---> d2f67b08bf19
+Step 19/29 : RUN cp libvchan-xen.so /out/usr/lib
+ ---> Using cache
+ ---> e1a6c066d4ec
+Step 20/29 : RUN cp vchan-xen.pc /out/usr/share/pkgconfig
+ ---> Using cache
+ ---> f91749f99a1e
+Step 21/29 : RUN cp libvchan.h /out/usr/include
+ ---> Using cache
+ ---> 7b0964fbb150
+Step 22/29 : WORKDIR /qubes-util-linux/qrexec-lib
+ ---> Using cache
+ ---> 28c339c04f8e
+Step 23/29 : RUN make BACKEND_VMM=xen DESTDIR=out/ INCLUDEDIR=/usr/include LIBDIR=/usr/lib
+ ---> Using cache
+ ---> 0743c2e6389f
+Step 24/29 : RUN make install BACKEND_VMM=xen DESTDIR=/out/ INCLUDEDIR=/usr/include LIBDIR=/usr/lib
+ ---> Using cache
+ ---> e05e441bf6cc
+Step 25/29 : FROM scratch
+ ---> 
+Step 26/29 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 27/29 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 28/29 : COPY --from=build /out /
+ ---> Using cache
+ ---> 7e3944b26f52
+Step 29/29 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 6f3b68bf7386
+ ---> eb8805e75ca6
+Removing intermediate container 6f3b68bf7386
+Successfully built eb8805e75ca6
+Successfully tagged zededa/qrexec-lib:2.1.1-arm64
+Pushing zededa/qrexec-lib:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/qrexec-lib]
+8002bc8453c6: Preparing
+8002bc8453c6: Layer already exists
+2.1.1-arm64: digest: sha256:2ed871d8814c22c545f60d34ac5cb79a9903d44ee2b77194b4165cc9e44a1590 size: 526
+Pushing zededa/qrexec-lib:2.1.1-arm64 to manifest zededa/qrexec-lib:2.1.1
+time="2019-04-02T08:13:36+02:00" level=warning msg="Couldn't find or access image reference \"zededa/qrexec-lib:2.1.1-s390x\". Skipping image."
+Digest: sha256:b08bf385322b32f5b181671260b94227e92ca7501f1a12e658c11d1d730c0674 741
+Not signing zededa/qrexec-lib:2.1.1
+Tagging zededa/qrexec-lib:2.1.1-arm64 as zededa/qrexec-lib:latest-arm64
+Pushing zededa/qrexec-lib:latest-arm64
+The push refers to a repository [docker.io/zededa/qrexec-lib]
+8002bc8453c6: Preparing
+8002bc8453c6: Layer already exists
+latest-arm64: digest: sha256:2ed871d8814c22c545f60d34ac5cb79a9903d44ee2b77194b4165cc9e44a1590 size: 526
+Pushing zededa/qrexec-lib:latest-arm64 to manifest zededa/qrexec-lib:latest
+time="2019-04-02T08:13:46+02:00" level=warning msg="Couldn't find or access image reference \"zededa/qrexec-lib:latest-s390x\". Skipping image."
+Digest: sha256:b08bf385322b32f5b181671260b94227e92ca7501f1a12e658c11d1d730c0674 741
+Not signing zededa/qrexec-lib:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/qrexec-dom0:2.1.1"
+2.1.1: Pulling from zededa/qrexec-dom0
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/16 : FROM zededa/xen-tools:2.1.1-arm64 as xentools
+ ---> 5a4944bbe086
+Step 2/16 : FROM zededa/qrexec-lib:2.1.1-arm64 as qrexec_lib
+ ---> eb8805e75ca6
+Step 3/16 : FROM alpine:3.6 as build
+ ---> 65fe3a2cb465
+Step 4/16 : RUN apk add --no-cache     gcc     make     libc-dev     linux-headers     git
+ ---> Using cache
+ ---> f1c08f8411db
+Step 5/16 : COPY --from=xentools / /
+ ---> Using cache
+ ---> 51382d2a8ef2
+Step 6/16 : COPY --from=qrexec_lib / /
+ ---> Using cache
+ ---> 9fd14e92dec7
+Step 7/16 : RUN git clone https://github.com/Zededa/qubes-core-admin-linux /qubes-core-admin-linux
+ ---> Using cache
+ ---> 2d5adc5ef0ad
+Step 8/16 : RUN mkdir -p /out/usr/bin
+ ---> Using cache
+ ---> 2a75bd9f6402
+Step 9/16 : WORKDIR /qubes-core-admin-linux/qrexec
+ ---> Using cache
+ ---> 9c2133e7958c
+Step 10/16 : RUN make BACKEND_VMM=xen
+ ---> Using cache
+ ---> c1c110e54a96
+Step 11/16 : RUN cp qrexec-daemon qrexec-client /out/usr/bin
+ ---> Using cache
+ ---> de44b07ccf3f
+Step 12/16 : FROM scratch
+ ---> 
+Step 13/16 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 14/16 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 15/16 : COPY --from=build /out /
+ ---> Using cache
+ ---> ab582792f90b
+Step 16/16 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f34079192237
+ ---> 5e0dbef90222
+Removing intermediate container f34079192237
+Successfully built 5e0dbef90222
+Successfully tagged zededa/qrexec-dom0:2.1.1-arm64
+Pushing zededa/qrexec-dom0:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/qrexec-dom0]
+8f7a7f9d2ec5: Preparing
+8f7a7f9d2ec5: Layer already exists
+2.1.1-arm64: digest: sha256:851c9a390337c1efb95b1bd21c4f19d5d09ac35eb8f8055ff3305659520f7dc2 size: 526
+Pushing zededa/qrexec-dom0:2.1.1-arm64 to manifest zededa/qrexec-dom0:2.1.1
+time="2019-04-02T08:14:09+02:00" level=warning msg="Couldn't find or access image reference \"zededa/qrexec-dom0:2.1.1-s390x\". Skipping image."
+Digest: sha256:81e95b7f0e43f630d4c9b9ec1b05f87adf0d7b73786ee6942a540de435084741 741
+Not signing zededa/qrexec-dom0:2.1.1
+Tagging zededa/qrexec-dom0:2.1.1-arm64 as zededa/qrexec-dom0:latest-arm64
+Pushing zededa/qrexec-dom0:latest-arm64
+The push refers to a repository [docker.io/zededa/qrexec-dom0]
+8f7a7f9d2ec5: Preparing
+8f7a7f9d2ec5: Layer already exists
+latest-arm64: digest: sha256:851c9a390337c1efb95b1bd21c4f19d5d09ac35eb8f8055ff3305659520f7dc2 size: 526
+Pushing zededa/qrexec-dom0:latest-arm64 to manifest zededa/qrexec-dom0:latest
+time="2019-04-02T08:14:19+02:00" level=warning msg="Couldn't find or access image reference \"zededa/qrexec-dom0:latest-s390x\". Skipping image."
+Digest: sha256:81e95b7f0e43f630d4c9b9ec1b05f87adf0d7b73786ee6942a540de435084741 741
+Not signing zededa/qrexec-dom0:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/wwan:2.1.1"
+2.1.1: Pulling from zededa/wwan
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  14.85kB
+Step 1/21 : FROM alpine:3.6 as build
+ ---> 65fe3a2cb465
+Step 2/21 : RUN apk add --no-cache     automake     autoconf     gettext     gettext-dev     git     pkgconfig     libtool     libc-dev     linux-headers     gcc     make     cmake
+ ---> Using cache
+ ---> dba466eafa04
+Step 3/21 : WORKDIR /
+ ---> Using cache
+ ---> cab5a52da254
+Step 4/21 : RUN git clone https://git.openwrt.org/project/uqmi.git
+ ---> Using cache
+ ---> 32d1deb36884
+Step 5/21 : RUN git clone https://git.openwrt.org/project/libubox.git
+ ---> Using cache
+ ---> 1aeb4a1d13e5
+Step 6/21 : RUN git clone https://github.com/json-c/json-c.git
+ ---> Using cache
+ ---> 71b9e523eb5b
+Step 7/21 : WORKDIR /json-c
+ ---> Using cache
+ ---> fe60907c6b32
+Step 8/21 : RUN ./autogen.sh && ./configure && make install
+ ---> Using cache
+ ---> 4f95786f5242
+Step 9/21 : WORKDIR /libubox
+ ---> Using cache
+ ---> 8532ab3bf64c
+Step 10/21 : RUN cmake . -DBUILD_LUA=OFF -DBUILD_EXAMPLES=OFF && make install
+ ---> Using cache
+ ---> 190fecb34624
+Step 11/21 : WORKDIR /uqmi
+ ---> Using cache
+ ---> f63f6f645574
+Step 12/21 : RUN cmake -DBUILD_STATIC=true . && make
+ ---> Using cache
+ ---> 304a107e485f
+Step 13/21 : FROM alpine:3.6
+ ---> 65fe3a2cb465
+Step 14/21 : RUN apk add --no-cache ppp jq
+ ---> Using cache
+ ---> 0f1651355b8d
+Step 15/21 : ENTRYPOINT
+ ---> Using cache
+ ---> 73dd8ad878d9
+Step 16/21 : WORKDIR /
+ ---> Using cache
+ ---> b732f6ff215d
+Step 17/21 : COPY --from=build /uqmi/uqmi /bin
+ ---> Using cache
+ ---> 7fda71efd2b1
+Step 18/21 : COPY usr/ /usr/
+ ---> Using cache
+ ---> 50d66a55af28
+Step 19/21 : COPY etc/ /etc/
+ ---> Using cache
+ ---> ac08222c1fb2
+Step 20/21 : CMD /usr/bin/wwan-init.sh
+ ---> Using cache
+ ---> 638fe96bf3b3
+Step 21/21 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/lib/modules:/lib/modules","/dev:/dev","/run:/run"],"net":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in a85661923771
+ ---> 6be3f912d903
+Removing intermediate container a85661923771
+Successfully built 6be3f912d903
+Successfully tagged zededa/wwan:2.1.1-arm64
+Pushing zededa/wwan:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/wwan]
+39ec6398bc47: Preparing
+7e123d48b7bf: Preparing
+a1ac33928d5b: Preparing
+96fe2f373e28: Preparing
+23c672618af4: Preparing
+b3bee2d5bf72: Preparing
+b3bee2d5bf72: Waiting
+23c672618af4: Layer already exists
+39ec6398bc47: Layer already exists
+96fe2f373e28: Layer already exists
+7e123d48b7bf: Layer already exists
+a1ac33928d5b: Layer already exists
+b3bee2d5bf72: Layer already exists
+2.1.1-arm64: digest: sha256:670f4fad59dbeac679370d0e4bc507f1e9e6f87671f7a55a63923d4d3c850920 size: 1571
+Pushing zededa/wwan:2.1.1-arm64 to manifest zededa/wwan:2.1.1
+time="2019-04-02T08:14:37+02:00" level=warning msg="Couldn't find or access image reference \"zededa/wwan:2.1.1-s390x\". Skipping image."
+Digest: sha256:7cf9cba77680a1ec1fc3ff468861f602e7b85d2057bcbaddfe0fdf0450f18f58 743
+Not signing zededa/wwan:2.1.1
+Tagging zededa/wwan:2.1.1-arm64 as zededa/wwan:latest-arm64
+Pushing zededa/wwan:latest-arm64
+The push refers to a repository [docker.io/zededa/wwan]
+39ec6398bc47: Preparing
+7e123d48b7bf: Preparing
+a1ac33928d5b: Preparing
+96fe2f373e28: Preparing
+23c672618af4: Preparing
+b3bee2d5bf72: Preparing
+b3bee2d5bf72: Waiting
+96fe2f373e28: Layer already exists
+23c672618af4: Layer already exists
+7e123d48b7bf: Layer already exists
+a1ac33928d5b: Layer already exists
+39ec6398bc47: Layer already exists
+b3bee2d5bf72: Layer already exists
+latest-arm64: digest: sha256:670f4fad59dbeac679370d0e4bc507f1e9e6f87671f7a55a63923d4d3c850920 size: 1571
+Pushing zededa/wwan:latest-arm64 to manifest zededa/wwan:latest
+time="2019-04-02T08:14:48+02:00" level=warning msg="Couldn't find or access image reference \"zededa/wwan:latest-s390x\". Skipping image."
+Digest: sha256:7cf9cba77680a1ec1fc3ff468861f602e7b85d2057bcbaddfe0fdf0450f18f58 743
+Not signing zededa/wwan:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/wlan:2.1.1"
+2.1.1: Pulling from zededa/wlan
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  6.144kB
+Step 1/7 : FROM alpine:3.8 as build
+ ---> 0db038343fbd
+Step 2/7 : WORKDIR /
+ ---> Using cache
+ ---> 85981395f7a8
+Step 3/7 : RUN apk add --no-cache     wireless-tools     wpa_supplicant
+ ---> Using cache
+ ---> b76b8c338314
+Step 4/7 : COPY init.sh /init.sh
+ ---> Using cache
+ ---> 585261e372ec
+Step 5/7 : ENTRYPOINT
+ ---> Using cache
+ ---> 2b0d056cac4f
+Step 6/7 : CMD /init.sh
+ ---> Using cache
+ ---> ded55b52b35e
+Step 7/7 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/lib/modules:/lib/modules","/lib/firmware:/lib/firmware","/dev:/dev","/run:/run","/var/config:/config"],"net":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 219d7ac5ab3c
+ ---> c89235c6df49
+Removing intermediate container 219d7ac5ab3c
+Successfully built c89235c6df49
+Successfully tagged zededa/wlan:2.1.1-arm64
+Pushing zededa/wlan:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/wlan]
+e38b7b11218b: Preparing
+14af56b8fc7d: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+92d7b4d0b33c: Layer already exists
+82fe62b38ba2: Layer already exists
+e38b7b11218b: Layer already exists
+14af56b8fc7d: Layer already exists
+2.1.1-arm64: digest: sha256:3ce028705be45bfc5166b6ef032d5c2132b61b6da656ad5d8a3a3292c67f62dc size: 1153
+Pushing zededa/wlan:2.1.1-arm64 to manifest zededa/wlan:2.1.1
+time="2019-04-02T08:15:04+02:00" level=warning msg="Couldn't find or access image reference \"zededa/wlan:2.1.1-s390x\". Skipping image."
+Digest: sha256:29b1fd202b650a3e9ae39cbdecf714eecb9d091ecb71158a6cdc2f4cc3c3bd0a 742
+Not signing zededa/wlan:2.1.1
+Tagging zededa/wlan:2.1.1-arm64 as zededa/wlan:latest-arm64
+Pushing zededa/wlan:latest-arm64
+The push refers to a repository [docker.io/zededa/wlan]
+e38b7b11218b: Preparing
+14af56b8fc7d: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+e38b7b11218b: Layer already exists
+92d7b4d0b33c: Layer already exists
+82fe62b38ba2: Layer already exists
+14af56b8fc7d: Layer already exists
+latest-arm64: digest: sha256:3ce028705be45bfc5166b6ef032d5c2132b61b6da656ad5d8a3a3292c67f62dc size: 1153
+Pushing zededa/wlan:latest-arm64 to manifest zededa/wlan:latest
+time="2019-04-02T08:15:14+02:00" level=warning msg="Couldn't find or access image reference \"zededa/wlan:latest-s390x\". Skipping image."
+Digest: sha256:29b1fd202b650a3e9ae39cbdecf714eecb9d091ecb71158a6cdc2f4cc3c3bd0a 742
+Not signing zededa/wlan:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/rngd:2.1.1"
+2.1.1: Pulling from zededa/rngd
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  4.291MB
+Step 1/13 : FROM linuxkit/alpine:3683c9a66cd4da40bd7d6c7da599b2dcd738b559 AS mirror
+ ---> a9508b75b64c
+Step 2/13 : RUN apk add --no-cache go gcc musl-dev linux-headers
+ ---> Using cache
+ ---> 83ae8e75c074
+Step 3/13 : ENV GOPATH /go PATH $PATH:/go/bin
+ ---> Using cache
+ ---> 6a2e92837920
+Step 4/13 : ENV CGO_CFLAGS_ALLOW (-mrdrnd|-mrdseed)
+ ---> Using cache
+ ---> 3dc8fd7da7ff
+Step 5/13 : COPY cmd/rngd/ /go/src/rngd/
+ ---> Using cache
+ ---> 8d5006b5abe8
+Step 6/13 : RUN REQUIRE_CGO=1 go-compile.sh /go/src/rngd
+ ---> Using cache
+ ---> c85a711ca09b
+Step 7/13 : FROM scratch
+ ---> 
+Step 8/13 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 9/13 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 10/13 : WORKDIR /
+ ---> Using cache
+ ---> 54782277bbf2
+Step 11/13 : COPY --from=mirror /go/bin/rngd /sbin/rngd
+ ---> Using cache
+ ---> 7b850e15cb62
+Step 12/13 : CMD /sbin/rngd
+ ---> Using cache
+ ---> 470ccb9caaac
+Step 13/13 : LABEL org.mobyproject.config '{"capabilities":["CAP_SYS_ADMIN"],"net":"new","ipc":"new","readonly":true,"oomScoreAdj":-800}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 343f917d8b44
+ ---> 9946daa46ff9
+Removing intermediate container 343f917d8b44
+Successfully built 9946daa46ff9
+Successfully tagged zededa/rngd:2.1.1-arm64
+Pushing zededa/rngd:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/rngd]
+fdd1f001ff36: Preparing
+fdd1f001ff36: Layer already exists
+2.1.1-arm64: digest: sha256:973f6655756bf5e77ac60d4d527e46b65af0cc815d4e7994d8d2e9dde7934199 size: 527
+Pushing zededa/rngd:2.1.1-arm64 to manifest zededa/rngd:2.1.1
+time="2019-04-02T08:15:34+02:00" level=warning msg="Couldn't find or access image reference \"zededa/rngd:2.1.1-s390x\". Skipping image."
+Digest: sha256:b36ace1a11a622babc2991e6a278284b117fe93582e33af1d3f206b76daad438 741
+Not signing zededa/rngd:2.1.1
+Tagging zededa/rngd:2.1.1-arm64 as zededa/rngd:latest-arm64
+Pushing zededa/rngd:latest-arm64
+The push refers to a repository [docker.io/zededa/rngd]
+fdd1f001ff36: Preparing
+fdd1f001ff36: Layer already exists
+latest-arm64: digest: sha256:973f6655756bf5e77ac60d4d527e46b65af0cc815d4e7994d8d2e9dde7934199 size: 527
+Pushing zededa/rngd:latest-arm64 to manifest zededa/rngd:latest
+time="2019-04-02T08:15:44+02:00" level=warning msg="Couldn't find or access image reference \"zededa/rngd:latest-s390x\". Skipping image."
+Digest: sha256:b36ace1a11a622babc2991e6a278284b117fe93582e33af1d3f206b76daad438 741
+Not signing zededa/rngd:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/watchdog:2.1.1"
+2.1.1: Pulling from zededa/watchdog
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  237.6kB
+Step 1/24 : FROM linuxkit/alpine:4d13c6209a679fc7c4e850f144b7aef879914d01 AS watchdog-build
+ ---> 55bf4864f089
+Step 2/24 : RUN apk add     build-base     file     libtirpc-dev     linux-headers     tar
+ ---> Using cache
+ ---> b1a15286f1f2
+Step 3/24 : ENV WATCHDOGD_VERSION 5.15
+ ---> Using cache
+ ---> 622d9fdf0094
+Step 4/24 : ENV WATCHDOGD_SRC_DIR watchdog-${WATCHDOGD_VERSION}
+ ---> Using cache
+ ---> 91a2a2cb048c
+Step 5/24 : ENV WATCHDOGD_SRC_TAR ${WATCHDOGD_SRC_DIR}.tar
+ ---> Using cache
+ ---> e413ea4eb682
+Step 6/24 : ENV WATCHDOGD_SRC_TGZ ${WATCHDOGD_SRC_TAR}.gz
+ ---> Using cache
+ ---> 60e0312c0d22
+Step 7/24 : ENV WATCHDOGD_MIRROR_URL https://jaist.dl.sourceforge.net/project/watchdog/watchdog/
+ ---> Using cache
+ ---> 3b57e50fea80
+Step 8/24 : ENV WATCHDOGD_SRC_URL ${WATCHDOGD_MIRROR_URL}/${WATCHDOGD_VERSION}/${WATCHDOGD_SRC_TGZ}
+ ---> Using cache
+ ---> 68b417e56d45
+Step 9/24 : WORKDIR /
+ ---> Using cache
+ ---> a0ebc6be028e
+Step 10/24 : COPY ${WATCHDOGD_SRC_TGZ} /
+ ---> Using cache
+ ---> ae1e4485aa8a
+Step 11/24 : RUN tar --absolute-names -zxf /${WATCHDOGD_SRC_TGZ}
+ ---> Using cache
+ ---> d60d2284f465
+Step 12/24 : COPY patches-${WATCHDOGD_SRC_DIR} /patches
+ ---> Using cache
+ ---> 35d1e7043d84
+Step 13/24 : WORKDIR /${WATCHDOGD_SRC_DIR}
+ ---> Using cache
+ ---> e176041280a9
+Step 14/24 : RUN echo "Applying local patches." ;     set -e && for patch in /patches/*.diff; do         echo "Applying patch from file $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> cdadf8e6f488
+Step 15/24 : ENV CONFIGURE_OPTS "--disable-nfs"
+ ---> Using cache
+ ---> adfc0ca1a1e0
+Step 16/24 : RUN CPPFLAGS=-I/usr/include/tirpc ./configure ${CONFIGURE_OPTS} && make && make install DESTDIR=/out
+ ---> Using cache
+ ---> a77b90ca618c
+Step 17/24 : FROM scratch
+ ---> 
+Step 18/24 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 19/24 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 20/24 : WORKDIR /
+ ---> Using cache
+ ---> 54782277bbf2
+Step 21/24 : COPY --from=watchdog-build /out/etc /etc
+ ---> Using cache
+ ---> 782a172d7e3b
+Step 22/24 : COPY --from=watchdog-build /out/usr/sbin /usr/sbin
+ ---> Using cache
+ ---> 97a94c008927
+Step 23/24 : COPY --from=watchdog-build /out/usr/share /usr/share
+ ---> Using cache
+ ---> 8b611e79e3a7
+Step 24/24 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 945c5b897af2
+ ---> 36b6f46e8baf
+Removing intermediate container 945c5b897af2
+Successfully built 36b6f46e8baf
+Successfully tagged zededa/watchdog:2.1.1-arm64
+Pushing zededa/watchdog:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/watchdog]
+ea0ce5e3b0ab: Preparing
+725f1f392c34: Preparing
+e665eeb03f2d: Preparing
+ea0ce5e3b0ab: Layer already exists
+e665eeb03f2d: Layer already exists
+725f1f392c34: Layer already exists
+2.1.1-arm64: digest: sha256:8acf704522c9803a109358e3d3239744dce642c2f7d2fac525f762b928d173d3 size: 942
+Pushing zededa/watchdog:2.1.1-arm64 to manifest zededa/watchdog:2.1.1
+time="2019-04-02T08:16:02+02:00" level=warning msg="Couldn't find or access image reference \"zededa/watchdog:2.1.1-s390x\". Skipping image."
+Digest: sha256:bb9d4af3fcfabb8dee8547e15a9f3ea1665a4552feb4d83cabd13b1aea25535a 741
+Not signing zededa/watchdog:2.1.1
+Tagging zededa/watchdog:2.1.1-arm64 as zededa/watchdog:latest-arm64
+Pushing zededa/watchdog:latest-arm64
+The push refers to a repository [docker.io/zededa/watchdog]
+ea0ce5e3b0ab: Preparing
+725f1f392c34: Preparing
+e665eeb03f2d: Preparing
+ea0ce5e3b0ab: Layer already exists
+725f1f392c34: Layer already exists
+e665eeb03f2d: Layer already exists
+latest-arm64: digest: sha256:8acf704522c9803a109358e3d3239744dce642c2f7d2fac525f762b928d173d3 size: 942
+Pushing zededa/watchdog:latest-arm64 to manifest zededa/watchdog:latest
+time="2019-04-02T08:16:12+02:00" level=warning msg="Couldn't find or access image reference \"zededa/watchdog:latest-s390x\". Skipping image."
+Digest: sha256:bb9d4af3fcfabb8dee8547e15a9f3ea1665a4552feb4d83cabd13b1aea25535a 741
+Not signing zededa/watchdog:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/guacd:2.1.1"
+2.1.1: Pulling from zededa/guacd
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  432.6kB
+Step 1/15 : FROM alpine:3.8 as build
+ ---> 0db038343fbd
+Step 2/15 : ENV GUACD_VERSION 1.0.0
+ ---> Using cache
+ ---> 66a222690672
+Step 3/15 : ADD http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/1.0.0/source/guacamole-server-${GUACD_VERSION}.tar.gz /${GUACD_VERSION}.tar.gz
+
+ ---> Using cache
+ ---> 5ee35c4a7b86
+Step 4/15 : ADD 0001-alpine-stacksize-fix.patch /
+ ---> Using cache
+ ---> 4aa786b3d301
+Step 5/15 : ADD uuid-1.6.2.tar.gz /
+ ---> Using cache
+ ---> 2fb263239253
+Step 6/15 : RUN apk add cairo-dev jpeg-dev libpng-dev gcc make libc-dev openssl-dev libvncserver-dev file
+ ---> Using cache
+ ---> 960c49a88d66
+Step 7/15 : RUN cd /uuid-1.6.2 ; ./configure --prefix=/usr/ && make && make install
+ ---> Using cache
+ ---> 2c9540bf9ab1
+Step 8/15 : RUN tar xzvf ${GUACD_VERSION}.tar.gz ;    patch -p0 < /0001-alpine-stacksize-fix.patch ;    cd /guacamole-server-${GUACD_VERSION} ;    ./configure --prefix=/usr/ --with-vnc --disable-guacenc --disable-dependency-tracking &&      make && make install
+ ---> Using cache
+ ---> a54013779b56
+Step 9/15 : FROM alpine:3.8
+ ---> 0db038343fbd
+Step 10/15 : RUN apk add cairo jpeg libpng openssl libvncserver
+ ---> Using cache
+ ---> b14add75eee4
+Step 11/15 : COPY --from=build /usr/sbin/guacd /usr/sbin/guacd
+ ---> Using cache
+ ---> d13d7a9a5b66
+Step 12/15 : COPY --from=build /usr/lib/libguac.so.* /usr/lib/libuuid.so.* /usr/lib/libguac-client-vnc* /usr/lib/
+ ---> Using cache
+ ---> 83ec4084aa37
+Step 13/15 : ENTRYPOINT
+ ---> Using cache
+ ---> 0ab5e772f82f
+Step 14/15 : CMD /usr/sbin/guacd -l 4822 -b 0.0.0.0 -L trace -f
+ ---> Using cache
+ ---> 9eb42b116a2c
+Step 15/15 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/config:/config"],"net":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in d39ed2c1d0c5
+ ---> 44791f6b644b
+Removing intermediate container d39ed2c1d0c5
+Successfully built 44791f6b644b
+Successfully tagged zededa/guacd:2.1.1-arm64
+Pushing zededa/guacd:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/guacd]
+37022c3697ba: Preparing
+8bf76a835164: Preparing
+46ed3f5e1345: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+82fe62b38ba2: Layer already exists
+92d7b4d0b33c: Layer already exists
+8bf76a835164: Layer already exists
+46ed3f5e1345: Layer already exists
+37022c3697ba: Layer already exists
+2.1.1-arm64: digest: sha256:f89d9d5979e46bb67d187cb585994ae45fb2e3076f1e769eb28e3745d8c9c6f3 size: 1365
+Pushing zededa/guacd:2.1.1-arm64 to manifest zededa/guacd:2.1.1
+time="2019-04-02T08:16:32+02:00" level=warning msg="Couldn't find or access image reference \"zededa/guacd:2.1.1-s390x\". Skipping image."
+Digest: sha256:281625316bb59d0e4a562a9881b1d8adb086c356a882dfbacbe87c4edee35243 743
+Not signing zededa/guacd:2.1.1
+Tagging zededa/guacd:2.1.1-arm64 as zededa/guacd:latest-arm64
+Pushing zededa/guacd:latest-arm64
+The push refers to a repository [docker.io/zededa/guacd]
+37022c3697ba: Preparing
+8bf76a835164: Preparing
+46ed3f5e1345: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+8bf76a835164: Layer already exists
+46ed3f5e1345: Layer already exists
+37022c3697ba: Layer already exists
+92d7b4d0b33c: Layer already exists
+82fe62b38ba2: Layer already exists
+latest-arm64: digest: sha256:f89d9d5979e46bb67d187cb585994ae45fb2e3076f1e769eb28e3745d8c9c6f3 size: 1365
+Pushing zededa/guacd:latest-arm64 to manifest zededa/guacd:latest
+time="2019-04-02T08:16:52+02:00" level=warning msg="Couldn't find or access image reference \"zededa/guacd:latest-s390x\". Skipping image."
+Digest: sha256:281625316bb59d0e4a562a9881b1d8adb086c356a882dfbacbe87c4edee35243 743
+Not signing zededa/guacd:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/device-trees:2.1.1"
+Error response from daemon: manifest for zededa/device-trees:2.1.1 not found
+No image pulled, continuing with build
+Sending build context to Docker daemon  64.51kB
+Step 1/11 : FROM linuxkit/alpine:90571a1a9059f3bf33ca3431bc5396aa837a47d3 as build
+ ---> 840748a37f6e
+Step 2/11 : COPY *.dts /dt/
+ ---> Using cache
+ ---> 875b7fd05474
+Step 3/11 : WORKDIR /dt
+ ---> Using cache
+ ---> 33d0b9655870
+Step 4/11 : RUN apk add --no-cache dtc
+ ---> Using cache
+ ---> 8a499f5961e8
+Step 5/11 : RUN for i in *dts ; do dtc -O dtb -o ${i%%.dts}.dtb -I dts $i ; done
+ ---> Using cache
+ ---> e163c085d57c
+Step 6/11 : RUN [ `uname -m` = aarch64 ] || rm -f /dt/*
+ ---> Using cache
+ ---> 52e7984b627e
+Step 7/11 : FROM scratch
+ ---> 
+Step 8/11 : ENTRYPOINT
+ ---> Using cache
+ ---> f1c2b7c982c3
+Step 9/11 : CMD
+ ---> Using cache
+ ---> 9e2b16c8664d
+Step 10/11 : COPY --from=build /dt /EFI/BOOT
+ ---> Using cache
+ ---> 3962c8674378
+Step 11/11 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 2882e08e55e6
+ ---> ca0c5fd0e518
+Removing intermediate container 2882e08e55e6
+Successfully built ca0c5fd0e518
+Successfully tagged zededa/device-trees:2.1.1-arm64
+Pushing zededa/device-trees:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/device-trees]
+76cad228258e: Preparing
+76cad228258e: Layer already exists
+2.1.1-arm64: digest: sha256:f3035e26c333689fc0621a69c6c465e8eb0475f8929ceb2d21e7e5e7a18d352d size: 526
+Pushing zededa/device-trees:2.1.1-arm64 to manifest zededa/device-trees:2.1.1
+time="2019-04-02T08:17:10+02:00" level=warning msg="Couldn't find or access image reference \"zededa/device-trees:2.1.1-s390x\". Skipping image."
+Digest: sha256:7faa3b78a07cd8e0bed58a162f91655957d81eb819a275385855edf77acd1173 741
+Not signing zededa/device-trees:2.1.1
+Tagging zededa/device-trees:2.1.1-arm64 as zededa/device-trees:latest-arm64
+Pushing zededa/device-trees:latest-arm64
+The push refers to a repository [docker.io/zededa/device-trees]
+76cad228258e: Preparing
+76cad228258e: Layer already exists
+latest-arm64: digest: sha256:f3035e26c333689fc0621a69c6c465e8eb0475f8929ceb2d21e7e5e7a18d352d size: 526
+Pushing zededa/device-trees:latest-arm64 to manifest zededa/device-trees:latest
+time="2019-04-02T08:17:20+02:00" level=warning msg="Couldn't find or access image reference \"zededa/device-trees:latest-s390x\". Skipping image."
+Digest: sha256:7faa3b78a07cd8e0bed58a162f91655957d81eb819a275385855edf77acd1173 741
+Not signing zededa/device-trees:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/debug:2.1.1"
+2.1.1: Pulling from zededa/debug
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  4.096kB
+Step 1/7 : FROM alpine:3.8
+ ---> 0db038343fbd
+Step 2/7 : ENTRYPOINT
+ ---> Using cache
+ ---> 974c17e47926
+Step 3/7 : WORKDIR /
+ ---> Using cache
+ ---> cec7241cb40a
+Step 4/7 : RUN apk add --no-cache pciutils usbutils vim tcpdump
+ ---> Using cache
+ ---> d7a545c1105d
+Step 5/7 : COPY debug-spin.sh /
+ ---> Using cache
+ ---> 7892bab4cf6d
+Step 6/7 : CMD /debug-spin.sh
+ ---> Using cache
+ ---> f3afeff96d94
+Step 7/7 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/log:/var/log/dom0","/:/hostfs"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 2db942d9c4e7
+ ---> a41a14abce7c
+Removing intermediate container 2db942d9c4e7
+Successfully built a41a14abce7c
+Successfully tagged zededa/debug:2.1.1-arm64
+Pushing zededa/debug:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/debug]
+56a01239b74f: Preparing
+729ba9b40bd2: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+82fe62b38ba2: Layer already exists
+92d7b4d0b33c: Layer already exists
+729ba9b40bd2: Layer already exists
+56a01239b74f: Layer already exists
+2.1.1-arm64: digest: sha256:847df062ecc888541eb65abfc6dba1c94f7b17ad7cb41af689cd2eb6896d8e74 size: 1154
+Pushing zededa/debug:2.1.1-arm64 to manifest zededa/debug:2.1.1
+time="2019-04-02T08:17:38+02:00" level=warning msg="Couldn't find or access image reference \"zededa/debug:2.1.1-s390x\". Skipping image."
+Digest: sha256:62e2fec4cbe9791075921ede59e67d7f0c19262917962c094e451390c7d27cb2 742
+Not signing zededa/debug:2.1.1
+Tagging zededa/debug:2.1.1-arm64 as zededa/debug:latest-arm64
+Pushing zededa/debug:latest-arm64
+The push refers to a repository [docker.io/zededa/debug]
+56a01239b74f: Preparing
+729ba9b40bd2: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+56a01239b74f: Layer already exists
+82fe62b38ba2: Layer already exists
+92d7b4d0b33c: Layer already exists
+729ba9b40bd2: Layer already exists
+latest-arm64: digest: sha256:847df062ecc888541eb65abfc6dba1c94f7b17ad7cb41af689cd2eb6896d8e74 size: 1154
+Pushing zededa/debug:latest-arm64 to manifest zededa/debug:latest
+time="2019-04-02T08:17:48+02:00" level=warning msg="Couldn't find or access image reference \"zededa/debug:latest-s390x\". Skipping image."
+Digest: sha256:62e2fec4cbe9791075921ede59e67d7f0c19262917962c094e451390c7d27cb2 742
+Not signing zededa/debug:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/conf:2.1.1"
+2.1.1: Pulling from zededa/conf
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/8 : FROM zededa/ztools@sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f as zededa
+ ---> 3e0f3f12a631
+Step 2/8 : FROM linuxkit/alpine:77287352db68b442534c0005edd6ff750c8189f3
+ ---> 31391f83f284
+Step 3/8 : RUN apk add --no-cache   mtools   dosfstools
+ ---> Using cache
+ ---> ded6c32bc0f8
+Step 4/8 : ADD make-config /
+ ---> Using cache
+ ---> 53c53ae466b8
+Step 5/8 : COPY --from=zededa /opt/zededa/examples/config /conf/
+ ---> Using cache
+ ---> 3650dcc187bd
+Step 6/8 : WORKDIR /
+ ---> Using cache
+ ---> 05231b7e1cdd
+Step 7/8 : ENTRYPOINT /make-config
+ ---> Using cache
+ ---> d4eef1e99128
+Step 8/8 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 0c4157289068
+ ---> cc2010a5aaa0
+Removing intermediate container 0c4157289068
+Successfully built cc2010a5aaa0
+Successfully tagged zededa/conf:2.1.1-arm64
+Pushing zededa/conf:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/conf]
+de29172fb0f2: Preparing
+f6c80ec138b2: Preparing
+646a5a996cc4: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+9b15bab0a8ca: Waiting
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+199db0687ace: Waiting
+47ca123a65b6: Waiting
+81d522e63704: Waiting
+bebd4541248c: Waiting
+de29172fb0f2: Layer already exists
+f6c80ec138b2: Layer already exists
+646a5a996cc4: Layer already exists
+2394445224a8: Layer already exists
+e159073689c5: Layer already exists
+47ca123a65b6: Layer already exists
+bebd4541248c: Layer already exists
+db638689b318: Layer already exists
+9b15bab0a8ca: Layer already exists
+4ade74f8ebf3: Layer already exists
+199db0687ace: Layer already exists
+81d522e63704: Layer already exists
+48730a5560d6: Layer already exists
+2.1.1-arm64: digest: sha256:ce0ce60835c3e1b61177fbf109f020edc997e054a3138ea097875869a30653b6 size: 3038
+Pushing zededa/conf:2.1.1-arm64 to manifest zededa/conf:2.1.1
+time="2019-04-02T08:18:07+02:00" level=warning msg="Couldn't find or access image reference \"zededa/conf:2.1.1-s390x\". Skipping image."
+Digest: sha256:4cb3c02b7f862f05213b6cc20e320ee56531e4e7d8a7cb3786d9c98269dd93e1 743
+Not signing zededa/conf:2.1.1
+Tagging zededa/conf:2.1.1-arm64 as zededa/conf:latest-arm64
+Pushing zededa/conf:latest-arm64
+The push refers to a repository [docker.io/zededa/conf]
+de29172fb0f2: Preparing
+f6c80ec138b2: Preparing
+646a5a996cc4: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+199db0687ace: Waiting
+81d522e63704: Waiting
+47ca123a65b6: Waiting
+bebd4541248c: Waiting
+9b15bab0a8ca: Waiting
+646a5a996cc4: Layer already exists
+e159073689c5: Layer already exists
+2394445224a8: Layer already exists
+de29172fb0f2: Layer already exists
+f6c80ec138b2: Layer already exists
+db638689b318: Layer already exists
+47ca123a65b6: Layer already exists
+9b15bab0a8ca: Layer already exists
+bebd4541248c: Layer already exists
+4ade74f8ebf3: Layer already exists
+48730a5560d6: Layer already exists
+199db0687ace: Layer already exists
+81d522e63704: Layer already exists
+latest-arm64: digest: sha256:ce0ce60835c3e1b61177fbf109f020edc997e054a3138ea097875869a30653b6 size: 3038
+Pushing zededa/conf:latest-arm64 to manifest zededa/conf:latest
+time="2019-04-02T08:18:18+02:00" level=warning msg="Couldn't find or access image reference \"zededa/conf:latest-s390x\". Skipping image."
+Digest: sha256:4cb3c02b7f862f05213b6cc20e320ee56531e4e7d8a7cb3786d9c98269dd93e1 743
+Not signing zededa/conf:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/mkrootfs-ext4:2.1.1"
+2.1.1: Pulling from zededa/mkrootfs-ext4
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  5.632kB
+Step 1/5 : FROM linuxkit/alpine:77287352db68b442534c0005edd6ff750c8189f3 AS make-img
+ ---> 31391f83f284
+Step 2/5 : RUN apk update && apk upgrade &&   apk add --no-cache   dosfstools   libarchive-tools   binutils   mtools   sfdisk   sgdisk   xfsprogs   e2fsprogs   util-linux   coreutils   multipath-tools   squashfs-tools   && true
+ ---> Using cache
+ ---> ddf28ecff0c1
+Step 3/5 : COPY . .
+ ---> Using cache
+ ---> 9d9c9acec543
+Step 4/5 : ENTRYPOINT /make-rootfs
+ ---> Using cache
+ ---> 9f050612eea2
+Step 5/5 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 4bfc7f8f3b61
+ ---> 41a24f0f6dc1
+Removing intermediate container 4bfc7f8f3b61
+Successfully built 41a24f0f6dc1
+Successfully tagged zededa/mkrootfs-ext4:2.1.1-arm64
+Pushing zededa/mkrootfs-ext4:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/mkrootfs-ext4]
+3eb6a58a2b1c: Preparing
+fd539d9986f6: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+bebd4541248c: Waiting
+9b15bab0a8ca: Waiting
+2394445224a8: Layer already exists
+e159073689c5: Layer already exists
+47ca123a65b6: Layer already exists
+3eb6a58a2b1c: Layer already exists
+fd539d9986f6: Layer already exists
+bebd4541248c: Layer already exists
+9b15bab0a8ca: Layer already exists
+db638689b318: Layer already exists
+4ade74f8ebf3: Layer already exists
+48730a5560d6: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+2.1.1-arm64: digest: sha256:0d5cfdf8159be0b57209cc54ddaf87cda292113a11cbe0dfb1f19f461826d333 size: 2833
+Pushing zededa/mkrootfs-ext4:2.1.1-arm64 to manifest zededa/mkrootfs-ext4:2.1.1
+time="2019-04-02T08:18:36+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkrootfs-ext4:2.1.1-s390x\". Skipping image."
+Digest: sha256:1c6ceedd40ab94258b5d7991cb4f44eb8ef575a9aebddc308556734ee2836438 743
+Not signing zededa/mkrootfs-ext4:2.1.1
+Tagging zededa/mkrootfs-ext4:2.1.1-arm64 as zededa/mkrootfs-ext4:latest-arm64
+Pushing zededa/mkrootfs-ext4:latest-arm64
+The push refers to a repository [docker.io/zededa/mkrootfs-ext4]
+3eb6a58a2b1c: Preparing
+fd539d9986f6: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+bebd4541248c: Waiting
+3eb6a58a2b1c: Layer already exists
+2394445224a8: Layer already exists
+e159073689c5: Layer already exists
+fd539d9986f6: Layer already exists
+47ca123a65b6: Layer already exists
+9b15bab0a8ca: Layer already exists
+bebd4541248c: Layer already exists
+db638689b318: Layer already exists
+48730a5560d6: Layer already exists
+4ade74f8ebf3: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+latest-arm64: digest: sha256:0d5cfdf8159be0b57209cc54ddaf87cda292113a11cbe0dfb1f19f461826d333 size: 2833
+Pushing zededa/mkrootfs-ext4:latest-arm64 to manifest zededa/mkrootfs-ext4:latest
+time="2019-04-02T08:18:48+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkrootfs-ext4:latest-s390x\". Skipping image."
+Digest: sha256:1c6ceedd40ab94258b5d7991cb4f44eb8ef575a9aebddc308556734ee2836438 743
+Not signing zededa/mkrootfs-ext4:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/mkrootfs-squash:2.1.1"
+2.1.1: Pulling from zededa/mkrootfs-squash
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/5 : FROM linuxkit/alpine:77287352db68b442534c0005edd6ff750c8189f3 AS make-img
+ ---> 31391f83f284
+Step 2/5 : RUN apk update && apk upgrade &&   apk add --no-cache   dosfstools   libarchive-tools   binutils   mtools   sfdisk   sgdisk   xfsprogs   e2fsprogs   util-linux   coreutils   multipath-tools   squashfs-tools   && true
+ ---> Using cache
+ ---> ddf28ecff0c1
+Step 3/5 : COPY . .
+ ---> Using cache
+ ---> 7dcbf7bcd677
+Step 4/5 : ENTRYPOINT /make-rootfs
+ ---> Using cache
+ ---> e4c2b74fb336
+Step 5/5 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 0fd179dacdc7
+ ---> 30c1559b7d5c
+Removing intermediate container 0fd179dacdc7
+Successfully built 30c1559b7d5c
+Successfully tagged zededa/mkrootfs-squash:2.1.1-arm64
+Pushing zededa/mkrootfs-squash:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/mkrootfs-squash]
+217f1150cbaa: Preparing
+fd539d9986f6: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+db638689b318: Waiting
+4ade74f8ebf3: Waiting
+48730a5560d6: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+bebd4541248c: Waiting
+9b15bab0a8ca: Waiting
+fd539d9986f6: Layer already exists
+2394445224a8: Layer already exists
+e159073689c5: Layer already exists
+47ca123a65b6: Layer already exists
+217f1150cbaa: Layer already exists
+9b15bab0a8ca: Layer already exists
+bebd4541248c: Layer already exists
+db638689b318: Layer already exists
+4ade74f8ebf3: Layer already exists
+48730a5560d6: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+2.1.1-arm64: digest: sha256:d5352cc247294b051d73f6df666b451031b06a0e20e742287b8936d24ae47ed5 size: 2833
+Pushing zededa/mkrootfs-squash:2.1.1-arm64 to manifest zededa/mkrootfs-squash:2.1.1
+time="2019-04-02T08:19:06+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkrootfs-squash:2.1.1-s390x\". Skipping image."
+Digest: sha256:fdae0812b38ddcf31f1f275377c15fc219635de96a88f475a8e22f46c624725a 743
+Not signing zededa/mkrootfs-squash:2.1.1
+Tagging zededa/mkrootfs-squash:2.1.1-arm64 as zededa/mkrootfs-squash:latest-arm64
+Pushing zededa/mkrootfs-squash:latest-arm64
+The push refers to a repository [docker.io/zededa/mkrootfs-squash]
+217f1150cbaa: Preparing
+fd539d9986f6: Preparing
+e159073689c5: Preparing
+2394445224a8: Preparing
+47ca123a65b6: Preparing
+bebd4541248c: Preparing
+9b15bab0a8ca: Preparing
+db638689b318: Preparing
+4ade74f8ebf3: Preparing
+48730a5560d6: Preparing
+bebd4541248c: Waiting
+4ade74f8ebf3: Waiting
+81d522e63704: Preparing
+199db0687ace: Preparing
+48730a5560d6: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+fd539d9986f6: Layer already exists
+e159073689c5: Layer already exists
+2394445224a8: Layer already exists
+217f1150cbaa: Layer already exists
+47ca123a65b6: Layer already exists
+bebd4541248c: Layer already exists
+9b15bab0a8ca: Layer already exists
+4ade74f8ebf3: Layer already exists
+db638689b318: Layer already exists
+48730a5560d6: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+latest-arm64: digest: sha256:d5352cc247294b051d73f6df666b451031b06a0e20e742287b8936d24ae47ed5 size: 2833
+Pushing zededa/mkrootfs-squash:latest-arm64 to manifest zededa/mkrootfs-squash:latest
+time="2019-04-02T08:19:17+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkrootfs-squash:latest-s390x\". Skipping image."
+Digest: sha256:fdae0812b38ddcf31f1f275377c15fc219635de96a88f475a8e22f46c624725a 743
+Not signing zededa/mkrootfs-squash:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/mkimage-raw-efi:2.1.1"
+2.1.1: Pulling from zededa/mkimage-raw-efi
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  18.43kB
+Step 1/8 : FROM alpine:3.7
+ ---> e9be492ac087
+Step 2/8 : RUN apk add --no-cache   mtools   dosfstools   libarchive-tools   sgdisk   e2fsprogs   util-linux   coreutils
+ ---> Using cache
+ ---> 1646d871f6f7
+Step 3/8 : WORKDIR /
+ ---> Using cache
+ ---> e32d2b24e608
+Step 4/8 : COPY make-raw install /
+ ---> Using cache
+ ---> 310ff9b22486
+Step 5/8 : COPY /efi-files /efifs
+ ---> Using cache
+ ---> 6c868decfbd1
+Step 6/8 : RUN echo "mtools_skip_check=1" >> /etc/mtools.conf
+ ---> Using cache
+ ---> 47086bcdba59
+Step 7/8 : ENTRYPOINT /make-raw
+ ---> Using cache
+ ---> a4756dd8d525
+Step 8/8 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in ba101d94ff21
+ ---> 172f2309a392
+Removing intermediate container ba101d94ff21
+Successfully built 172f2309a392
+Successfully tagged zededa/mkimage-raw-efi:2.1.1-arm64
+Pushing zededa/mkimage-raw-efi:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/mkimage-raw-efi]
+0b4d9c808227: Preparing
+4017e300a9f5: Preparing
+11bfe07d2987: Preparing
+b6a5e3908cdd: Preparing
+d1ebf0a8b652: Preparing
+0376dca82a15: Preparing
+0376dca82a15: Waiting
+d1ebf0a8b652: Layer already exists
+0b4d9c808227: Layer already exists
+11bfe07d2987: Layer already exists
+4017e300a9f5: Layer already exists
+b6a5e3908cdd: Layer already exists
+0376dca82a15: Layer already exists
+2.1.1-arm64: digest: sha256:61f93daf7da7ed4e57385986f5da5ba58eeb785876aee22a6e88ba7f5362e101 size: 1568
+Pushing zededa/mkimage-raw-efi:2.1.1-arm64 to manifest zededa/mkimage-raw-efi:2.1.1
+time="2019-04-02T08:19:34+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-raw-efi:2.1.1-s390x\". Skipping image."
+Digest: sha256:98478b111bfbd4adab68227b529f95f2035ee79c1870b66e031970d7e39ba4d3 743
+Not signing zededa/mkimage-raw-efi:2.1.1
+Tagging zededa/mkimage-raw-efi:2.1.1-arm64 as zededa/mkimage-raw-efi:latest-arm64
+Pushing zededa/mkimage-raw-efi:latest-arm64
+The push refers to a repository [docker.io/zededa/mkimage-raw-efi]
+0b4d9c808227: Preparing
+4017e300a9f5: Preparing
+11bfe07d2987: Preparing
+b6a5e3908cdd: Preparing
+d1ebf0a8b652: Preparing
+0376dca82a15: Preparing
+0376dca82a15: Waiting
+d1ebf0a8b652: Layer already exists
+0b4d9c808227: Layer already exists
+4017e300a9f5: Layer already exists
+11bfe07d2987: Layer already exists
+b6a5e3908cdd: Layer already exists
+0376dca82a15: Layer already exists
+latest-arm64: digest: sha256:61f93daf7da7ed4e57385986f5da5ba58eeb785876aee22a6e88ba7f5362e101 size: 1568
+Pushing zededa/mkimage-raw-efi:latest-arm64 to manifest zededa/mkimage-raw-efi:latest
+time="2019-04-02T08:19:44+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-raw-efi:latest-s390x\". Skipping image."
+Digest: sha256:98478b111bfbd4adab68227b529f95f2035ee79c1870b66e031970d7e39ba4d3 743
+Not signing zededa/mkimage-raw-efi:latest
+Build, push and release of "latest" complete, all done.
+Building and pushing "zededa/mkimage-iso-efi:2.1.1"
+2.1.1: Pulling from zededa/mkimage-iso-efi
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  6.144kB
+Step 1/5 : FROM linuxkit/alpine:ad35b6ddbc70faa07e59a9d7dee7707c08122e8d AS make-img
+ ---> 5ecd57f692e6
+Step 2/5 : RUN apk update && apk upgrade &&   apk add --no-cache   dosfstools   libarchive-tools   binutils   mtools   xorriso   && true
+ ---> Using cache
+ ---> b3bf2368e4d0
+Step 3/5 : COPY . .
+ ---> Using cache
+ ---> a15d517a69f0
+Step 4/5 : ENTRYPOINT /make-efi
+ ---> Using cache
+ ---> c9fa9c736d21
+Step 5/5 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'bd3a087410d56368b0cf9dded9da0f4f08701fb6' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 4a88c053201b
+ ---> fe632e15e05b
+Removing intermediate container 4a88c053201b
+Successfully built fe632e15e05b
+Successfully tagged zededa/mkimage-iso-efi:2.1.1-arm64
+Pushing zededa/mkimage-iso-efi:2.1.1-arm64
+The push refers to a repository [docker.io/zededa/mkimage-iso-efi]
+88e7c550410e: Preparing
+2b1241083fdb: Preparing
+7dea4d1aed3f: Preparing
+6aaab284bec8: Preparing
+ae10edb167a4: Preparing
+6338c1cfbeb5: Preparing
+95b18c8ba3df: Preparing
+aa316b6f622d: Preparing
+3e8f2ba34a3a: Preparing
+5df7b5f40eb4: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+aa316b6f622d: Waiting
+3e8f2ba34a3a: Waiting
+5df7b5f40eb4: Waiting
+81d522e63704: Waiting
+199db0687ace: Waiting
+95b18c8ba3df: Waiting
+6338c1cfbeb5: Waiting
+88e7c550410e: Layer already exists
+2b1241083fdb: Layer already exists
+ae10edb167a4: Layer already exists
+7dea4d1aed3f: Layer already exists
+6aaab284bec8: Layer already exists
+aa316b6f622d: Layer already exists
+6338c1cfbeb5: Layer already exists
+5df7b5f40eb4: Layer already exists
+3e8f2ba34a3a: Layer already exists
+95b18c8ba3df: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+2.1.1-arm64: digest: sha256:87de9c3422fd1e1ffd3bd32f54a7998c9413193ca56b08479f6a4057cf4f5562 size: 2832
+Pushing zededa/mkimage-iso-efi:2.1.1-arm64 to manifest zededa/mkimage-iso-efi:2.1.1
+time="2019-04-02T08:20:04+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-iso-efi:2.1.1-s390x\". Skipping image."
+Digest: sha256:3faf561f3e0c3b3c267ec585bda67d4d5f3c9d8a6b676f3afbe2198374da2909 743
+Not signing zededa/mkimage-iso-efi:2.1.1
+Tagging zededa/mkimage-iso-efi:2.1.1-arm64 as zededa/mkimage-iso-efi:latest-arm64
+Pushing zededa/mkimage-iso-efi:latest-arm64
+The push refers to a repository [docker.io/zededa/mkimage-iso-efi]
+88e7c550410e: Preparing
+2b1241083fdb: Preparing
+7dea4d1aed3f: Preparing
+6aaab284bec8: Preparing
+ae10edb167a4: Preparing
+6338c1cfbeb5: Preparing
+95b18c8ba3df: Preparing
+aa316b6f622d: Preparing
+3e8f2ba34a3a: Preparing
+5df7b5f40eb4: Preparing
+81d522e63704: Preparing
+199db0687ace: Preparing
+aa316b6f622d: Waiting
+3e8f2ba34a3a: Waiting
+6338c1cfbeb5: Waiting
+95b18c8ba3df: Waiting
+5df7b5f40eb4: Waiting
+199db0687ace: Waiting
+81d522e63704: Waiting
+7dea4d1aed3f: Layer already exists
+88e7c550410e: Layer already exists
+ae10edb167a4: Layer already exists
+6aaab284bec8: Layer already exists
+2b1241083fdb: Layer already exists
+aa316b6f622d: Layer already exists
+3e8f2ba34a3a: Layer already exists
+6338c1cfbeb5: Layer already exists
+95b18c8ba3df: Layer already exists
+5df7b5f40eb4: Layer already exists
+81d522e63704: Layer already exists
+199db0687ace: Layer already exists
+latest-arm64: digest: sha256:87de9c3422fd1e1ffd3bd32f54a7998c9413193ca56b08479f6a4057cf4f5562 size: 2832
+Pushing zededa/mkimage-iso-efi:latest-arm64 to manifest zededa/mkimage-iso-efi:latest
+time="2019-04-02T08:20:15+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-iso-efi:latest-s390x\". Skipping image."
+Digest: sha256:3faf561f3e0c3b3c267ec585bda67d4d5f3c9d8a6b676f3afbe2198374da2909 743
+Not signing zededa/mkimage-iso-efi:latest
+Build, push and release of "latest" complete, all done.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+mkdir bios
+cd bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+043df59b4eb0083b76ad6be6c48a743f8c7476e9e1ead4a09abfa58a6a39bcc7
+./maketestconfig.sh conf config.img
++ CONFIG_FILE=/config.img
++ CONFIG_SIZE_KB=1024
++ cd /conf
++ tar xf -
++ echo mtools_skip_check=1
++ dd if=/dev/zero of=/config.img bs=1024 count=1024
+1024+0 records in
+1024+0 records out
++ mkfs.vfat -n ZEDEDA -v /config.img 1024
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is f2361b12, volume label ZEDEDA     .
++ mcopy -i /config.img -s /conf/onboard.cert.pem /conf/onboard.key.pem /conf/root-certificate.pem /conf/server /conf/server.production /conf/wpa_supplicant.conf ::/
+docker pull zededa/zedctr:2.1.1-arm64 >/dev/null 2>&1 || : ;\
+if ! docker inspect zededa/zedctr:2.1.1-arm64 >/dev/null 2>&1 ; then \
+  if [ aarch64 != $(uname -m) ] ; then \
+    ZENIX_HASH=2.1.1 DOCKER_ARCH_TAG=arm64 ./parse-pkgs.sh < pkg/zedctr/Dockerfile.cross.in > pkg/zedctr/Dockerfile ;\
+    PKG_HASH=`mktemp -u XXXXXXXXXX` ;\
+    make -C pkg PKGS=zedctr RESCAN_DEPS="" LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash $PKG_HASH" push ;\
+    PKG_HASH=zededa/zedctr:$PKG_HASH ;\
+    docker tag $PKG_HASH zededa/zedctr:2.1.1-arm64 ;\
+    docker rmi $PKG_HASH $PKG_HASH-arm64 ;\
+  else \
+    make -C pkg PKGS=zedctr LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash 2.1.1" push ;\
+  fi ;\
+fi
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+Building and pushing "zededa/zedctr:2.1.1"
+Sending build context to Docker daemon  22.02kB
+Step 1/27 : FROM zededa/ztools@sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f as ztools
+ ---> 3e0f3f12a631
+Step 2/27 : FROM zededa/lisp:2.1.1-arm64 as lisp
+manifest for zededa/lisp:2.1.1-arm64 not found
+exit status 1
+Makefile:21: recipe for target 'push' failed
+make[1]: *** [push] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+Makefile:157: recipe for target 'pkg/zedctr' failed
+make: *** [pkg/zedctr] Error 2
+Removing bios/
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing config.img
+Removing pkg/mkconf/Dockerfile
+Removing pkg/qrexec-dom0/Dockerfile
+Removing pkg/qrexec-lib/Dockerfile
+Removing pkg/zedctr/Dockerfile
+HEAD is now at bd3a087 Updating onboarding cert
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=bd3a087410d56368b0cf9dded9da0f4f08701fb6" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="  --release snapshot" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:1a11eee631ec5ff068f207ae6bcd87d5d4a48a062308b46988cda10abdd15c86
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:40b3cfec230b69210428c2b9db0d96985b2f107d18b0a62b28736e3e04b15f44
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make -C pkg LINUXKIT_HASH="  --release snapshot" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+Building and pushing "zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b"
+97e7b1404e7c9d141eddb58294fcff019f61571b: Pulling from zededa/grub
+Digest: sha256:5e43a4e7bb105de4dafe6ca1b86e978544597f44e95be1faa8d97c0a25aa89b1
+Status: Image is up to date for zededa/grub:97e7b1404e7c9d141eddb58294fcff019f61571b
+Building and pushing "zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99"
+f51bf3d17fad15b71242befbddec96e177132a99: Pulling from zededa/xen
+Digest: sha256:72ff3c98dafff206e4b77c51f05eb768ae4e42032c31f5755c6ebec33aa571ab
+Status: Image is up to date for zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99
+Building and pushing "zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315"
+7cfa13614bb99a84030db209b6c9a0696c7d3315: Pulling from zededa/kernel
+Digest: sha256:0e681b1a20b981282191d707ae01019ef41dd7b01697271e34885b572239894b
+Status: Image is up to date for zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315
+Building and pushing "zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569"
+1d8c22ae31c42d767ba648b186db4ea967a9c569: Pulling from zededa/fw
+Digest: sha256:c95ae74a720a42dc91dce6b5d225bf1758bef24b327e21f18c9dd184713d43e3
+Status: Image is up to date for zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569
+Building and pushing "zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2"
+9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2: Pulling from zededa/xen-tools
+Digest: sha256:897606c52b7cb91fa393ca30dae8f7c4cd8ce9fc26e5251e784a0af2fe9685c2
+Status: Image is up to date for zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2
+Building and pushing "zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b"
+c5985cdd83998d06255fe115d230a280c6928f1b: Pulling from zededa/dnsmasq
+Digest: sha256:12240a65c524eaf5def9bd3598e771336e9350c249abc1ff6a06cb8e57f56832
+Status: Image is up to date for zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b
+Building and pushing "zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec"
+8f5ee3b98aa3ea49a9a4231baac9be933d6155ec: Pulling from zededa/strongswan
+Digest: sha256:369e5f5de5fe189d5c1942f797b217fdc48b6e4161a70df5efce2d252135c978
+Status: Image is up to date for zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec
+Building and pushing "zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4"
+fe878611e4e032ea10946cbc9a1c3d5b22349dc4: Pulling from zededa/gpt-tools
+Digest: sha256:4c3e178a2b6881c98c7398fbdb003caf5b5db0ef6e6904c1d6204e336eeed5cc
+Status: Image is up to date for zededa/gpt-tools:fe878611e4e032ea10946cbc9a1c3d5b22349dc4
+Building and pushing "zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d"
+b53cd1b5785c128371a5997e3a6e16007718c12d: Pulling from zededa/dom0-ztools
+Digest: sha256:65037565a2b30850b6368825b9d1e7af47a89c812eb1a910b8c93da828736473
+Status: Image is up to date for zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:15aa3ca4fef43b0918e92eed910279f368e8c3fd52faabb50fc688f555b35700
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:8595ea8ced1b220d3afb52b7804c31e7a0a26779638d9f7e737dfb924569e479
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d"
+5f68442251df0f2625fde14e947f11de2374b72d: Pulling from zededa/wwan
+Digest: sha256:9a80f2fdbc39ee1282fa18cd476b601ef6826c31b5edcb09bb4eba674e9f80d1
+Status: Image is up to date for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d
+Building and pushing "zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97"
+8aa66e76c276b97d1141801d3f461e2b3f8f8f97: Pulling from zededa/wlan
+Digest: sha256:eb614df60aa8c847ea9f7a89848b0199f4852dbda8a9c07841607fdd7cb16d6c
+Status: Image is up to date for zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97
+Building and pushing "zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272"
+5adb10a552c07513159777bd022ac58e23d59272: Pulling from zededa/rngd
+Digest: sha256:936bf272bcf06dc1f25cbb81a7cb8b439bb356df86a399456b61a65cc92ef254
+Status: Image is up to date for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272
+Building and pushing "zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173"
+2aea3af274e4928d2eab2b738d0e100ee5362173: Pulling from zededa/watchdog
+Digest: sha256:3beef59348def169640889b43bfebf7fa22b7b095dc4168abee3a5a88b5dc559
+Status: Image is up to date for zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173
+Building and pushing "zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96"
+85a2add30bae37777d3d4f3f17a528fe8db88e96: Pulling from zededa/guacd
+Digest: sha256:47376275e56439a0836f1765511f19768651b2a095be6da54fdfd0b2b7b6ce24
+Status: Image is up to date for zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96
+Building and pushing "zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9"
+18377dd0bc3c33a1602e94a4c43aa0b3c51badb9: Pulling from zededa/device-trees
+Digest: sha256:61bb1d6398633d24618b7f788432b81137e619b29eb1c6e2f762c53357f10d66
+Status: Image is up to date for zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9
+Building and pushing "zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687"
+3aeeaf4e04f450283d49220eb7e82262b4531687: Pulling from zededa/debug
+Digest: sha256:81015d30d78e63cd2f1084198c92ebca85cb3214fb1eb90444fd59d3936b74a9
+Status: Image is up to date for zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687
+Building and pushing "zededa/conf:e22275bd5d97d32d523595bbb41b2a21cbe509a7"
+e22275bd5d97d32d523595bbb41b2a21cbe509a7: Pulling from zededa/conf
+Digest: sha256:bdea79263dde5375b38ea0616330d8c422f11c6a13b4b725dfe497482e788544
+Status: Image is up to date for zededa/conf:e22275bd5d97d32d523595bbb41b2a21cbe509a7
+Building and pushing "zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80"
+5f77cd6a2b87a3a9927593763da1941dbed1ce80: Pulling from zededa/mkrootfs-ext4
+Digest: sha256:dedb371f7dc9af3f9472d9f4c0c4dd75771a34bb940085b75c3e1d42a7108467
+Status: Image is up to date for zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80
+Building and pushing "zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212"
+b47d705603f5f0d3765b03cf583e1a7fd287f212: Pulling from zededa/mkrootfs-squash
+Digest: sha256:69fe871728593b96cd07c9803cfafd083e0adc34e62236669052d16a955f8c8b
+Status: Image is up to date for zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212
+Building and pushing "zededa/mkimage-raw-efi:9902ef2da5f2290c01c570d2c2e3a3e084e0ce57"
+9902ef2da5f2290c01c570d2c2e3a3e084e0ce57: Pulling from zededa/mkimage-raw-efi
+Digest: sha256:391f27d14dcc43f618c9c9fada3b9518cc30ecf9a6112b599d55bc647a1eaca6
+Status: Image is up to date for zededa/mkimage-raw-efi:9902ef2da5f2290c01c570d2c2e3a3e084e0ce57
+Building and pushing "zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9"
+49a6ff8320ce088460c8acb6f36bc15b15d800e9: Pulling from zededa/mkimage-iso-efi
+Digest: sha256:6693333f49b1f7c8e7931c6580e56d05078484b0b099136b7b2aff1b3055e65e
+Status: Image is up to date for zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+mkdir bios
+cd bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+122157d72ee7ff3fa06f0296d0c4662783cb72530472f797b53cf494b4dcbad2
+./maketestconfig.sh conf config.img
++ CONFIG_FILE=/config.img
++ CONFIG_SIZE_KB=1024
++ cd /conf
++ tar xf -
++ echo mtools_skip_check=1
++ dd if=/dev/zero of=/config.img bs=1024 count=1024
+1024+0 records in
+1024+0 records out
++ mkfs.vfat -n ZEDEDA -v /config.img 1024
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is ff326485, volume label ZEDEDA     .
++ mcopy -i /config.img -s /conf/onboard.cert.pem /conf/onboard.key.pem /conf/root-certificate.pem /conf/server /conf/server.production /conf/wpa_supplicant.conf ::/
+docker pull zededa/zedctr:f737b8d59e54fc1903b322c6996d11e3d462ab49-arm64 >/dev/null 2>&1 || : ;\
+if ! docker inspect zededa/zedctr:f737b8d59e54fc1903b322c6996d11e3d462ab49-arm64 >/dev/null 2>&1 ; then \
+  if [ aarch64 != $(uname -m) ] ; then \
+    ZENIX_HASH= DOCKER_ARCH_TAG=arm64 ./parse-pkgs.sh < pkg/zedctr/Dockerfile.cross.in > pkg/zedctr/Dockerfile ;\
+    PKG_HASH=`mktemp -u XXXXXXXXXX` ;\
+    make -C pkg PKGS=zedctr RESCAN_DEPS="" LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash $PKG_HASH" push ;\
+    PKG_HASH=zededa/zedctr:$PKG_HASH ;\
+    docker tag $PKG_HASH zededa/zedctr:f737b8d59e54fc1903b322c6996d11e3d462ab49-arm64 ;\
+    docker rmi $PKG_HASH $PKG_HASH-arm64 ;\
+  else \
+    make -C pkg PKGS=zedctr LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash f737b8d59e54fc1903b322c6996d11e3d462ab49" push ;\
+  fi ;\
+fi
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+2.1.1-arm64: Pulling from zededa/ztools
+Digest: sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f
+Status: Image is up to date for zededa/ztools:2.1.1-arm64
+Error response from daemon: manifest for zededa/lisp:2.1.1-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.1-arm64 - may be using stale cache
+Building and pushing "zededa/zedctr:f737b8d59e54fc1903b322c6996d11e3d462ab49"
+Sending build context to Docker daemon  22.02kB
+Step 1/27 : FROM zededa/ztools@sha256:45d782df0c0237c2cb9b321e655ca4993274bfae7c920e65baf76d1d1a6d336f as ztools
+ ---> 3e0f3f12a631
+Step 2/27 : FROM zededa/lisp:2.1.1-arm64 as lisp
+manifest for zededa/lisp:2.1.1-arm64 not found
+exit status 1
+Makefile:21: recipe for target 'push' failed
+make[1]: *** [push] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+Makefile:157: recipe for target 'pkg/zedctr' failed
+make: *** [pkg/zedctr] Error 2
+FINISHED
