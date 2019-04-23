@@ -1,0 +1,1514 @@
+Cloning into '/tmp/zenbuild'...
+make: Entering directory '/tmp/zenbuild'
+make -C build-tools all
+make[1]: Entering directory '/tmp/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=67d281fde09e0272e12b296fee75aaabecf7a65c" -o /tmp/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=67d281fde09e0272e12b296fee75aaabecf7a65c" -o /tmp/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/tmp/zenbuild/build-tools'
+make: Leaving directory '/tmp/zenbuild'
+From github.com:zededa/lisp
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.2.2      -> 1.2.2
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.5.0      -> 1.5.0
+ * [new tag]         2.1        -> 2.1
+ * [new tag]         2.1.0      -> 2.1.0
+ * [new tag]         2.1.1      -> 2.1.1
+--- /dev/fd/63	2019-04-23 08:01:31.295501560 +0200
++++ /dev/fd/62	2019-04-23 08:01:31.295501560 +0200
+@@ -1,90 +1,29 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.2.2
+-1.2.2-amd64
+ 1.2.2-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
+-2.1.1
+-2.1.1-amd64
+ 2.1.1-arm64
+-2.2.1
+-2.2.1-amd64
+-2.2.1-arm64
+Building the following tags:  origin/master (latest tag is 2.1.1)
+HEAD is now at de0b237 Update README.md
+Building and pushing "zededa/lisp:b2a8f9870d5e2d599b8e0fbb72fb3f1c0dd2870c"
+b2a8f9870d5e2d599b8e0fbb72fb3f1c0dd2870c: Pulling from zededa/lisp
+Digest: sha256:d59365661d2392beb4e2dd854b817336a4026f56522a7da6103120d78d86d27f
+Status: Image is up to date for zededa/lisp:b2a8f9870d5e2d599b8e0fbb72fb3f1c0dd2870c
+From github.com:zededa/go-provision
+ * [new tag]           2.2.0      -> 2.2.0
+ * [new tag]           2.2.1      -> 2.2.1
+--- /dev/fd/63	2019-04-23 08:01:36.745531403 +0200
++++ /dev/fd/62	2019-04-23 08:01:36.745531403 +0200
+@@ -1,132 +1,43 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+-0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.4.2
+-1.4.2-amd64
+ 1.4.2-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-1.5.1
+-1.5.1-amd64
+ 1.5.1-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
+-2.1.1
+-2.1.1-amd64
+ 2.1.1-arm64
+-2.1.3
+-2.1.3-amd64
+ 2.1.3-arm64
+-2.1.4
+-2.1.4-amd64
+ 2.1.4-arm64
+-2.2.0
+-2.2.0-amd64
+ 2.2.0-arm64
+-2.2.1
+-2.2.1-amd64
+ 2.2.1-arm64
+Building the following tags:  origin/master (latest tag is 2.2.1)
+HEAD is now at 61aabdc1 Merge pull request #353 from zededa/fixes
+Building and pushing "zededa/ztools:fa6fa0caf196b12258f792e419d06e5f0aee1eb7"
+fa6fa0caf196b12258f792e419d06e5f0aee1eb7: Pulling from zededa/ztools
+Digest: sha256:c3ca1bfc66e869b24bccf5de796d4a149825f8887622eb9e0fa7694086d1775c
+Status: Image is up to date for zededa/ztools:fa6fa0caf196b12258f792e419d06e5f0aee1eb7
+From https://github.com/zededa/zenbuild
+   8218bec..67d281f  master     -> origin/master
+ + d79309f...09ec066 fixes      -> origin/fixes  (forced update)
+ * [new tag]         0.1.0      -> 0.1.0
+ * [new tag]         0.1.1      -> 0.1.1
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.10.1     -> 0.10.1
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.11.1     -> 0.11.1
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.14.1     -> 0.14.1
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.16.1     -> 0.16.1
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.3.0      -> 0.3.0
+ * [new tag]         0.3.1      -> 0.3.1
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.8.1      -> 0.8.1
+ * [new tag]         0.9.0      -> 0.9.0
+ * [new tag]         0.9.1      -> 0.9.1
+ * [new tag]         0.9.2      -> 0.9.2
+ * [new tag]         1.0.0      -> 1.0.0
+ * [new tag]         1.1.0      -> 1.1.0
+ * [new tag]         1.2.0      -> 1.2.0
+ * [new tag]         1.3.0      -> 1.3.0
+ * [new tag]         1.3.1      -> 1.3.1
+ * [new tag]         1.3.2      -> 1.3.2
+ * [new tag]         1.3.3      -> 1.3.3
+ * [new tag]         1.4.0      -> 1.4.0
+ * [new tag]         1.4.1      -> 1.4.1
+ * [new tag]         1.4.2      -> 1.4.2
+ * [new tag]         1.5.0      -> 1.5.0
+ * [new tag]         1.5.1      -> 1.5.1
+ * [new tag]         2.1.0      -> 2.1.0
+ * [new tag]         2.1.1      -> 2.1.1
+ * [new tag]         2.1.2      -> 2.1.2
+ * [new tag]         2.1.3      -> 2.1.3
+ * [new tag]         2.1.4      -> 2.1.4
+ * [new tag]         2.2.0      -> 2.2.0
+ * [new tag]         2.2.1      -> 2.2.1
+--- /dev/fd/63	2019-04-23 08:01:42.105560753 +0200
++++ /dev/fd/62	2019-04-23 08:01:42.105560753 +0200
+@@ -1,132 +1,45 @@
+-0.1.0
+-0.1.0-amd64
+ 0.1.0-arm64
+-0.1.1
+-0.1.1-amd64
+ 0.1.1-arm64
+-0.3.0
+-0.3.0-amd64
+ 0.3.0-arm64
+-0.3.1
+-0.3.1-amd64
+ 0.3.1-arm64
+-0.4.0
+-0.4.0-amd64
+ 0.4.0-arm64
+-0.5.0
+-0.5.0-amd64
+ 0.5.0-arm64
+-0.6.0
+-0.6.0-amd64
+ 0.6.0-arm64
+-0.7.0
+-0.7.0-amd64
+ 0.7.0-arm64
+-0.8.0
+-0.8.0-amd64
+ 0.8.0-arm64
+-0.8.1
+-0.8.1-amd64
+ 0.8.1-arm64
+-0.9.0
+-0.9.0-amd64
+ 0.9.0-arm64
+-0.9.1
+-0.9.1-amd64
+ 0.9.1-arm64
+-0.9.2
+-0.9.2-amd64
+ 0.9.2-arm64
+-0.10.0
+-0.10.0-amd64
+ 0.10.0-arm64
+-0.10.1
+-0.10.1-amd64
+ 0.10.1-arm64
+-0.11.0
+-0.11.0-amd64
+ 0.11.0-arm64
+-0.11.1
+-0.11.1-amd64
+ 0.11.1-arm64
+-0.12.0
+-0.12.0-amd64
+ 0.12.0-arm64
+-0.13.0
+-0.13.0-amd64
+ 0.13.0-arm64
+-0.14.0
+-0.14.0-amd64
+ 0.14.0-arm64
+-0.14.1
+-0.14.1-amd64
+ 0.14.1-arm64
+-0.15.0
+-0.15.0-amd64
+ 0.15.0-arm64
+-0.16.0
+-0.16.0-amd64
+ 0.16.0-arm64
+-0.16.1
+-0.16.1-amd64
+ 0.16.1-arm64
+-0.17.0
+-0.17.0-amd64
+ 0.17.0-arm64
+-0.18.0
+-0.18.0-amd64
+ 0.18.0-arm64
+-1.0.0
+-1.0.0-amd64
+ 1.0.0-arm64
+-1.1.0
+-1.1.0-amd64
+ 1.1.0-arm64
+-1.2.0
+-1.2.0-amd64
+ 1.2.0-arm64
+-1.3.0
+-1.3.0-amd64
+ 1.3.0-arm64
+-1.3.1
+-1.3.1-amd64
+ 1.3.1-arm64
+-1.3.2
+-1.3.2-amd64
+ 1.3.2-arm64
+-1.3.3
+-1.3.3-amd64
+ 1.3.3-arm64
+-1.4.0
+-1.4.0-amd64
+ 1.4.0-arm64
+-1.4.1
+-1.4.1-amd64
+ 1.4.1-arm64
+-1.4.2
+-1.4.2-amd64
+ 1.4.2-arm64
+-1.5.0
+-1.5.0-amd64
+ 1.5.0-arm64
+-1.5.1
+-1.5.1-amd64
+ 1.5.1-arm64
+-2.1.0
+-2.1.0-amd64
+ 2.1.0-arm64
+-2.1.1
+-2.1.1-amd64
+ 2.1.1-arm64
+-2.1.3
+-2.1.3-amd64
++2.1.2-arm64
+ 2.1.3-arm64
+-2.1.4
+-2.1.4-amd64
+ 2.1.4-arm64
+-2.2.0
+-2.2.0-amd64
+ 2.2.0-arm64
+-2.2.1
+-2.2.1-amd64
+ 2.2.1-arm64
+Building the following tags: 2.1.2 origin/master (latest tag is 2.2.1)
+Removing build-pkgs/zenix/Makefile
+Removing build-pkgs/zenix/OVMF.fd
+Removing build-pkgs/zenix/config.img
+Removing build-pkgs/zenix/fallback.img
+Removing build-pkgs/zenix/installer.iso
+Removing build-pkgs/zenix/installer.raw
+Removing build-pkgs/zenix/installer.yml
+Removing build-pkgs/zenix/rootfs.img
+Removing build-pkgs/zenix/rootfs.yml
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+Removing images/installer.yml
+Removing images/rootfs.yml
+Removing pkg/mkconf/Dockerfile
+Removing pkg/qrexec-dom0/Dockerfile
+Removing pkg/qrexec-lib/Dockerfile
+HEAD is now at fb1f9ad Changing default server to prod
+Error response from daemon: manifest for zededa/ztools:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/ztools:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.2-arm64 - may be using stale cache
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=fb1f9ad71980df3698358d13825745f5e02939ec" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=fb1f9ad71980df3698358d13825745f5e02939ec" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="--hash 2.1.2  " push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:2.1.2"
+2.1.2: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:056fcbe61a2a8c0590a467d397fa974429d4584a2930e7e1e7c21e6fd4587f44
+Status: Image is up to date for zededa/build-pkgs_abuild:2.1.2
+Building and pushing "zededa/build-pkgs_uefi:2.1.2"
+2.1.2: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:028192b0b60eeb7932300a189a4060c180697858ee35f0f0423582578457afd9
+Status: Image is up to date for zededa/build-pkgs_uefi:2.1.2
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make -C pkg LINUXKIT_HASH="--hash 2.1.2  " push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+Error response from daemon: manifest for zededa/ztools:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.2-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+Error response from daemon: manifest for zededa/ztools:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.2-arm64 - may be using stale cache
+(cd ..; ./parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+Error response from daemon: manifest for zededa/ztools:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/ztools:2.1.2-arm64 - may be using stale cache
+Error response from daemon: manifest for zededa/lisp:2.1.2-arm64 not found
+WARNING: couldn't fetch the latest zededa/lisp:2.1.2-arm64 - may be using stale cache
+Building and pushing "zededa/grub:2.1.2"
+2.1.2: Pulling from zededa/grub
+Digest: sha256:b8428be0527f3fe8e8f08a4193feddfe764cc14e5418d19348a26de0df24c3c2
+Status: Image is up to date for zededa/grub:2.1.2
+Building and pushing "zededa/xen:2.1.2"
+2.1.2: Pulling from zededa/xen
+Digest: sha256:fee5ade87844662db397e9f8bec2803275a5e74fb0cfd50506ef6bf91e856b9e
+Status: Image is up to date for zededa/xen:2.1.2
+Building and pushing "zededa/kernel:2.1.2"
+2.1.2: Pulling from zededa/kernel
+Digest: sha256:9033dd0ac2da1f9b860c0e125d28235e3bc4170e88fab542c9dcba29c8a04c74
+Status: Image is up to date for zededa/kernel:2.1.2
+Building and pushing "zededa/fw:2.1.2"
+2.1.2: Pulling from zededa/fw
+Digest: sha256:7e1a88e3676aa590ae4234438c87aea5bcb6b400194b77714d72de0a77028bee
+Status: Image is up to date for zededa/fw:2.1.2
+Building and pushing "zededa/xen-tools:2.1.2"
+2.1.2: Pulling from zededa/xen-tools
+Digest: sha256:5a8def9f8c71e5dc9fd61bac543cdae3e0a39e1d3ac0a5e1c7de0d82c6fda775
+Status: Image is up to date for zededa/xen-tools:2.1.2
+Building and pushing "zededa/dnsmasq:2.1.2"
+2.1.2: Pulling from zededa/dnsmasq
+Digest: sha256:e047216be05882f94d139dffedc57d840eae66c4a603c6076e85896bf32d8cc5
+Status: Image is up to date for zededa/dnsmasq:2.1.2
+Building and pushing "zededa/strongswan:2.1.2"
+2.1.2: Pulling from zededa/strongswan
+Digest: sha256:59b48624befe9b18e7a2f0482bc9deddfa10468e3d822bba976160cb49d56e35
+Status: Image is up to date for zededa/strongswan:2.1.2
+Building and pushing "zededa/gpt-tools:2.1.2"
+2.1.2: Pulling from zededa/gpt-tools
+Digest: sha256:de16a2d67feb7dd8564b8add9ea60bcd7d82a84bee3bb39be2d6c04f5cc7071f
+Status: Image is up to date for zededa/gpt-tools:2.1.2
+Building and pushing "zededa/dom0-ztools:2.1.2"
+2.1.2: Pulling from zededa/dom0-ztools
+Digest: sha256:88ac0d4ccb5d09b9a83a4911a6a7aba610fa7171eb532128fee20f465d8eb534
+Status: Image is up to date for zededa/dom0-ztools:2.1.2
+Building and pushing "zededa/qrexec-lib:2.1.2"
+2.1.2: Pulling from zededa/qrexec-lib
+Digest: sha256:79decdfe0154050783786bc48e72c81a1aa64ad376f87b992cd049d97cc6ecc0
+Status: Image is up to date for zededa/qrexec-lib:2.1.2
+Building and pushing "zededa/qrexec-dom0:2.1.2"
+2.1.2: Pulling from zededa/qrexec-dom0
+Digest: sha256:769fdc66d21aa88c459765b50dd1de14ca37c900cf096e5ac60559bcdf566201
+Status: Image is up to date for zededa/qrexec-dom0:2.1.2
+Building and pushing "zededa/wwan:2.1.2"
+2.1.2: Pulling from zededa/wwan
+Digest: sha256:218cfa7a49435e7664293c3003583dd001b67c8bbb77b0ce28d4b5c591796eb3
+Status: Image is up to date for zededa/wwan:2.1.2
+Building and pushing "zededa/wlan:2.1.2"
+2.1.2: Pulling from zededa/wlan
+Digest: sha256:8757be36ddc552cf6281a3d42656d8f63b0e55ee7e51fcb53b7e2982385e8367
+Status: Image is up to date for zededa/wlan:2.1.2
+Building and pushing "zededa/rngd:2.1.2"
+2.1.2: Pulling from zededa/rngd
+Digest: sha256:38049daa5dbc1bcae1dceb8148814eb9bb2823d8746bbff19cb38d18c26cb3f7
+Status: Image is up to date for zededa/rngd:2.1.2
+Building and pushing "zededa/watchdog:2.1.2"
+2.1.2: Pulling from zededa/watchdog
+Digest: sha256:15ae5e8bf37e8775deb6ca4bd4b7d546ca80c8c67f1faa8a4dbcbb9efe330dd9
+Status: Image is up to date for zededa/watchdog:2.1.2
+Building and pushing "zededa/guacd:2.1.2"
+2.1.2: Pulling from zededa/guacd
+Digest: sha256:d07c2b73e30cd871db1cae1099feaa65a8a6258bd844e28849961e6f5109da3c
+Status: Image is up to date for zededa/guacd:2.1.2
+Building and pushing "zededa/device-trees:2.1.2"
+2.1.2: Pulling from zededa/device-trees
+Digest: sha256:f8a83a0d7041153ce3d6489266b7cb5754c2fb755819e318d031894c98d5622a
+Status: Image is up to date for zededa/device-trees:2.1.2
+Building and pushing "zededa/debug:2.1.2"
+2.1.2: Pulling from zededa/debug
+Digest: sha256:c3c1e593d28a76218e776e572e20f90d68fd0a5f67c8a6e32282b3387747b7fe
+Status: Image is up to date for zededa/debug:2.1.2
+Building and pushing "zededa/conf:2.1.2"
+Error response from daemon: manifest for zededa/conf:2.1.2 not found
+No image pulled, continuing with build
+Sending build context to Docker daemon   5.12kB
+Step 1/8 : FROM zededa/ztools:2.1.2-arm64 as zededa
+manifest for zededa/ztools:2.1.2-arm64 not found
+exit status 1
+Makefile:21: recipe for target 'push' failed
+make[1]: *** [push] Error 1
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+Makefile:61: recipe for target 'pkgs' failed
+make: *** [pkgs] Error 2
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing pkg/mkconf/Dockerfile
+Removing pkg/qrexec-dom0/Dockerfile
+Removing pkg/qrexec-lib/Dockerfile
+HEAD is now at 67d281f Merge pull request #94 from zededa/fixes
+make -C build-tools all
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-tools'
+cd src/linuxkit/vendor/github.com/linuxkit/linuxkit/src/cmd/linuxkit ;\
+/usr/bin/go  build -ldflags "-X github.com/linuxkit/linuxkit/src/cmd/linuxkit/version.GitCommit=67d281fde09e0272e12b296fee75aaabecf7a65c" -o /home/zededa-ci/src/zenbuild/build-tools/bin/linuxkit .
+cd src/manifest-tool/vendor/github.com/estesp/manifest-tool ;\
+/usr/bin/go  build -ldflags "-X main.gitCommit=67d281fde09e0272e12b296fee75aaabecf7a65c" -o /home/zededa-ci/src/zenbuild/build-tools/bin/manifest-tool .
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-tools'
+make -C build-pkgs LINUXKIT_HASH="  --release snapshot" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824"
+7ae4d9f9fa290963de466d5ed96d6c9318354824: Pulling from zededa/build-pkgs_abuild
+Digest: sha256:1a11eee631ec5ff068f207ae6bcd87d5d4a48a062308b46988cda10abdd15c86
+Status: Image is up to date for zededa/build-pkgs_abuild:7ae4d9f9fa290963de466d5ed96d6c9318354824
+Building and pushing "zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693"
+a3362428c518fb4db1a136a961bd17e8a66fb693: Pulling from zededa/build-pkgs_uefi
+Digest: sha256:40b3cfec230b69210428c2b9db0d96985b2f107d18b0a62b28736e3e04b15f44
+Status: Image is up to date for zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+make -C pkg LINUXKIT_HASH="  --release snapshot" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./tools/parse-pkgs.sh pkg/qrexec-lib/Dockerfile.in > pkg/qrexec-lib/Dockerfile)
+(cd ..; ./tools/parse-pkgs.sh pkg/qrexec-dom0/Dockerfile.in > pkg/qrexec-dom0/Dockerfile)
+(cd ..; ./tools/parse-pkgs.sh pkg/mkconf/Dockerfile.in > pkg/mkconf/Dockerfile)
+Building and pushing "zededa/grub:6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be"
+6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be: Pulling from zededa/grub
+Digest: sha256:0bf4b8aa67a1b36cefde607f54acc797906edf41c50109b7823aa0298e968e0e
+Status: Image is up to date for zededa/grub:6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be
+Building and pushing "zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99"
+f51bf3d17fad15b71242befbddec96e177132a99: Pulling from zededa/xen
+Digest: sha256:72ff3c98dafff206e4b77c51f05eb768ae4e42032c31f5755c6ebec33aa571ab
+Status: Image is up to date for zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99
+Building and pushing "zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315"
+7cfa13614bb99a84030db209b6c9a0696c7d3315: Pulling from zededa/kernel
+Digest: sha256:0e681b1a20b981282191d707ae01019ef41dd7b01697271e34885b572239894b
+Status: Image is up to date for zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315
+Building and pushing "zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569"
+1d8c22ae31c42d767ba648b186db4ea967a9c569: Pulling from zededa/fw
+Digest: sha256:c95ae74a720a42dc91dce6b5d225bf1758bef24b327e21f18c9dd184713d43e3
+Status: Image is up to date for zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569
+Building and pushing "zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2"
+9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2: Pulling from zededa/xen-tools
+Digest: sha256:897606c52b7cb91fa393ca30dae8f7c4cd8ce9fc26e5251e784a0af2fe9685c2
+Status: Image is up to date for zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2
+Building and pushing "zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b"
+c5985cdd83998d06255fe115d230a280c6928f1b: Pulling from zededa/dnsmasq
+Digest: sha256:12240a65c524eaf5def9bd3598e771336e9350c249abc1ff6a06cb8e57f56832
+Status: Image is up to date for zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b
+Building and pushing "zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec"
+8f5ee3b98aa3ea49a9a4231baac9be933d6155ec: Pulling from zededa/strongswan
+Digest: sha256:369e5f5de5fe189d5c1942f797b217fdc48b6e4161a70df5efce2d252135c978
+Status: Image is up to date for zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec
+Building and pushing "zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237"
+8e929f0aaa1d2d397c093e68ced86690f511a237: Pulling from zededa/gpt-tools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  1.533MB
+Step 1/37 : FROM linuxkit/alpine:4d13c6209a679fc7c4e850f144b7aef879914d01 as build
+ ---> 55bf4864f089
+Step 2/37 : ENV POPT_VERSION 1.16
+ ---> Using cache
+ ---> c48ca87f69d2
+Step 3/37 : ENV GPTFDISK_VERSION 1.0.3
+ ---> Using cache
+ ---> 05cfb671909d
+Step 4/37 : ENV VBOOT_REPO https://chromium.googlesource.com/chromiumos/platform/vboot_reference
+ ---> Using cache
+ ---> 32e022a88a75
+Step 5/37 : ENV VBOOT_COMMIT e0b3841863281a3fc3b188bfbab55d401fabdc73
+ ---> Using cache
+ ---> 4d85a846628f
+Step 6/37 : RUN apk add --no-cache     gcc     make     patch     libc-dev     util-linux-dev     linux-headers     openssl-dev     g++     tar
+ ---> Using cache
+ ---> dda63a2eb068
+Step 7/37 : RUN mkdir /out
+ ---> Using cache
+ ---> 5e39b041b492
+Step 8/37 : WORKDIR /
+ ---> Using cache
+ ---> c82b56540b3f
+Step 9/37 : RUN mkdir /popt
+ ---> Using cache
+ ---> a424d04b7370
+Step 10/37 : COPY popt-${POPT_VERSION}.tar.gz /popt
+ ---> Using cache
+ ---> 3287c8f4d6d8
+Step 11/37 : WORKDIR /popt
+ ---> Using cache
+ ---> b15aa0a42aaa
+Step 12/37 : RUN tar xvzf popt-${POPT_VERSION}.tar.gz
+ ---> Using cache
+ ---> 317adea20958
+Step 13/37 : WORKDIR /popt/popt-${POPT_VERSION}
+ ---> Using cache
+ ---> 8a224596e140
+Step 14/37 : COPY patches/popt* /popt
+ ---> Using cache
+ ---> 487a2c45ce26
+Step 15/37 : RUN for patch in /popt/*patch ; do patch -p1 < $patch ; done
+ ---> Using cache
+ ---> 15647ed76dea
+Step 16/37 : RUN ./configure && make && make install
+ ---> Using cache
+ ---> 860c18b0de6d
+Step 17/37 : WORKDIR /
+ ---> Using cache
+ ---> 048befba6361
+Step 18/37 : RUN mkdir -p /sgdisk/patches
+ ---> Using cache
+ ---> 5a6ad41d74e8
+Step 19/37 : COPY gptfdisk-${GPTFDISK_VERSION}.tar.gz /sgdisk
+ ---> Using cache
+ ---> d55c8b0c2e7e
+Step 20/37 : COPY patches/* /sgdisk/patches/
+ ---> Using cache
+ ---> 5d376e9e7858
+Step 21/37 : WORKDIR /sgdisk
+ ---> Using cache
+ ---> 7195816584fb
+Step 22/37 : RUN tar xvzf gptfdisk-${GPTFDISK_VERSION}.tar.gz
+ ---> Using cache
+ ---> 39a9e1cb3bb0
+Step 23/37 : WORKDIR /sgdisk/gptfdisk-${GPTFDISK_VERSION}
+ ---> Using cache
+ ---> 27fce267f5f3
+Step 24/37 : RUN set -e && for patch in ../patches/sgdisk-*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Using cache
+ ---> e96dd2ca4449
+Step 25/37 : RUN make LDFLAGS=-static sgdisk
+ ---> Using cache
+ ---> cbc7f35c7eeb
+Step 26/37 : RUN cp sgdisk /out/sgdisk
+ ---> Using cache
+ ---> b186a47136b6
+Step 27/37 : WORKDIR /
+ ---> Using cache
+ ---> 58a56db822bf
+Step 28/37 : COPY vboot_reference-${VBOOT_COMMIT}.tar.gz /
+ ---> Using cache
+ ---> 54ccb4b63f46
+Step 29/37 : RUN tar xvzf vboot_reference-${VBOOT_COMMIT}.tar.gz
+ ---> Using cache
+ ---> 1a387f2a2afd
+Step 30/37 : WORKDIR /vboot_reference
+ ---> Using cache
+ ---> 95b51c5e13ff
+Step 31/37 : RUN make cgpt LDFLAGS=-static
+ ---> Using cache
+ ---> a26cb1af50b2
+Step 32/37 : RUN cp build/cgpt/cgpt /out/cgpt
+ ---> Using cache
+ ---> 5b42841f219f
+Step 33/37 : FROM scratch
+ ---> 
+Step 34/37 : COPY --from=build /out/sgdisk /usr/bin/sgdisk
+ ---> Using cache
+ ---> d3c4675c5ba2
+Step 35/37 : COPY --from=build /out/cgpt /usr/bin/cgpt
+ ---> Using cache
+ ---> c36256105300
+Step 36/37 : COPY files/zboot /usr/bin/zboot
+ ---> e08aa6036383
+Step 37/37 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '67d281fde09e0272e12b296fee75aaabecf7a65c' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in da6d8617f164
+ ---> 3e7b643f9ef1
+Removing intermediate container da6d8617f164
+Successfully built 3e7b643f9ef1
+Successfully tagged zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64
+Pushing zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64
+The push refers to a repository [docker.io/zededa/gpt-tools]
+d3fb3de5732b: Preparing
+fd6c05f8deb5: Preparing
+34ec61e75420: Preparing
+34ec61e75420: Layer already exists
+fd6c05f8deb5: Layer already exists
+d3fb3de5732b: Pushed
+8e929f0aaa1d2d397c093e68ced86690f511a237-arm64: digest: sha256:5eb8f839956aa32a18e3b9da16dbf341420fdd177ebd0510e2e5f34f50f46d5c size: 946
+Pushing zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64 to manifest zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237
+time="2019-04-23T08:07:55+02:00" level=warning msg="Couldn't find or access image reference \"zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-s390x\". Skipping image."
+Digest: sha256:e98f1b50bdf2809b4814b31a1707e6e0ee26441477af39cc29d972636bc4ad31 741
+Not signing zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237
+Tagging zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64 as zededa/gpt-tools:snapshot-arm64
+Pushing zededa/gpt-tools:snapshot-arm64
+The push refers to a repository [docker.io/zededa/gpt-tools]
+d3fb3de5732b: Preparing
+fd6c05f8deb5: Preparing
+34ec61e75420: Preparing
+fd6c05f8deb5: Layer already exists
+d3fb3de5732b: Layer already exists
+34ec61e75420: Layer already exists
+snapshot-arm64: digest: sha256:5eb8f839956aa32a18e3b9da16dbf341420fdd177ebd0510e2e5f34f50f46d5c size: 946
+Pushing zededa/gpt-tools:snapshot-arm64 to manifest zededa/gpt-tools:snapshot
+time="2019-04-23T08:08:05+02:00" level=warning msg="Couldn't find or access image reference \"zededa/gpt-tools:snapshot-s390x\". Skipping image."
+Digest: sha256:e98f1b50bdf2809b4814b31a1707e6e0ee26441477af39cc29d972636bc4ad31 741
+Not signing zededa/gpt-tools:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d"
+b53cd1b5785c128371a5997e3a6e16007718c12d: Pulling from zededa/dom0-ztools
+Digest: sha256:65037565a2b30850b6368825b9d1e7af47a89c812eb1a910b8c93da828736473
+Status: Image is up to date for zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d
+Building and pushing "zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206"
+2e0df0df95f86df6953d7d2e7729213b77fd7206: Pulling from zededa/qrexec-lib
+Digest: sha256:15aa3ca4fef43b0918e92eed910279f368e8c3fd52faabb50fc688f555b35700
+Status: Image is up to date for zededa/qrexec-lib:2e0df0df95f86df6953d7d2e7729213b77fd7206
+Building and pushing "zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468"
+2c3cf9b135409690eaa86092c41f7c800d398468: Pulling from zededa/qrexec-dom0
+Digest: sha256:8595ea8ced1b220d3afb52b7804c31e7a0a26779638d9f7e737dfb924569e479
+Status: Image is up to date for zededa/qrexec-dom0:2c3cf9b135409690eaa86092c41f7c800d398468
+Building and pushing "zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d"
+5f68442251df0f2625fde14e947f11de2374b72d: Pulling from zededa/wwan
+Digest: sha256:9a80f2fdbc39ee1282fa18cd476b601ef6826c31b5edcb09bb4eba674e9f80d1
+Status: Image is up to date for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d
+Building and pushing "zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97"
+8aa66e76c276b97d1141801d3f461e2b3f8f8f97: Pulling from zededa/wlan
+Digest: sha256:eb614df60aa8c847ea9f7a89848b0199f4852dbda8a9c07841607fdd7cb16d6c
+Status: Image is up to date for zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97
+Building and pushing "zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272"
+5adb10a552c07513159777bd022ac58e23d59272: Pulling from zededa/rngd
+Digest: sha256:8f798b501b621b915f73ffe47bffb38a7135ea96dcd01b509ee46324756d01b4
+Status: Image is up to date for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272
+Building and pushing "zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173"
+2aea3af274e4928d2eab2b738d0e100ee5362173: Pulling from zededa/watchdog
+Digest: sha256:3beef59348def169640889b43bfebf7fa22b7b095dc4168abee3a5a88b5dc559
+Status: Image is up to date for zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173
+Building and pushing "zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96"
+85a2add30bae37777d3d4f3f17a528fe8db88e96: Pulling from zededa/guacd
+Digest: sha256:47376275e56439a0836f1765511f19768651b2a095be6da54fdfd0b2b7b6ce24
+Status: Image is up to date for zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96
+Building and pushing "zededa/lisp:6654433c2b3df84d02472f202eee07e4d3173442"
+6654433c2b3df84d02472f202eee07e4d3173442: Pulling from zededa/lisp
+Digest: sha256:c8a5fc7a7620be9c18fba8b2d7d34d439a1a9d46d7198488ee4077f0001dedc3
+Status: Image is up to date for zededa/lisp:6654433c2b3df84d02472f202eee07e4d3173442
+Building and pushing "zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9"
+18377dd0bc3c33a1602e94a4c43aa0b3c51badb9: Pulling from zededa/device-trees
+Digest: sha256:61bb1d6398633d24618b7f788432b81137e619b29eb1c6e2f762c53357f10d66
+Status: Image is up to date for zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9
+Building and pushing "zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687"
+3aeeaf4e04f450283d49220eb7e82262b4531687: Pulling from zededa/debug
+Digest: sha256:81015d30d78e63cd2f1084198c92ebca85cb3214fb1eb90444fd59d3936b74a9
+Status: Image is up to date for zededa/debug:3aeeaf4e04f450283d49220eb7e82262b4531687
+Building and pushing "zededa/conf:e22275bd5d97d32d523595bbb41b2a21cbe509a7"
+e22275bd5d97d32d523595bbb41b2a21cbe509a7: Pulling from zededa/conf
+Digest: sha256:bdea79263dde5375b38ea0616330d8c422f11c6a13b4b725dfe497482e788544
+Status: Image is up to date for zededa/conf:e22275bd5d97d32d523595bbb41b2a21cbe509a7
+Building and pushing "zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80"
+5f77cd6a2b87a3a9927593763da1941dbed1ce80: Pulling from zededa/mkrootfs-ext4
+Digest: sha256:dedb371f7dc9af3f9472d9f4c0c4dd75771a34bb940085b75c3e1d42a7108467
+Status: Image is up to date for zededa/mkrootfs-ext4:5f77cd6a2b87a3a9927593763da1941dbed1ce80
+Building and pushing "zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212"
+b47d705603f5f0d3765b03cf583e1a7fd287f212: Pulling from zededa/mkrootfs-squash
+Digest: sha256:69fe871728593b96cd07c9803cfafd083e0adc34e62236669052d16a955f8c8b
+Status: Image is up to date for zededa/mkrootfs-squash:b47d705603f5f0d3765b03cf583e1a7fd287f212
+Building and pushing "zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50"
+335897b5ea6350947ecb1c7fa85f4fac093d4d50: Pulling from zededa/mkimage-raw-efi
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  18.43kB
+Step 1/8 : FROM alpine:3.7
+ ---> e9be492ac087
+Step 2/8 : RUN apk add --no-cache   mtools   dosfstools   libarchive-tools   sgdisk   e2fsprogs   util-linux   coreutils
+ ---> Using cache
+ ---> 1646d871f6f7
+Step 3/8 : WORKDIR /
+ ---> Using cache
+ ---> e32d2b24e608
+Step 4/8 : COPY make-raw install /
+ ---> 02cb650b147b
+Step 5/8 : COPY /efi-files /efifs
+ ---> e71f22e4fc2b
+Step 6/8 : RUN echo "mtools_skip_check=1" >> /etc/mtools.conf
+ ---> Running in 89181d3a71c5
+ ---> 480c1ef94700
+Removing intermediate container 89181d3a71c5
+Step 7/8 : ENTRYPOINT /make-raw
+ ---> Running in 401c7e83da93
+ ---> cabb38b0ac02
+Removing intermediate container 401c7e83da93
+Step 8/8 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '67d281fde09e0272e12b296fee75aaabecf7a65c' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in c19fe0d4a26a
+ ---> 689b32638f4b
+Removing intermediate container c19fe0d4a26a
+Successfully built 689b32638f4b
+Successfully tagged zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64
+Pushing zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64
+The push refers to a repository [docker.io/zededa/mkimage-raw-efi]
+83d229e3f796: Preparing
+2508b8a92f87: Preparing
+eea135e9dfc1: Preparing
+b6a5e3908cdd: Preparing
+d1ebf0a8b652: Preparing
+0376dca82a15: Preparing
+0376dca82a15: Waiting
+d1ebf0a8b652: Layer already exists
+b6a5e3908cdd: Layer already exists
+0376dca82a15: Layer already exists
+83d229e3f796: Pushed
+eea135e9dfc1: Pushed
+2508b8a92f87: Pushed
+335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64: digest: sha256:4b6509f2be3a25fb78bb13b1c75fb1d2984fe905314bc234672ed701b9063b62 size: 1568
+Pushing zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64 to manifest zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50
+time="2019-04-23T08:09:22+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-s390x\". Skipping image."
+Digest: sha256:0c15be5b4c2d38f5fde53f100c1964459ae80639162f8875e2f70bcf47a5d48c 743
+Not signing zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50
+Tagging zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64 as zededa/mkimage-raw-efi:snapshot-arm64
+Pushing zededa/mkimage-raw-efi:snapshot-arm64
+The push refers to a repository [docker.io/zededa/mkimage-raw-efi]
+83d229e3f796: Preparing
+2508b8a92f87: Preparing
+eea135e9dfc1: Preparing
+b6a5e3908cdd: Preparing
+d1ebf0a8b652: Preparing
+0376dca82a15: Preparing
+0376dca82a15: Waiting
+83d229e3f796: Layer already exists
+2508b8a92f87: Layer already exists
+d1ebf0a8b652: Layer already exists
+eea135e9dfc1: Layer already exists
+b6a5e3908cdd: Layer already exists
+0376dca82a15: Layer already exists
+snapshot-arm64: digest: sha256:4b6509f2be3a25fb78bb13b1c75fb1d2984fe905314bc234672ed701b9063b62 size: 1568
+Pushing zededa/mkimage-raw-efi:snapshot-arm64 to manifest zededa/mkimage-raw-efi:snapshot
+time="2019-04-23T08:09:33+02:00" level=warning msg="Couldn't find or access image reference \"zededa/mkimage-raw-efi:snapshot-s390x\". Skipping image."
+Digest: sha256:0c15be5b4c2d38f5fde53f100c1964459ae80639162f8875e2f70bcf47a5d48c 743
+Not signing zededa/mkimage-raw-efi:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9"
+49a6ff8320ce088460c8acb6f36bc15b15d800e9: Pulling from zededa/mkimage-iso-efi
+Digest: sha256:6693333f49b1f7c8e7931c6580e56d05078484b0b099136b7b2aff1b3055e65e
+Status: Image is up to date for zededa/mkimage-iso-efi:49a6ff8320ce088460c8acb6f36bc15b15d800e9
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+mkdir -p dist/arm64/bios
+cd dist/arm64/bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ zededa/build-pkgs_uefi:a3362428c518fb4db1a136a961bd17e8a66fb693-arm64 OVMF.fd
+4470367fe1a31dd6efc7ca03a481ebdb2e2d35ad42a50ec5ff14919fd112f31f
+./tools/makeconfig.sh conf dist/arm64/config.img
++ CONFIG_FILE=/config.img
++ CONFIG_SIZE_KB=1024
++ cd /conf
++ tar xf -
++ echo mtools_skip_check=1
++ dd if=/dev/zero of=/config.img bs=1024 count=1024
+1024+0 records in
+1024+0 records out
++ mkfs.vfat -n ZEDEDA -v /config.img 1024
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is c2606f19, volume label ZEDEDA     .
++ mcopy -i /config.img -s /conf/onboard.cert.pem /conf/onboard.key.pem /conf/root-certificate.pem /conf/server /conf/server.production /conf/wpa_supplicant.conf ::/
+docker pull zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 >/dev/null 2>&1 || : ;\
+if ! docker inspect zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 >/dev/null 2>&1 ; then \
+  if [ -n "" ] ; then \
+     DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh < pkg/zedctr/Dockerfile.cross.in > pkg/zedctr/Dockerfile ;\
+    PKG_HASH=`mktemp -u XXXXXXXXXX` ;\
+    make -C pkg PKGS=zedctr RESCAN_DEPS="" LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash $PKG_HASH" push ;\
+    PKG_HASH=zededa/zedctr:$PKG_HASH ;\
+    docker tag $PKG_HASH zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 ;\
+    docker rmi $PKG_HASH $PKG_HASH- ;\
+  else \
+    make -C pkg PKGS=zedctr LINUXKIT_OPTS="--disable-content-trust --force --disable-cache --hash 152e553e4915b1e2997fd20b50dd9874a3e52fd2 --release snapshot" push ;\
+  fi ;\
+fi
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/pkg'
+(cd ..; ./tools/parse-pkgs.sh pkg/zedctr//Dockerfile.in > pkg/zedctr//Dockerfile)
+Building and pushing "zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2"
+Sending build context to Docker daemon   21.5kB
+Step 1/22 : FROM sha256:b19a646a8e061b3acbb22c002619f2734a683851acf5df7e4f9466b1755f48df as ztools
+ ---> b19a646a8e06
+Step 2/22 : FROM zededa/lisp:6654433c2b3df84d02472f202eee07e4d3173442-arm64 as lisp
+ ---> 52fd71b4f412
+Step 3/22 : FROM zededa/xen-tools:9c96b441d083d7ef7bcb602bf009fa91bd7ebbf2-arm64 as xen-tools
+ ---> 194a0d29c96f
+Step 4/22 : FROM zededa/dnsmasq:c5985cdd83998d06255fe115d230a280c6928f1b-arm64 as dnsmasq
+ ---> 85ce87902c8e
+Step 5/22 : FROM zededa/strongswan:8f5ee3b98aa3ea49a9a4231baac9be933d6155ec-arm64 as strongswan
+ ---> 2e11606a1b07
+Step 6/22 : FROM zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64 as gpttools
+ ---> 3e7b643f9ef1
+Step 7/22 : FROM zededa/watchdog:2aea3af274e4928d2eab2b738d0e100ee5362173-arm64 as watchdog
+ ---> 2682e16114b6
+Step 8/22 : FROM alpine:3.8
+ ---> 0db038343fbd
+Step 9/22 : RUN apk add --no-cache     yajl xz bash openssl iptables ip6tables iproute2 dhcpcd     apk-cron coreutils dmidecode sudo libbz2 libuuid ipset     libaio logrotate pixman glib curl radvd perl ethtool     openssh-server util-linux e2fsprogs libcrypto1.0 xorriso     python libpcap libffi
+ ---> Running in cd3c32de3671
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/66) Installing apk-cron (1.0-r1)
+(2/66) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(3/66) Installing ncurses-terminfo (6.1_p20180818-r1)
+(4/66) Installing ncurses-libs (6.1_p20180818-r1)
+(5/66) Installing readline (7.0.003-r0)
+(6/66) Installing bash (4.4.19-r1)
+Executing bash-4.4.19-r1.post-install
+(7/66) Installing libattr (2.4.47-r7)
+(8/66) Installing libacl (2.2.52-r5)
+(9/66) Installing coreutils (8.29-r2)
+(10/66) Installing ca-certificates (20171114-r3)
+(11/66) Installing nghttp2-libs (1.32.0-r0)
+(12/66) Installing libssh2 (1.8.2-r0)
+(13/66) Installing libcurl (7.61.1-r2)
+(14/66) Installing curl (7.61.1-r2)
+(15/66) Installing dhcpcd (7.0.7-r0)
+(16/66) Installing dmidecode (3.1-r0)
+(17/66) Installing libuuid (2.32-r0)
+(18/66) Installing libblkid (2.32-r0)
+(19/66) Installing libcom_err (1.44.2-r0)
+(20/66) Installing e2fsprogs-libs (1.44.2-r0)
+(21/66) Installing e2fsprogs (1.44.2-r0)
+(22/66) Installing ethtool (4.16-r0)
+(23/66) Installing libffi (3.2.1-r4)
+(24/66) Installing libintl (0.19.8.1-r2)
+(25/66) Installing libmount (2.32-r0)
+(26/66) Installing pcre (8.42-r0)
+(27/66) Installing glib (2.56.1-r0)
+(28/66) Installing libmnl (1.0.4-r0)
+(29/66) Installing jansson (2.11-r0)
+(30/66) Installing libnftnl-libs (1.1.1-r0)
+(31/66) Installing iptables (1.6.2-r0)
+(32/66) Installing ip6tables (1.6.2-r0)
+(33/66) Installing libelf (0.8.13-r3)
+(34/66) Installing iproute2 (4.13.0-r0)
+Executing iproute2-4.13.0-r0.post-install
+(35/66) Installing ipset (6.38-r1)
+(36/66) Installing libaio (0.3.111-r0)
+(37/66) Installing libbz2 (1.0.6-r6)
+(38/66) Installing libcrypto1.0 (1.0.2r-r0)
+(39/66) Installing libpcap (1.8.1-r1)
+(40/66) Installing popt (1.16-r7)
+(41/66) Installing logrotate (3.14.0-r0)
+(42/66) Installing openssh-keygen (7.7_p1-r4)
+(43/66) Installing openssh-server-common (7.7_p1-r4)
+(44/66) Installing openssh-server (7.7_p1-r4)
+(45/66) Installing libssl1.0 (1.0.2r-r0)
+(46/66) Installing openssl (1.0.2r-r0)
+(47/66) Installing perl (5.26.3-r0)
+(48/66) Installing pixman (0.34.0-r5)
+(49/66) Installing expat (2.2.5-r0)
+(50/66) Installing gdbm (1.13-r1)
+(51/66) Installing sqlite-libs (3.25.3-r0)
+(52/66) Installing python2 (2.7.15-r1)
+(53/66) Installing radvd (2.17-r2)
+Executing radvd-2.17-r2.pre-install
+(54/66) Installing sudo (1.8.23-r2)
+(55/66) Installing libsmartcols (2.32-r0)
+(56/66) Installing findmnt (2.32-r0)
+(57/66) Installing libfdisk (2.32-r0)
+(58/66) Installing util-linux (2.32-r0)
+(59/66) Installing libburn (1.4.8-r0)
+(60/66) Installing libedit (20170329.3.1-r3)
+(61/66) Installing libisofs (1.4.8-r0)
+(62/66) Installing libisoburn (1.4.8-r0)
+(63/66) Installing xorriso (1.4.8-r0)
+(64/66) Installing xz-libs (5.2.4-r0)
+(65/66) Installing xz (5.2.4-r0)
+(66/66) Installing yajl (2.1.0-r0)
+Executing busybox-1.28.4-r2.trigger
+Executing ca-certificates-20171114-r3.trigger
+Executing glib-2.56.1-r0.trigger
+OK: 111 MiB in 79 packages
+ ---> 64fd9875f509
+Removing intermediate container cd3c32de3671
+Step 10/22 : RUN [ `uname -m` = "aarch64" ] && apk add --no-cache libfdt || :
+ ---> Running in 10a3de777d2b
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/1) Installing libfdt (1.4.4-r0)
+OK: 111 MiB in 80 packages
+ ---> 80719990b0ea
+Removing intermediate container 10a3de777d2b
+Step 11/22 : RUN ssh-keygen -A ; echo PermitRootLogin yes >> /etc/ssh/sshd_config ; sed -ie '/^root/s#^.*$#root:$6$Ndt1G5AYZFQ8rz7m$7vGZMKKotSYxwxk/.jMfuOCzxw0I3DNedygaQaLF7kYSYsLqiBHhmc8RJSXp8/VxSYPpgYSz/8fkv0hO6I4js.:17477:0:::::#' /etc/shadow
+ ---> Running in 4036c8ea2e0c
+ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519 
+ ---> 35535156fc2d
+Removing intermediate container 4036c8ea2e0c
+Step 12/22 : COPY --from=xen-tools / /
+ ---> 3e6404beb2c4
+Step 13/22 : COPY --from=ztools / /
+ ---> b0fc7ffe574d
+Step 14/22 : COPY --from=lisp / /
+ ---> b468fa544cfd
+Step 15/22 : COPY --from=gpttools / /
+ ---> ad1048b2b390
+Step 16/22 : COPY --from=dnsmasq /usr/sbin/dnsmasq /opt/zededa/bin/dnsmasq
+ ---> 90a5849c61ad
+Step 17/22 : COPY --from=strongswan / /
+ ---> be1d3b87a1f6
+Step 18/22 : COPY --from=watchdog /usr/sbin /usr/sbin
+ ---> 554362d0cef4
+Step 19/22 : COPY rootfs/ /
+ ---> 476f5ce884cf
+Step 20/22 : RUN chmod 644 /etc/logrotate.d/zededa
+ ---> Running in 30bb4c493dee
+ ---> e2d5f9ff6159
+Removing intermediate container 30bb4c493dee
+Step 21/22 : CMD /init.sh
+ ---> Running in 1c4186ca7cdf
+ ---> e92de12b9bd4
+Removing intermediate container 1c4186ca7cdf
+Step 22/22 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/lib/modules:/lib/modules","/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/config:/config","/var/log:/var/log/dom0","/:/hostfs"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '67d281fde09e0272e12b296fee75aaabecf7a65c' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in d9af1a16839a
+ ---> 344c424c6321
+Removing intermediate container d9af1a16839a
+Successfully built 344c424c6321
+Successfully tagged zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64
+Pushing zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64
+The push refers to a repository [docker.io/zededa/zedctr]
+ed7552bafd3c: Preparing
+a1a64ce861e8: Preparing
+c2c99f72275e: Preparing
+930859ddc42b: Preparing
+5523ecc06c42: Preparing
+873b78285a20: Preparing
+a56d18aeaee2: Preparing
+400d5a602195: Preparing
+fa8462a2ec51: Preparing
+179341292db4: Preparing
+42c8def97580: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+fa8462a2ec51: Waiting
+82fe62b38ba2: Waiting
+92d7b4d0b33c: Waiting
+a56d18aeaee2: Waiting
+400d5a602195: Waiting
+179341292db4: Waiting
+42c8def97580: Waiting
+c2c99f72275e: Layer already exists
+873b78285a20: Layer already exists
+a56d18aeaee2: Layer already exists
+ed7552bafd3c: Pushed
+a1a64ce861e8: Pushed
+930859ddc42b: Pushed
+400d5a602195: Layer already exists
+82fe62b38ba2: Layer already exists
+5523ecc06c42: Pushed
+92d7b4d0b33c: Layer already exists
+fa8462a2ec51: Pushed
+179341292db4: Pushed
+42c8def97580: Pushed
+152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64: digest: sha256:1cda7afa2bf9d8af681c8e3dbc70188412f53e149a11ce3ce81611ab6b39cf01 size: 3051
+Pushing zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 to manifest zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2
+time="2019-04-23T08:11:54+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-amd64\". Skipping image."
+time="2019-04-23T08:11:57+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-s390x\". Skipping image."
+Digest: sha256:12a18ed7b363aa7be985308aa1f21d703f7db42b4f477ce9d8f8b7c6b375c420 434
+Not signing zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2
+Tagging zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 as zededa/zedctr:snapshot-arm64
+Pushing zededa/zedctr:snapshot-arm64
+The push refers to a repository [docker.io/zededa/zedctr]
+ed7552bafd3c: Preparing
+a1a64ce861e8: Preparing
+c2c99f72275e: Preparing
+930859ddc42b: Preparing
+5523ecc06c42: Preparing
+873b78285a20: Preparing
+a56d18aeaee2: Preparing
+400d5a602195: Preparing
+fa8462a2ec51: Preparing
+179341292db4: Preparing
+42c8def97580: Preparing
+82fe62b38ba2: Preparing
+92d7b4d0b33c: Preparing
+400d5a602195: Waiting
+fa8462a2ec51: Waiting
+179341292db4: Waiting
+42c8def97580: Waiting
+82fe62b38ba2: Waiting
+92d7b4d0b33c: Waiting
+873b78285a20: Waiting
+a56d18aeaee2: Waiting
+a1a64ce861e8: Layer already exists
+ed7552bafd3c: Layer already exists
+c2c99f72275e: Layer already exists
+930859ddc42b: Layer already exists
+5523ecc06c42: Layer already exists
+873b78285a20: Layer already exists
+400d5a602195: Layer already exists
+fa8462a2ec51: Layer already exists
+179341292db4: Layer already exists
+a56d18aeaee2: Layer already exists
+42c8def97580: Layer already exists
+82fe62b38ba2: Layer already exists
+92d7b4d0b33c: Layer already exists
+snapshot-arm64: digest: sha256:1cda7afa2bf9d8af681c8e3dbc70188412f53e149a11ce3ce81611ab6b39cf01 size: 3051
+Pushing zededa/zedctr:snapshot-arm64 to manifest zededa/zedctr:snapshot
+time="2019-04-23T08:12:10+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zedctr:snapshot-s390x\". Skipping image."
+Digest: sha256:213ff99915ade62ecba57fdaba3a64cdadf8babdb1b1a50c78c6aa5729bc2719 743
+Not signing zededa/zedctr:snapshot
+Build, push and release of "snapshot" complete, all done.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/pkg'
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh images/installer.yml.in > images/installer.yml
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh images/rootfs.yml.in > images/rootfs.yml
+./tools/makerootfs.sh images/rootfs.yml squash dist/arm64/rootfs.img
+Extract kernel image: zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315-arm64
+Add init containers:
+Process init image: zededa/grub:6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be-arm64
+Process init image: zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9-arm64
+Process init image: zededa/fw:1d8c22ae31c42d767ba648b186db4ea967a9c569-arm64
+Process init image: zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99-arm64
+Process init image: zededa/gpt-tools:8e929f0aaa1d2d397c093e68ced86690f511a237-arm64
+Process init image: zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d-arm64
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/containerd:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Add onboot containers:
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+  Create OCI config for linuxkit/mount:v0.5-arm64
+  Create OCI config for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272-arm64
+Add service containers:
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+  Create OCI config for zededa/wwan:5f68442251df0f2625fde14e947f11de2374b72d-arm64
+  Create OCI config for zededa/wlan:8aa66e76c276b97d1141801d3f461e2b3f8f8f97-arm64
+  Create OCI config for zededa/guacd:85a2add30bae37777d3d4f3f17a528fe8db88e96-arm64
+  Create OCI config for zededa/zedctr:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64
+Add files:
+  /containers/services/zededa-tools/lower/opt/zededa/bin/versioninfo
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/17165   0%[==============================\                             ]  9000/17165  52%[================================================-           ] 14000/17165  81%[===================================================-        ] 14900/17165  86%[===========================================================|] 17165/17165 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 202770.05 Kbytes (198.02 Mbytes)
+	32.31% of uncompressed filesystem size (627632.29 Kbytes)
+Inode table size 182036 bytes (177.77 Kbytes)
+	26.07% of uncompressed inode table size (698368 bytes)
+Directory table size 188527 bytes (184.11 Kbytes)
+	45.25% of uncompressed directory table size (416653 bytes)
+Number of duplicate files found 4461
+Number of inodes 18356
+Number of files 13283
+Number of fragments 678
+Number of symbolic links  3465
+Number of device nodes 8
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1600
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+./tools/makeiso.sh images/installer.yml dist/arm64/installer.iso
+Extract kernel image: zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315-arm64
+Add init containers:
+Process init image: zededa/grub:6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be-arm64
+Process init image: zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9-arm64
+Process init image: zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99-arm64
+Process init image: zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d-arm64
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Add onboot containers:
+  Create OCI config for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272-arm64
+  Create OCI config for zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64
+Add files:
+  /bits/config.img
+  /bits/rootfs.img
+xorriso 1.4.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:linuxkit-efi.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data,  569g free
+Added to ISO image: directory '/'='/tmp/efi'
+xorriso : UPDATE : 7732 files added in 1 seconds
+xorriso : UPDATE : 7732 files added in 1 seconds
+libisofs: NOTE : Cannot arrange content of data files in surely reproducible way
+xorriso : UPDATE :  3.75% done
+xorriso : UPDATE :  31.88% done
+ISO image produced: 243092 sectors
+Written to medium : 243092 sectors at LBA 0
+Writing to 'stdio:linuxkit-efi.iso' completed successfully.
+
+./tools/makerootfs.sh images/installer.yml squash dist/arm64/rootfs.img_installer.img
+Extract kernel image: zededa/kernel:7cfa13614bb99a84030db209b6c9a0696c7d3315-arm64
+Add init containers:
+Process init image: zededa/grub:6a5c0688ea5c05aaa92b9e4a40579ea14f5e55be-arm64
+Process init image: zededa/device-trees:18377dd0bc3c33a1602e94a4c43aa0b3c51badb9-arm64
+Process init image: zededa/xen:f51bf3d17fad15b71242befbddec96e177132a99-arm64
+Process init image: zededa/dom0-ztools:b53cd1b5785c128371a5997e3a6e16007718c12d-arm64
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Add onboot containers:
+  Create OCI config for zededa/rngd:5adb10a552c07513159777bd022ac58e23d59272-arm64
+  Create OCI config for zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50-arm64
+Add files:
+  /bits/config.img
+  /bits/rootfs.img
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[=============================================================\] 7821/7821 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 295455.50 Kbytes (288.53 Mbytes)
+	61.70% of uncompressed filesystem size (478873.20 Kbytes)
+Inode table size 66493 bytes (64.93 Kbytes)
+	26.91% of uncompressed inode table size (247054 bytes)
+Directory table size 66365 bytes (64.81 Kbytes)
+	45.40% of uncompressed directory table size (146166 bytes)
+Number of duplicate files found 1440
+Number of inodes 5690
+Number of files 4389
+Number of fragments 152
+Number of symbolic links  914
+Number of device nodes 2
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 385
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+tar -C dist/arm64 -c rootfs.img_installer.img config.img | ./tools/makeflash.sh -C 350 dist/arm64/installer.raw "efi imga conf_win"
+1+0 records in
+1+0 records out
+1 byte copied, 0.000156089 s, 6.4 kB/s
+Unable to find image 'zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50' locally
+335897b5ea6350947ecb1c7fa85f4fac093d4d50: Pulling from zededa/mkimage-raw-efi
+Digest: sha256:0c15be5b4c2d38f5fde53f100c1964459ae80639162f8875e2f70bcf47a5d48c
+Status: Downloaded newer image for zededa/mkimage-raw-efi:335897b5ea6350947ecb1c7fa85f4fac093d4d50
+Unknown (or unrecongnizable) GTP partition table on /output.img
+Creating new GPT entries.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 0
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 1
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 3
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+
+No problems found. 96189 free sectors (47.0 MiB) available in 2
+segments, the largest of which is 94175 (46.0 MiB) in size.
+rm dist/arm64/rootfs.img_installer.img
+tar -C dist/arm64 -c rootfs.img config.img | ./tools/makeflash.sh -C 8192 dist/arm64/fallback.raw
+1+0 records in
+1+0 records out
+1 byte copied, 0.000154321 s, 6.5 kB/s
+Unknown (or unrecongnizable) GTP partition table on /output.img
+Creating new GPT entries.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 0
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 1
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 2
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 3
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 8
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+
+No problems found. 2014 free sectors (1007.0 KiB) available in 1
+segments, the largest of which is 2014 (1007.0 KiB) in size.
+qemu-img convert -c -f raw -O qcow2 dist/arm64/fallback.raw dist/arm64/fallback.qcow2
+rm dist/arm64/fallback.raw
+ln -s fallback.qcow2 dist/arm64/fallback.img
+cp Makefile dist/arm64/bios/OVMF.fd dist/arm64/config.img dist/arm64/installer.iso dist/arm64/installer.raw dist/arm64/rootfs.img dist/arm64/fallback.img images/rootfs.yml images/installer.yml build-pkgs/zenix
+make -C build-pkgs BUILD-PKGS=zenix LINUXKIT_HASH="--hash 152e553e4915b1e2997fd20b50dd9874a3e52fd2 --release snapshot" push
+make[1]: Entering directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+Building and pushing "zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2"
+Error response from daemon: manifest for zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2 not found
+No image pulled, continuing with build
+Sending build context to Docker daemon  1.284GB
+Step 1/9 : FROM alpine:edge
+ ---> a7881f1d3b63
+Step 2/9 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git
+ ---> Using cache
+ ---> c7dd2e65d8d0
+Step 3/9 : COPY . /bits/
+ ---> 86fc135dcdc6
+Step 4/9 : COPY OVMF.fd /bits/bios/OVMF.fd
+ ---> 9cfebfe3bc8b
+Step 5/9 : COPY runme.sh /
+ ---> 2bbf2f81e74c
+Step 6/9 : RUN touch /bits/bios/OVMF.fd
+ ---> Running in 9b934b3dcb32
+ ---> 791ecffa32a6
+Removing intermediate container 9b934b3dcb32
+Step 7/9 : WORKDIR /bits
+ ---> d3091567ac44
+Removing intermediate container 5f8809636b98
+Step 8/9 : ENTRYPOINT /runme.sh
+ ---> Running in 723564ce6919
+ ---> 0704f2595d89
+Removing intermediate container 723564ce6919
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '67d281fde09e0272e12b296fee75aaabecf7a65c' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in ac1a30b3b4dd
+ ---> bf1a8b71642c
+Removing intermediate container ac1a30b3b4dd
+Successfully built bf1a8b71642c
+Successfully tagged zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64
+Pushing zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64
+The push refers to a repository [docker.io/zededa/zenix]
+7838cb2d8f39: Preparing
+c96588d795bb: Preparing
+9fa976bb84b7: Preparing
+8a6236f71731: Preparing
+7ec4b1dbd042: Preparing
+d4d04a8204b5: Preparing
+2a2e682c36db: Preparing
+2a2e682c36db: Waiting
+d4d04a8204b5: Waiting
+c96588d795bb: Layer already exists
+7ec4b1dbd042: Layer already exists
+d4d04a8204b5: Layer already exists
+2a2e682c36db: Layer already exists
+9fa976bb84b7: Pushed
+7838cb2d8f39: Pushed
+8a6236f71731: Pushed
+152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64: digest: sha256:49ebb86ebe340bdbbd8e125da6ef0552498dacedb9f1fcce45cd4cffc25b1dd8 size: 1788
+Pushing zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 to manifest zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2
+time="2019-04-23T08:28:11+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-amd64\". Skipping image."
+time="2019-04-23T08:28:15+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-s390x\". Skipping image."
+Digest: sha256:bf8f790e2f42822b74f781443b198840b95f50309d2a445225037e5e3b868734 434
+Not signing zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2
+Tagging zededa/zenix:152e553e4915b1e2997fd20b50dd9874a3e52fd2-arm64 as zededa/zenix:snapshot-arm64
+Pushing zededa/zenix:snapshot-arm64
+The push refers to a repository [docker.io/zededa/zenix]
+7838cb2d8f39: Preparing
+c96588d795bb: Preparing
+9fa976bb84b7: Preparing
+8a6236f71731: Preparing
+7ec4b1dbd042: Preparing
+d4d04a8204b5: Preparing
+2a2e682c36db: Preparing
+d4d04a8204b5: Waiting
+2a2e682c36db: Waiting
+7ec4b1dbd042: Layer already exists
+c96588d795bb: Layer already exists
+8a6236f71731: Layer already exists
+7838cb2d8f39: Layer already exists
+9fa976bb84b7: Layer already exists
+d4d04a8204b5: Layer already exists
+2a2e682c36db: Layer already exists
+snapshot-arm64: digest: sha256:49ebb86ebe340bdbbd8e125da6ef0552498dacedb9f1fcce45cd4cffc25b1dd8 size: 1788
+Pushing zededa/zenix:snapshot-arm64 to manifest zededa/zenix:snapshot
+time="2019-04-23T08:28:26+02:00" level=warning msg="Couldn't find or access image reference \"zededa/zenix:snapshot-s390x\". Skipping image."
+Digest: sha256:1703bac79129d1537501ba21688fa606d07b63809cdcb555e3b426e6b279c825 743
+Not signing zededa/zenix:snapshot
+Build, push and release of "snapshot" complete, all done.
+make[1]: Leaving directory '/home/zededa-ci/src/zenbuild/build-pkgs'
+FINISHED
