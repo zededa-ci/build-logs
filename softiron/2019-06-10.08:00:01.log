@@ -1,0 +1,21 @@
+From https://github.com/lf-edge/eve
+   e860f6cb..5b785f19  master     -> origin/master
+Building the following tags:  origin/master (latest tag is 3.1.0)
+Removing .go/
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+Removing images/installer.yml
+Removing images/rootfs.yml
+HEAD is now at 5b785f19 Adding CODEOWNERS to our repo
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+the input device is not a TTY
+Makefile:257: recipe for target '/home/zededa-ci/src/eve/build-tools/bin/manifest-tool' failed
+make: *** [/home/zededa-ci/src/eve/build-tools/bin/manifest-tool] Error 1
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+the input device is not a TTY
+Makefile:257: recipe for target '/home/zededa-ci/src/eve/build-tools/bin/manifest-tool' failed
+make: *** [/home/zededa-ci/src/eve/build-tools/bin/manifest-tool] Error 1
+FINISHED
