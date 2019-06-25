@@ -1,0 +1,666 @@
+From https://github.com/lf-edge/eve
+   288fdfa3..2db014c7  master     -> origin/master
+ * [new tag]           3.1.1      -> 3.1.1
+ * [new tag]           3.2.0      -> 3.2.0
+Building the following tags:  origin/master (latest tag is 3.2.0)
+Removing .go/
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+Removing images/installer.yml
+Removing images/rootfs.yml
+HEAD is now at 2db014c7 fixed serial in xen.cfg
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+Building and pushing "lfedge/eve-debug:7470486834865217ccd1f589f44fba48a9647081"
+7470486834865217ccd1f589f44fba48a9647081: Pulling from lfedge/eve-debug
+Digest: sha256:bc7c7b8808877a4460ec6549365bddba3f3316e23beb69b1154b96206cf1c463
+Status: Image is up to date for lfedge/eve-debug:7470486834865217ccd1f589f44fba48a9647081
+Building and pushing "lfedge/eve-device-trees:107f663ced4eda54228dc95b17f3c5ed636caf36"
+107f663ced4eda54228dc95b17f3c5ed636caf36: Pulling from lfedge/eve-device-trees
+Digest: sha256:b357525ec26ad2fca6304fa24e14434d464803df7d8719c4b7f1b6e493767db5
+Status: Image is up to date for lfedge/eve-device-trees:107f663ced4eda54228dc95b17f3c5ed636caf36
+Building and pushing "lfedge/eve-dnsmasq:cdb36dc56fb50bbd2b28123e435b3660adf34efb"
+cdb36dc56fb50bbd2b28123e435b3660adf34efb: Pulling from lfedge/eve-dnsmasq
+Digest: sha256:b55dd556251ba5ae5308bba68357e778cf80ef66292daab53d3f509f7c7ff22b
+Status: Image is up to date for lfedge/eve-dnsmasq:cdb36dc56fb50bbd2b28123e435b3660adf34efb
+Building and pushing "lfedge/eve-dom0-ztools:0128e43f0aef91f403e436d9e128f8f239f5bbbd"
+0128e43f0aef91f403e436d9e128f8f239f5bbbd: Pulling from lfedge/eve-dom0-ztools
+Digest: sha256:640cab7b63dbeffb8b63828a263fae7ef4dc6faa4e5aaa8a6ee93bc5170b7c30
+Status: Image is up to date for lfedge/eve-dom0-ztools:0128e43f0aef91f403e436d9e128f8f239f5bbbd
+Building and pushing "lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541"
+e07c45a98386767ec3926b813dc4b46a96a81541: Pulling from lfedge/eve-fw
+Digest: sha256:1f2c0ab02db59a1e79c0cc2529045eb39b73a739b450e8d8029875bdf9f5178e
+Status: Image is up to date for lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541
+Building and pushing "lfedge/eve-gpt-tools:19ef56f5014fab1978a6e98b047d4498eabf8295"
+19ef56f5014fab1978a6e98b047d4498eabf8295: Pulling from lfedge/eve-gpt-tools
+Digest: sha256:cc958c98fbff93c02b3454b0976d76656a6f75f0dc01fa8ddaeb7d360bb2a165
+Status: Image is up to date for lfedge/eve-gpt-tools:19ef56f5014fab1978a6e98b047d4498eabf8295
+Building and pushing "lfedge/eve-grub:d2b849944fc4bb95e04c7414a79a7c2c2fe5a245"
+d2b849944fc4bb95e04c7414a79a7c2c2fe5a245: Pulling from lfedge/eve-grub
+Digest: sha256:7b67b1880ebc9978a7aa38f3ddf524be8bb9cb115380ec52995388c2a3f6e0e7
+Status: Image is up to date for lfedge/eve-grub:d2b849944fc4bb95e04c7414a79a7c2c2fe5a245
+Building and pushing "lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be"
+f1f08a0fcadd35320f5d03fe0f0a1a318e8449be: Pulling from lfedge/eve-guacd
+Digest: sha256:c8f56593d2e0a75130182602c85a4fb24e7d79c53a7717f718fc09bb84cbaab2
+Status: Image is up to date for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be
+Building and pushing "lfedge/eve-kernel:5303468200baef2e1747f2ded4ba3e0413400c79"
+5303468200baef2e1747f2ded4ba3e0413400c79: Pulling from lfedge/eve-kernel
+Digest: sha256:4a815154a29119b65bc02854d5e679cfd29dbf0336fdc17e78e65e1b00882a1b
+Status: Image is up to date for lfedge/eve-kernel:5303468200baef2e1747f2ded4ba3e0413400c79
+Building and pushing "lfedge/eve-lisp:4bdcc521c878167913dabc59743fe4994a21ed56"
+4bdcc521c878167913dabc59743fe4994a21ed56: Pulling from lfedge/eve-lisp
+Digest: sha256:cafe8de235b9129c2d9bcab0bc8256694e1021d177d57eb33e2537bdd13a0734
+Status: Image is up to date for lfedge/eve-lisp:4bdcc521c878167913dabc59743fe4994a21ed56
+Building and pushing "lfedge/eve-mkconf:ecf6b2692257d32b006c1768f8c88fdfdf2a8fca"
+ecf6b2692257d32b006c1768f8c88fdfdf2a8fca: Pulling from lfedge/eve-mkconf
+Digest: sha256:77ebadc0beccc842b6853e7a1a77b8661bda2ac9ca0c8eb8a92e03d44d92d8fc
+Status: Image is up to date for lfedge/eve-mkconf:ecf6b2692257d32b006c1768f8c88fdfdf2a8fca
+Building and pushing "lfedge/eve-mkimage-iso-efi:3f0400e9324c8d3b044745119f5e0d74f37067ae"
+3f0400e9324c8d3b044745119f5e0d74f37067ae: Pulling from lfedge/eve-mkimage-iso-efi
+Digest: sha256:512c6e7bf6ceeb77885dd107c0e5f855f1c1f1f040d95a6ec97545ebfe71ca66
+Status: Image is up to date for lfedge/eve-mkimage-iso-efi:3f0400e9324c8d3b044745119f5e0d74f37067ae
+Building and pushing "lfedge/eve-mkimage-raw-efi:8887bbf04ea9ce2ca0e40d83025a658d8dc8396e"
+8887bbf04ea9ce2ca0e40d83025a658d8dc8396e: Pulling from lfedge/eve-mkimage-raw-efi
+Digest: sha256:1661fd474fdc3d02ccf95420809b58fea8385a92082d2db957ba4e97e8fec479
+Status: Image is up to date for lfedge/eve-mkimage-raw-efi:8887bbf04ea9ce2ca0e40d83025a658d8dc8396e
+Building and pushing "lfedge/eve-mkrootfs-ext4:08d616d0ae2fed5b9996b80e1caf06183ea371c6"
+08d616d0ae2fed5b9996b80e1caf06183ea371c6: Pulling from lfedge/eve-mkrootfs-ext4
+Digest: sha256:01c722122b4cdfbdaedbc7052bd00806a254850da955fd6fb6c5bf5ec68a73b0
+Status: Image is up to date for lfedge/eve-mkrootfs-ext4:08d616d0ae2fed5b9996b80e1caf06183ea371c6
+Building and pushing "lfedge/eve-mkrootfs-squash:061a611a4fe80e5386f05bc1ebe0bd87952da1b4"
+061a611a4fe80e5386f05bc1ebe0bd87952da1b4: Pulling from lfedge/eve-mkrootfs-squash
+Digest: sha256:4ceb8ac0f5fab4d17a234b8549431737bf977fd3cb851324afa4a26181fc40c0
+Status: Image is up to date for lfedge/eve-mkrootfs-squash:061a611a4fe80e5386f05bc1ebe0bd87952da1b4
+Building and pushing "lfedge/eve-xen-tools:d6ca7e6ebbd3c234791edc58b65d7ce74b4b9e98"
+d6ca7e6ebbd3c234791edc58b65d7ce74b4b9e98: Pulling from lfedge/eve-xen-tools
+Digest: sha256:dc7b7fec76dcc838b5d6a0d233e445a343d663bb9fcf86653e8f72b55a896c0b
+Status: Image is up to date for lfedge/eve-xen-tools:d6ca7e6ebbd3c234791edc58b65d7ce74b4b9e98
+Building and pushing "lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252"
+6dda5ee56b295a0115e7c09a0ca23aa925426252: Pulling from lfedge/eve-strongswan
+Digest: sha256:23a114b85bb003ff07d9ace288f437aa4b1b40269ba716754261013fa00781c5
+Status: Image is up to date for lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252
+Building and pushing "lfedge/eve-watchdog:6467d18c58faa455deaf3e4ab04d9fd4a5ed6512"
+6467d18c58faa455deaf3e4ab04d9fd4a5ed6512: Pulling from lfedge/eve-watchdog
+Digest: sha256:799264427df90434c1e7ffe313e383550b5a8ae8b918aeeb27c99e7a6035abe1
+Status: Image is up to date for lfedge/eve-watchdog:6467d18c58faa455deaf3e4ab04d9fd4a5ed6512
+Building and pushing "lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466"
+Error response from daemon: manifest for lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466 not found
+No image pulled, continuing with build
+Sending build context to Docker daemon   26.3MB
+Step 1/39 : ARG GOVER=1.12.4
+ ---> 
+Step 2/39 : FROM golang:${GOVER}-alpine as build
+ ---> 7701ec5e84de
+Step 3/39 : RUN apk update
+ ---> Using cache
+ ---> 1313b4b081cd
+Step 4/39 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux libpcap-dev make
+ ---> Using cache
+ ---> 3239420f4da5
+Step 5/39 : ENV GOFLAGS -mod=vendor
+ ---> Using cache
+ ---> 5a32bee8cdd0
+Step 6/39 : ENV GO111MODULE on
+ ---> Using cache
+ ---> 4b592687c631
+Step 7/39 : ENV CGO_ENABLED 1
+ ---> Using cache
+ ---> ffc776e657c2
+Step 8/39 : ARG GOARCH=
+ ---> Using cache
+ ---> ed6944649d94
+Step 9/39 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Using cache
+ ---> f305b1951a02
+Step 10/39 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Using cache
+ ---> ce95abeed10e
+Step 11/39 : ADD ./ /pillar/
+ ---> a2e7cd747aaf
+Step 12/39 : WORKDIR /pillar
+ ---> 21c93ff7f2f9
+Removing intermediate container b7ae31b9b4bf
+Step 13/39 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc) ;    echo "Running go vet" && go vet ./... &&     echo "Running go fmt" && ERR=$(gofmt -e -l -s $(find . -name \*.go | grep -v /vendor/)) &&        if [ -n "$ERR" ] ; then echo $ERR ; exit 1 ; fi &&     make DISTDIR=/dist build
+ ---> Running in 5561c5a4addc
+Running go vet
+Running go fmt
+mkdir -p /dist
+Building /dist/zedbox
+GO111MODULE=on GOOS=linux CGO_ENABLED=1 go build -mod=vendor -ldflags -X=main.Version=---2019-06-25.06.03 -o /dist/zedbox ./zedbox
+logmanager
+ledmanager
+downloader
+verifier
+client
+zedrouter
+domainmgr
+identitymgr
+zedmanager
+zedagent
+hardwaremodel
+ipcmonitor
+nim
+diag
+baseosmgr
+wstunnelclient
+conntrack
+lisp-ztr
+waitforaddr
+tpmmgr
+ ---> 2c6ee90241f0
+Removing intermediate container 5561c5a4addc
+Step 14/39 : FROM lfedge/eve-lisp:4bdcc521c878167913dabc59743fe4994a21ed56-arm64 as lisp
+ ---> 4fa4ff09e238
+Step 15/39 : FROM lfedge/eve-xen-tools:d6ca7e6ebbd3c234791edc58b65d7ce74b4b9e98-arm64 as xen-tools
+ ---> 757461f283c0
+Step 16/39 : FROM lfedge/eve-dnsmasq:cdb36dc56fb50bbd2b28123e435b3660adf34efb-arm64 as dnsmasq
+ ---> 7698ac38c622
+Step 17/39 : FROM lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252-arm64 as strongswan
+ ---> d23c4a3696a4
+Step 18/39 : FROM lfedge/eve-gpt-tools:19ef56f5014fab1978a6e98b047d4498eabf8295-arm64 as gpttools
+ ---> 7da24df3be62
+Step 19/39 : FROM lfedge/eve-watchdog:6467d18c58faa455deaf3e4ab04d9fd4a5ed6512-arm64 as watchdog
+ ---> 87dfc9a8e6dd
+Step 20/39 : FROM alpine:3.8
+ ---> 91f7ef093236
+Step 21/39 : RUN apk add --no-cache     yajl xz bash openssl iptables ip6tables iproute2 dhcpcd     apk-cron coreutils dmidecode sudo libbz2 libuuid ipset     libaio logrotate pixman glib curl radvd perl ethtool     util-linux e2fsprogs libcrypto1.0 xorriso     python libpcap libffi
+ ---> Using cache
+ ---> 0e049608a38f
+Step 22/39 : RUN [ `uname -m` = "aarch64" ] && apk add --no-cache libfdt || :
+ ---> Using cache
+ ---> 7a2ca1860c0f
+Step 23/39 : ADD conf/root-certificate.pem conf/server conf/server.production /opt/zededa/examples/config/
+ ---> Using cache
+ ---> a7267dd2b108
+Step 24/39 : ADD scripts/device-steps.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh scripts/watchdog-report.sh /opt/zededa/bin/
+ ---> 1664f85ac782
+Step 25/39 : ADD conf/AssignableAdapters /var/tmp/zededa/AssignableAdapters
+ ---> 7352f08b1436
+Step 26/39 : ADD conf/DeviceNetworkConfig /var/tmp/zededa/DeviceNetworkConfig
+ ---> 2ea0c6a4fefa
+Step 27/39 : ADD conf/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> f350c162ea8d
+Step 28/39 : COPY --from=build /dist /opt/zededa/bin
+ ---> e10c7dd8f96c
+Step 29/39 : COPY --from=xen-tools / /
+ ---> 950062442846
+Step 30/39 : COPY --from=lisp / /
+ ---> 24109b7bd6da
+Step 31/39 : COPY --from=gpttools / /
+ ---> 92328908f3c0
+Step 32/39 : COPY --from=dnsmasq /usr/sbin/dnsmasq /opt/zededa/bin/dnsmasq
+ ---> abef4b35dcea
+Step 33/39 : COPY --from=strongswan / /
+ ---> e1e22de55811
+Step 34/39 : COPY --from=watchdog /usr/sbin /usr/sbin
+ ---> 889c8b8b1ea5
+Step 35/39 : COPY rootfs/ /
+ ---> fa8efa435807
+Step 36/39 : RUN chmod 644 /etc/logrotate.d/zededa
+ ---> Running in 7d53ad937b83
+ ---> 4a958357e7c2
+Removing intermediate container 7d53ad937b83
+Step 37/39 : WORKDIR /
+ ---> f0662d573918
+Removing intermediate container ad4cb65d9ca5
+Step 38/39 : CMD /init.sh
+ ---> Running in 3449aa391e74
+ ---> 42eae3b9842a
+Removing intermediate container 3449aa391e74
+Step 39/39 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/lib/modules:/lib/modules","/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/config:/config","/var/log:/var/log/dom0","/:/hostfs","/etc/eve-release:/etc/eve-release"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '2db014c7a56e0f1ec0ae9a0b84a9b7eaf59d57c7' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 5b01378b23fe
+ ---> 1374a2654325
+Removing intermediate container 5b01378b23fe
+Successfully built 1374a2654325
+Successfully tagged lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-arm64
+Pushing lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-arm64
+The push refers to a repository [docker.io/lfedge/eve-pillar]
+f3cdab45c760: Preparing
+e60d14258646: Preparing
+29a5a39628f7: Preparing
+a1cd02a95e02: Preparing
+d2fa071bca8e: Preparing
+af8624ceb1d0: Preparing
+9ec8cf3e76df: Preparing
+0dfbb60f49ee: Preparing
+98d58d277fe3: Preparing
+5f57f6717bfa: Preparing
+a2aa0bdba9c5: Preparing
+2be2a3e1925f: Preparing
+27d4d6b4912a: Preparing
+96fdabf1f4d2: Preparing
+a96b1a01ad03: Preparing
+11ef7eb92407: Preparing
+9ec8cf3e76df: Waiting
+0dfbb60f49ee: Waiting
+af8624ceb1d0: Waiting
+98d58d277fe3: Waiting
+5f57f6717bfa: Waiting
+a2aa0bdba9c5: Waiting
+2be2a3e1925f: Waiting
+27d4d6b4912a: Waiting
+96fdabf1f4d2: Waiting
+a96b1a01ad03: Waiting
+11ef7eb92407: Waiting
+29a5a39628f7: Layer already exists
+f3cdab45c760: Layer already exists
+d2fa071bca8e: Layer already exists
+af8624ceb1d0: Layer already exists
+9ec8cf3e76df: Layer already exists
+a1cd02a95e02: Pushed
+e60d14258646: Pushed
+98d58d277fe3: Pushed
+5f57f6717bfa: Pushed
+27d4d6b4912a: Layer already exists
+96fdabf1f4d2: Layer already exists
+a2aa0bdba9c5: Pushed
+2be2a3e1925f: Pushed
+11ef7eb92407: Layer already exists
+a96b1a01ad03: Layer already exists
+0dfbb60f49ee: Pushed
+8dc4a768e1425911c6dca462c8f405e4df173466-arm64: digest: sha256:867a9a2f9cf1d9973c039683573797b6637738060eb6fabbb97147454e2b1582 size: 3677
+Pushing lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-arm64 to manifest lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466
+time="2019-06-25T08:05:00+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-s390x\". Skipping image."
+Digest: sha256:215dae8f0beebf11dd5e849205c580c59c5935c5ee4fb386f4afa5e799894458 743
+Not signing lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466
+Tagging lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-arm64 as lfedge/eve-pillar:snapshot-arm64
+Pushing lfedge/eve-pillar:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve-pillar]
+f3cdab45c760: Preparing
+e60d14258646: Preparing
+29a5a39628f7: Preparing
+a1cd02a95e02: Preparing
+d2fa071bca8e: Preparing
+af8624ceb1d0: Preparing
+9ec8cf3e76df: Preparing
+0dfbb60f49ee: Preparing
+98d58d277fe3: Preparing
+5f57f6717bfa: Preparing
+a2aa0bdba9c5: Preparing
+2be2a3e1925f: Preparing
+27d4d6b4912a: Preparing
+96fdabf1f4d2: Preparing
+a96b1a01ad03: Preparing
+11ef7eb92407: Preparing
+af8624ceb1d0: Waiting
+9ec8cf3e76df: Waiting
+0dfbb60f49ee: Waiting
+98d58d277fe3: Waiting
+5f57f6717bfa: Waiting
+a2aa0bdba9c5: Waiting
+2be2a3e1925f: Waiting
+27d4d6b4912a: Waiting
+96fdabf1f4d2: Waiting
+a96b1a01ad03: Waiting
+11ef7eb92407: Waiting
+29a5a39628f7: Layer already exists
+a1cd02a95e02: Layer already exists
+e60d14258646: Layer already exists
+f3cdab45c760: Layer already exists
+d2fa071bca8e: Layer already exists
+af8624ceb1d0: Layer already exists
+9ec8cf3e76df: Layer already exists
+0dfbb60f49ee: Layer already exists
+98d58d277fe3: Layer already exists
+5f57f6717bfa: Layer already exists
+a2aa0bdba9c5: Layer already exists
+2be2a3e1925f: Layer already exists
+27d4d6b4912a: Layer already exists
+a96b1a01ad03: Layer already exists
+96fdabf1f4d2: Layer already exists
+11ef7eb92407: Layer already exists
+snapshot-arm64: digest: sha256:867a9a2f9cf1d9973c039683573797b6637738060eb6fabbb97147454e2b1582 size: 3677
+Pushing lfedge/eve-pillar:snapshot-arm64 to manifest lfedge/eve-pillar:snapshot
+time="2019-06-25T08:05:11+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-pillar:snapshot-s390x\". Skipping image."
+Digest: sha256:215dae8f0beebf11dd5e849205c580c59c5935c5ee4fb386f4afa5e799894458 743
+Not signing lfedge/eve-pillar:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "lfedge/eve-qrexec-lib:b0fb86eb752be7884d4d83c1dbbb025e75c5c466"
+b0fb86eb752be7884d4d83c1dbbb025e75c5c466: Pulling from lfedge/eve-qrexec-lib
+Digest: sha256:738f796da4d434031d40e93bc8f5e9943e804861834ae687a926f60bfaac7cf7
+Status: Image is up to date for lfedge/eve-qrexec-lib:b0fb86eb752be7884d4d83c1dbbb025e75c5c466
+Building and pushing "lfedge/eve-qrexec-dom0:29024a9e04a96b4baede4f474dcf85c1cef98607"
+29024a9e04a96b4baede4f474dcf85c1cef98607: Pulling from lfedge/eve-qrexec-dom0
+Digest: sha256:cdd8e3bb99cb58ce3ca6e8a55e767cf610357eb24bb3c47b8f1835c3c8bedbcb
+Status: Image is up to date for lfedge/eve-qrexec-dom0:29024a9e04a96b4baede4f474dcf85c1cef98607
+Building and pushing "lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7"
+6e16dad8553a6c2939854abfa9f34a5f2604bce7: Pulling from lfedge/eve-rngd
+Digest: sha256:4c880395a2ab261cc4abe2b866db6764527c19c61a187e68470e1e3f94f99388
+Status: Image is up to date for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7
+Building and pushing "lfedge/eve-uefi:aef36d9c29fd16f9bae72a74d887568f0ef138f0"
+aef36d9c29fd16f9bae72a74d887568f0ef138f0: Pulling from lfedge/eve-uefi
+Digest: sha256:10151b39c87a095cc3ad92ef41d04a3d31b6f676de5968201fa9849e4f931069
+Status: Image is up to date for lfedge/eve-uefi:aef36d9c29fd16f9bae72a74d887568f0ef138f0
+Building and pushing "lfedge/eve-wlan:c0808ff7629fe29203a4fb0025afef836b6c0e3c"
+c0808ff7629fe29203a4fb0025afef836b6c0e3c: Pulling from lfedge/eve-wlan
+Digest: sha256:294a580bd34fbb787a9e8b4a44ae03ee230819de86929640da3789b7b4cbc8e7
+Status: Image is up to date for lfedge/eve-wlan:c0808ff7629fe29203a4fb0025afef836b6c0e3c
+Building and pushing "lfedge/eve-wwan:d6017841c27672fe466ea091498c58dade273f1d"
+d6017841c27672fe466ea091498c58dade273f1d: Pulling from lfedge/eve-wwan
+Digest: sha256:59ecbd968eb05d80cc58245e6f12786fc004831ca87bbceb1a90975d0117d499
+Status: Image is up to date for lfedge/eve-wwan:d6017841c27672fe466ea091498c58dade273f1d
+Building and pushing "lfedge/eve-xen:2d1814903e8397595800c3684ea719ab152f4d3d"
+2d1814903e8397595800c3684ea719ab152f4d3d: Pulling from lfedge/eve-xen
+Digest: sha256:e5ce70aff916556e8b4e9e06086eefdd8c2a8d55b63fcfc11cebdc61f65db6a1
+Status: Image is up to date for lfedge/eve-xen:2d1814903e8397595800c3684ea719ab152f4d3d
+Done building packages
+rm pkg/qrexec-dom0/Dockerfile pkg/qrexec-lib/Dockerfile pkg/pillar/Dockerfile
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/bios
+cd /home/zededa-ci/src/eve/dist/arm64/bios ; _() { C=`docker create $1 fake` ; docker export $C | tar -xf - $2 ; docker rm $C ; } ; _ lfedge/eve-uefi:aef36d9c29fd16f9bae72a74d887568f0ef138f0-arm64 OVMF.fd
+9d9eb15046ee68cee7b02d61514d320d6fcd24ccd4f6e860aba67c9a6a813ba0
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+./tools/makeconfig.sh conf /home/zededa-ci/src/eve/dist/arm64/config.img
++ CONFIG_FILE=/config.img
++ CONFIG_SIZE_KB=1024
++ cd /conf
++ tar xf -
++ echo mtools_skip_check=1
++ dd if=/dev/zero of=/config.img bs=1024 count=1024
+1024+0 records in
+1024+0 records out
++ mkfs.vfat -n EVE -v /config.img 1024
+mkfs.fat 4.1 (2017-01-24)
++ mcopy -i /config.img -s /conf/authorized_keys /conf/onboard.cert.pem /conf/onboard.key.pem /conf/root-certificate.pem /conf/server /conf/wpa_supplicant.conf ::/
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 9b0ae6e5, volume label EVE        .
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+./tools/makerootfs.sh images/rootfs.yml squash /home/zededa-ci/src/eve/dist/arm64/rootfs.img
+Extract kernel image: lfedge/eve-kernel:5303468200baef2e1747f2ded4ba3e0413400c79-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/containerd:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Process init image: lfedge/eve-grub:d2b849944fc4bb95e04c7414a79a7c2c2fe5a245-arm64
+Process init image: lfedge/eve-device-trees:107f663ced4eda54228dc95b17f3c5ed636caf36-arm64
+Process init image: lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541-arm64
+Process init image: lfedge/eve-xen:2d1814903e8397595800c3684ea719ab152f4d3d-arm64
+Process init image: lfedge/eve-gpt-tools:19ef56f5014fab1978a6e98b047d4498eabf8295-arm64
+Process init image: lfedge/eve-dom0-ztools:0128e43f0aef91f403e436d9e128f8f239f5bbbd-arm64
+Add onboot containers:
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+  Create OCI config for linuxkit/mount:v0.5-arm64
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+Add service containers:
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+  Create OCI config for lfedge/eve-wwan:d6017841c27672fe466ea091498c58dade273f1d-arm64
+  Create OCI config for lfedge/eve-wlan:c0808ff7629fe29203a4fb0025afef836b6c0e3c-arm64
+  Create OCI config for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be-arm64
+  Create OCI config for lfedge/eve-pillar:8dc4a768e1425911c6dca462c8f405e4df173466-arm64
+Add files:
+  /etc/eve-release
+  /containers/services/pillar/lower/opt/zededa/bin/versioninfo
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/19242   0%[===========|                                                ]  3600/19242  18%[=============================================-              ] 15000/19242  77%[=================================================/          ] 16300/19242  84%[===========================================================\] 19242/19242 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 208800.64 Kbytes (203.91 Mbytes)
+	32.61% of uncompressed filesystem size (640311.19 Kbytes)
+Inode table size 209766 bytes (204.85 Kbytes)
+	25.60% of uncompressed inode table size (819463 bytes)
+Directory table size 221571 bytes (216.38 Kbytes)
+	45.09% of uncompressed directory table size (491377 bytes)
+Number of duplicate files found 6484
+Number of inodes 21142
+Number of files 15314
+Number of fragments 678
+Number of symbolic links  4083
+Number of device nodes 5
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1740
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+./tools/makeiso.sh images/installer.yml /home/zededa-ci/src/eve/dist/arm64/installer.iso
+Extract kernel image: lfedge/eve-kernel:5303468200baef2e1747f2ded4ba3e0413400c79-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Process init image: lfedge/eve-grub:d2b849944fc4bb95e04c7414a79a7c2c2fe5a245-arm64
+Process init image: lfedge/eve-device-trees:107f663ced4eda54228dc95b17f3c5ed636caf36-arm64
+Process init image: lfedge/eve-xen:2d1814903e8397595800c3684ea719ab152f4d3d-arm64
+Process init image: lfedge/eve-dom0-ztools:0128e43f0aef91f403e436d9e128f8f239f5bbbd-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for lfedge/eve-mkimage-raw-efi:8887bbf04ea9ce2ca0e40d83025a658d8dc8396e-arm64
+Add files:
+  /bits/config.img
+  /bits/rootfs.img
+  /etc/eve-release
+xorriso 1.4.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:linuxkit-efi.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data,  289g free
+Added to ISO image: directory '/'='/tmp/efi'
+xorriso : UPDATE : 7732 files added in 1 seconds
+xorriso : UPDATE : 7732 files added in 1 seconds
+libisofs: NOTE : Cannot arrange content of data files in surely reproducible way
+xorriso : UPDATE :  3.38% done
+xorriso : UPDATE :  88.52% done
+ISO image produced: 246104 sectors
+Written to medium : 246104 sectors at LBA 0
+Writing to 'stdio:linuxkit-efi.iso' completed successfully.
+
+./tools/makerootfs.sh images/installer.yml squash /home/zededa-ci/src/eve/dist/arm64/rootfs.img_installer.img
+Extract kernel image: lfedge/eve-kernel:5303468200baef2e1747f2ded4ba3e0413400c79-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:v0.5-arm64
+Process init image: linuxkit/getty:v0.5-arm64
+Process init image: lfedge/eve-grub:d2b849944fc4bb95e04c7414a79a7c2c2fe5a245-arm64
+Process init image: lfedge/eve-device-trees:107f663ced4eda54228dc95b17f3c5ed636caf36-arm64
+Process init image: lfedge/eve-xen:2d1814903e8397595800c3684ea719ab152f4d3d-arm64
+Process init image: lfedge/eve-dom0-ztools:0128e43f0aef91f403e436d9e128f8f239f5bbbd-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for lfedge/eve-mkimage-raw-efi:8887bbf04ea9ce2ca0e40d83025a658d8dc8396e-arm64
+Add files:
+  /bits/config.img
+  /bits/rootfs.img
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[==============-                                               ] 1900/7866  24%[===============================-                              ] 4100/7866  52%[======================================\                       ] 5000/7866  63%[=============================================================|] 7866/7866 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 301445.15 Kbytes (294.38 Mbytes)
+	62.17% of uncompressed filesystem size (484865.34 Kbytes)
+Inode table size 66463 bytes (64.91 Kbytes)
+	26.88% of uncompressed inode table size (247238 bytes)
+Directory table size 66294 bytes (64.74 Kbytes)
+	45.38% of uncompressed directory table size (146084 bytes)
+Number of duplicate files found 1440
+Number of inodes 5690
+Number of files 4389
+Number of fragments 152
+Number of symbolic links  915
+Number of device nodes 1
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 385
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+tar -C /home/zededa-ci/src/eve/dist/arm64 -c rootfs.img_installer.img config.img | ./tools/makeflash.sh -C 350 /home/zededa-ci/src/eve/dist/arm64/installer.raw "efi imga conf_win inventory_win"
+1+0 records in
+1+0 records out
+1 byte copied, 0.000155945 s, 6.4 kB/s
+Unknown (or unrecongnizable) GTP partition table on /output.img
+Creating new GPT entries.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 0
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 1
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 3
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 4
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+
+No problems found. 75709 free sectors (37.0 MiB) available in 2
+segments, the largest of which is 73695 (36.0 MiB) in size.
+rm /home/zededa-ci/src/eve/dist/arm64/rootfs.img_installer.img
+tar -C /home/zededa-ci/src/eve/dist/arm64 -c rootfs.img config.img | ./tools/makeflash.sh -C 8192 /home/zededa-ci/src/eve/dist/arm64/live.raw
+1+0 records in
+1+0 records out
+1 byte copied, 0.000151248 s, 6.6 kB/s
+Unknown (or unrecongnizable) GTP partition table on /output.img
+Creating new GPT entries.
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 0
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 1
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 2
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 3
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+Setting name!
+partNum is 8
+Warning: The kernel is still using the old partition table.
+The new table will be used at the next reboot or after you
+run partprobe(8) or kpartx(8)
+The operation has completed successfully.
+
+No problems found. 2014 free sectors (1007.0 KiB) available in 1
+segments, the largest of which is 2014 (1007.0 KiB) in size.
+qemu-img convert -c -f raw -O qcow2 /home/zededa-ci/src/eve/dist/arm64/live.raw /home/zededa-ci/src/eve/dist/arm64/live.qcow2
+rm /home/zededa-ci/src/eve/dist/arm64/live.raw
+ln -s live.qcow2 /home/zededa-ci/src/eve/dist/arm64/live.img
+cp pkg/eve/* Makefile images/rootfs.yml images/installer.yml /home/zededa-ci/src/eve/dist/arm64
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --hash-path /home/zededa-ci/src/eve --disable-content-trust   --release snapshot --force /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed"
+Sending build context to Docker daemon  1.303GB
+Step 1/8 : FROM alpine:3.9
+ ---> 1a773c1b496c
+Step 2/8 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git
+ ---> Using cache
+ ---> 8fcaeda599fb
+Step 3/8 : COPY . /bits/
+ ---> 831404836e31
+Step 4/8 : COPY runme.sh /
+ ---> 6697e6d41caf
+Step 5/8 : RUN touch /bits/bios/OVMF.fd
+ ---> Running in 577e567832da
+ ---> f1ccd39b665f
+Removing intermediate container 577e567832da
+Step 6/8 : WORKDIR /bits
+ ---> 0c82a4d54eab
+Removing intermediate container ac6aff4bc9d4
+Step 7/8 : ENTRYPOINT /runme.sh
+ ---> Running in 9c36a4e058db
+ ---> d46df04ebf51
+Removing intermediate container 9c36a4e058db
+Step 8/8 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '2db014c7a56e0f1ec0ae9a0b84a9b7eaf59d57c7' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 4ecb7c0feafb
+ ---> 9227d8845ad3
+Removing intermediate container 4ecb7c0feafb
+Successfully built 9227d8845ad3
+Successfully tagged lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-arm64
+Pushing lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+a644a4b82688: Preparing
+a6762dfb040f: Preparing
+453dfa2c950f: Preparing
+397dbb05dcfc: Preparing
+6d626da635fc: Preparing
+6d626da635fc: Layer already exists
+397dbb05dcfc: Layer already exists
+a6762dfb040f: Pushed
+a644a4b82688: Pushed
+453dfa2c950f: Pushed
+f8686032f2130344b682adbadabd59c73cabdbed-arm64: digest: sha256:be30b0565450013df2685730b72ae66448df5bb64a05437feb141bc946e50457 size: 1371
+Pushing lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-arm64 to manifest lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed
+time="2019-06-25T08:21:39+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-amd64\". Skipping image."
+time="2019-06-25T08:21:42+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-s390x\". Skipping image."
+Digest: sha256:14a6d8833227e6675dc5d4b4a0634a43e50bd0528ecdace57ea40c5ecdf6beed 434
+Not signing lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed
+Tagging lfedge/eve:f8686032f2130344b682adbadabd59c73cabdbed-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+a644a4b82688: Preparing
+a6762dfb040f: Preparing
+453dfa2c950f: Preparing
+397dbb05dcfc: Preparing
+6d626da635fc: Preparing
+a644a4b82688: Layer already exists
+397dbb05dcfc: Layer already exists
+a6762dfb040f: Layer already exists
+453dfa2c950f: Layer already exists
+6d626da635fc: Layer already exists
+snapshot-arm64: digest: sha256:be30b0565450013df2685730b72ae66448df5bb64a05437feb141bc946e50457 size: 1371
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2019-06-25T08:21:52+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:ba73ddc0f19a4351b59f4006be6d3d7d512c6a0b5c4fc0d071870a22b5bbb9bb 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+FINISHED
