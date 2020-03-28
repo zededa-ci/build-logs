@@ -1,0 +1,1126 @@
+From https://github.com/lf-edge/eve
+   011db8c9..4b66b189  master     -> origin/master
+ * [new tag]           4.10.0     -> 4.10.0
+ * [new tag]           5.0.0      -> 5.0.0
+Building the following tags:  origin/master (latest tag is 5.0.0)
+Skipping repository .go/pkg/dep/sources/https---github.com-linuxkit-linuxkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-hyperkit
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-context
+Skipping repository .go/pkg/dep/sources/https---github.com-theupdateframework-notary
+Skipping repository .go/pkg/dep/sources/https---github.com-mitchellh-go--ps
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-appengine
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonschema
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-net
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonpointer
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-tool
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--ansiterm
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-vpnkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-anonuuid
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--autorest
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-gotty--client
+Skipping repository .go/pkg/dep/sources/https---github.com-Microsoft-go--winio
+Skipping repository .go/pkg/dep/sources/https---github.com-agl-ed25519
+Skipping repository .go/pkg/dep/sources/https---github.com-aws-aws--sdk--go
+Skipping repository .go/pkg/dep/sources/https---github.com-containerd-containerd
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-go--digest
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-image--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-runtime--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-packethost-packngo
+Skipping repository .go/pkg/dep/sources/https---github.com-pkg-errors
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--vhd--utils
+Skipping repository .go/pkg/dep/sources/https---github.com-renstrom-fuzzysearch
+Skipping repository .go/pkg/dep/sources/https---github.com-rn-iso9660wrap
+Skipping repository .go/pkg/dep/sources/https---github.com-creack-goselect
+Skipping repository .go/pkg/dep/sources/https---github.com-dgrijalva-jwt--go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-distribution
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-docker
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--connections
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--units
+Skipping repository .go/pkg/dep/sources/https---github.com-jmespath-go--jmespath
+Skipping repository .go/pkg/dep/sources/https---github.com-scaleway-go--scaleway
+Skipping repository .go/pkg/dep/sources/https---github.com-go--ini-ini
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-mux
+Skipping repository .go/pkg/dep/sources/https---github.com-gogo-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-websocket
+Skipping repository .go/pkg/dep/sources/https---github.com-vmware-govmomi
+Skipping repository .go/pkg/dep/sources/https---github.com-sirupsen-logrus
+Skipping repository .go/pkg/dep/sources/https---gopkg.in-yaml.v2
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--p9p
+Skipping repository .go/pkg/dep/sources/https---github.com-google-uuid
+Skipping repository .go/pkg/dep/sources/https---github.com-gophercloud-gophercloud
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonreference
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-datakit
+Skipping repository .go/pkg/dep/sources/https---github.com-surma-gocpio
+Skipping repository .go/pkg/dep/sources/https---github.com-miekg-pkcs11
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sync
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-oauth2
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-gocloud
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sys
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-crypto
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-google--api--go--client
+Skipping repository .go/pkg/dep/sources/https---github.com-census--instrumentation-opencensus--go
+Skipping repository .go/pkg/dep/sources/https---github.com-googleapis-gax--go
+Skipping repository .go/pkg/dep/sources/https---github.com-grpc-grpc--go
+Skipping repository .go/pkg/dep/sources/https---github.com-konsorten-go--windows--terminal--sequences
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-groupcache
+Skipping repository .go/pkg/dep/sources/https---github.com-google-go--genproto
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-text
+Removing .go/src
+Removing .go/bin
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+Removing images/rootfs-xen.yml
+HEAD is now at 4b66b189 Short version file /opt/zededa/bin/versioninfo is no longer required
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+Building and pushing "lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8"
+4671ddb5582e8c788d6953ce113ca1f53af81fe8: Pulling from lfedge/eve-acrn
+Digest: sha256:7d8badd1ec2a820dd5c442f6e9ee0a369d786609f4c029e300efb9065a88e944
+Status: Image is up to date for lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8
+Building and pushing "lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9"
+1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9: Pulling from lfedge/eve-acrn-kernel
+Digest: sha256:4e919dabba56fe57cea76b45a0e81a6c0b964b5f4d622e8f38f9e989d78cd6a2
+Status: Image is up to date for lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9
+Building and pushing "lfedge/eve-alpine:ad1020939fb59dbdaa558a3da99649d81e341cac"
+ad1020939fb59dbdaa558a3da99649d81e341cac: Pulling from lfedge/eve-alpine
+Digest: sha256:925e30e5d89ac04913a0b9ac5b2205df2611414c9f018ac0568d406087749cc5
+Status: Image is up to date for lfedge/eve-alpine:ad1020939fb59dbdaa558a3da99649d81e341cac
+Building and pushing "lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b"
+2ff5b19ea565a13fa93a634abdef20e04276b73b: Pulling from lfedge/eve-debug
+Digest: sha256:5635f14ff52bd253d475322d9082e33364662ab71b14717dd67a9bf7e3eb84ea
+Status: Image is up to date for lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b
+Building and pushing "lfedge/eve-dnsmasq:cdb36dc56fb50bbd2b28123e435b3660adf34efb"
+cdb36dc56fb50bbd2b28123e435b3660adf34efb: Pulling from lfedge/eve-dnsmasq
+Digest: sha256:255b9958e32b08db84855c647cd95646b00ce23dac5493a3d6346af1102a1021
+Status: Image is up to date for lfedge/eve-dnsmasq:cdb36dc56fb50bbd2b28123e435b3660adf34efb
+Building and pushing "lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f"
+b4b546907c17195e7e79baefd88fdb841bc92b8f: Pulling from lfedge/eve-dom0-ztools
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   21.5kB
+Step 1/3 : FROM scratch
+ ---> 
+Step 2/3 : ADD rootfs/ /
+ ---> c9f7f0928736
+Step 3/3 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '4b66b189ad95e39d3988f09bea8b8efd38dbb9f4' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 416bd2329815
+ ---> 6a59904d7cc2
+Removing intermediate container 416bd2329815
+Successfully built 6a59904d7cc2
+Successfully tagged lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64
+Pushing lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64
+The push refers to a repository [docker.io/lfedge/eve-dom0-ztools]
+e17f7a56b1ca: Preparing
+e17f7a56b1ca: Pushed
+b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64: digest: sha256:2c971d803bb2cb68c61c8b7d6f6218e93772d47c5791d1918618046a08d88ceb size: 525
+Pushing lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64 to manifest lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f
+time="2020-03-28T08:01:45+01:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-s390x\". Skipping image."
+Digest: sha256:0b0d059e711ed6e5d6b23ea4ed62ffb8cde12a7dea7b04b4b190955dec4e03aa 741
+Not signing lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f
+Tagging lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64 as lfedge/eve-dom0-ztools:snapshot-arm64
+Pushing lfedge/eve-dom0-ztools:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve-dom0-ztools]
+e17f7a56b1ca: Preparing
+e17f7a56b1ca: Layer already exists
+snapshot-arm64: digest: sha256:2c971d803bb2cb68c61c8b7d6f6218e93772d47c5791d1918618046a08d88ceb size: 525
+Pushing lfedge/eve-dom0-ztools:snapshot-arm64 to manifest lfedge/eve-dom0-ztools:snapshot
+time="2020-03-28T08:02:01+01:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-dom0-ztools:snapshot-s390x\". Skipping image."
+Digest: sha256:0b0d059e711ed6e5d6b23ea4ed62ffb8cde12a7dea7b04b4b190955dec4e03aa 741
+Not signing lfedge/eve-dom0-ztools:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "lfedge/eve-fscrypt:14e5bffae1e7744eacafa3d46d2cbff39027cd3c"
+14e5bffae1e7744eacafa3d46d2cbff39027cd3c: Pulling from lfedge/eve-fscrypt
+Digest: sha256:edab2411002df436daf2e8c515811b0486b77e6bdd582ce242290374279fb59b
+Status: Image is up to date for lfedge/eve-fscrypt:14e5bffae1e7744eacafa3d46d2cbff39027cd3c
+Building and pushing "lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541"
+e07c45a98386767ec3926b813dc4b46a96a81541: Pulling from lfedge/eve-fw
+Digest: sha256:d2e5b34ea83168a68fbe9a420efac40264b187ff3f0a22658e8916b3f5fe6385
+Status: Image is up to date for lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541
+Building and pushing "lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1"
+e378abea66b77fb7e9587b798a8caf5c78f440c1: Pulling from lfedge/eve-gpt-tools
+Digest: sha256:5ab0097ee02c29d030203bd8abd8bcff401b987d5d009db75c8ac051e147210b
+Status: Image is up to date for lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1
+Building and pushing "lfedge/eve-grub:6ba90a37e6f4d81a8a0c1d58f8eca99e72e19fdb"
+6ba90a37e6f4d81a8a0c1d58f8eca99e72e19fdb: Pulling from lfedge/eve-grub
+Digest: sha256:8287a26631a759ff89c0135e5afcb2af0f84fc31cb5c4927fa4a7e132cbd0fe1
+Status: Image is up to date for lfedge/eve-grub:6ba90a37e6f4d81a8a0c1d58f8eca99e72e19fdb
+Building and pushing "lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be"
+f1f08a0fcadd35320f5d03fe0f0a1a318e8449be: Pulling from lfedge/eve-guacd
+Digest: sha256:c63eaa48b06670e26a257eff3264a87bf0117effb2bb63ba5609b89ec4dcdc1c
+Status: Image is up to date for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be
+Building and pushing "lfedge/eve-kernel:769e498a416977d0526e2f37022a68b8a421f9a2"
+769e498a416977d0526e2f37022a68b8a421f9a2: Pulling from lfedge/eve-kernel
+Digest: sha256:28581ae0d42f89036887743f99c03afaba6a7f084da62e17ea05c4cbac4deac3
+Status: Downloaded newer image for lfedge/eve-kernel:769e498a416977d0526e2f37022a68b8a421f9a2
+Building and pushing "lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5"
+6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5: Pulling from lfedge/eve-lisp
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  11.83MB
+Step 1/32 : ARG GOVER=1.12.4
+ ---> 
+Step 2/32 : FROM golang:${GOVER}-alpine as build
+ ---> 7701ec5e84de
+Step 3/32 : RUN apk add --no-cache                   gcc=8.3.0-r0                     linux-headers=4.18.13-r1         libc-dev=0.7.1-r0                libpcap-dev=1.9.0-r1
+ ---> Running in 9290dbca70e7
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/18) Upgrading musl (1.1.20-r4 -> 1.1.20-r5)
+(2/18) Installing binutils (2.31.1-r2)
+(3/18) Installing gmp (6.1.2-r1)
+(4/18) Installing isl (0.18-r0)
+(5/18) Installing libgomp (8.3.0-r0)
+(6/18) Installing libatomic (8.3.0-r0)
+(7/18) Installing libgcc (8.3.0-r0)
+(8/18) Installing mpfr3 (3.1.5-r1)
+(9/18) Installing mpc1 (1.0.3-r1)
+(10/18) Installing libstdc++ (8.3.0-r0)
+(11/18) Installing gcc (8.3.0-r0)
+(12/18) Installing musl-dev (1.1.20-r5)
+(13/18) Installing libc-dev (0.7.1-r0)
+(14/18) Upgrading musl-utils (1.1.20-r4 -> 1.1.20-r5)
+(15/18) Installing libpcap (1.9.0-r1)
+(16/18) Installing pkgconf (1.6.0-r0)
+(17/18) Installing libpcap-dev (1.9.0-r1)
+(18/18) Installing linux-headers (4.18.13-r1)
+Executing busybox-1.29.3-r10.trigger
+OK: 98 MiB in 31 packages
+ ---> b6e4587546bf
+Removing intermediate container 9290dbca70e7
+Step 4/32 : ENV GOFLAGS -mod=vendor
+ ---> Running in 3ede27adfc99
+ ---> ecdd37cc79c3
+Removing intermediate container 3ede27adfc99
+Step 5/32 : ENV GO111MODULE on
+ ---> Running in e8fa3a2dfd1d
+ ---> 16b6777fe2ae
+Removing intermediate container e8fa3a2dfd1d
+Step 6/32 : ENV CGO_ENABLED 1
+ ---> Running in 50e166497957
+ ---> 5853ca5bd44c
+Removing intermediate container 50e166497957
+Step 7/32 : COPY ./ /lisp/
+ ---> dc1454422749
+Step 8/32 : WORKDIR /lisp
+ ---> 7629359d2cd1
+Removing intermediate container 90b6a94a5104
+Step 9/32 : RUN go build -mod=vendor -o lisp-ztr ./cmd/lisp-ztr
+ ---> Running in 29617c499e99
+ ---> e062dd6786ea
+Removing intermediate container 29617c499e99
+Step 10/32 : RUN strip lisp-ztr
+ ---> Running in d7adbc498936
+ ---> b49ed99ca080
+Removing intermediate container d7adbc498936
+Step 11/32 : FROM alpine:3.8 AS lisp
+ ---> b22edbe95d11
+Step 12/32 : ENV LISP_VERSION release-0.488
+ ---> Running in 729f65056c2b
+ ---> 7ecb581622d2
+Removing intermediate container 729f65056c2b
+Step 13/32 : ADD https://github.com/farinacci/lispers.net/archive/${LISP_VERSION}.tar.gz /tmp/
+
+
+ ---> 4c42c62c1c50
+Step 14/32 : ADD patches /tmp/patches
+ ---> 86ee02ff035e
+Step 15/32 : RUN apk add --no-cache py2-pyflakes py2-pip gcc linux-headers      libc-dev python python-dev libffi-dev openssl-dev libpcap-dev
+ ---> Running in dbd27728435a
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/35) Installing binutils (2.30-r6)
+(2/35) Installing gmp (6.1.2-r1)
+(3/35) Installing isl (0.18-r0)
+(4/35) Installing libgomp (6.4.0-r9)
+(5/35) Installing libatomic (6.4.0-r9)
+(6/35) Installing libgcc (6.4.0-r9)
+(7/35) Installing pkgconf (1.5.3-r0)
+(8/35) Installing mpfr3 (3.1.5-r1)
+(9/35) Installing mpc1 (1.0.3-r1)
+(10/35) Installing libstdc++ (6.4.0-r9)
+(11/35) Installing gcc (6.4.0-r9)
+(12/35) Installing musl-dev (1.1.19-r11)
+(13/35) Installing libc-dev (0.7.1-r0)
+(14/35) Installing libffi (3.2.1-r4)
+(15/35) Installing libffi-dev (3.2.1-r4)
+(16/35) Installing libpcap (1.8.1-r1)
+(17/35) Installing libpcap-dev (1.8.1-r1)
+(18/35) Installing linux-headers (4.4.6-r2)
+(19/35) Installing zlib-dev (1.2.11-r1)
+(20/35) Installing libcrypto1.0 (1.0.2u-r0)
+(21/35) Installing libssl1.0 (1.0.2u-r0)
+(22/35) Installing openssl-dev (1.0.2u-r0)
+(23/35) Installing libbz2 (1.0.6-r7)
+(24/35) Installing expat (2.2.8-r0)
+(25/35) Installing gdbm (1.13-r1)
+(26/35) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(27/35) Installing ncurses-terminfo (6.1_p20180818-r1)
+(28/35) Installing ncurses-libs (6.1_p20180818-r1)
+(29/35) Installing readline (7.0.003-r0)
+(30/35) Installing sqlite-libs (3.25.3-r3)
+(31/35) Installing python2 (2.7.15-r3)
+(32/35) Installing py-setuptools (39.1.0-r0)
+(33/35) Installing py2-pip (10.0.1-r0)
+(34/35) Installing py2-pyflakes (1.6.0-r3)
+(35/35) Installing python2-dev (2.7.15-r3)
+Executing busybox-1.28.4-r3.trigger
+OK: 187 MiB in 48 packages
+ ---> a10d87a17f73
+Removing intermediate container dbd27728435a
+Step 16/32 : RUN ln -s pyflakes-2 /usr/bin/pyflakes
+ ---> Running in dbd15152ea5e
+ ---> 71106330859d
+Removing intermediate container dbd15152ea5e
+Step 17/32 : RUN tar -C /tmp -xzvf /tmp/${LISP_VERSION}.tar.gz &&     cd /tmp/lispers.net-${LISP_VERSION} &&     for p in /tmp/patches/* ; do patch -p1 < $p ; done &&     cd build ; python make-release.py dev &&     mkdir /lisp ; tar -C /lisp -xzvf latest/lispers.net.tgz
+ ---> Running in 173246e85fd1
+lispers.net-release-0.488/
+lispers.net-release-0.488/.gitignore
+lispers.net-release-0.488/CODEOWNERS
+lispers.net-release-0.488/GOVERNANCE
+lispers.net-release-0.488/LICENSE
+lispers.net-release-0.488/NOTICE
+lispers.net-release-0.488/README
+lispers.net-release-0.488/apps/
+lispers.net-release-0.488/apps/README
+lispers.net-release-0.488/apps/lisp-add-mc.py
+lispers.net-release-0.488/apps/lisp-join.py
+lispers.net-release-0.488/apps/lisp-map-cache.py
+lispers.net-release-0.488/apps/lisp-news-receiver.py
+lispers.net-release-0.488/apps/lisp-news-sender.py
+lispers.net-release-0.488/apps/lisp-onoff.py
+lispers.net-release-0.488/apps/lisp-provision-site.py
+lispers.net-release-0.488/apps/lisp-provision-vpn.py
+lispers.net-release-0.488/apps/lisp-provision-xtr.py
+lispers.net-release-0.488/apps/lisp-sys-info.py
+lispers.net-release-0.488/apps/lisp-watch-pps.py
+lispers.net-release-0.488/apps/loc8tr.py
+lispers.net-release-0.488/apps/make-crypto-eid.py
+lispers.net-release-0.488/apps/make-eid-hash.py
+lispers.net-release-0.488/apps/ping-from-eeid.py
+lispers.net-release-0.488/build/
+lispers.net-release-0.488/build/Dockerfile
+lispers.net-release-0.488/build/README
+lispers.net-release-0.488/build/RL.docker
+lispers.net-release-0.488/build/commit-release
+lispers.net-release-0.488/build/latest
+lispers.net-release-0.488/build/make-apps-release.py
+lispers.net-release-0.488/build/make-release.py
+lispers.net-release-0.488/build/py-depend/
+lispers.net-release-0.488/build/py-depend/get-pip.py
+lispers.net-release-0.488/build/py-depend/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/py-depend/lispers.net-test-install.py
+lispers.net-release-0.488/build/py-depend/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.486/
+lispers.net-release-0.488/build/release-0.486/RESTART-LISP
+lispers.net-release-0.488/build/release-0.486/RL-template
+lispers.net-release-0.488/build/release-0.486/RUN-LISP
+lispers.net-release-0.488/build/release-0.486/STOP-LISP
+lispers.net-release-0.488/build/release-0.486/bin/
+lispers.net-release-0.488/build/release-0.486/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.486/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.486/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.486/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.486/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.486/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.486/get-pip.py
+lispers.net-release-0.488/build/release-0.486/how-to-install.txt
+lispers.net-release-0.488/build/release-0.486/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.486/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.486/lisp-version.txt
+lispers.net-release-0.488/build/release-0.486/lisp.config.example
+lispers.net-release-0.488/build/release-0.486/lispapi.txt
+lispers.net-release-0.488/build/release-0.486/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.486/lispers.net-x86-release-0.486.tgz
+lispers.net-release-0.488/build/release-0.486/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.486/log-packets
+lispers.net-release-0.488/build/release-0.486/ob/
+lispers.net-release-0.488/build/release-0.486/ob/chacha.py
+lispers.net-release-0.488/build/release-0.486/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.486/ob/lisp.py
+lispers.net-release-0.488/build/release-0.486/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.486/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.486/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.486/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.486/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.486/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.486/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.486/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.486/pslisp
+lispers.net-release-0.488/build/release-0.486/release-notes.txt
+lispers.net-release-0.488/build/release-0.486/src/
+lispers.net-release-0.488/build/release-0.486/src/chacha.py
+lispers.net-release-0.488/build/release-0.486/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.486/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.486/src/lisp.py
+lispers.net-release-0.488/build/release-0.486/src/lispapi.py
+lispers.net-release-0.488/build/release-0.486/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.486/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.486/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.486/src/poly1305.py
+lispers.net-release-0.488/build/release-0.486/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.486/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.487/
+lispers.net-release-0.488/build/release-0.487/RESTART-LISP
+lispers.net-release-0.488/build/release-0.487/RL-template
+lispers.net-release-0.488/build/release-0.487/RUN-LISP
+lispers.net-release-0.488/build/release-0.487/STOP-LISP
+lispers.net-release-0.488/build/release-0.487/bin/
+lispers.net-release-0.488/build/release-0.487/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.487/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.487/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.487/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.487/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.487/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.487/get-pip.py
+lispers.net-release-0.488/build/release-0.487/how-to-install.txt
+lispers.net-release-0.488/build/release-0.487/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.487/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.487/lisp-version.txt
+lispers.net-release-0.488/build/release-0.487/lisp.config.example
+lispers.net-release-0.488/build/release-0.487/lispapi.txt
+lispers.net-release-0.488/build/release-0.487/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.487/lispers.net-x86-release-0.487.tgz
+lispers.net-release-0.488/build/release-0.487/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.487/log-packets
+lispers.net-release-0.488/build/release-0.487/ob/
+lispers.net-release-0.488/build/release-0.487/ob/chacha.py
+lispers.net-release-0.488/build/release-0.487/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.487/ob/lisp.py
+lispers.net-release-0.488/build/release-0.487/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.487/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.487/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.487/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.487/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.487/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.487/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.487/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.487/pslisp
+lispers.net-release-0.488/build/release-0.487/release-notes.txt
+lispers.net-release-0.488/build/release-0.487/src/
+lispers.net-release-0.488/build/release-0.487/src/chacha.py
+lispers.net-release-0.488/build/release-0.487/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.487/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.487/src/lisp.py
+lispers.net-release-0.488/build/release-0.487/src/lispapi.py
+lispers.net-release-0.488/build/release-0.487/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.487/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.487/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.487/src/poly1305.py
+lispers.net-release-0.488/build/release-0.487/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.487/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.488/
+lispers.net-release-0.488/build/release-0.488/RESTART-LISP
+lispers.net-release-0.488/build/release-0.488/RL-template
+lispers.net-release-0.488/build/release-0.488/RUN-LISP
+lispers.net-release-0.488/build/release-0.488/STOP-LISP
+lispers.net-release-0.488/build/release-0.488/bin/
+lispers.net-release-0.488/build/release-0.488/bin/chacha.pyo
+lispers.net-release-0.488/build/release-0.488/bin/is-lisp-running.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-core.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-ddt.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-etr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-get-bits.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-itr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-lig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-log-packets.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-mr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-ms.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-rig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-rtr.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp-save-logs.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lisp.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispapi.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispconfig.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispers.net-install-ubuntu.pyo
+lispers.net-release-0.488/build/release-0.488/bin/lispers.net-test-install.pyo
+lispers.net-release-0.488/build/release-0.488/bin/poly1305.pyo
+lispers.net-release-0.488/build/release-0.488/bin/remove-lisp-iptables.pyo
+lispers.net-release-0.488/build/release-0.488/bin/remove-lisp-locks.pyo
+lispers.net-release-0.488/build/release-0.488/get-pip.py
+lispers.net-release-0.488/build/release-0.488/how-to-install.txt
+lispers.net-release-0.488/build/release-0.488/lisp-build-date.txt
+lispers.net-release-0.488/build/release-0.488/lisp-cert.pem.default
+lispers.net-release-0.488/build/release-0.488/lisp-version.txt
+lispers.net-release-0.488/build/release-0.488/lisp.config.example
+lispers.net-release-0.488/build/release-0.488/lispapi.txt
+lispers.net-release-0.488/build/release-0.488/lispers.net-geo.html
+lispers.net-release-0.488/build/release-0.488/lispers.net-x86-release-0.488.tgz
+lispers.net-release-0.488/build/release-0.488/lispers.net.tgz
+lispers.net-release-0.488/build/release-0.488/log-packets
+lispers.net-release-0.488/build/release-0.488/ob/
+lispers.net-release-0.488/build/release-0.488/ob/chacha.py
+lispers.net-release-0.488/build/release-0.488/ob/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-core.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-etr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-itr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-lig.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-mr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-ms.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-rig.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.488/ob/lisp.py
+lispers.net-release-0.488/build/release-0.488/ob/lispapi.py
+lispers.net-release-0.488/build/release-0.488/ob/lispconfig.py
+lispers.net-release-0.488/build/release-0.488/ob/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.488/ob/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.488/ob/poly1305.py
+lispers.net-release-0.488/build/release-0.488/ob/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.488/ob/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-0.488/pip-requirements.txt
+lispers.net-release-0.488/build/release-0.488/pslisp
+lispers.net-release-0.488/build/release-0.488/release-notes.txt
+lispers.net-release-0.488/build/release-0.488/src/
+lispers.net-release-0.488/build/release-0.488/src/chacha.py
+lispers.net-release-0.488/build/release-0.488/src/is-lisp-running.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-core.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-ddt.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-etr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-get-bits.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-itr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-lig.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-log-packets.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-mr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-ms.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-rig.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-rtr.py
+lispers.net-release-0.488/build/release-0.488/src/lisp-save-logs.py
+lispers.net-release-0.488/build/release-0.488/src/lisp.py
+lispers.net-release-0.488/build/release-0.488/src/lispapi.py
+lispers.net-release-0.488/build/release-0.488/src/lispconfig.py
+lispers.net-release-0.488/build/release-0.488/src/lispers.net-install-ubuntu.py
+lispers.net-release-0.488/build/release-0.488/src/lispers.net-test-install.py
+lispers.net-release-0.488/build/release-0.488/src/poly1305.py
+lispers.net-release-0.488/build/release-0.488/src/remove-lisp-iptables.py
+lispers.net-release-0.488/build/release-0.488/src/remove-lisp-locks.py
+lispers.net-release-0.488/build/release-notes.txt
+lispers.net-release-0.488/build/stable
+lispers.net-release-0.488/docs/
+lispers.net-release-0.488/docs/README
+lispers.net-release-0.488/docs/feature-list.txt
+lispers.net-release-0.488/docs/how-to-install.txt
+lispers.net-release-0.488/docs/how-to-use-apps.txt
+lispers.net-release-0.488/docs/lisp-ipc-data-plane.txt
+lispers.net-release-0.488/docs/lisp-runs-on.pdf
+lispers.net-release-0.488/docs/lisp.config.ddt
+lispers.net-release-0.488/docs/lisp.config.decent-xtr-her
+lispers.net-release-0.488/docs/lisp.config.decent-xtr-underlay
+lispers.net-release-0.488/docs/lisp.config.example
+lispers.net-release-0.488/docs/lisp.config.mrms
+lispers.net-release-0.488/docs/lisp.config.ms-ddt
+lispers.net-release-0.488/docs/lisp.config.petr
+lispers.net-release-0.488/docs/lisp.config.pitr
+lispers.net-release-0.488/docs/lisp.config.rtr
+lispers.net-release-0.488/docs/lisp.config.xtr
+lispers.net-release-0.488/docs/lisp.config.xtr-L2
+lispers.net-release-0.488/docs/lisp.config.xtr-crypto
+lispers.net-release-0.488/docs/lisp.config.xtr-mobility
+lispers.net-release-0.488/docs/lisp.config.xtr-multi-tenant
+lispers.net-release-0.488/docs/lisp.config.xtr-multicast
+lispers.net-release-0.488/docs/lisp.config.xtr-nat
+lispers.net-release-0.488/docs/loc8tr.pdf
+lispers.net-release-0.488/docs/release-history.pdf
+lispers.net-release-0.488/lisp/
+lispers.net-release-0.488/lisp/README
+lispers.net-release-0.488/lisp/RESTART-LISP
+lispers.net-release-0.488/lisp/RL-template
+lispers.net-release-0.488/lisp/RUN-LISP
+lispers.net-release-0.488/lisp/STOP-LISP
+lispers.net-release-0.488/lisp/build-xtr
+lispers.net-release-0.488/lisp/chacha.py
+lispers.net-release-0.488/lisp/ipc.go
+lispers.net-release-0.488/lisp/is-lisp-running.py
+lispers.net-release-0.488/lisp/lisp-cert.pem
+lispers.net-release-0.488/lisp/lisp-cert.pem.default
+lispers.net-release-0.488/lisp/lisp-core.py
+lispers.net-release-0.488/lisp/lisp-ddt.py
+lispers.net-release-0.488/lisp/lisp-etr.py
+lispers.net-release-0.488/lisp/lisp-get-bits.py
+lispers.net-release-0.488/lisp/lisp-itr.py
+lispers.net-release-0.488/lisp/lisp-lig.py
+lispers.net-release-0.488/lisp/lisp-log-packets.py
+lispers.net-release-0.488/lisp/lisp-mr.py
+lispers.net-release-0.488/lisp/lisp-ms.py
+lispers.net-release-0.488/lisp/lisp-rig.py
+lispers.net-release-0.488/lisp/lisp-rtr.py
+lispers.net-release-0.488/lisp/lisp-save-logs.py
+lispers.net-release-0.488/lisp/lisp.go
+lispers.net-release-0.488/lisp/lisp.py
+lispers.net-release-0.488/lisp/lispapi.py
+lispers.net-release-0.488/lisp/lispapi.txt
+lispers.net-release-0.488/lisp/lispconfig.py
+lispers.net-release-0.488/lisp/lispers.net-geo.html
+lispers.net-release-0.488/lisp/lml.go
+lispers.net-release-0.488/lisp/log-packets
+lispers.net-release-0.488/lisp/poly1305.py
+lispers.net-release-0.488/lisp/pslisp
+lispers.net-release-0.488/lisp/remove-lisp-iptables.py
+lispers.net-release-0.488/lisp/remove-lisp-locks.py
+lispers.net-release-0.488/lisp/xtr.go
+patching file build/make-apps-release.py
+patching file build/make-release.py
+patching file lisp/lispconfig.py
+patching file lisp/lisp.py
+Checking for python errors with pyflakes ...  done
+Compiling chacha.py ...
+Compiling is-lisp-running.py ...
+Compiling lisp-core.py ...
+Compiling lisp-ddt.py ...
+Compiling lisp-etr.py ...
+Compiling lisp-get-bits.py ...
+Compiling lisp-itr.py ...
+Compiling lisp-lig.py ...
+Compiling lisp-log-packets.py ...
+Compiling lisp-mr.py ...
+Compiling lisp-ms.py ...
+Compiling lisp-rig.py ...
+Compiling lisp-rtr.py ...
+Compiling lisp-save-logs.py ...
+Compiling lisp.py ...
+Compiling lispapi.py ...
+Compiling lispconfig.py ...
+Compiling lispers.net-install-ubuntu.py ...
+Compiling lispers.net-test-install.py ...
+Compiling poly1305.py ...
+Compiling remove-lisp-iptables.py ...
+Compiling remove-lisp-locks.py ...
+Checking for any lisp.debug() calls ...  done
+Copying files from ../lisp to release-dev build directory ... done
+Copying install scripts to release-dev build directory ... done
+Compiling for machine 'aarch64'
+Binary 'lisp-xtr' not found, not included in build
+Build tgz file lispers.net-aarch64-release-dev.tgz ...  done
+Copying version information to ../lisp directory ...  done
+Script run time: 6.083 seconds
+chacha.pyo
+is-lisp-running.pyo
+lisp-core.pyo
+lisp-ddt.pyo
+lisp-etr.pyo
+lisp-get-bits.pyo
+lisp-itr.pyo
+lisp-lig.pyo
+lisp-log-packets.pyo
+lisp-mr.pyo
+lisp-ms.pyo
+lisp-rig.pyo
+lisp-rtr.pyo
+lisp-save-logs.pyo
+lisp.pyo
+lispapi.pyo
+lispconfig.pyo
+lispers.net-install-ubuntu.pyo
+lispers.net-test-install.pyo
+poly1305.pyo
+remove-lisp-iptables.pyo
+remove-lisp-locks.pyo
+how-to-install.txt
+lisp-build-date.txt
+lisp-version.txt
+lispapi.txt
+pip-requirements.txt
+release-notes.txt
+lisp.config.example
+lisp-cert.pem.default
+RESTART-LISP
+RUN-LISP
+STOP-LISP
+RL-template
+get-pip.py
+pslisp
+log-packets
+lispers.net-geo.html
+ ---> 4e4cff05895c
+Removing intermediate container 173246e85fd1
+Step 18/32 : RUN pip install --upgrade pip && pip install -r /lisp/pip-requirements.txt
+ ---> Running in 9d9bb24284e9
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl (1.4MB)
+Installing collected packages: pip
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+Successfully installed pip-20.0.2
+[91mDEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+[0mCollecting CherryPy==8.2.0
+  Downloading CherryPy-8.2.0.tar.gz (710 kB)
+Collecting bottle==0.11.6
+  Downloading bottle-0.11.6-py2.py3-none-any.whl (77 kB)
+Collecting netifaces==0.10.0
+  Downloading netifaces-0.10.0.tar.gz (22 kB)
+Collecting pcappy==0.3
+  Downloading pcappy-0.3.tar.gz (8.6 kB)
+Collecting pyOpenSSL==16.2.0
+  Downloading pyOpenSSL-16.2.0-py2.py3-none-any.whl (43 kB)
+Collecting pycrypto==2.6.1
+  Downloading pycrypto-2.6.1.tar.gz (446 kB)
+Collecting requests==2.0.1
+  Downloading requests-2.0.1-py2.py3-none-any.whl (439 kB)
+Collecting curve25519-donna==1.3
+  Downloading curve25519-donna-1.3.tar.gz (20 kB)
+Collecting geopy==1.11.0
+  Downloading geopy-1.11.0-py2.py3-none-any.whl (66 kB)
+Collecting python-pytun==0.2
+  Downloading python-pytun-0.2.tar.gz (6.7 kB)
+Collecting ecdsa==0.13
+  Downloading ecdsa-0.13-py2.py3-none-any.whl (86 kB)
+Collecting pycryptodome==3.5.1
+  Downloading pycryptodome-3.5.1.tar.gz (6.7 MB)
+Collecting six
+  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)
+Collecting cryptography>=1.3.4
+  Downloading cryptography-2.8.tar.gz (504 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+    Preparing wheel metadata: started
+    Preparing wheel metadata: finished with status 'done'
+Collecting cffi!=1.11.3,>=1.8
+  Using cached cffi-1.14.0.tar.gz (463 kB)
+Collecting enum34; python_version < "3"
+  Downloading enum34-1.1.10-py2-none-any.whl (11 kB)
+Collecting ipaddress; python_version < "3"
+  Downloading ipaddress-1.0.23-py2.py3-none-any.whl (18 kB)
+Collecting pycparser
+  Using cached pycparser-2.20-py2.py3-none-any.whl (112 kB)
+Building wheels for collected packages: cryptography
+  Building wheel for cryptography (PEP 517): started
+  Building wheel for cryptography (PEP 517): finished with status 'done'
+  Created wheel for cryptography: filename=cryptography-2.8-cp27-cp27mu-linux_aarch64.whl size=753717 sha256=10b68381ca1a99ab7db5b0ed4f61e05982d5d9a2251b602c94d10a407de09959
+  Stored in directory: /root/.cache/pip/wheels/e3/02/77/c3a60a7154123cfce421af1454eb2c3ef444bbf56c4af0360a
+Successfully built cryptography
+Installing collected packages: six, CherryPy, bottle, netifaces, pcappy, pycparser, cffi, enum34, ipaddress, cryptography, pyOpenSSL, pycrypto, requests, curve25519-donna, geopy, python-pytun, ecdsa, pycryptodome
+    Running setup.py install for CherryPy: started
+    Running setup.py install for CherryPy: finished with status 'done'
+    Running setup.py install for netifaces: started
+    Running setup.py install for netifaces: finished with status 'done'
+    Running setup.py install for pcappy: started
+    Running setup.py install for pcappy: finished with status 'done'
+    Running setup.py install for cffi: started
+    Running setup.py install for cffi: finished with status 'done'
+    Running setup.py install for pycrypto: started
+    Running setup.py install for pycrypto: finished with status 'done'
+    Running setup.py install for curve25519-donna: started
+    Running setup.py install for curve25519-donna: finished with status 'done'
+    Running setup.py install for python-pytun: started
+    Running setup.py install for python-pytun: finished with status 'done'
+    Running setup.py install for pycryptodome: started
+    Running setup.py install for pycryptodome: finished with status 'done'
+Successfully installed CherryPy-8.2.0 bottle-0.11.6 cffi-1.14.0 cryptography-2.8 curve25519-donna-1.3 ecdsa-0.13 enum34-1.1.10 geopy-1.11.0 ipaddress-1.0.23 netifaces-0.10.0 pcappy-0.3 pyOpenSSL-16.2.0 pycparser-2.20 pycrypto-2.6.1 pycryptodome-3.5.1 python-pytun-0.2 requests-2.0.1 six-1.14.0
+ ---> 957278f83bbb
+Removing intermediate container 9d9bb24284e9
+Step 19/32 : RUN apk del py2-pip py2-pyflakes
+ ---> Running in 8ed3d0ecc175
+[91mWARNING: Ignoring APKINDEX.adfa7ceb.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.efaa1f73.tar.gz: No such file or directory
+[0m(1/3) Purging py2-pip (10.0.1-r0)
+(2/3) Purging py-setuptools (39.1.0-r0)
+(3/3) Purging py2-pyflakes (1.6.0-r3)
+Executing busybox-1.28.4-r3.trigger
+OK: 174 MiB in 45 packages
+ ---> 9708b8c56cb9
+Removing intermediate container 8ed3d0ecc175
+Step 20/32 : FROM alpine:3.8
+ ---> b22edbe95d11
+Step 21/32 : RUN apk add --no-cache         libffi=3.2.1-r4            libpcap=1.8.1-r1           python=2.7.15-r3           openssl=1.0.2u-r0          iproute2=4.13.0-r0         keyutils=1.5.10-r0         tini=0.18.0-r0
+ ---> Running in a5a9b7e0df84
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/23) Installing libelf (0.8.13-r3)
+(2/23) Installing libmnl (1.0.4-r0)
+(3/23) Installing jansson (2.11-r0)
+(4/23) Installing libnftnl-libs (1.1.1-r0)
+(5/23) Installing iptables (1.6.2-r0)
+(6/23) Installing iproute2 (4.13.0-r0)
+Executing iproute2-4.13.0-r0.post-install
+(7/23) Installing keyutils-libs (1.5.10-r0)
+(8/23) Installing keyutils (1.5.10-r0)
+(9/23) Installing libffi (3.2.1-r4)
+(10/23) Installing libpcap (1.8.1-r1)
+(11/23) Installing libcrypto1.0 (1.0.2u-r0)
+(12/23) Installing libssl1.0 (1.0.2u-r0)
+(13/23) Installing openssl (1.0.2u-r0)
+(14/23) Installing libbz2 (1.0.6-r7)
+(15/23) Installing expat (2.2.8-r0)
+(16/23) Installing gdbm (1.13-r1)
+(17/23) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(18/23) Installing ncurses-terminfo (6.1_p20180818-r1)
+(19/23) Installing ncurses-libs (6.1_p20180818-r1)
+(20/23) Installing readline (7.0.003-r0)
+(21/23) Installing sqlite-libs (3.25.3-r3)
+(22/23) Installing python2 (2.7.15-r3)
+(23/23) Installing tini (0.18.0-r0)
+Executing busybox-1.28.4-r3.trigger
+OK: 57 MiB in 36 packages
+ ---> d9a8511e7da9
+Removing intermediate container a5a9b7e0df84
+Step 22/32 : COPY --from=lisp /lisp /lisp/
+ ---> 1df1a7f7f7d7
+Step 23/32 : COPY --from=lisp /usr/bin/pydoc /usr/bin/smtpd.py /usr/bin/
+ ---> 826aa46ac694
+Step 24/32 : RUN echo workaround for https://github.com/moby/moby/issues/37965
+ ---> Running in 8c948d6f297f
+workaround for https://github.com/moby/moby/issues/37965
+ ---> c81d6b63adae
+Removing intermediate container 8c948d6f297f
+Step 25/32 : COPY --from=lisp /usr/lib/python2.7/site-packages /usr/lib/python2.7/site-packages
+ ---> b07d91256707
+Step 26/32 : COPY --from=build /lisp/lisp-ztr /lisp/
+ ---> 3e9e026d7374
+Step 27/32 : ADD rootfs/ /
+ ---> 27ef72a9d43d
+Step 28/32 : EXPOSE 8080
+ ---> Running in 0a0c9d302ad3
+ ---> e1a9a5ad3e2e
+Removing intermediate container 0a0c9d302ad3
+Step 29/32 : WORKDIR /lisp
+ ---> 8be590f994f6
+Removing intermediate container a71472810327
+Step 30/32 : ENTRYPOINT
+ ---> Running in a6daf23ebd7a
+ ---> 9ddd12299f82
+Removing intermediate container a6daf23ebd7a
+Step 31/32 : CMD /sbin/tini /init.sh
+ ---> Running in 126e541260ad
+ ---> 23af329f1703
+Removing intermediate container 126e541260ad
+Step 32/32 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/persist:/persist"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '4b66b189ad95e39d3988f09bea8b8efd38dbb9f4' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 6fd0662307a8
+ ---> c3c3c30db10f
+Removing intermediate container 6fd0662307a8
+Successfully built c3c3c30db10f
+Successfully tagged lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64
+Pushing lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64
+The push refers to a repository [docker.io/lfedge/eve-lisp]
+e3cbb2f84d3f: Preparing
+5c494b0c1a6e: Preparing
+d08f478b078b: Preparing
+0c975b0478e0: Preparing
+d02add9988a5: Preparing
+7207ab4ea143: Preparing
+7207ab4ea143: Waiting
+e3cbb2f84d3f: Pushed
+0c975b0478e0: Pushed
+7207ab4ea143: Layer already exists
+5c494b0c1a6e: Pushed
+d08f478b078b: Pushed
+d02add9988a5: Pushed
+6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64: digest: sha256:71098947175c9a0626fdcaaccac92fb77f5522ca5d82c8c6ca094c1aa49e57b7 size: 1582
+Pushing lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64 to manifest lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5
+time="2020-03-28T08:08:59+01:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-s390x\". Skipping image."
+Digest: sha256:ffd1e627f758962b57ccab772aa0bfb1e60704574a4b7795008da1fce6315dd0 743
+Not signing lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5
+Tagging lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64 as lfedge/eve-lisp:snapshot-arm64
+Pushing lfedge/eve-lisp:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve-lisp]
+e3cbb2f84d3f: Preparing
+5c494b0c1a6e: Preparing
+d08f478b078b: Preparing
+0c975b0478e0: Preparing
+d02add9988a5: Preparing
+7207ab4ea143: Preparing
+7207ab4ea143: Waiting
+e3cbb2f84d3f: Layer already exists
+0c975b0478e0: Layer already exists
+d02add9988a5: Layer already exists
+d08f478b078b: Layer already exists
+5c494b0c1a6e: Layer already exists
+7207ab4ea143: Layer already exists
+snapshot-arm64: digest: sha256:71098947175c9a0626fdcaaccac92fb77f5522ca5d82c8c6ca094c1aa49e57b7 size: 1582
+Pushing lfedge/eve-lisp:snapshot-arm64 to manifest lfedge/eve-lisp:snapshot
+time="2020-03-28T08:09:17+01:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-lisp:snapshot-s390x\". Skipping image."
+Digest: sha256:ffd1e627f758962b57ccab772aa0bfb1e60704574a4b7795008da1fce6315dd0 743
+Not signing lfedge/eve-lisp:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "lfedge/eve-mkconf:509401352a7f1606902a76736fe5b8aaacc91b4c"
+509401352a7f1606902a76736fe5b8aaacc91b4c: Pulling from lfedge/eve-mkconf
+Digest: sha256:efac237bc73f44ed6fdb31e4e8ad1a39cda13e7d8a172dbca05d634eb17a8485
+Status: Image is up to date for lfedge/eve-mkconf:509401352a7f1606902a76736fe5b8aaacc91b4c
+Building and pushing "lfedge/eve-mkimage-iso-efi:35c81fef9d9a3c849b698250d60c793e56426396"
+35c81fef9d9a3c849b698250d60c793e56426396: Pulling from lfedge/eve-mkimage-iso-efi
+Digest: sha256:dc3c19a08a44efedaac00cf8c504713f06c7672cb7cecba660093b5f2bc8a00a
+Status: Image is up to date for lfedge/eve-mkimage-iso-efi:35c81fef9d9a3c849b698250d60c793e56426396
+Building and pushing "lfedge/eve-mkimage-raw-efi:ada4c7c50a9371575ff750e84923b8f74d0f86ad"
+ada4c7c50a9371575ff750e84923b8f74d0f86ad: Pulling from lfedge/eve-mkimage-raw-efi
+Digest: sha256:c49a3c5eff6de69f0c18fe334df96376661d19e5b31a128b2685e9553db9afb9
+Status: Image is up to date for lfedge/eve-mkimage-raw-efi:ada4c7c50a9371575ff750e84923b8f74d0f86ad
+Building and pushing "lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3"
+17ec5bda58c7f6d3717b88d3da55df4516cdb6f3: Pulling from lfedge/eve-mkrootfs-ext4
+Digest: sha256:b867059462b3864d19c8f185331bc5ea7c351a90f69b4f7b97d925ec294d03eb
+Status: Image is up to date for lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3
+Building and pushing "lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0"
+70b1faff4c3b512c91a1b7157fbddabbd41992f0: Pulling from lfedge/eve-mkrootfs-squash
+Digest: sha256:bd251f51068e34d09a6b0aad4162484fe8dc09a2a3ca14b57134e49a4838e9b8
+Status: Image is up to date for lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0
+Building and pushing "lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252"
+6dda5ee56b295a0115e7c09a0ca23aa925426252: Pulling from lfedge/eve-strongswan
+Digest: sha256:981b13f775e13852c196038eee1fb7163340e9281a5b8a017bf75e1ad10ba8c3
+Status: Image is up to date for lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252
+Building and pushing "lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83"
+Error response from daemon: manifest for lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83 not found
+No image pulled, continuing with build
+Sending build context to Docker daemon  30.91MB
+Step 1/36 : ARG GOVER=1.12.4
+ ---> 
+Step 2/36 : FROM golang:${GOVER}-alpine as build
+ ---> 7701ec5e84de
+Step 3/36 : RUN apk update
+ ---> Running in 1a1fd94a631b
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+v3.9.5-23-g3f5cd043a9 [http://dl-cdn.alpinelinux.org/alpine/v3.9/main]
+v3.9.5-14-g437bc75312 [http://dl-cdn.alpinelinux.org/alpine/v3.9/community]
+OK: 9565 distinct packages available
+ ---> ae1f3ea9f8bc
+Removing intermediate container 1a1fd94a631b
+Step 4/36 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux make
+ ---> Running in cdceee5e7661
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/32) Upgrading musl (1.1.20-r4 -> 1.1.20-r5)
+(2/32) Installing binutils (2.31.1-r2)
+(3/32) Installing gmp (6.1.2-r1)
+(4/32) Installing isl (0.18-r0)
+(5/32) Installing libgomp (8.3.0-r0)
+(6/32) Installing libatomic (8.3.0-r0)
+(7/32) Installing libgcc (8.3.0-r0)
+(8/32) Installing mpfr3 (3.1.5-r1)
+(9/32) Installing mpc1 (1.0.3-r1)
+(10/32) Installing libstdc++ (8.3.0-r0)
+(11/32) Installing gcc (8.3.0-r0)
+(12/32) Installing nghttp2-libs (1.35.1-r1)
+(13/32) Installing libssh2 (1.9.0-r1)
+(14/32) Installing libcurl (7.64.0-r3)
+(15/32) Installing expat (2.2.8-r0)
+(16/32) Installing pcre2 (10.32-r1)
+(17/32) Installing git (2.20.2-r0)
+(18/32) Installing musl-dev (1.1.20-r5)
+(19/32) Installing libc-dev (0.7.1-r0)
+(20/32) Upgrading musl-utils (1.1.20-r4 -> 1.1.20-r5)
+(21/32) Installing linux-headers (4.18.13-r1)
+(22/32) Installing make (4.2.1-r2)
+(23/32) Installing libuuid (2.33-r0)
+(24/32) Installing libblkid (2.33-r0)
+(25/32) Installing libmount (2.33-r0)
+(26/32) Installing libsmartcols (2.33-r0)
+(27/32) Installing findmnt (2.33-r0)
+(28/32) Installing libfdisk (2.33-r0)
+(29/32) Installing ncurses-terminfo-base (6.1_p20190105-r0)
+(30/32) Installing ncurses-terminfo (6.1_p20190105-r0)
+(31/32) Installing ncurses-libs (6.1_p20190105-r0)
+(32/32) Installing util-linux (2.33-r0)
+Executing busybox-1.29.3-r10.trigger
+OK: 124 MiB in 45 packages
+ ---> b73fbf5363db
+Removing intermediate container cdceee5e7661
+Step 5/36 : ENV GOFLAGS -mod=vendor
+ ---> Running in 9c72faf6d30d
+ ---> 577980703193
+Removing intermediate container 9c72faf6d30d
+Step 6/36 : ENV GO111MODULE on
+ ---> Running in 9ec08ee165f1
+ ---> def7d26c28fc
+Removing intermediate container 9ec08ee165f1
+Step 7/36 : ENV CGO_ENABLED 1
+ ---> Running in c9bf0a199b1c
+ ---> c1c8313de114
+Removing intermediate container c9bf0a199b1c
+Step 8/36 : ARG GOARCH=
+ ---> Running in 00cb0f487878
+ ---> 86d9a007c9e7
+Removing intermediate container 00cb0f487878
+Step 9/36 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Running in 16a7ac82e99d
+ ---> 1421145ff700
+Removing intermediate container 16a7ac82e99d
+Step 10/36 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Running in 26e25267f46f
+ ---> d7df5999ae0e
+Removing intermediate container 26e25267f46f
+Step 11/36 : ADD ./ /pillar/
+ ---> e1ceb9ec034a
+Step 12/36 : WORKDIR /pillar
+ ---> 2f42faeee71a
+Removing intermediate container dc2a3013a3a9
+Step 13/36 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc) ;    echo "Running go vet" && go vet ./... &&     echo "Running go fmt" && ERR=$(gofmt -e -l -s $(find . -name \*.go | grep -v /vendor/)) &&        if [ -n "$ERR" ] ; then echo "go fmt Failed - ERR: "$ERR ; exit 1 ; fi &&     make DISTDIR=/dist build
+ ---> Running in 641597d01331
+Running go vet
+[91m# github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter [github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter.test]
+cmd/upgradeconverter/upgradeconverter.go:72:22: too many arguments in call to agentlog.Init
+	have (string, string)
+	want (string)
+cmd/upgradeconverter/upgradeconverter.go:72:22: agentlog.Init("upgradeconverter", "") used as value
+[0m[91m# github.com/lf-edge/eve/pkg/pillar/cmd/upgradeconverter
+cmd/upgradeconverter/upgradeconverter.go:72:22: too many arguments in call to agentlog.Init
+	have (string, string)
+	want (string)
+cmd/upgradeconverter/upgradeconverter.go:72:22: agentlog.Init("upgradeconverter", "") used as value
+[0mThe command '/bin/sh -c [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc) ;    echo "Running go vet" && go vet ./... &&     echo "Running go fmt" && ERR=$(gofmt -e -l -s $(find . -name \*.go | grep -v /vendor/)) &&        if [ -n "$ERR" ] ; then echo "go fmt Failed - ERR: "$ERR ; exit 1 ; fi &&     make DISTDIR=/dist build' returned a non-zero code: 2
+exit status 2
+Makefile:336: recipe for target 'eve-pillar' failed
+make: *** [eve-pillar] Error 1
+rm pkg/pillar/Dockerfile
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:df662ad0d7a0d581a36efed16e7e15d5c0f536cc-arm64 OVMF.fd
+5194c439e2acdba78e640583c56cb18991b72c750015281fca556fd99be92cd7
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+./tools/makeconfig.sh conf /home/zededa-ci/src/eve/dist/arm64/installer/config.img
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@1 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/i2c@f7102000/adv7533@39/ports/port@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/thermal-zones/cls0/trips/trip-point@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/thermal-zones/cls0/trips/trip-point@1 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/dsi@f4107800/ports/port@1/endpoint@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/i2s@f7118000/ports/port@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@2 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@0 has a unit name, but no reg property
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 90905d8e, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:6ba90a37e6f4d81a8a0c1d58f8eca99e72e19fdb-arm64 EFI
+787de349b4ecf81728ff1699b139dfab810e55b49c2e425275bce749934cbdcc
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+./tools/makerootfs.sh images/rootfs-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs.img squash
+Extract kernel image: lfedge/eve-kernel:769e498a416977d0526e2f37022a68b8a421f9a2-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+Process init image: linuxkit/runc:69b4a35eaa22eba4990ee52cccc8f48f6c08ed03-arm64
+time="2020-03-28T08:13:31+01:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-03-28T08:13:31+01:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/containerd:09553963ed9da626c25cf8acdf6d62ec37645412-arm64
+time="2020-03-28T08:13:38+01:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-03-28T08:13:38+01:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-03-28T08:13:44+01:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-03-28T08:13:44+01:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:6ba90a37e6f4d81a8a0c1d58f8eca99e72e19fdb-arm64
+Process init image: lfedge/eve-fw:e07c45a98386767ec3926b813dc4b46a96a81541-arm64
+Process init image: lfedge/eve-xen:93b863e105118a0be7cf7423daf6b8831f0009d9-arm64
+Process init image: lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1-arm64
+Process init image: lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:25ee4f67f954a164b0722b10d74462c1c9862396-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-03-28T08:14:16+01:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:0c5a32296bfec4da3a4f8f2ca33ef64ff4be17de-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-03-28T08:14:23+01:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-03-28T08:14:23+01:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-03-28T08:14:29+01:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-03-28T08:14:29+01:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-wwan:2b98bc7569f167b1850dd9025a4b8c8489fee754-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64
+  Create OCI config for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be-arm64
+  Create OCI config for lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83-arm64
+Pull image: lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83-arm64
+time="2020-03-28T08:14:49+01:00" level=fatal msg="Failed to create OCI spec for lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83-arm64: Error response from daemon: manifest for lfedge/eve-pillar:97f61787ba13500d2094da68cd3caeebfdb68d83-arm64 not found"
+containers/services/guacd/runtime.json: Truncated input file (needed 71 bytes, only 0 available)
+bsdtar: Error exit delayed from previous errors.
+Makefile:234: recipe for target '/home/zededa-ci/src/eve/dist/arm64/installer/rootfs.img' failed
+make: *** [/home/zededa-ci/src/eve/dist/arm64/installer/rootfs.img] Error 1
+FINISHED
