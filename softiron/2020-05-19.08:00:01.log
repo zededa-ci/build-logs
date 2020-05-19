@@ -1,0 +1,2680 @@
+From https://github.com/lf-edge/eve
+   b5f5b95c..667e2ce0  master     -> origin/master
+ * [new tag]           4.10.0     -> 4.10.0
+ * [new tag]           5.0.0      -> 5.0.0
+ * [new tag]           5.0.1      -> 5.0.1
+ * [new tag]           5.1.0      -> 5.1.0
+ * [new tag]           5.1.1      -> 5.1.1
+ * [new tag]           5.1.10     -> 5.1.10
+ * [new tag]           5.1.11     -> 5.1.11
+ * [new tag]           5.2.0      -> 5.2.0
+ * [new tag]           5.2.1      -> 5.2.1
+ * [new tag]           5.2.2      -> 5.2.2
+ * [new tag]           5.2.3      -> 5.2.3
+ * [new tag]           5.2.4      -> 5.2.4
+ * [new tag]           5.3.0      -> 5.3.0
+ * [new tag]           5.4.0      -> 5.4.0
+Building the following tags:  origin/master (latest tag is 5.4.0)
+Skipping repository .go/pkg/dep/sources/https---github.com-linuxkit-linuxkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-hyperkit
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-context
+Skipping repository .go/pkg/dep/sources/https---github.com-theupdateframework-notary
+Skipping repository .go/pkg/dep/sources/https---github.com-mitchellh-go--ps
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-appengine
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonschema
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-net
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonpointer
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-tool
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--ansiterm
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-vpnkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-anonuuid
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--autorest
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-gotty--client
+Skipping repository .go/pkg/dep/sources/https---github.com-Microsoft-go--winio
+Skipping repository .go/pkg/dep/sources/https---github.com-agl-ed25519
+Skipping repository .go/pkg/dep/sources/https---github.com-aws-aws--sdk--go
+Skipping repository .go/pkg/dep/sources/https---github.com-containerd-containerd
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-go--digest
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-image--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-runtime--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-packethost-packngo
+Skipping repository .go/pkg/dep/sources/https---github.com-pkg-errors
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--vhd--utils
+Skipping repository .go/pkg/dep/sources/https---github.com-renstrom-fuzzysearch
+Skipping repository .go/pkg/dep/sources/https---github.com-rn-iso9660wrap
+Skipping repository .go/pkg/dep/sources/https---github.com-creack-goselect
+Skipping repository .go/pkg/dep/sources/https---github.com-dgrijalva-jwt--go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-distribution
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-docker
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--connections
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--units
+Skipping repository .go/pkg/dep/sources/https---github.com-jmespath-go--jmespath
+Skipping repository .go/pkg/dep/sources/https---github.com-scaleway-go--scaleway
+Skipping repository .go/pkg/dep/sources/https---github.com-go--ini-ini
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-mux
+Skipping repository .go/pkg/dep/sources/https---github.com-gogo-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-websocket
+Skipping repository .go/pkg/dep/sources/https---github.com-vmware-govmomi
+Skipping repository .go/pkg/dep/sources/https---github.com-sirupsen-logrus
+Skipping repository .go/pkg/dep/sources/https---gopkg.in-yaml.v2
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--p9p
+Skipping repository .go/pkg/dep/sources/https---github.com-google-uuid
+Skipping repository .go/pkg/dep/sources/https---github.com-gophercloud-gophercloud
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonreference
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-datakit
+Skipping repository .go/pkg/dep/sources/https---github.com-surma-gocpio
+Skipping repository .go/pkg/dep/sources/https---github.com-miekg-pkcs11
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sync
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-oauth2
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-gocloud
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sys
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-crypto
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-google--api--go--client
+Skipping repository .go/pkg/dep/sources/https---github.com-census--instrumentation-opencensus--go
+Skipping repository .go/pkg/dep/sources/https---github.com-googleapis-gax--go
+Skipping repository .go/pkg/dep/sources/https---github.com-grpc-grpc--go
+Skipping repository .go/pkg/dep/sources/https---github.com-konsorten-go--windows--terminal--sequences
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-groupcache
+Skipping repository .go/pkg/dep/sources/https---github.com-google-go--genproto
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-text
+Removing .go/src
+Removing .go/bin
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+HEAD is now at 667e2ce0 Latching SHA with name for container images
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+Building and pushing "lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8"
+4671ddb5582e8c788d6953ce113ca1f53af81fe8: Pulling from lfedge/eve-acrn
+Digest: sha256:7d8badd1ec2a820dd5c442f6e9ee0a369d786609f4c029e300efb9065a88e944
+Status: Image is up to date for lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8
+Building and pushing "lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9"
+1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9: Pulling from lfedge/eve-acrn-kernel
+Digest: sha256:4e919dabba56fe57cea76b45a0e81a6c0b964b5f4d622e8f38f9e989d78cd6a2
+Status: Image is up to date for lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9
+Building and pushing "lfedge/eve-alpine:ac1dc159510afa61334222cedf085c7730e4583c"
+ac1dc159510afa61334222cedf085c7730e4583c: Pulling from lfedge/eve-alpine
+Digest: sha256:11acfecd7d2baf8c6b9b369db7c57f805db63901eaba796f59d755daa0212ed6
+Status: Image is up to date for lfedge/eve-alpine:ac1dc159510afa61334222cedf085c7730e4583c
+Building and pushing "lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b"
+2ff5b19ea565a13fa93a634abdef20e04276b73b: Pulling from lfedge/eve-debug
+Digest: sha256:5635f14ff52bd253d475322d9082e33364662ab71b14717dd67a9bf7e3eb84ea
+Status: Image is up to date for lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b
+Building and pushing "lfedge/eve-dnsmasq:daf64b1cfa970979aa461faf7024beea9b5d6ded"
+daf64b1cfa970979aa461faf7024beea9b5d6ded: Pulling from lfedge/eve-dnsmasq
+Digest: sha256:154f733a60bc10438f9e6125442bb0f4424995d099b830385371c3430e1813f7
+Status: Image is up to date for lfedge/eve-dnsmasq:daf64b1cfa970979aa461faf7024beea9b5d6ded
+Building and pushing "lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f"
+b4b546907c17195e7e79baefd88fdb841bc92b8f: Pulling from lfedge/eve-dom0-ztools
+Digest: sha256:0b0d059e711ed6e5d6b23ea4ed62ffb8cde12a7dea7b04b4b190955dec4e03aa
+Status: Image is up to date for lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f
+Building and pushing "lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0"
+60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0: Pulling from lfedge/eve-fw
+Digest: sha256:66ab18a572b7e443201cfc837ac02d97b4006ade3c8e2791ccee30576556327e
+Status: Image is up to date for lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0
+Building and pushing "lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1"
+e378abea66b77fb7e9587b798a8caf5c78f440c1: Pulling from lfedge/eve-gpt-tools
+Digest: sha256:5ab0097ee02c29d030203bd8abd8bcff401b987d5d009db75c8ac051e147210b
+Status: Image is up to date for lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1
+Building and pushing "lfedge/eve-grub:2a4c82f75e6a9e63a3e00ebad6873a2f30a31739"
+2a4c82f75e6a9e63a3e00ebad6873a2f30a31739: Pulling from lfedge/eve-grub
+Digest: sha256:fbd93b438824695860afa3d87302ccedce7c90107f62211e70b61162eb5fd347
+Status: Image is up to date for lfedge/eve-grub:2a4c82f75e6a9e63a3e00ebad6873a2f30a31739
+Building and pushing "lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be"
+f1f08a0fcadd35320f5d03fe0f0a1a318e8449be: Pulling from lfedge/eve-guacd
+Digest: sha256:c63eaa48b06670e26a257eff3264a87bf0117effb2bb63ba5609b89ec4dcdc1c
+Status: Image is up to date for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be
+Building and pushing "lfedge/eve-kernel:b7ef5cdd9425eb67cd8f95761d95249045c82e9c"
+b7ef5cdd9425eb67cd8f95761d95249045c82e9c: Pulling from lfedge/eve-kernel
+Digest: sha256:fdaca61a686287d6e1c786effc6559a507416e70d59382f31696c81ed1261564
+Status: Image is up to date for lfedge/eve-kernel:b7ef5cdd9425eb67cd8f95761d95249045c82e9c
+Building and pushing "lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5"
+6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5: Pulling from lfedge/eve-lisp
+Digest: sha256:ffd1e627f758962b57ccab772aa0bfb1e60704574a4b7795008da1fce6315dd0
+Status: Image is up to date for lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5
+Building and pushing "lfedge/eve-mkconf:c634f15aed9821e397870987c9fa41d802d2223c"
+c634f15aed9821e397870987c9fa41d802d2223c: Pulling from lfedge/eve-mkconf
+Digest: sha256:5c67d36defefdb6ce4acf1b6394344438cda78ff6f52d1dc12300b13eac17d76
+Status: Image is up to date for lfedge/eve-mkconf:c634f15aed9821e397870987c9fa41d802d2223c
+Building and pushing "lfedge/eve-mkimage-iso-efi:8ce5372435b573edc59f0bd5e03bf460defccb0b"
+8ce5372435b573edc59f0bd5e03bf460defccb0b: Pulling from lfedge/eve-mkimage-iso-efi
+Digest: sha256:a566a800432cef6d0e9546d1fc97e9b54286f9143c5b42751ed8af124dc3020b
+Status: Image is up to date for lfedge/eve-mkimage-iso-efi:8ce5372435b573edc59f0bd5e03bf460defccb0b
+Building and pushing "lfedge/eve-mkimage-raw-efi:5b9c8a3bc15353352a7462b508c9f379e9fcea32"
+5b9c8a3bc15353352a7462b508c9f379e9fcea32: Pulling from lfedge/eve-mkimage-raw-efi
+Digest: sha256:b950b096c66ef17283e886ed9d7653883968310d610501e00f8fdc3cf78c72d0
+Status: Image is up to date for lfedge/eve-mkimage-raw-efi:5b9c8a3bc15353352a7462b508c9f379e9fcea32
+Building and pushing "lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3"
+17ec5bda58c7f6d3717b88d3da55df4516cdb6f3: Pulling from lfedge/eve-mkrootfs-ext4
+Digest: sha256:b867059462b3864d19c8f185331bc5ea7c351a90f69b4f7b97d925ec294d03eb
+Status: Image is up to date for lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3
+Building and pushing "lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0"
+70b1faff4c3b512c91a1b7157fbddabbd41992f0: Pulling from lfedge/eve-mkrootfs-squash
+Digest: sha256:bd251f51068e34d09a6b0aad4162484fe8dc09a2a3ca14b57134e49a4838e9b8
+Status: Image is up to date for lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0
+Building and pushing "lfedge/eve-new-kernel:86689f6975f498d47e804575a79e77a36cbefe3c"
+86689f6975f498d47e804575a79e77a36cbefe3c: Pulling from lfedge/eve-new-kernel
+Digest: sha256:d52c22c5c79a746253adc0b9e23c69b3370aa4750377f5214dfac4656b3c8331
+Status: Image is up to date for lfedge/eve-new-kernel:86689f6975f498d47e804575a79e77a36cbefe3c
+Building and pushing "lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252"
+6dda5ee56b295a0115e7c09a0ca23aa925426252: Pulling from lfedge/eve-strongswan
+Digest: sha256:981b13f775e13852c196038eee1fb7163340e9281a5b8a017bf75e1ad10ba8c3
+Status: Image is up to date for lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+Building and pushing "lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304"
+8f003948bc2c61cbe26297aef6d6fc4b871fa304: Pulling from lfedge/eve-pillar
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon   31.9MB
+Step 1/45 : ARG GOVER=1.12.4
+ ---> 
+Step 2/45 : FROM lfedge/eve-alpine:ac1dc159510afa61334222cedf085c7730e4583c as fscrypt-build
+ ---> 71f89e1f36c5
+Step 3/45 : RUN apk add --no-cache git=2.20.2-r0 gcc=8.3.0-r0 linux-headers=4.18.13-r1                        libc-dev=0.7.1-r0 make=4.2.1-r2 linux-pam-dev=1.3.0-r0                        m4=1.4.18-r1 findutils=4.6.0-r1 go=1.11.5-r0
+ ---> Running in 40ffd2892a40
+(1/36) Installing findutils (4.6.0-r1)
+(2/36) Installing binutils (2.31.1-r2)
+(3/36) Installing gmp (6.1.2-r1)
+(4/36) Installing isl (0.18-r0)
+(5/36) Installing libgomp (8.3.0-r0)
+(6/36) Installing libatomic (8.3.0-r0)
+(7/36) Installing libgcc (8.3.0-r0)
+(8/36) Installing mpfr3 (3.1.5-r1)
+(9/36) Installing mpc1 (1.0.3-r1)
+(10/36) Installing libstdc++ (8.3.0-r0)
+(11/36) Installing gcc (8.3.0-r0)
+(12/36) Installing ca-certificates (20190108-r0)
+(13/36) Installing nghttp2-libs (1.35.1-r1)
+(14/36) Installing libssh2 (1.9.0-r1)
+(15/36) Installing libcurl (7.64.0-r3)
+(16/36) Installing expat (2.2.8-r0)
+(17/36) Installing pcre2 (10.32-r1)
+(18/36) Installing git (2.20.2-r0)
+(19/36) Installing go (1.11.5-r0)
+(20/36) Installing musl-dev (1.1.20-r5)
+(21/36) Installing libc-dev (0.7.1-r0)
+(22/36) Installing linux-headers (4.18.13-r1)
+(23/36) Installing gettext-asprintf (0.19.8.1-r4)
+(24/36) Installing libintl (0.19.8.1-r4)
+(25/36) Installing libunistring (0.9.10-r0)
+(26/36) Installing gettext-libs (0.19.8.1-r4)
+(27/36) Installing ncurses-terminfo-base (6.1_p20190105-r0)
+(28/36) Installing ncurses-terminfo (6.1_p20190105-r0)
+(29/36) Installing ncurses-libs (6.1_p20190105-r0)
+(30/36) Installing libxml2 (2.9.9-r2)
+(31/36) Installing gettext (0.19.8.1-r4)
+(32/36) Installing gettext-dev (0.19.8.1-r4)
+(33/36) Installing linux-pam (1.3.0-r0)
+(34/36) Installing linux-pam-dev (1.3.0-r0)
+(35/36) Installing m4 (1.4.18-r1)
+(36/36) Installing make (4.2.1-r2)
+Executing busybox-1.29.3-r10.trigger
+Executing ca-certificates-20190108-r0.trigger
+OK: 375 MiB in 50 packages
+ ---> 40f07b2f8fb7
+Removing intermediate container 40ffd2892a40
+Step 4/45 : RUN mkdir -p /go/src/github.com/google
+ ---> Running in 268729ba4c1c
+ ---> e0b4d8136b2c
+Removing intermediate container 268729ba4c1c
+Step 5/45 : WORKDIR /go/src/github.com/google
+ ---> 788c5911c0f4
+Removing intermediate container 9aeff4e1bd7e
+Step 6/45 : RUN git clone https://github.com/google/fscrypt
+ ---> Running in 66ce6bf7b81d
+[91mCloning into 'fscrypt'...
+[0m ---> 313ccd908c45
+Removing intermediate container 66ce6bf7b81d
+Step 7/45 : WORKDIR /go/src/github.com/google/fscrypt
+ ---> 51e083e29fb8
+Removing intermediate container 023f4abff34d
+Step 8/45 : RUN git reset --hard b41569d397d3e66099cde07d8eef36b2f42dd0ec
+ ---> Running in fc5c77ae81d3
+HEAD is now at b41569d README.md: improve documentation for moving files into encrypted dirs (#138)
+ ---> 8681b9819069
+Removing intermediate container fc5c77ae81d3
+Step 9/45 : COPY fscrypt/* ./
+ ---> e61038a2cfcb
+Step 10/45 : RUN patch -p1 < patch01-no-pam.diff &&     patch -p1 < patch02-rotate-raw-key.diff &&     make && make install
+ ---> Running in 85127c0e337e
+patching file actions/callback.go
+patching file cmd/fscrypt/keys.go
+patching file cmd/fscrypt/commands.go
+patching file cmd/fscrypt/flags.go
+patching file cmd/fscrypt/keys.go
+patching file cmd/fscrypt/prompt.go
+go build --ldflags '-s -w -X "main.version=v0.2.4-29-gb41569d" -X "main.buildTime=Tue May 19 06:06:49 UTC 2020" -extldflags ""' -o bin/fscrypt ./cmd/fscrypt
+[91mgo: finding github.com/golang/protobuf v1.2.0
+[0m[91mgo: finding github.com/urfave/cli v1.20.0
+[0m[91mgo: finding github.com/pkg/errors v0.8.0
+[0m[91mgo: finding golang.org/x/net v0.0.0-20180826012351-8a410e7b638d
+[0m[91mgo: finding golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f
+[0m[91mgo: finding golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac
+go: finding golang.org/x/sys v0.0.0-20180828065106-d99a578cf41b
+[0m[91mgo: downloading golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac
+[0m[91mgo: downloading github.com/urfave/cli v1.20.0
+[0m[91mgo: downloading github.com/golang/protobuf v1.2.0
+[0m[91mgo: downloading github.com/pkg/errors v0.8.0
+[0m[91mgo: downloading golang.org/x/sys v0.0.0-20180828065106-d99a578cf41b
+[0mgo build -buildmode=c-shared --ldflags '-s -w -X "main.version=v0.2.4-29-gb41569d" -X "main.buildTime=Tue May 19 06:06:49 UTC 2020" -extldflags ""' -o bin/pam_fscrypt.so ./pam_fscrypt
+rm -f bin/pam_fscrypt.h
+install -d /usr/local/bin
+install bin/fscrypt /usr/local/bin
+install -d /usr/local/lib/security
+install bin/pam_fscrypt.so /usr/local/lib/security
+m4 --define=PAM_INSTALL_PATH=/usr/local/lib/security/pam_fscrypt.so < pam_fscrypt/config > bin/config
+install -d /usr/local/share/pam-configs
+install bin/config /usr/local/share/pam-configs/fscrypt
+ ---> 2d015fa2c35f
+Removing intermediate container 85127c0e337e
+Step 11/45 : ARG GOVER=1.12.4
+ ---> Running in 4b253b12596e
+ ---> 4202c14e41ae
+Removing intermediate container 4b253b12596e
+Step 12/45 : FROM golang:${GOVER}-alpine as build
+ ---> 7701ec5e84de
+Step 13/45 : RUN apk update
+ ---> Running in ba0a9c48d636
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+v3.9.6-8-g0a50437d8b [http://dl-cdn.alpinelinux.org/alpine/v3.9/main]
+v3.9.5-42-g2b1bc27a69 [http://dl-cdn.alpinelinux.org/alpine/v3.9/community]
+OK: 9567 distinct packages available
+ ---> f909d2298342
+Removing intermediate container ba0a9c48d636
+Step 14/45 : RUN apk add --no-cache git gcc linux-headers libc-dev util-linux make
+ ---> Running in 21b692deddd1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/32) Upgrading musl (1.1.20-r4 -> 1.1.20-r5)
+(2/32) Installing binutils (2.31.1-r2)
+(3/32) Installing gmp (6.1.2-r1)
+(4/32) Installing isl (0.18-r0)
+(5/32) Installing libgomp (8.3.0-r0)
+(6/32) Installing libatomic (8.3.0-r0)
+(7/32) Installing libgcc (8.3.0-r0)
+(8/32) Installing mpfr3 (3.1.5-r1)
+(9/32) Installing mpc1 (1.0.3-r1)
+(10/32) Installing libstdc++ (8.3.0-r0)
+(11/32) Installing gcc (8.3.0-r0)
+(12/32) Installing nghttp2-libs (1.35.1-r1)
+(13/32) Installing libssh2 (1.9.0-r1)
+(14/32) Installing libcurl (7.64.0-r3)
+(15/32) Installing expat (2.2.8-r0)
+(16/32) Installing pcre2 (10.32-r1)
+(17/32) Installing git (2.20.4-r0)
+(18/32) Installing musl-dev (1.1.20-r5)
+(19/32) Installing libc-dev (0.7.1-r0)
+(20/32) Upgrading musl-utils (1.1.20-r4 -> 1.1.20-r5)
+(21/32) Installing linux-headers (4.18.13-r1)
+(22/32) Installing make (4.2.1-r2)
+(23/32) Installing libuuid (2.33-r0)
+(24/32) Installing libblkid (2.33-r0)
+(25/32) Installing libmount (2.33-r0)
+(26/32) Installing libsmartcols (2.33-r0)
+(27/32) Installing findmnt (2.33-r0)
+(28/32) Installing libfdisk (2.33-r0)
+(29/32) Installing ncurses-terminfo-base (6.1_p20190105-r0)
+(30/32) Installing ncurses-terminfo (6.1_p20190105-r0)
+(31/32) Installing ncurses-libs (6.1_p20190105-r0)
+(32/32) Installing util-linux (2.33-r0)
+Executing busybox-1.29.3-r10.trigger
+OK: 124 MiB in 45 packages
+ ---> de57c0e6748e
+Removing intermediate container 21b692deddd1
+Step 15/45 : ENV GOFLAGS -mod=vendor
+ ---> Running in 47cfbc30dd97
+ ---> da2b5472ad82
+Removing intermediate container 47cfbc30dd97
+Step 16/45 : ENV GO111MODULE on
+ ---> Running in 70af9b02fdf7
+ ---> 156be91384c8
+Removing intermediate container 70af9b02fdf7
+Step 17/45 : ENV CGO_ENABLED 1
+ ---> Running in 72c28fc2fa92
+ ---> 8900bf472f12
+Removing intermediate container 72c28fc2fa92
+Step 18/45 : ARG GOARCH=
+ ---> Running in aed5efa2eaec
+ ---> 03379c77741f
+Removing intermediate container aed5efa2eaec
+Step 19/45 : ARG CROSS_GCC=https://musl.cc/aarch64-linux-musleabi-cross.tgz
+ ---> Running in 643d723d2068
+ ---> 43b0356c7dc6
+Removing intermediate container 643d723d2068
+Step 20/45 : RUN [ -z "$GOARCH" ] || (cd / ; apk add --no-cache wget && wget -O - $CROSS_GCC | tar xzvf -)
+ ---> Running in a2c70a9b2a92
+ ---> 0788578216e5
+Removing intermediate container a2c70a9b2a92
+Step 21/45 : ADD ./ /pillar/
+ ---> 7a347be1e2d7
+Step 22/45 : WORKDIR /pillar
+ ---> d73bdf02ef62
+Removing intermediate container 76c807d029de
+Step 23/45 : RUN [ -z "$GOARCH" ] || export CC=$(echo /*-cross/bin/*-gcc) ;    echo "Running go vet" && go vet ./... &&     echo "Running go fmt" && ERR=$(gofmt -e -l -s $(find . -name \*.go | grep -v /vendor/)) &&        if [ -n "$ERR" ] ; then echo "go fmt Failed - ERR: "$ERR ; exit 1 ; fi &&     make DISTDIR=/dist build
+ ---> Running in d833b3566c84
+Running go vet
+Running go fmt
+mkdir -p /dist
+Building /dist/zedbox
+GO111MODULE=on GOOS=linux CGO_ENABLED=0 go build -mod=vendor -ldflags -X=main.Version=---2020-05-19.06.10 -o /dist/zedbox ./zedbox
+hardwaremodel
+executor
+conntrack
+downloader
+zedagent
+volumemgr
+identitymgr
+logmanager
+command
+tpmmgr
+ipcmonitor
+zedmanager
+baseosmgr
+diag
+verifier
+zedrouter
+vaultmgr
+domainmgr
+ledmanager
+nim
+nodeagent
+waitforaddr
+client
+upgradeconverter
+wstunnelclient
+ ---> fd88a7b4d480
+Removing intermediate container d833b3566c84
+Step 24/45 : FROM lfedge/eve-dnsmasq:daf64b1cfa970979aa461faf7024beea9b5d6ded-arm64 as dnsmasq
+ ---> b859fe4aa713
+Step 25/45 : FROM lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252-arm64 as strongswan
+ ---> f6691cb64fbb
+Step 26/45 : FROM lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1-arm64 as gpttools
+ ---> 3d002692eddd
+Step 27/45 : FROM alpine:3.8
+ ---> b22edbe95d11
+Step 28/45 : SHELL /bin/ash -eo pipefail -c
+ ---> Running in 77ce160f2c50
+ ---> c1fe93845686
+Removing intermediate container 77ce160f2c50
+Step 29/45 : RUN apk add --no-cache     yajl xz bash openssl iptables ip6tables iproute2 dhcpcd          coreutils dmidecode libbz2 libuuid ipset           curl radvd ethtool     util-linux e2fsprogs libcrypto1.0 xorriso qemu-img     jq e2fsprogs-extra keyutils ca-certificates
+ ---> Running in d088e97943b1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/65) Installing ncurses-terminfo-base (6.1_p20180818-r1)
+(2/65) Installing ncurses-terminfo (6.1_p20180818-r1)
+(3/65) Installing ncurses-libs (6.1_p20180818-r1)
+(4/65) Installing readline (7.0.003-r0)
+(5/65) Installing bash (4.4.19-r1)
+Executing bash-4.4.19-r1.post-install
+(6/65) Installing ca-certificates (20191127-r0)
+(7/65) Installing libattr (2.4.47-r7)
+(8/65) Installing libacl (2.2.52-r5)
+(9/65) Installing coreutils (8.29-r2)
+(10/65) Installing nghttp2-libs (1.39.2-r0)
+(11/65) Installing libssh2 (1.9.0-r1)
+(12/65) Installing libcurl (7.61.1-r3)
+(13/65) Installing curl (7.61.1-r3)
+(14/65) Installing dhcpcd (7.0.7-r0)
+(15/65) Installing dmidecode (3.1-r0)
+(16/65) Installing libuuid (2.32-r0)
+(17/65) Installing libblkid (2.32-r0)
+(18/65) Installing libcom_err (1.44.2-r2)
+(19/65) Installing e2fsprogs-libs (1.44.2-r2)
+(20/65) Installing e2fsprogs (1.44.2-r2)
+(21/65) Installing e2fsprogs-extra (1.44.2-r2)
+(22/65) Installing ethtool (4.16-r0)
+(23/65) Installing libmnl (1.0.4-r0)
+(24/65) Installing jansson (2.11-r0)
+(25/65) Installing libnftnl-libs (1.1.1-r0)
+(26/65) Installing iptables (1.6.2-r0)
+(27/65) Installing ip6tables (1.6.2-r0)
+(28/65) Installing libelf (0.8.13-r3)
+(29/65) Installing iproute2 (4.13.0-r0)
+Executing iproute2-4.13.0-r0.post-install
+(30/65) Installing ipset (6.38-r1)
+(31/65) Installing oniguruma (6.9.4-r0)
+(32/65) Installing jq (1.6_rc1-r1)
+(33/65) Installing keyutils-libs (1.5.10-r0)
+(34/65) Installing keyutils (1.5.10-r0)
+(35/65) Installing libbz2 (1.0.6-r7)
+(36/65) Installing libcrypto1.0 (1.0.2u-r0)
+(37/65) Installing libssl1.0 (1.0.2u-r0)
+(38/65) Installing openssl (1.0.2u-r0)
+(39/65) Installing libaio (0.3.111-r0)
+(40/65) Installing libgcc (6.4.0-r9)
+(41/65) Installing libffi (3.2.1-r4)
+(42/65) Installing libintl (0.19.8.1-r2)
+(43/65) Installing libmount (2.32-r0)
+(44/65) Installing pcre (8.42-r0)
+(45/65) Installing glib (2.56.1-r1)
+(46/65) Installing gmp (6.1.2-r1)
+(47/65) Installing nettle (3.4.1-r0)
+(48/65) Installing p11-kit (0.23.10-r0)
+(49/65) Installing libtasn1 (4.14-r0)
+(50/65) Installing libunistring (0.9.7-r0)
+(51/65) Installing gnutls (3.6.7-r1)
+(52/65) Installing qemu-img (2.12.0-r3)
+(53/65) Installing radvd (2.17-r2)
+Executing radvd-2.17-r2.pre-install
+(54/65) Installing libsmartcols (2.32-r0)
+(55/65) Installing findmnt (2.32-r0)
+(56/65) Installing libfdisk (2.32-r0)
+(57/65) Installing util-linux (2.32-r0)
+(58/65) Installing libburn (1.4.8-r0)
+(59/65) Installing libedit (20170329.3.1-r3)
+(60/65) Installing libisofs (1.4.8-r0)
+(61/65) Installing libisoburn (1.4.8-r0)
+(62/65) Installing xorriso (1.4.8-r0)
+(63/65) Installing xz-libs (5.2.4-r0)
+(64/65) Installing xz (5.2.4-r0)
+(65/65) Installing yajl (2.1.0-r0)
+Executing busybox-1.28.4-r3.trigger
+Executing ca-certificates-20191127-r0.trigger
+Executing glib-2.56.1-r1.trigger
+OK: 44 MiB in 78 packages
+ ---> 2358f5362fce
+Removing intermediate container d088e97943b1
+Step 30/45 : ADD conf/root-certificate.pem conf/server conf/server.production /opt/zededa/examples/config/
+ ---> bfa6f4d61f9b
+Step 31/45 : ADD scripts/device-steps.sh scripts/generate-device.sh scripts/generate-self-signed.sh scripts/handlezedserverconfig.sh scripts/veth.sh /opt/zededa/bin/
+ ---> 8e7f5d7123b8
+Step 32/45 : ADD conf/lisp.config.base /var/tmp/zededa/lisp.config.base
+ ---> 3f89a6095613
+Step 33/45 : COPY patches/* /patches/
+ ---> 6f504bf80b74
+Step 34/45 : RUN set -e && for patch in ../patches/*.patch; do         echo "Applying $patch";         patch -p1 < "$patch";     done
+ ---> Running in 15dbb01e294e
+Applying ../patches/001-dhcpcd-no-resolv-conf.patch
+patching file usr/lib/dhcpcd/dhcpcd-hooks/20-resolv.conf
+ ---> 6d94a4d23ce4
+Removing intermediate container 15dbb01e294e
+Step 35/45 : COPY --from=build /dist /opt/zededa/bin
+ ---> d2df5487c427
+Step 36/45 : COPY --from=gpttools / /
+ ---> 878a6a3b6588
+Step 37/45 : COPY --from=dnsmasq /usr/sbin/dnsmasq /opt/zededa/bin/dnsmasq
+ ---> 0d6f89a39580
+Step 38/45 : COPY --from=strongswan / /
+ ---> 569abd5b01d4
+Step 39/45 : COPY --from=fscrypt-build /usr/local/bin/fscrypt /opt/zededa/bin/fscrypt
+ ---> 5ce55c598267
+Step 40/45 : COPY rootfs/ /
+ ---> 92f5f68c9794
+Step 41/45 : RUN if [ "$(uname -m)" = "aarch64" ] ; then                                                    apk add --no-cache findutils=4.6.0-r1 binutils=2.30-r6 file=5.32-r2             ;       find / -type f -executable -exec file {} \; | grep 'not stripped' | cut -f1 -d: |       xargs strip                                                                     ;       apk del findutils binutils file                                                 ;    fi
+ ---> Running in cb0e715e15ac
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/aarch64/APKINDEX.tar.gz
+(1/4) Installing binutils (2.30-r6)
+(2/4) Installing libmagic (5.32-r2)
+(3/4) Installing file (5.32-r2)
+(4/4) Installing findutils (4.6.0-r1)
+Executing busybox-1.28.4-r3.trigger
+OK: 60 MiB in 82 packages
+[91mWARNING: Ignoring APKINDEX.adfa7ceb.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.efaa1f73.tar.gz: No such file or directory
+[0m(1/4) Purging binutils (2.30-r6)
+(2/4) Purging file (5.32-r2)
+(3/4) Purging findutils (4.6.0-r1)
+(4/4) Purging libmagic (5.32-r2)
+Executing busybox-1.28.4-r3.trigger
+OK: 44 MiB in 78 packages
+ ---> 3993e045cff8
+Removing intermediate container cb0e715e15ac
+Step 42/45 : SHELL /bin/sh -c
+ ---> Running in bd2d0e1f242f
+ ---> c8bf1cc5b4de
+Removing intermediate container bd2d0e1f242f
+Step 43/45 : WORKDIR /
+ ---> 663f692be89c
+Removing intermediate container b982e06e9ec7
+Step 44/45 : CMD /init.sh
+ ---> Running in c9b4c9de3990
+ ---> acf83a5cc0eb
+Removing intermediate container c9b4c9de3990
+Step 45/45 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/lib/modules:/lib/modules","/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/run:/run","/var/config:/config","/:/hostfs","/var/persist:/persist:rshared,rbind"],"net":"host","pid":"host","rootfsPropagation":"shared"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '667e2ce0622ef079c48509a43a6f3c0411cf9f9a' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in df404322d831
+ ---> b9af973981f3
+Removing intermediate container df404322d831
+Successfully built b9af973981f3
+Successfully tagged lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64
+Pushing lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64
+The push refers to a repository [docker.io/lfedge/eve-pillar]
+a0e865996b29: Preparing
+428d7ddc5b68: Preparing
+0c5f7e0d3c60: Preparing
+7548da99f9e5: Preparing
+a1e42e8c78a7: Preparing
+4e6211245ee9: Preparing
+85e84e1278b6: Preparing
+a2de339e3ce2: Preparing
+dcb415216872: Preparing
+11d2add812e7: Preparing
+44971cc33b8e: Preparing
+74c21f456c6a: Preparing
+555d56ad428b: Preparing
+7207ab4ea143: Preparing
+11d2add812e7: Waiting
+44971cc33b8e: Waiting
+74c21f456c6a: Waiting
+555d56ad428b: Waiting
+7207ab4ea143: Waiting
+4e6211245ee9: Waiting
+85e84e1278b6: Waiting
+a2de339e3ce2: Waiting
+dcb415216872: Waiting
+428d7ddc5b68: Layer already exists
+7548da99f9e5: Layer already exists
+a1e42e8c78a7: Pushed
+4e6211245ee9: Layer already exists
+0c5f7e0d3c60: Pushed
+a2de339e3ce2: Pushed
+dcb415216872: Pushed
+11d2add812e7: Pushed
+a0e865996b29: Pushed
+44971cc33b8e: Pushed
+7207ab4ea143: Layer already exists
+74c21f456c6a: Pushed
+85e84e1278b6: Pushed
+555d56ad428b: Pushed
+8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64: digest: sha256:2644489363be8cae98aa28bd1916a6ce91d67c59bf97289ef2ec33eff01ee715 size: 3255
+Pushing lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64 to manifest lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304
+time="2020-05-19T08:12:50+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-s390x\". Skipping image."
+Digest: sha256:4a904ad498dcb335d27c0f41dc13efcd58f761705c27578191681b6878dc5820 743
+Not signing lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304
+Tagging lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64 as lfedge/eve-pillar:snapshot-arm64
+Pushing lfedge/eve-pillar:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve-pillar]
+a0e865996b29: Preparing
+428d7ddc5b68: Preparing
+0c5f7e0d3c60: Preparing
+7548da99f9e5: Preparing
+a1e42e8c78a7: Preparing
+4e6211245ee9: Preparing
+85e84e1278b6: Preparing
+a2de339e3ce2: Preparing
+dcb415216872: Preparing
+11d2add812e7: Preparing
+44971cc33b8e: Preparing
+74c21f456c6a: Preparing
+555d56ad428b: Preparing
+7207ab4ea143: Preparing
+dcb415216872: Waiting
+11d2add812e7: Waiting
+44971cc33b8e: Waiting
+74c21f456c6a: Waiting
+555d56ad428b: Waiting
+7207ab4ea143: Waiting
+85e84e1278b6: Waiting
+a2de339e3ce2: Waiting
+4e6211245ee9: Waiting
+0c5f7e0d3c60: Layer already exists
+a1e42e8c78a7: Layer already exists
+7548da99f9e5: Layer already exists
+a0e865996b29: Layer already exists
+428d7ddc5b68: Layer already exists
+4e6211245ee9: Layer already exists
+85e84e1278b6: Layer already exists
+dcb415216872: Layer already exists
+a2de339e3ce2: Layer already exists
+11d2add812e7: Layer already exists
+44971cc33b8e: Layer already exists
+555d56ad428b: Layer already exists
+74c21f456c6a: Layer already exists
+7207ab4ea143: Layer already exists
+snapshot-arm64: digest: sha256:2644489363be8cae98aa28bd1916a6ce91d67c59bf97289ef2ec33eff01ee715 size: 3255
+Pushing lfedge/eve-pillar:snapshot-arm64 to manifest lfedge/eve-pillar:snapshot
+time="2020-05-19T08:13:10+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-pillar:snapshot-s390x\". Skipping image."
+Digest: sha256:4a904ad498dcb335d27c0f41dc13efcd58f761705c27578191681b6878dc5820 743
+Not signing lfedge/eve-pillar:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "lfedge/eve-uefi:fa7ce16c9abd2aa6028e58b3da01eb7ee07067da"
+fa7ce16c9abd2aa6028e58b3da01eb7ee07067da: Pulling from lfedge/eve-uefi
+Digest: sha256:3174b76287ef09aaf7ec84a29fd884fb008c0845c1ec5baba689e5900dfc6f32
+Status: Image is up to date for lfedge/eve-uefi:fa7ce16c9abd2aa6028e58b3da01eb7ee07067da
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+Building and pushing "lfedge/eve-xen-tools:b3043f4196b7124fbd9385a37e44993b84db562d"
+b3043f4196b7124fbd9385a37e44993b84db562d: Pulling from lfedge/eve-xen-tools
+Digest: sha256:c598e535e4022cf45090e01f7b2fd086be682d85404eecd8a40f5b72c7ee5439
+Status: Image is up to date for lfedge/eve-xen-tools:b3043f4196b7124fbd9385a37e44993b84db562d
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+Building and pushing "lfedge/eve-qrexec-lib:b0fb86eb752be7884d4d83c1dbbb025e75c5c466"
+b0fb86eb752be7884d4d83c1dbbb025e75c5c466: Pulling from lfedge/eve-qrexec-lib
+Digest: sha256:abd39f4a76686a94b422d935bc9a3f194250bc5bdfe1ca0a2d129490060011d4
+Status: Image is up to date for lfedge/eve-qrexec-lib:b0fb86eb752be7884d4d83c1dbbb025e75c5c466
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+Building and pushing "lfedge/eve-qrexec-dom0:29024a9e04a96b4baede4f474dcf85c1cef98607"
+29024a9e04a96b4baede4f474dcf85c1cef98607: Pulling from lfedge/eve-qrexec-dom0
+Digest: sha256:c9c1e1021d32a2ceae4c0c3ac06fea559a447165f9a1400456d8fd05d7cfd2d6
+Status: Image is up to date for lfedge/eve-qrexec-dom0:29024a9e04a96b4baede4f474dcf85c1cef98607
+Building and pushing "lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7"
+6e16dad8553a6c2939854abfa9f34a5f2604bce7: Pulling from lfedge/eve-rngd
+Digest: sha256:d18f87ec9e50c7a996e1a9c78589b5dba52e53d59c81998503e782d65875a6dc
+Status: Image is up to date for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7
+Building and pushing "lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905"
+45c06206f5930d20ad41666a829167542ec66905: Pulling from lfedge/eve-rsyslog
+no matching manifest for linux/arm64 in the manifest list entries
+No image pulled, continuing with build
+Sending build context to Docker daemon  50.69kB
+Step 1/23 : FROM lfedge/eve-alpine:ad1020939fb59dbdaa558a3da99649d81e341cac as build
+ ---> d9881f541d0a
+Step 2/23 : WORKDIR /
+ ---> c9bdd8a0fab6
+Removing intermediate container 5855d9bce61d
+Step 3/23 : RUN apk add --no-cache         git=2.20.2-r0         build-base=0.5-r1         automake=1.16.1-r0         libtool=2.4.6-r5         autoconf=2.69-r2         zlib-dev=1.2.11-r1         curl-dev=7.64.0-r3         libuuid=2.33-r0         util-linux-dev=2.33-r0         flex=2.6.4-r1         bison=3.0.5-r0         bsd-compat-headers=0.7.1-r0         linux-headers=4.18.13-r1         libestr-dev=0.1.10-r0         libfastjson-dev=0.99.8-r1         librelp-dev=1.3.0-r0         liblogging-dev=1.0.6-r0
+ ---> Running in 14f931ce8b29
+(1/67) Installing m4 (1.4.18-r1)
+(2/67) Installing libbz2 (1.0.6-r7)
+(3/67) Installing perl (5.26.3-r0)
+(4/67) Installing autoconf (2.69-r2)
+(5/67) Installing automake (1.16.1-r0)
+(6/67) Installing bison (3.0.5-r0)
+(7/67) Installing bsd-compat-headers (0.7.1-r0)
+(8/67) Installing binutils (2.31.1-r2)
+(9/67) Installing libmagic (5.36-r1)
+(10/67) Installing file (5.36-r1)
+(11/67) Installing gmp (6.1.2-r1)
+(12/67) Installing isl (0.18-r0)
+(13/67) Installing libgomp (8.3.0-r0)
+(14/67) Installing libatomic (8.3.0-r0)
+(15/67) Installing libgcc (8.3.0-r0)
+(16/67) Installing mpfr3 (3.1.5-r1)
+(17/67) Installing mpc1 (1.0.3-r1)
+(18/67) Installing libstdc++ (8.3.0-r0)
+(19/67) Installing gcc (8.3.0-r0)
+(20/67) Installing musl-dev (1.1.20-r5)
+(21/67) Installing libc-dev (0.7.1-r0)
+(22/67) Installing g++ (8.3.0-r0)
+(23/67) Installing make (4.2.1-r2)
+(24/67) Installing fortify-headers (1.0-r0)
+(25/67) Installing build-base (0.5-r1)
+(26/67) Installing pkgconf (1.6.0-r0)
+(27/67) Installing openssl-dev (1.1.1d-r2)
+(28/67) Installing libssh2 (1.9.0-r1)
+(29/67) Installing zlib-dev (1.2.11-r1)
+(30/67) Installing libssh2-dev (1.9.0-r1)
+(31/67) Installing nghttp2-libs (1.35.1-r1)
+(32/67) Installing nghttp2-dev (1.35.1-r1)
+(33/67) Installing ca-certificates (20190108-r0)
+(34/67) Installing libcurl (7.64.0-r3)
+(35/67) Installing curl-dev (7.64.0-r3)
+(36/67) Installing flex (2.6.4-r1)
+(37/67) Installing expat (2.2.8-r0)
+(38/67) Installing pcre2 (10.32-r1)
+(39/67) Installing git (2.20.2-r0)
+(40/67) Installing libestr (0.1.10-r0)
+(41/67) Installing libestr-dev (0.1.10-r0)
+(42/67) Installing libfastjson (0.99.8-r1)
+(43/67) Installing libfastjson-dev (0.99.8-r1)
+(44/67) Installing liblogging (1.0.6-r0)
+(45/67) Installing liblogging-dev (1.0.6-r0)
+(46/67) Installing nettle (3.4.1-r0)
+(47/67) Installing libffi (3.2.1-r6)
+(48/67) Installing p11-kit (0.23.14-r0)
+(49/67) Installing libtasn1 (4.14-r0)
+(50/67) Installing libunistring (0.9.10-r0)
+(51/67) Installing gnutls (3.6.7-r0)
+(52/67) Installing librelp (1.3.0-r0)
+(53/67) Installing librelp-dev (1.3.0-r0)
+(54/67) Installing ncurses-terminfo-base (6.1_p20190105-r0)
+(55/67) Installing ncurses-terminfo (6.1_p20190105-r0)
+(56/67) Installing ncurses-libs (6.1_p20190105-r0)
+(57/67) Installing readline (7.0.003-r1)
+(58/67) Installing bash (4.4.19-r1)
+Executing bash-4.4.19-r1.post-install
+(59/67) Installing libltdl (2.4.6-r5)
+(60/67) Installing libtool (2.4.6-r5)
+(61/67) Installing libuuid (2.33-r0)
+(62/67) Installing linux-headers (4.18.13-r1)
+(63/67) Installing libblkid (2.33-r0)
+(64/67) Installing libfdisk (2.33-r0)
+(65/67) Installing libmount (2.33-r0)
+(66/67) Installing libsmartcols (2.33-r0)
+(67/67) Installing util-linux-dev (2.33-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing ca-certificates-20190108-r0.trigger
+OK: 275 MiB in 81 packages
+ ---> 5396a8bf20d4
+Removing intermediate container 14f931ce8b29
+Step 4/23 : ENV SUDO ""
+ ---> Running in 4c794a5b2290
+ ---> 3965f6f1a550
+Removing intermediate container 4c794a5b2290
+Step 5/23 : ENV PKG_CONFIG_PATH /usr/local/lib/pkgconfig LD_LIBRARY_PATH /usr/local/lib CFLAGS "-Os -fomit-frame-pointer"
+ ---> Running in 409f94379b93
+ ---> dca22bc635c0
+Removing intermediate container 409f94379b93
+Step 6/23 : ENV RSYSLOG_CONFIGURE_OPTIONS --enable-generate-man-pages=no --enable-mmjsonparse --enable-mmutf8fix --disable-omudpspoof --enable-relp --disable-snmp --disable-mmsnmptrapd --enable-usertools=no --enable-libgcrypt=no --enable-imemlogd
+ ---> Running in 45f088c503c1
+ ---> ce7a5a171abb
+Removing intermediate container 45f088c503c1
+Step 7/23 : COPY build-rsyslog.sh /build-rsyslog.sh
+ ---> ecd5db1670d5
+Step 8/23 : COPY imemlogd.diff /imemlogd.diff
+ ---> 84f2dc12683f
+Step 9/23 : RUN ./build-rsyslog.sh
+ ---> Running in 5990a2279a93
+[91mCloning into 'rsyslog'...
+[0m[91mNote: checking out 'ceafdcdfd9c00b97c4f2a57f3d3a2b0b950f76b0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ceafdcdfd fix invalid version number
+[0m[91mautoreconf: Entering directory `.'
+[0m[91mautoreconf: configure.ac: not using Gettext
+[0m[91mautoreconf: running: aclocal --force -I m4
+[0m[91mautoreconf: configure.ac: tracing
+[0m[91mautoreconf: running: libtoolize --copy --force
+[0mlibtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+[91mautoreconf: running: /usr/bin/autoconf --force
+[0m[91mautoreconf: running: /usr/bin/autoheader --force
+[0m[91mautoreconf: running: automake --add-missing --copy --force-missing
+[0m[91mconfigure.ac:39: installing './compile'
+[0m[91mconfigure.ac:52: installing './config.guess'
+[0m[91mconfigure.ac:52: installing './config.sub'
+[0m[91mconfigure.ac:9: installing './install-sh'
+[0m[91mconfigure.ac:9: installing './missing'
+[0m[91mMakefile.am:17: warning: '%'-style pattern rules are a GNU make extension
+[0m[91mMakefile.am: installing './INSTALL'
+[0m[91mcompat/Makefile.am: installing './depcomp'
+[0m[91mconfigure.ac: installing './ylwrap'
+[0m[91mtests/Makefile.am:82: warning: es-basic-server.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:69: ... 'es-basic-server.log' previously defined here
+[0m[91mtests/Makefile.am:83: warning: elasticsearch-stop.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:73: ... 'elasticsearch-stop.log' previously defined here
+[0m[91mtests/Makefile.am:89: warning: es-basic-server.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_HELGRIND and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:69: ... 'es-basic-server.log' previously defined here
+tests/Makefile.am:90: warning: elasticsearch-stop.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS_MINIMAL and ENABLE_HELGRIND and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:73: ... 'elasticsearch-stop.log' previously defined here
+[0m[91mtests/Makefile.am:125: warning: elasticsearch-stop.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_IMPSTATS and ENABLE_TESTBENCH ...
+tests/Makefile.am:116: ... 'elasticsearch-stop.log' previously defined here
+[0m[91mtests/Makefile.am:138: warning: elasticsearch-stop.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_IMFILE and ENABLE_TESTBENCH ...
+tests/Makefile.am:116: ... 'elasticsearch-stop.log' previously defined here
+tests/Makefile.am:149: warning: elasticsearch-stop.log was already defined in condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_ELASTICSEARCH_TESTS and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:116: ... 'elasticsearch-stop.log' previously defined here
+[0m[91mtests/Makefile.am:601: warning: clickhouse-stop.log was already defined in condition ENABLE_CLICKHOUSE_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_CLICKHOUSE_TESTS and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:588: ... 'clickhouse-stop.log' previously defined here
+tests/Makefile.am:703: warning: mysqld-stop.log was already defined in condition ENABLE_MYSQL_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_MYSQL_TESTS and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:686: ... 'mysqld-stop.log' previously defined here
+[0m[91mtests/Makefile.am:714: warning: mysqld-stop.log was already defined in condition ENABLE_MYSQL_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_MYSQL_TESTS and ENABLE_OMLIBDBI and ENABLE_TESTBENCH ...
+tests/Makefile.am:686: ... 'mysqld-stop.log' previously defined here
+[0m[91mtests/Makefile.am:720: warning: mysqld-stop.log was already defined in condition ENABLE_MYSQL_TESTS and ENABLE_TESTBENCH, which includes condition ENABLE_MYSQL_TESTS and ENABLE_OMLIBDBI and ENABLE_TESTBENCH and HAVE_VALGRIND ...
+tests/Makefile.am:686: ... 'mysqld-stop.log' previously defined here
+[0m[91mparallel-tests: installing './test-driver'
+[0m[91mautoreconf: Leaving directory `.'
+[0m[91mconfigure: WARNING: unrecognized options: --enable-compile-warnings
+[0mchecking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... none needed
+checking whether yytext is a pointer... no
+checking for bison... bison -y
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking for gcc option to accept ISO C99... none needed
+checking build system type... aarch64-unknown-linux-musl
+checking host system type... aarch64-unknown-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/aarch64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/aarch64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert aarch64-unknown-linux-musl file names to aarch64-unknown-linux-musl format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/aarch64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/aarch64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+[91mconfigure: WARNING: missing AX_IS_RELEASE macro, not using AX_COMPILER_FLAGS macro because of this
+[0mchecking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for LIBESTR... yes
+checking for LIBFASTJSON... yes
+[91m./configure: line 1: lsb_release: not found
+[0mHOST: aarch64-unknown-linux-musl
+checking for python... no
+checking for python2... no
+checking for python3... no
+checking for python3.9... no
+checking for python3.8... no
+checking for python3.7... no
+checking for python3.6... no
+checking for python3.5... no
+checking for python3.4... no
+checking for python3.3... no
+checking for python3.2... no
+checking for python3.1... no
+checking for python3.0... no
+checking for python2.7... no
+checking for python2.6... no
+checking for python2.5... no
+checking for python2.4... no
+checking for python2.3... no
+checking for python2.2... no
+checking for python2.1... no
+checking for python2.0... no
+checking for library containing clock_gettime... none required
+checking for library containing mq_getattr... none required
+checking for library containing dlopen... none required
+checking for sys/types.h... (cached) yes
+checking for netinet/in.h... yes
+checking for arpa/nameser.h... yes
+checking for netdb.h... yes
+checking for resolv.h... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for arpa/inet.h... yes
+checking for libgen.h... yes
+checking for malloc.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for netdb.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/stat.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for mode_t... yes
+checking for uid_t in sys/types.h... yes
+checking for uint8_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for working volatile... yes
+checking for struct sockaddr.sa_len... no
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether gcc needs -traditional... no
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking return type of signal handlers... void
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for vprintf... yes
+checking for _doprnt... no
+checking for flock... yes
+checking for recvmmsg... yes
+checking for basename... yes
+checking for alarm... yes
+checking for clock_gettime... yes
+checking for gethostbyname... yes
+checking for gethostname... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for regcomp... yes
+checking for select... yes
+checking for setsid... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strndup... yes
+checking for strnlen... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for uname... yes
+checking for ttyname_r... yes
+checking for getline... yes
+checking for malloc_trim... no
+checking for prctl... yes
+checking for epoll_create... yes
+checking for epoll_create1... yes
+checking for fdatasync... yes
+checking for syscall... yes
+checking for lseek64... yes
+checking for asprintf... yes
+checking for setns... yes
+checking for off64_t... yes
+checking sys/inotify.h usability... yes
+checking sys/inotify.h presence... yes
+checking for sys/inotify.h... yes
+checking for inotify_init... yes
+checking for library containing getifaddrs... none required
+checking whether SCM_CREDENTIALS is declared... yes
+checking whether SO_TIMESTAMP is declared... yes
+checking whether SYS_gettid is declared... yes
+checking for struct sysinfo.uptime... yes
+checking whether GLOB_NOMAGIC is declared... no
+checking for MAXHOSTNAMELEN... yes
+checking for __builtin_expect()... yes
+checking whether the compiler provides atomic builtins... yes
+checking whether the compiler provides atomic builtins for 64 bit data types... yes
+checking semaphore.h usability... yes
+checking semaphore.h presence... yes
+checking for semaphore.h... yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for ZLIB... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking for pthread_rwlockattr_setkind_np in -lpthread... no
+checking for pthread_setname_np in -lpthread... yes
+checking for library containing pthread_setschedparam... none required
+checking sched.h usability... yes
+checking sched.h presence... yes
+checking for sched.h... yes
+checking for library containing sched_get_priority_max... none required
+checking for sched_get_priority_max... yes
+checking for LIBSYSTEMD... no
+[91mconfigure: WARNING: libsystemd not present - disabling systemd support
+[0mconfigure: --enable-libsystemd in auto mode, enable-libsystemd is set to no
+configure: enable-debug in auto mode, enable-debug is set to yes
+checking for LIBUUID... yes
+checking for CURL... yes
+checking maxminddb.h usability... no
+checking maxminddb.h presence... no
+checking for maxminddb.h... no
+checking protocol.h usability... no
+checking protocol.h presence... no
+checking for protocol.h... no
+checking for RELP... yes
+checking for relpSrvSetOversizeMode... yes
+checking for relpSrvSetLstnAddr... yes
+checking for relpEngineSetTLSLibByName... no
+checking for relpSrvSetTlsConfigCmd... no
+checking for relpSrvSetTlsConfigCmd... (cached) no
+checking for LIBLOGGING_STDLOG... yes
+checking for ip... yes
+checking for valgrind... no
+configure: testbench will use valgrind
+checking hdfs.h usability... no
+checking hdfs.h presence... no
+checking for hdfs.h... no
+checking hadoop/hdfs.h usability... no
+checking hadoop/hdfs.h presence... no
+checking for hadoop/hdfs.h... no
+configure: Running from git source
+checking for rst2man... no
+checking for rst2man.py... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating runtime/Makefile
+config.status: creating compat/Makefile
+config.status: creating grammar/Makefile
+config.status: creating tools/Makefile
+config.status: creating plugins/imudp/Makefile
+config.status: creating plugins/imtcp/Makefile
+config.status: creating plugins/im3195/Makefile
+config.status: creating plugins/imgssapi/Makefile
+config.status: creating plugins/imuxsock/Makefile
+config.status: creating plugins/imjournal/Makefile
+config.status: creating plugins/immark/Makefile
+config.status: creating plugins/imklog/Makefile
+config.status: creating plugins/omhdfs/Makefile
+config.status: creating plugins/omkafka/Makefile
+config.status: creating plugins/omprog/Makefile
+config.status: creating plugins/mmexternal/Makefile
+config.status: creating plugins/omstdout/Makefile
+config.status: creating plugins/omjournal/Makefile
+config.status: creating plugins/pmciscoios/Makefile
+config.status: creating plugins/pmnull/Makefile
+config.status: creating plugins/pmnormalize/Makefile
+config.status: creating plugins/omruleset/Makefile
+config.status: creating plugins/omuxsock/Makefile
+config.status: creating plugins/imfile/Makefile
+config.status: creating plugins/imsolaris/Makefile
+config.status: creating plugins/imptcp/Makefile
+config.status: creating plugins/impstats/Makefile
+config.status: creating plugins/imrelp/Makefile
+config.status: creating plugins/imdiag/Makefile
+config.status: creating plugins/imkafka/Makefile
+config.status: creating plugins/omtesting/Makefile
+config.status: creating plugins/omgssapi/Makefile
+config.status: creating plugins/ommysql/Makefile
+config.status: creating plugins/ompgsql/Makefile
+config.status: creating plugins/omrelp/Makefile
+config.status: creating plugins/omlibdbi/Makefile
+config.status: creating plugins/ommail/Makefile
+config.status: creating plugins/fmhttp/Makefile
+config.status: creating plugins/omsnmp/Makefile
+config.status: creating plugins/omudpspoof/Makefile
+config.status: creating plugins/ommongodb/Makefile
+config.status: creating plugins/mmnormalize/Makefile
+config.status: creating plugins/mmjsonparse/Makefile
+config.status: creating plugins/mmaudit/Makefile
+config.status: creating plugins/mmanon/Makefile
+config.status: creating plugins/mmrm1stspace/Makefile
+config.status: creating plugins/mmutf8fix/Makefile
+config.status: creating plugins/mmfields/Makefile
+config.status: creating plugins/mmpstrucdata/Makefile
+config.status: creating plugins/omelasticsearch/Makefile
+config.status: creating plugins/omclickhouse/Makefile
+config.status: creating plugins/mmsnmptrapd/Makefile
+config.status: creating plugins/pmlastmsg/Makefile
+config.status: creating plugins/mmdblookup/Makefile
+config.status: creating contrib/mmdarwin/Makefile
+config.status: creating contrib/omhttp/Makefile
+config.status: creating contrib/fmhash/Makefile
+config.status: creating contrib/pmsnare/Makefile
+config.status: creating contrib/pmpanngfw/Makefile
+config.status: creating contrib/pmaixforwardedfrom/Makefile
+config.status: creating contrib/omhiredis/Makefile
+config.status: creating contrib/omrabbitmq/Makefile
+config.status: creating contrib/imkmsg/Makefile
+config.status: creating contrib/mmgrok/Makefile
+config.status: creating contrib/mmcount/Makefile
+config.status: creating contrib/omczmq/Makefile
+config.status: creating contrib/imczmq/Makefile
+config.status: creating contrib/mmsequence/Makefile
+config.status: creating contrib/mmrfc5424addhmac/Makefile
+config.status: creating contrib/pmcisconames/Makefile
+config.status: creating contrib/omhttpfs/Makefile
+config.status: creating contrib/omamqp1/Makefile
+config.status: creating contrib/omtcl/Makefile
+config.status: creating contrib/imbatchreport/Makefile
+config.status: creating contrib/omfile-hardened/Makefile
+config.status: creating contrib/mmkubernetes/Makefile
+config.status: creating contrib/imtuxedoulog/Makefile
+config.status: creating contrib/improg/Makefile
+config.status: creating contrib/imemlogd/Makefile
+config.status: creating contrib/mmtaghostname/Makefile
+config.status: creating contrib/imdocker/Makefile
+config.status: creating contrib/pmdb2diag/Makefile
+config.status: creating tests/set-envvars
+config.status: creating tests/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[91mconfigure: WARNING: unrecognized options: --enable-compile-warnings
+[0m****************************************************
+rsyslog will be compiled with the following settings:
+
+    Large file support enabled:               yes
+    Networking support enabled:               yes
+    Regular expressions support enabled:      yes
+    rsyslog runtime will be built:            yes
+    rsyslogd will be built:                   yes
+    have to generate man pages:               no
+    Unlimited select() support enabled:       no
+    uuid support enabled:                     yes
+    Log file signing support via KSI LS12:    no
+    Log file encryption support:              no
+    anonymization support enabled:            no
+    message counting support enabled:         no
+    liblogging-stdlog support enabled:        no
+    libsystemd enabled:                       no
+    kafka static linking enabled:             no
+    atomic operations enabled:                yes
+
+---{ input plugins }---
+    Klog functionality enabled:               yes (linux)
+    /dev/kmsg functionality enabled:          no
+    plain tcp input module enabled:           no
+    imdiag enabled:                           no
+    file input module enabled:                no
+    docker log input module enabled:          no
+    Solaris input module enabled:             no
+    periodic statistics module enabled:       no
+    imczmq input module enabled:              no
+    imjournal input module enabled:           no
+    imbatchreport input module enabled:       no
+    imkafka module will be compiled:          no
+    imtuxedoulog module will be compiled:     no
+    improg input module enabled:              no
+    imemlogd input module enabled:            yes
+
+---{ output plugins }---
+    Mail support enabled:                     no
+    omfile-hardened module will be compiled:  no
+    omprog module will be compiled:           no
+    omstdout module will be compiled:         no
+    omjournal module will be compiled:        no
+    omhdfs module will be compiled:           no
+    omelasticsearch module will be compiled:  no
+    omclickhouse module will be compiled:     no
+    omhttp module will be compiled:           no
+    omruleset module will be compiled:        no
+    omudpspoof module will be compiled:       no
+    omuxsock module will be compiled:         no
+    omczmq module will be compiled:           no
+    omrabbitmq module will be compiled:       no
+    omhttpfs module will be compiled:         no
+    omamqp1 module will be compiled:          no
+    omtcl module will be compiled:            no
+    omkafka module will be compiled:          no
+
+---{ parser modules }---
+    pmlastmsg module will be compiled:        no
+    pmcisconames module will be compiled:     no
+    pmciscoios module will be compiled:       no
+    pmnull module will be compiled:           no
+    pmnormalize module will be compiled:      no
+    pmaixforwardedfrom module w.be compiled:  no
+    pmsnare module will be compiled:          no
+    pmdb2diag module will be compiled:        no
+    pmpanngfw module will be compiled:        no
+
+---{ message modification modules }---
+    mmnormalize module will be compiled:      no
+    mmjsonparse module will be compiled:      yes
+    mmgrok module will be compiled:           no
+    mmjaduit module will be compiled:         no
+    mmsnmptrapd module will be compiled:      no
+    mmutf8fix enabled:                        yes
+    mmrfc5424addhmac enabled:                 no
+    mmpstrucdata enabled:                     no
+    mmsequence enabled:                       no
+    mmdblookup enabled:                       no
+    mmdarwin enabled:                         no
+    mmfields enabled:                         no
+    mmrm1stspace module enabled:              no
+    mmkubernetes enabled:                     no
+    mmtaghostname enabled:                    no
+
+---{ database support }---
+    MySql support enabled:                    no
+    libdbi support enabled:                   no
+    PostgreSQL support enabled:               no
+    mongodb support enabled:                  no
+    hiredis support enabled:                  no
+
+---{ protocol support }---
+    openssl network stream driver enabled:    no
+    GnuTLS network stream driver enabled:     no
+    GSSAPI Kerberos 5 support enabled:        no
+    RELP support enabled:                     yes
+    SNMP support enabled:                     no
+
+---{ function modules }---
+    fmhttp enabled:                           yes
+    fmhash enabled:                           yes
+    fmhash with xxhash enabled:               no
+
+---{ debugging support }---
+    distcheck workaround enabled:             no
+    Testbench enabled:                        no
+    valgrind tests enabled:                   
+    valgrind helgrind tests enabled:          yes
+    Default tests enabled:                    yes
+    Testbench libfaketime tests enabled:      no
+    Extended Testbench enabled:               no
+    MySQL Tests enabled:                      no
+    Elasticsearch Tests:                      no
+    ClickHouse Tests:                         no
+    PostgreSQL Tests enabled:                 no
+    Kafka Tests enabled:                      no
+    Imdocker Tests enabled:                   no
+    systemd journal tests enabled:            no
+    SNMP Tests enabled:                       no
+    Debug mode enabled:                       yes
+    (total) debugless mode enabled:           no
+    Diagnostic tools enabled:                 no
+    End-User tools enabled:                   no
+    Valgrind support settings enabled:        no
+
+make  all-recursive
+make[1]: Entering directory '/rsyslog'
+Making all in compat
+make[2]: Entering directory '/rsyslog/compat'
+  CC       compat_la-getifaddrs.lo
+  CC       compat_la-strndup.lo
+  CC       compat_la-asprintf.lo
+  CC       compat_la-solaris_elf_fix.lo
+  CCLD     compat.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[2]: Leaving directory '/rsyslog/compat'
+Making all in runtime
+make[2]: Entering directory '/rsyslog/runtime'
+  CC       librsyslog_la-rsyslog.lo
+  CC       librsyslog_la-dnscache.lo
+  CC       librsyslog_la-glbl.lo
+  CC       librsyslog_la-conf.lo
+  CC       librsyslog_la-janitor.lo
+  CC       librsyslog_la-rsconf.lo
+  CC       librsyslog_la-parser.lo
+  CC       librsyslog_la-strgen.lo
+  CC       librsyslog_la-msg.lo
+  CC       librsyslog_la-linkedlist.lo
+  CC       librsyslog_la-objomsr.lo
+  CC       librsyslog_la-stringbuf.lo
+  CC       librsyslog_la-datetime.lo
+  CC       librsyslog_la-srutils.lo
+  CC       librsyslog_la-errmsg.lo
+  CC       librsyslog_la-operatingstate.lo
+  CC       librsyslog_la-debug.lo
+  CC       librsyslog_la-obj.lo
+  CC       librsyslog_la-modules.lo
+  CC       librsyslog_la-statsobj.lo
+  CC       librsyslog_la-dynstats.lo
+  CC       librsyslog_la-stream.lo
+  CC       librsyslog_la-var.lo
+  CC       librsyslog_la-wtp.lo
+  CC       librsyslog_la-wti.lo
+  CC       librsyslog_la-queue.lo
+  CC       librsyslog_la-ruleset.lo
+  CC       librsyslog_la-prop.lo
+  CC       librsyslog_la-ratelimit.lo
+  CC       librsyslog_la-lookup.lo
+  CC       librsyslog_la-cfsysline.lo
+  CC       librsyslog_la-hashtable.lo
+  CC       librsyslog_la-hashtable_itr.lo
+  CC       ../librsyslog_la-outchannel.lo
+  CC       ../librsyslog_la-template.lo
+  CC       lmregexp_la-regexp.lo
+  CC       lmzlibw_la-zlibw.lo
+  CC       lmnet_la-net.lo
+  CC       lmnetstrms_la-netstrms.lo
+  CC       lmnetstrms_la-netstrm.lo
+  CC       lmnetstrms_la-nssel.lo
+  CC       lmnetstrms_la-nspoll.lo
+  CC       lmnsd_ptcp_la-nsd_ptcp.lo
+  CC       lmnsd_ptcp_la-nsdsel_ptcp.lo
+  CC       lmnsd_ptcp_la-nsdpoll_ptcp.lo
+  CC       lmtcpsrv_la-tcps_sess.lo
+  CC       lmtcpsrv_la-tcpsrv.lo
+  CC       lmtcpclt_la-tcpclt.lo
+  CC       ../librsyslog_la-action.lo
+  CC       ../librsyslog_la-threads.lo
+  CC       ../librsyslog_la-parse.lo
+  CCLD     lmregexp.la
+  CCLD     lmzlibw.la
+  CCLD     lmnet.la
+  CCLD     lmnetstrms.la
+  CCLD     lmnsd_ptcp.la
+  CCLD     lmtcpsrv.la
+  CCLD     lmtcpclt.la
+  CCLD     librsyslog.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[2]: Leaving directory '/rsyslog/runtime'
+Making all in grammar
+make[2]: Entering directory '/rsyslog/grammar'
+  YACC     grammar.c
+updating grammar.h
+make  all-am
+make[3]: Entering directory '/rsyslog/grammar'
+  LEX      lexer.c
+  CC       libgrammar_la-grammar.lo
+  CC       libgrammar_la-rainerscript.lo
+  CC       libgrammar_la-lexer.lo
+  CCLD     libgrammar.la
+[91mar: `u' modifier ignored since `D' is the default (see `U')
+[0mmake[3]: Leaving directory '/rsyslog/grammar'
+make[2]: Leaving directory '/rsyslog/grammar'
+Making all in .
+make[2]: Entering directory '/rsyslog'
+make[2]: Leaving directory '/rsyslog'
+Making all in plugins/immark
+make[2]: Entering directory '/rsyslog/plugins/immark'
+  CC       immark_la-immark.lo
+  CCLD     immark.la
+make[2]: Leaving directory '/rsyslog/plugins/immark'
+Making all in plugins/imuxsock
+make[2]: Entering directory '/rsyslog/plugins/imuxsock'
+  CC       imuxsock_la-imuxsock.lo
+  CCLD     imuxsock.la
+make[2]: Leaving directory '/rsyslog/plugins/imuxsock'
+Making all in plugins/imtcp
+make[2]: Entering directory '/rsyslog/plugins/imtcp'
+  CC       imtcp_la-imtcp.lo
+  CCLD     imtcp.la
+make[2]: Leaving directory '/rsyslog/plugins/imtcp'
+Making all in plugins/imudp
+make[2]: Entering directory '/rsyslog/plugins/imudp'
+  CC       imudp_la-imudp.lo
+  CCLD     imudp.la
+make[2]: Leaving directory '/rsyslog/plugins/imudp'
+Making all in plugins/omtesting
+make[2]: Entering directory '/rsyslog/plugins/omtesting'
+  CC       omtesting_la-omtesting.lo
+  CCLD     omtesting.la
+make[2]: Leaving directory '/rsyslog/plugins/omtesting'
+Making all in plugins/mmexternal
+make[2]: Entering directory '/rsyslog/plugins/mmexternal'
+  CC       mmexternal_la-mmexternal.lo
+  CCLD     mmexternal.la
+make[2]: Leaving directory '/rsyslog/plugins/mmexternal'
+Making all in tools
+make[2]: Entering directory '/rsyslog/tools'
+  CC       rsyslogd-syslogd.o
+  CC       rsyslogd-rsyslogd.o
+  CC       rsyslogd-omshell.o
+  CC       rsyslogd-omusrmsg.o
+  CC       rsyslogd-omfwd.o
+  CC       rsyslogd-omfile.o
+  CC       rsyslogd-ompipe.o
+  CC       rsyslogd-omdiscard.o
+  CC       rsyslogd-pmrfc5424.o
+  CC       rsyslogd-pmrfc3164.o
+  CC       rsyslogd-smtradfile.o
+  CC       rsyslogd-smfile.o
+  CC       rsyslogd-smfwd.o
+  CC       rsyslogd-smtradfwd.o
+  CC       rsyslogd-iminternal.o
+  CCLD     rsyslogd
+make[2]: Leaving directory '/rsyslog/tools'
+Making all in plugins/imklog
+make[2]: Entering directory '/rsyslog/plugins/imklog'
+  CC       imklog_la-imklog.lo
+  CC       imklog_la-bsd.lo
+  CCLD     imklog.la
+make[2]: Leaving directory '/rsyslog/plugins/imklog'
+Making all in plugins/omrelp
+make[2]: Entering directory '/rsyslog/plugins/omrelp'
+  CC       omrelp_la-omrelp.lo
+  CCLD     omrelp.la
+make[2]: Leaving directory '/rsyslog/plugins/omrelp'
+Making all in plugins/imrelp
+make[2]: Entering directory '/rsyslog/plugins/imrelp'
+  CC       imrelp_la-imrelp.lo
+  CCLD     imrelp.la
+make[2]: Leaving directory '/rsyslog/plugins/imrelp'
+Making all in plugins/fmhttp
+make[2]: Entering directory '/rsyslog/plugins/fmhttp'
+  CC       fmhttp_la-fmhttp.lo
+  CCLD     fmhttp.la
+make[2]: Leaving directory '/rsyslog/plugins/fmhttp'
+Making all in contrib/fmhash
+make[2]: Entering directory '/rsyslog/contrib/fmhash'
+  CC       fmhash_la-fmhash.lo
+  CCLD     fmhash.la
+make[2]: Leaving directory '/rsyslog/contrib/fmhash'
+Making all in plugins/mmjsonparse
+make[2]: Entering directory '/rsyslog/plugins/mmjsonparse'
+  CC       mmjsonparse_la-mmjsonparse.lo
+  CCLD     mmjsonparse.la
+make[2]: Leaving directory '/rsyslog/plugins/mmjsonparse'
+Making all in plugins/mmutf8fix
+make[2]: Entering directory '/rsyslog/plugins/mmutf8fix'
+  CC       mmutf8fix_la-mmutf8fix.lo
+  CCLD     mmutf8fix.la
+make[2]: Leaving directory '/rsyslog/plugins/mmutf8fix'
+Making all in contrib/imemlogd
+make[2]: Entering directory '/rsyslog/contrib/imemlogd'
+  CC       imemlogd_la-imemlogd.lo
+[91mimemlogd.c: In function 'SubmitMsg':
+imemlogd.c:557:23: warning: unused variable 'dummyTS' [-Wunused-variable]
+     struct syslogTime dummyTS;
+                       ^~~~~~~
+imemlogd.c:553:11: warning: unused variable 'bufParseTAG' [-Wunused-variable]
+     uchar bufParseTAG[CONF_TAG_MAXSIZE];
+           ^~~~~~~~~~~
+imemlogd.c:551:12: warning: unused variable 'parse' [-Wunused-variable]
+     uchar *parse;
+            ^~~~~
+[0m[91mimemlogd.c:550:9: warning: unused variable 'i' [-Wunused-variable]
+     int i;
+         ^
+imemlogd.c:549:9: warning: unused variable 'offs' [-Wunused-variable]
+     int offs;
+         ^~~~
+imemlogd.c:548:9: warning: unused variable 'lenMsg' [-Wunused-variable]
+     int lenMsg;
+         ^~~~~~
+[0m[91mimemlogd.c: In function 'readSocket':
+imemlogd.c:663:16: warning: pointer targets in assignment from 'char *' to 'uchar *' {aka 'unsigned char *'} differ in signedness [-Wpointer-sign]
+         for (p = (char*)pRcv; (q = strchr(p, '\n')) != NULL; p = q + 1) {
+                ^
+[0m[91mimemlogd.c:663:43: warning: pointer targets in passing argument 1 of 'strchr' differ in signedness [-Wpointer-sign]
+         for (p = (char*)pRcv; (q = strchr(p, '\n')) != NULL; p = q + 1) {
+                                           ^
+In file included from /usr/include/fortify/string.h:22,
+                 from imemlogd.c:35:
+/usr/include/string.h:43:7: note: expected 'const char *' but argument is of type 'uchar *' {aka 'unsigned char *'}
+ char *strchr (const char *, int);
+       ^~~~~~
+[0m[91mimemlogd.c:663:34: warning: pointer targets in assignment from 'char *' to 'uchar *' {aka 'unsigned char *'} differ in signedness [-Wpointer-sign]
+         for (p = (char*)pRcv; (q = strchr(p, '\n')) != NULL; p = q + 1) {
+                                  ^
+[0m[91mIn file included from imemlogd.c:43:
+imemlogd.c:665:41: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             CHKiRet(SubmitMsg(p, strlen(p), pLstn, (cred_set ? &cred : NULL), NULL));
+                                         ^
+../../runtime/rsyslog.h:610:35: note: in definition of macro 'CHKiRet'
+ # define CHKiRet(code) if((iRet = code) != RS_RET_OK) goto finalize_it
+                                   ^~~~
+In file included from imemlogd.c:41:
+/usr/include/sys/un.h:23:8: note: expected 'const char *' but argument is of type 'uchar *' {aka 'unsigned char *'}
+ size_t strlen(const char *);
+        ^~~~~~
+[0m[91mimemlogd.c:667:22: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+         len = strlen(p);
+                      ^
+In file included from imemlogd.c:41:
+/usr/include/sys/un.h:23:8: note: expected 'const char *' but argument is of type 'uchar *' {aka 'unsigned char *'}
+ size_t strlen(const char *);
+        ^~~~~~
+[0m[91mIn file included from imemlogd.c:43:
+imemlogd.c:669:41: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             CHKiRet(SubmitMsg(p, strlen(p), pLstn, (cred_set ? &cred : NULL), NULL));
+                                         ^
+../../runtime/rsyslog.h:610:35: note: in definition of macro 'CHKiRet'
+ # define CHKiRet(code) if((iRet = code) != RS_RET_OK) goto finalize_it
+                                   ^~~~
+In file included from imemlogd.c:41:
+/usr/include/sys/un.h:23:8: note: expected 'const char *' but argument is of type 'uchar *' {aka 'unsigned char *'}
+ size_t strlen(const char *);
+        ^~~~~~
+[0m[91mimemlogd.c: In function 'runInput':
+imemlogd.c:888:9: warning: 'return' with no value, in function returning non-void
+         return;
+         ^~~~~~
+[0m[91mIn file included from imemlogd.c:47:
+../../runtime/module-template.h:1031:17: note: declared here
+ static rsRetVal runInput(thrdInfo_t __attribute__((unused)) *pThrd)\
+                 ^~~~~~~~
+imemlogd.c:884:1: note: in expansion of macro 'BEGINrunInput'
+ BEGINrunInput
+ ^~~~~~~~~~~~~
+[0m[91mimemlogd.c: At top level:
+imemlogd.c:84:17: warning: 'resetConfigVariables' declared 'static' but never defined [-Wunused-function]
+ static rsRetVal resetConfigVariables(uchar __attribute__((unused)) *pp, void __attribute__((unused)) *pVal);
+                 ^~~~~~~~~~~~~~~~~~~~
+[0m[91mimemlogd.c:261:17: warning: 'addInstance' defined but not used [-Wunused-function]
+ static rsRetVal addInstance(void __attribute__((unused)) *pVal, uchar *pNewVal)
+                 ^~~~~~~~~~~
+[0m[91mimemlogd.c: In function 'SubmitMsg.constprop':
+imemlogd.c:601:5: warning: 'pri' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     msgSetPRI(pMsg, pri);
+     ^~~~~~~~~~~~~~~~~~~~
+[0m  CCLD     imemlogd.la
+make[2]: Leaving directory '/rsyslog/contrib/imemlogd'
+Making all in tests
+make[2]: Entering directory '/rsyslog/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/rsyslog/tests'
+make[1]: Leaving directory '/rsyslog'
+Making install in compat
+make[1]: Entering directory '/rsyslog/compat'
+make[2]: Entering directory '/rsyslog/compat'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/compat'
+make[1]: Leaving directory '/rsyslog/compat'
+Making install in runtime
+make[1]: Entering directory '/rsyslog/runtime'
+make[2]: Entering directory '/rsyslog/runtime'
+ .././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   lmregexp.la lmzlibw.la lmnet.la lmnetstrms.la lmnsd_ptcp.la lmtcpsrv.la lmtcpclt.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/lmregexp.so /usr/local/lib/rsyslog/lmregexp.so
+libtool: install: /usr/bin/install -c .libs/lmregexp.lai /usr/local/lib/rsyslog/lmregexp.la
+libtool: install: /usr/bin/install -c .libs/lmzlibw.so /usr/local/lib/rsyslog/lmzlibw.so
+libtool: install: /usr/bin/install -c .libs/lmzlibw.lai /usr/local/lib/rsyslog/lmzlibw.la
+libtool: install: /usr/bin/install -c .libs/lmnet.so /usr/local/lib/rsyslog/lmnet.so
+libtool: install: /usr/bin/install -c .libs/lmnet.lai /usr/local/lib/rsyslog/lmnet.la
+libtool: install: /usr/bin/install -c .libs/lmnetstrms.so /usr/local/lib/rsyslog/lmnetstrms.so
+libtool: install: /usr/bin/install -c .libs/lmnetstrms.lai /usr/local/lib/rsyslog/lmnetstrms.la
+libtool: install: /usr/bin/install -c .libs/lmnsd_ptcp.so /usr/local/lib/rsyslog/lmnsd_ptcp.so
+libtool: install: /usr/bin/install -c .libs/lmnsd_ptcp.lai /usr/local/lib/rsyslog/lmnsd_ptcp.la
+libtool: install: /usr/bin/install -c .libs/lmtcpsrv.so /usr/local/lib/rsyslog/lmtcpsrv.so
+libtool: install: /usr/bin/install -c .libs/lmtcpsrv.lai /usr/local/lib/rsyslog/lmtcpsrv.la
+libtool: install: /usr/bin/install -c .libs/lmtcpclt.so /usr/local/lib/rsyslog/lmtcpclt.so
+libtool: install: /usr/bin/install -c .libs/lmtcpclt.lai /usr/local/lib/rsyslog/lmtcpclt.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/runtime'
+make[1]: Leaving directory '/rsyslog/runtime'
+Making install in grammar
+make[1]: Entering directory '/rsyslog/grammar'
+make  install-am
+make[2]: Entering directory '/rsyslog/grammar'
+make[3]: Entering directory '/rsyslog/grammar'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/rsyslog/grammar'
+make[2]: Leaving directory '/rsyslog/grammar'
+make[1]: Leaving directory '/rsyslog/grammar'
+Making install in .
+make[1]: Entering directory '/rsyslog'
+make[2]: Entering directory '/rsyslog'
+make[2]: Leaving directory '/rsyslog'
+make[1]: Leaving directory '/rsyslog'
+Making install in plugins/immark
+make[1]: Entering directory '/rsyslog/plugins/immark'
+make[2]: Entering directory '/rsyslog/plugins/immark'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   immark.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/immark.so /usr/local/lib/rsyslog/immark.so
+libtool: install: /usr/bin/install -c .libs/immark.lai /usr/local/lib/rsyslog/immark.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/immark'
+make[1]: Leaving directory '/rsyslog/plugins/immark'
+Making install in plugins/imuxsock
+make[1]: Entering directory '/rsyslog/plugins/imuxsock'
+make[2]: Entering directory '/rsyslog/plugins/imuxsock'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imuxsock.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imuxsock.so /usr/local/lib/rsyslog/imuxsock.so
+libtool: install: /usr/bin/install -c .libs/imuxsock.lai /usr/local/lib/rsyslog/imuxsock.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/imuxsock'
+make[1]: Leaving directory '/rsyslog/plugins/imuxsock'
+Making install in plugins/imtcp
+make[1]: Entering directory '/rsyslog/plugins/imtcp'
+make[2]: Entering directory '/rsyslog/plugins/imtcp'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imtcp.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imtcp.so /usr/local/lib/rsyslog/imtcp.so
+libtool: install: /usr/bin/install -c .libs/imtcp.lai /usr/local/lib/rsyslog/imtcp.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/imtcp'
+make[1]: Leaving directory '/rsyslog/plugins/imtcp'
+Making install in plugins/imudp
+make[1]: Entering directory '/rsyslog/plugins/imudp'
+make[2]: Entering directory '/rsyslog/plugins/imudp'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imudp.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imudp.so /usr/local/lib/rsyslog/imudp.so
+libtool: install: /usr/bin/install -c .libs/imudp.lai /usr/local/lib/rsyslog/imudp.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/imudp'
+make[1]: Leaving directory '/rsyslog/plugins/imudp'
+Making install in plugins/omtesting
+make[1]: Entering directory '/rsyslog/plugins/omtesting'
+make[2]: Entering directory '/rsyslog/plugins/omtesting'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   omtesting.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/omtesting.so /usr/local/lib/rsyslog/omtesting.so
+libtool: install: /usr/bin/install -c .libs/omtesting.lai /usr/local/lib/rsyslog/omtesting.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/omtesting'
+make[1]: Leaving directory '/rsyslog/plugins/omtesting'
+Making install in plugins/mmexternal
+make[1]: Entering directory '/rsyslog/plugins/mmexternal'
+make[2]: Entering directory '/rsyslog/plugins/mmexternal'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   mmexternal.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/mmexternal.so /usr/local/lib/rsyslog/mmexternal.so
+libtool: install: /usr/bin/install -c .libs/mmexternal.lai /usr/local/lib/rsyslog/mmexternal.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/mmexternal'
+make[1]: Leaving directory '/rsyslog/plugins/mmexternal'
+Making install in tools
+make[1]: Entering directory '/rsyslog/tools'
+make[2]: Entering directory '/rsyslog/tools'
+ .././install-sh -c -d '/usr/local/bin'
+ .././install-sh -c -d '/usr/local/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c rsyslogd '/usr/local/sbin'
+libtool: install: /usr/bin/install -c rsyslogd /usr/local/sbin/rsyslogd
+ .././install-sh -c -d '/usr/local/share/man/man1'
+ .././install-sh -c -d '/usr/local/share/man/man5'
+ /usr/bin/install -c -m 644 rsyslog.conf.5 '/usr/local/share/man/man5'
+ .././install-sh -c -d '/usr/local/share/man/man8'
+ /usr/bin/install -c -m 644 rsyslogd.8 '/usr/local/share/man/man8'
+make[2]: Leaving directory '/rsyslog/tools'
+make[1]: Leaving directory '/rsyslog/tools'
+Making install in plugins/imklog
+make[1]: Entering directory '/rsyslog/plugins/imklog'
+make[2]: Entering directory '/rsyslog/plugins/imklog'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imklog.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imklog.so /usr/local/lib/rsyslog/imklog.so
+libtool: install: /usr/bin/install -c .libs/imklog.lai /usr/local/lib/rsyslog/imklog.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/imklog'
+make[1]: Leaving directory '/rsyslog/plugins/imklog'
+Making install in plugins/omrelp
+make[1]: Entering directory '/rsyslog/plugins/omrelp'
+make[2]: Entering directory '/rsyslog/plugins/omrelp'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   omrelp.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/omrelp.so /usr/local/lib/rsyslog/omrelp.so
+libtool: install: /usr/bin/install -c .libs/omrelp.lai /usr/local/lib/rsyslog/omrelp.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/omrelp'
+make[1]: Leaving directory '/rsyslog/plugins/omrelp'
+Making install in plugins/imrelp
+make[1]: Entering directory '/rsyslog/plugins/imrelp'
+make[2]: Entering directory '/rsyslog/plugins/imrelp'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imrelp.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imrelp.so /usr/local/lib/rsyslog/imrelp.so
+libtool: install: /usr/bin/install -c .libs/imrelp.lai /usr/local/lib/rsyslog/imrelp.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/imrelp'
+make[1]: Leaving directory '/rsyslog/plugins/imrelp'
+Making install in plugins/fmhttp
+make[1]: Entering directory '/rsyslog/plugins/fmhttp'
+make[2]: Entering directory '/rsyslog/plugins/fmhttp'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   fmhttp.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/fmhttp.so /usr/local/lib/rsyslog/fmhttp.so
+libtool: install: /usr/bin/install -c .libs/fmhttp.lai /usr/local/lib/rsyslog/fmhttp.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/fmhttp'
+make[1]: Leaving directory '/rsyslog/plugins/fmhttp'
+Making install in contrib/fmhash
+make[1]: Entering directory '/rsyslog/contrib/fmhash'
+make[2]: Entering directory '/rsyslog/contrib/fmhash'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   fmhash.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/fmhash.so /usr/local/lib/rsyslog/fmhash.so
+libtool: install: /usr/bin/install -c .libs/fmhash.lai /usr/local/lib/rsyslog/fmhash.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/contrib/fmhash'
+make[1]: Leaving directory '/rsyslog/contrib/fmhash'
+Making install in plugins/mmjsonparse
+make[1]: Entering directory '/rsyslog/plugins/mmjsonparse'
+make[2]: Entering directory '/rsyslog/plugins/mmjsonparse'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   mmjsonparse.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/mmjsonparse.so /usr/local/lib/rsyslog/mmjsonparse.so
+libtool: install: /usr/bin/install -c .libs/mmjsonparse.lai /usr/local/lib/rsyslog/mmjsonparse.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/mmjsonparse'
+make[1]: Leaving directory '/rsyslog/plugins/mmjsonparse'
+Making install in plugins/mmutf8fix
+make[1]: Entering directory '/rsyslog/plugins/mmutf8fix'
+make[2]: Entering directory '/rsyslog/plugins/mmutf8fix'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   mmutf8fix.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/mmutf8fix.so /usr/local/lib/rsyslog/mmutf8fix.so
+libtool: install: /usr/bin/install -c .libs/mmutf8fix.lai /usr/local/lib/rsyslog/mmutf8fix.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/plugins/mmutf8fix'
+make[1]: Leaving directory '/rsyslog/plugins/mmutf8fix'
+Making install in contrib/imemlogd
+make[1]: Entering directory '/rsyslog/contrib/imemlogd'
+make[2]: Entering directory '/rsyslog/contrib/imemlogd'
+ ../.././install-sh -c -d '/usr/local/lib/rsyslog'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   imemlogd.la '/usr/local/lib/rsyslog'
+libtool: install: /usr/bin/install -c .libs/imemlogd.so /usr/local/lib/rsyslog/imemlogd.so
+libtool: install: /usr/bin/install -c .libs/imemlogd.lai /usr/local/lib/rsyslog/imemlogd.la
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib/rsyslog
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/rsyslog
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/contrib/imemlogd'
+make[1]: Leaving directory '/rsyslog/contrib/imemlogd'
+Making install in tests
+make[1]: Entering directory '/rsyslog/tests'
+make[2]: Entering directory '/rsyslog/tests'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/rsyslog/tests'
+make[1]: Leaving directory '/rsyslog/tests'
+ ---> c78cc7fcefb1
+Removing intermediate container 5990a2279a93
+Step 10/23 : FROM alpine:3.10.3
+ ---> 61ebf0b9b18f
+Step 11/23 : COPY rsyslog.conf /etc/rsyslog.conf
+ ---> f3a89492ca7e
+Step 12/23 : COPY init.sh /init.sh
+ ---> 9532d43930ee
+Step 13/23 : COPY rotate.sh /rotate.sh
+ ---> 9d5b1bfe3d15
+Step 14/23 : COPY monitor-rsyslog.sh /monitor-rsyslog.sh
+ ---> d1b0fefae4c6
+Step 15/23 : COPY --from=build /usr/local/sbin/rsyslogd /usr/sbin/rsyslogd
+ ---> 95049ef233aa
+Step 16/23 : COPY --from=build /usr/local/lib/rsyslog/ /usr/local/lib/rsyslog/
+ ---> 51cf42c5b30b
+Step 17/23 : COPY --from=build /usr/lib/libestr.so.0 /usr/lib/libestr.so.0
+ ---> dae8c53e6f3c
+Step 18/23 : COPY --from=build /usr/lib/libfastjson.so.4 /usr/lib/libfastjson.so.4
+ ---> f5746f847f8f
+Step 19/23 : COPY --from=build /lib/libuuid.so.1 /lib/libuuid.so.1
+ ---> e99c67624e8a
+Step 20/23 : COPY --from=build /usr/lib/liblogging-stdlog.so.0 /usr/lib/liblogging-stdlog.so.0
+ ---> b676d6bc6ac5
+Step 21/23 : ENTRYPOINT
+ ---> Running in 436d53312e22
+ ---> 6f344d112991
+Removing intermediate container 436d53312e22
+Step 22/23 : CMD /init.sh
+ ---> Running in 81f7492b3690
+ ---> 06a03567573c
+Removing intermediate container 81f7492b3690
+Step 23/23 : LABEL org.mobyproject.config '{"capabilities":["all"],"binds":["/run:/run","/dev:/dev","/etc/resolv.conf:/etc/resolv.conf","/var/persist:/persist"],"net":"host","pid":"host"}' org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '667e2ce0622ef079c48509a43a6f3c0411cf9f9a' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in c819eb53f249
+ ---> 1df4927db8ae
+Removing intermediate container c819eb53f249
+Successfully built 1df4927db8ae
+Successfully tagged lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64
+Pushing lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64
+The push refers to a repository [docker.io/lfedge/eve-rsyslog]
+f39fdaefa79a: Preparing
+31dddcd0ed61: Preparing
+c83cba37429d: Preparing
+869bdf7bf509: Preparing
+06c77b8e5d47: Preparing
+2165e9cbd059: Preparing
+741189d81e14: Preparing
+c941c87c58fc: Preparing
+a970db123019: Preparing
+76c961c64858: Preparing
+98713a20507f: Preparing
+c941c87c58fc: Waiting
+a970db123019: Waiting
+2165e9cbd059: Waiting
+741189d81e14: Waiting
+31dddcd0ed61: Pushed
+f39fdaefa79a: Pushed
+c83cba37429d: Pushed
+869bdf7bf509: Pushed
+741189d81e14: Layer already exists
+c941c87c58fc: Layer already exists
+a970db123019: Layer already exists
+06c77b8e5d47: Pushed
+98713a20507f: Layer already exists
+76c961c64858: Pushed
+2165e9cbd059: Pushed
+45c06206f5930d20ad41666a829167542ec66905-arm64: digest: sha256:a0fd30368ab852cb2beb5430b830defc6c36b64128794896263287df40ea6388 size: 2613
+Pushing lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64 to manifest lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905
+time="2020-05-19T08:18:30+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-s390x\". Skipping image."
+Digest: sha256:c6c0794ea346b4404741cea11cf75ae32ca11d245727a0b040d286f55a52dc3a 743
+Not signing lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905
+Tagging lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64 as lfedge/eve-rsyslog:snapshot-arm64
+Pushing lfedge/eve-rsyslog:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve-rsyslog]
+f39fdaefa79a: Preparing
+31dddcd0ed61: Preparing
+c83cba37429d: Preparing
+869bdf7bf509: Preparing
+06c77b8e5d47: Preparing
+2165e9cbd059: Preparing
+741189d81e14: Preparing
+c941c87c58fc: Preparing
+a970db123019: Preparing
+76c961c64858: Preparing
+98713a20507f: Preparing
+741189d81e14: Waiting
+c941c87c58fc: Waiting
+a970db123019: Waiting
+76c961c64858: Waiting
+98713a20507f: Waiting
+2165e9cbd059: Waiting
+f39fdaefa79a: Layer already exists
+31dddcd0ed61: Layer already exists
+869bdf7bf509: Layer already exists
+c83cba37429d: Layer already exists
+06c77b8e5d47: Layer already exists
+2165e9cbd059: Layer already exists
+741189d81e14: Layer already exists
+c941c87c58fc: Layer already exists
+a970db123019: Layer already exists
+76c961c64858: Layer already exists
+98713a20507f: Layer already exists
+snapshot-arm64: digest: sha256:a0fd30368ab852cb2beb5430b830defc6c36b64128794896263287df40ea6388 size: 2613
+Pushing lfedge/eve-rsyslog:snapshot-arm64 to manifest lfedge/eve-rsyslog:snapshot
+time="2020-05-19T08:18:50+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve-rsyslog:snapshot-s390x\". Skipping image."
+Digest: sha256:c6c0794ea346b4404741cea11cf75ae32ca11d245727a0b040d286f55a52dc3a 743
+Not signing lfedge/eve-rsyslog:snapshot
+Build, push and release of "snapshot" complete, all done.
+Building and pushing "lfedge/eve-storage-init:31ed12195e31e7f4b118cbcc2cecfce815e5c4ed"
+31ed12195e31e7f4b118cbcc2cecfce815e5c4ed: Pulling from lfedge/eve-storage-init
+Digest: sha256:9a9d0ee33bd1f163f68926cfca523480d7a4501147112709796e86f62829ae1e
+Status: Image is up to date for lfedge/eve-storage-init:31ed12195e31e7f4b118cbcc2cecfce815e5c4ed
+Building and pushing "lfedge/eve-u-boot:5c8e6788239142c6cd48ef5875912ae607847dec"
+5c8e6788239142c6cd48ef5875912ae607847dec: Pulling from lfedge/eve-u-boot
+Digest: sha256:891919694d89da60d23f504262bdb9792c7c0cc93b29e057d0a6103e5c6a9f67
+Status: Image is up to date for lfedge/eve-u-boot:5c8e6788239142c6cd48ef5875912ae607847dec
+Building and pushing "lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f"
+11365a20a21fa000e9d48614e9303c8f0e81477f: Pulling from lfedge/eve-vtpm
+Digest: sha256:04a0292c68d3e35c25320befcb19735faa248b4ecd7211d84eb03f6ce3659bef
+Status: Image is up to date for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f
+Building and pushing "lfedge/eve-watchdog:288a4129631e73aad6a9e5c01f229205f5dbc9be"
+288a4129631e73aad6a9e5c01f229205f5dbc9be: Pulling from lfedge/eve-watchdog
+Digest: sha256:bac09ff8ba45c195bde56ace1a04c084ee074eff30eef7e7cd6e5e6b69c8edf7
+Status: Image is up to date for lfedge/eve-watchdog:288a4129631e73aad6a9e5c01f229205f5dbc9be
+Building and pushing "lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44"
+ac31bb78810451ef1333b3970f29bebc0a6c9c44: Pulling from lfedge/eve-wlan
+Digest: sha256:c3d7e2a6b381a6bdd4c1a1d1e44b46bb348990777cc828cb575f79a515d35830
+Status: Image is up to date for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44
+Building and pushing "lfedge/eve-wwan:31a3911c7aa7e5c44e19406d6277173b494c6f35"
+31a3911c7aa7e5c44e19406d6277173b494c6f35: Pulling from lfedge/eve-wwan
+Digest: sha256:e0dfd4fb011f186f726453825cac33899766425c382a747dcd46c5d83f6946f6
+Status: Image is up to date for lfedge/eve-wwan:31a3911c7aa7e5c44e19406d6277173b494c6f35
+Building and pushing "lfedge/eve-xen:93b863e105118a0be7cf7423daf6b8831f0009d9"
+93b863e105118a0be7cf7423daf6b8831f0009d9: Pulling from lfedge/eve-xen
+Digest: sha256:b0d381f65d7f20bc385522b0a81688e0cc0ba65479c06baeeae127fa32d6781b
+Status: Image is up to date for lfedge/eve-xen:93b863e105118a0be7cf7423daf6b8831f0009d9
+Done building packages
+rm pkg/qrexec-dom0/Dockerfile pkg/xen-tools/Dockerfile pkg/qrexec-lib/Dockerfile pkg/pillar/Dockerfile
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:fa7ce16c9abd2aa6028e58b3da01eb7ee07067da-arm64 OVMF.fd
+1c1d5047a693af43a3182371645773582db144093ffcb78b7653916dc3b33c45
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/eve.dts conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@1 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/i2c@f7102000/adv7533@39/ports/port@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/thermal-zones/cls0/trips/trip-point@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/thermal-zones/cls0/trips/trip-point@1 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/dsi@f4107800/ports/port@1/endpoint@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /soc/i2s@f7118000/ports/port@0 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@2 has a unit name, but no reg property
+/conf/eve.dtb: Warning (unit_address_vs_reg): Node /regulator@0 has a unit name, but no reg property
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is aa378789, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:2a4c82f75e6a9e63a3e00ebad6873a2f30a31739-arm64 EFI
+7900bc35035e2859d0696918b409f8642504eec81e31db5e4b8303df420d8903
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+./tools/makerootfs.sh images/rootfs-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-HEAD-667e2ce0-2020-05-19.06.20-xen-arm64.squash squash
+Extract kernel image: lfedge/eve-kernel:b7ef5cdd9425eb67cd8f95761d95249045c82e9c-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-05-19T08:20:31+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-05-19T08:20:45+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:20:45+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:20:45+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-05-19T08:20:59+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:20:59+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:20:59+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-05-19T08:21:14+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:21:14+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:21:14+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:2a4c82f75e6a9e63a3e00ebad6873a2f30a31739-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:93b863e105118a0be7cf7423daf6b8831f0009d9-arm64
+Process init image: lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1-arm64
+Process init image: lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:31ed12195e31e7f4b118cbcc2cecfce815e5c4ed-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-05-19T08:21:52+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-05-19T08:22:06+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:06+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-05-19T08:22:20+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:20+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:20+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:20+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-05-19T08:22:33+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:33+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:22:33+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-wwan:31a3911c7aa7e5c44e19406d6277173b494c6f35-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64
+  Create OCI config for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be-arm64
+  Create OCI config for lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:288a4129631e73aad6a9e5c01f229205f5dbc9be-arm64
+  Create OCI config for lfedge/eve-xen-tools:b3043f4196b7124fbd9385a37e44993b84db562d-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[=====================-                                      ]  7800/21007  37%[==============================-                             ] 10900/21007  51%[=================================================-          ] 17500/21007  83%[==================================================\         ] 18100/21007  86%[====================================================|       ] 18600/21007  88%[===========================================================|] 21007/21007 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 234278.15 Kbytes (228.79 Mbytes)
+	33.58% of uncompressed filesystem size (697658.79 Kbytes)
+Inode table size 239945 bytes (234.32 Kbytes)
+	24.99% of uncompressed inode table size (960024 bytes)
+Directory table size 260744 bytes (254.63 Kbytes)
+	45.58% of uncompressed directory table size (572020 bytes)
+Number of duplicate files found 8683
+Number of inodes 24620
+Number of files 16682
+Number of fragments 656
+Number of symbolic links  5904
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 2030
+Number of ids (unique uids + gids) 4
+Number of uids 2
+	root (0)
+	unknown (1000)
+Number of gids 4
+	root (0)
+	shadow (42)
+	tty (5)
+	unknown (1000)
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:5b9c8a3bc15353352a7462b508c9f379e9fcea32-arm64 initrd.img EFI
+b165a9b5745da237454dc333e5832b5a41d809cf8d027c4110f8cffcf00ed9e2
+./tools/makeiso.sh /home/zededa-ci/src/eve/dist/arm64/installer /home/zededa-ci/src/eve/dist/arm64/installer.iso
+xorriso 1.4.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:/tmp/disk.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data,  235g free
+Added to ISO image: directory '/'='/parts'
+xorriso : UPDATE : 8 files added in 1 seconds
+xorriso : UPDATE : 8 files added in 1 seconds
+libisofs: NOTE : Cannot arrange content of data files in surely reproducible way
+xorriso : UPDATE :  10.45% done
+ISO image produced: 122890 sectors
+Written to medium : 122890 sectors at LBA 0
+Writing to 'stdio:/tmp/disk.iso' completed successfully.
+
+./tools/makeflash.sh -C 350 /home/zededa-ci/src/eve/dist/arm64/installer /home/zededa-ci/src/eve/dist/arm64/installer.raw "conf_win installer inventory_win"
+1+0 records in
+1+0 records out
+1 byte copied, 0.000154712 s, 6.5 kB/s
+Unknown (or unrecongnizable) GTP partition table on /output.img
+1+0 records in
+1+0 records out
+512 bytes copied, 5.0953e-05 s, 10.0 MB/s
+Creating new GPT entries in memory.
+GPT data structures destroyed! You may now partition the disk using fdisk or
+other utilities.
+Setting name!
+partNum is 3
+Setting name!
+partNum is 0
+Setting name!
+partNum is 4
+64+0 records in
+64+0 records out
+64 bytes copied, 0.000631259 s, 101 kB/s
+No problems found. 79805 free sectors (39.0 MiB) available in 2
+segments, the largest of which is 77791 (38.0 MiB) in size.
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-u-boot:5c8e6788239142c6cd48ef5875912ae607847dec-arm64 boot
+c5ceb07b4ad2236984dc864497fbaccd20f0c831cf17f879dd8e17e8768ed45e
+./tools/makeflash.sh -C 350 /home/zededa-ci/src/eve/dist/arm64/installer /home/zededa-ci/src/eve/dist/arm64/live.raw efi conf imga
+1+0 records in
+1+0 records out
+1 byte copied, 0.000149473 s, 6.7 kB/s
+Unknown (or unrecongnizable) GTP partition table on /output.img
+1+0 records in
+1+0 records out
+512 bytes copied, 5.1648e-05 s, 9.9 MB/s
+Creating new GPT entries in memory.
+GPT data structures destroyed! You may now partition the disk using fdisk or
+other utilities.
+Setting name!
+partNum is 0
+Setting name!
+partNum is 3
+Setting name!
+partNum is 1
+64+0 records in
+64+0 records out
+64 bytes copied, 0.000632988 s, 101 kB/s
+No problems found. 96189 free sectors (47.0 MiB) available in 2
+segments, the largest of which is 94175 (46.0 MiB) in size.
+qemu-img convert -c -f raw -O qcow2 /home/zededa-ci/src/eve/dist/arm64/live.raw /home/zededa-ci/src/eve/dist/arm64/live.qcow2
+qemu-img resize /home/zededa-ci/src/eve/dist/arm64/live.qcow2 8192M
+Image resized.
+open /home/zededa-ci/src/eve/pkg/fscrypt/build.yml: no such file or directory
+./tools/makerootfs.sh images/rootfs-kvm.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-HEAD-667e2ce0-2020-05-19.06.20-kvm-arm64.squash squash
+Extract kernel image: lfedge/eve-kernel:b7ef5cdd9425eb67cd8f95761d95249045c82e9c-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-05-19T08:26:28+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-05-19T08:26:44+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:26:44+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:26:44+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-05-19T08:26:58+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:26:58+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:26:58+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-05-19T08:27:13+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:27:13+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:27:13+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:2a4c82f75e6a9e63a3e00ebad6873a2f30a31739-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:93b863e105118a0be7cf7423daf6b8831f0009d9-arm64
+Process init image: lfedge/eve-gpt-tools:e378abea66b77fb7e9587b798a8caf5c78f440c1-arm64
+Process init image: lfedge/eve-dom0-ztools:b4b546907c17195e7e79baefd88fdb841bc92b8f-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:31ed12195e31e7f4b118cbcc2cecfce815e5c4ed-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-05-19T08:27:59+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-05-19T08:28:14+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:14+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:45c06206f5930d20ad41666a829167542ec66905-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-05-19T08:28:29+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:29+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:29+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:29+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-05-19T08:28:43+02:00" level=warning msg="targets metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:43+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-05-19T08:28:43+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-wwan:31a3911c7aa7e5c44e19406d6277173b494c6f35-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-lisp:6fe9cf905fb0fc657f646a82b42aa95e4f68f5e5-arm64
+  Create OCI config for lfedge/eve-guacd:f1f08a0fcadd35320f5d03fe0f0a1a318e8449be-arm64
+  Create OCI config for lfedge/eve-pillar:8f003948bc2c61cbe26297aef6d6fc4b871fa304-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:288a4129631e73aad6a9e5c01f229205f5dbc9be-arm64
+  Create OCI config for lfedge/eve-xen-tools:b3043f4196b7124fbd9385a37e44993b84db562d-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[=====================/                                      ]  7800/21007  37%[======================/                                     ]  8000/21007  38%[========================/                                   ]  8600/21007  40%[==============================|                             ] 10900/21007  51%[==============================/                             ] 11000/21007  52%[=====================================-                      ] 13200/21007  62%[=================================================\          ] 17500/21007  83%[==================================================|         ] 18100/21007  86%[===========================================================/] 21007/21007 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 234278.14 Kbytes (228.79 Mbytes)
+	33.58% of uncompressed filesystem size (697658.79 Kbytes)
+Inode table size 239933 bytes (234.31 Kbytes)
+	24.99% of uncompressed inode table size (960024 bytes)
+Directory table size 260740 bytes (254.63 Kbytes)
+	45.58% of uncompressed directory table size (572020 bytes)
+Number of duplicate files found 8683
+Number of inodes 24620
+Number of files 16682
+Number of fragments 656
+Number of symbolic links  5904
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 2030
+Number of ids (unique uids + gids) 4
+Number of uids 2
+	root (0)
+	unknown (1000)
+Number of gids 4
+	root (0)
+	shadow (42)
+	tty (5)
+	unknown (1000)
+cp pkg/eve/* Makefile images/*.yml /home/zededa-ci/src/eve/dist/arm64
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --hash-path /home/zededa-ci/src/eve --disable-content-trust   --release snapshot --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69"
+Sending build context to Docker daemon  1.721GB
+Step 1/9 : FROM alpine:3.9
+ ---> 355993758880
+Step 2/9 : WORKDIR /bits
+ ---> f6fe8dcb6705
+Removing intermediate container 7577710ee4e6
+Step 3/9 : RUN apk add --no-cache qemu-system-x86_64 qemu-system-aarch64 bash make git squashfs-tools
+ ---> Running in c2031607a3eb
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/64) Installing ncurses-terminfo-base (6.1_p20190105-r0)
+(2/64) Installing ncurses-terminfo (6.1_p20190105-r0)
+(3/64) Installing ncurses-libs (6.1_p20190105-r0)
+(4/64) Installing readline (7.0.003-r1)
+(5/64) Installing bash (4.4.19-r1)
+Executing bash-4.4.19-r1.post-install
+(6/64) Installing ca-certificates (20191127-r0)
+(7/64) Installing nghttp2-libs (1.35.1-r1)
+(8/64) Installing libssh2 (1.9.0-r1)
+(9/64) Installing libcurl (7.64.0-r3)
+(10/64) Installing expat (2.2.8-r0)
+(11/64) Installing pcre2 (10.32-r1)
+(12/64) Installing git (2.20.4-r0)
+(13/64) Installing make (4.2.1-r2)
+(14/64) Installing libcap-ng (0.7.9-r1)
+(15/64) Installing libcap (2.26-r0)
+(16/64) Installing libffi (3.2.1-r6)
+(17/64) Installing libintl (0.19.8.1-r4)
+(18/64) Installing libuuid (2.33-r0)
+(19/64) Installing libblkid (2.33-r0)
+(20/64) Installing libmount (2.33-r0)
+(21/64) Installing pcre (8.42-r1)
+(22/64) Installing glib (2.58.1-r3)
+(23/64) Installing gmp (6.1.2-r1)
+(24/64) Installing nettle (3.4.1-r0)
+(25/64) Installing p11-kit (0.23.14-r0)
+(26/64) Installing libtasn1 (4.14-r0)
+(27/64) Installing libunistring (0.9.10-r0)
+(28/64) Installing gnutls (3.6.7-r1)
+(29/64) Installing libxau (1.0.8-r3)
+(30/64) Installing libbsd (0.8.6-r2)
+(31/64) Installing libxdmcp (1.1.2-r5)
+(32/64) Installing libxcb (1.13-r2)
+(33/64) Installing libxkbcommon (0.8.2-r0)
+(34/64) Installing qemu (3.1.0-r3)
+Executing qemu-3.1.0-r3.pre-install
+Executing qemu-3.1.0-r3.post-install
+[91m*
+* If you want to run VM as unprivileged user and let Qemu create tunX devices,
+* then you must add that user to the group "qemu".
+* If you use KVM for hardware-assisted virtualization, then you may also need
+* to add that user to the group "kvm".
+*
+[0m(35/64) Installing libaio (0.3.111-r0)
+(36/64) Installing libepoxy (1.5.3-r0)
+(37/64) Installing libdrm (2.4.96-r0)
+(38/64) Installing wayland-libs-server (1.16.0-r0)
+(39/64) Installing mesa-gbm (18.1.7-r2)
+(40/64) Installing libgcc (8.3.0-r0)
+(41/64) Installing libjpeg-turbo (1.5.3-r6)
+(42/64) Installing lzo (2.10-r2)
+(43/64) Installing pixman (0.34.0-r6)
+(44/64) Installing libpng (1.6.37-r0)
+(45/64) Installing libseccomp (2.4.2-r2)
+(46/64) Installing libstdc++ (8.3.0-r0)
+(47/64) Installing snappy (1.1.7-r1)
+(48/64) Installing libogg (1.3.3-r2)
+(49/64) Installing celt051 (0.5.1.3-r0)
+(50/64) Installing opus (1.3-r0)
+(51/64) Installing db (5.3.28-r1)
+(52/64) Installing libsasl (2.1.27-r2)
+(53/64) Installing spice-server (0.14.1-r6)
+(54/64) Installing libusb (1.0.22-r0)
+(55/64) Installing usbredir (0.7.1-r0)
+(56/64) Installing openssl (1.1.1g-r0)
+(57/64) Installing vde2-libs (2.3.2-r10)
+(58/64) Installing libx11 (1.6.7-r0)
+(59/64) Installing virglrenderer (0.7.0-r1)
+(60/64) Installing qemu-system-aarch64 (3.1.0-r3)
+(61/64) Installing qemu-system-x86_64 (3.1.0-r3)
+(62/64) Installing lz4-libs (1.8.3-r2)
+(63/64) Installing xz-libs (5.2.4-r0)
+(64/64) Installing squashfs-tools (4.3-r5)
+Executing busybox-1.29.3-r10.trigger
+Executing ca-certificates-20191127-r0.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 97 MiB in 78 packages
+ ---> 3131d5eaac90
+Removing intermediate container c2031607a3eb
+Step 4/9 : COPY . /bits/
+ ---> 9c26c428d2af
+Step 5/9 : COPY runme.sh /
+ ---> adc8b4032f97
+Step 6/9 : RUN ln -s installer/* .
+ ---> Running in 543c39c1715a
+ ---> 33534e949a6c
+Removing intermediate container 543c39c1715a
+Step 7/9 : RUN rm -f installer/rootfs.img  && ln -s rootfs-xen.img installer/rootfs.img
+ ---> Running in 96c4395e0aff
+ ---> 0b35318ae5c9
+Removing intermediate container 96c4395e0aff
+Step 8/9 : ENTRYPOINT /runme.sh
+ ---> Running in 5ef19eb8fb66
+ ---> 2d1a4f17ffc4
+Removing intermediate container 5ef19eb8fb66
+Step 9/9 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision '667e2ce0622ef079c48509a43a6f3c0411cf9f9a' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f5157883d287
+ ---> d1521d0aa028
+Removing intermediate container f5157883d287
+Successfully built d1521d0aa028
+Successfully tagged lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69-arm64
+Pushing lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+d41139848a32: Preparing
+9668c39260ef: Preparing
+ea200f359205: Preparing
+69b1baa29fd7: Preparing
+42b458420393: Preparing
+bad50bce1ce0: Preparing
+a73aeeee9177: Preparing
+bad50bce1ce0: Waiting
+a73aeeee9177: Waiting
+ea200f359205: Pushed
+d41139848a32: Pushed
+9668c39260ef: Pushed
+a73aeeee9177: Layer already exists
+bad50bce1ce0: Pushed
+42b458420393: Pushed
+69b1baa29fd7: Pushed
+75ca20f61a3800820774464f861d3a1f578c6e69-arm64: digest: sha256:8aeddccb6213941a8af4c6eaff8e044cf44249c757481f9dba6fac5ebecbb64d size: 1781
+Pushing lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69-arm64 to manifest lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69
+time="2020-05-19T08:40:01+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69-s390x\". Skipping image."
+Digest: sha256:92898491ff8212a07fad22fe78228a0e26a5466a4c90203f324e5dda65198f46 743
+Not signing lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69
+Tagging lfedge/eve:75ca20f61a3800820774464f861d3a1f578c6e69-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+d41139848a32: Preparing
+9668c39260ef: Preparing
+ea200f359205: Preparing
+69b1baa29fd7: Preparing
+42b458420393: Preparing
+bad50bce1ce0: Preparing
+a73aeeee9177: Preparing
+bad50bce1ce0: Waiting
+a73aeeee9177: Waiting
+42b458420393: Layer already exists
+9668c39260ef: Layer already exists
+69b1baa29fd7: Layer already exists
+d41139848a32: Layer already exists
+ea200f359205: Layer already exists
+bad50bce1ce0: Layer already exists
+a73aeeee9177: Layer already exists
+snapshot-arm64: digest: sha256:8aeddccb6213941a8af4c6eaff8e044cf44249c757481f9dba6fac5ebecbb64d size: 1781
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2020-05-19T08:40:20+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:92898491ff8212a07fad22fe78228a0e26a5466a4c90203f324e5dda65198f46 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+rm images/rootfs-kvm.yml images/rootfs-xen.yml images/rootfs-xen.yml.in images/rootfs-kvm.yml.in
+FINISHED
