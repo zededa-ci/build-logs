@@ -1,0 +1,2542 @@
+From https://github.com/lf-edge/eve
+ * [new tag]           5.10.2     -> 5.10.2
+ * [new tag]           5.10.3     -> 5.10.3
+ * [new tag]           5.10.4     -> 5.10.4
+Building the following tags: 5.10.4 origin/master (latest tag is 5.10.4)
+Skipping repository .go/pkg/dep/sources/https---github.com-linuxkit-linuxkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-hyperkit
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-context
+Skipping repository .go/pkg/dep/sources/https---github.com-theupdateframework-notary
+Skipping repository .go/pkg/dep/sources/https---github.com-mitchellh-go--ps
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-appengine
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonschema
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-net
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonpointer
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-tool
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--ansiterm
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-vpnkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-anonuuid
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--autorest
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-gotty--client
+Skipping repository .go/pkg/dep/sources/https---github.com-Microsoft-go--winio
+Skipping repository .go/pkg/dep/sources/https---github.com-agl-ed25519
+Skipping repository .go/pkg/dep/sources/https---github.com-aws-aws--sdk--go
+Skipping repository .go/pkg/dep/sources/https---github.com-containerd-containerd
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-go--digest
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-image--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-runtime--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-packethost-packngo
+Skipping repository .go/pkg/dep/sources/https---github.com-pkg-errors
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--vhd--utils
+Skipping repository .go/pkg/dep/sources/https---github.com-renstrom-fuzzysearch
+Skipping repository .go/pkg/dep/sources/https---github.com-rn-iso9660wrap
+Skipping repository .go/pkg/dep/sources/https---github.com-creack-goselect
+Skipping repository .go/pkg/dep/sources/https---github.com-dgrijalva-jwt--go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-distribution
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-docker
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--connections
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--units
+Skipping repository .go/pkg/dep/sources/https---github.com-jmespath-go--jmespath
+Skipping repository .go/pkg/dep/sources/https---github.com-scaleway-go--scaleway
+Skipping repository .go/pkg/dep/sources/https---github.com-go--ini-ini
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-mux
+Skipping repository .go/pkg/dep/sources/https---github.com-gogo-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-websocket
+Skipping repository .go/pkg/dep/sources/https---github.com-vmware-govmomi
+Skipping repository .go/pkg/dep/sources/https---github.com-sirupsen-logrus
+Skipping repository .go/pkg/dep/sources/https---gopkg.in-yaml.v2
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--p9p
+Skipping repository .go/pkg/dep/sources/https---github.com-google-uuid
+Skipping repository .go/pkg/dep/sources/https---github.com-gophercloud-gophercloud
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonreference
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-datakit
+Skipping repository .go/pkg/dep/sources/https---github.com-surma-gocpio
+Skipping repository .go/pkg/dep/sources/https---github.com-miekg-pkcs11
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sync
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-oauth2
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-gocloud
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sys
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-crypto
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-google--api--go--client
+Skipping repository .go/pkg/dep/sources/https---github.com-census--instrumentation-opencensus--go
+Skipping repository .go/pkg/dep/sources/https---github.com-googleapis-gax--go
+Skipping repository .go/pkg/dep/sources/https---github.com-grpc-grpc--go
+Skipping repository .go/pkg/dep/sources/https---github.com-konsorten-go--windows--terminal--sequences
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-groupcache
+Skipping repository .go/pkg/dep/sources/https---github.com-google-go--genproto
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-text
+Removing .go/src
+Removing .go/bin
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+HEAD is now at db2838f7 fix fatal: Lease not found
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+Building and pushing "lfedge/eve-acrn:5.10.4"
+5.10.4: Pulling from lfedge/eve-acrn
+Digest: sha256:4f8a96bffa35c4f5e24e697d6fda42003145fff4058b7ed4a37516cc593e6d48
+Status: Image is up to date for lfedge/eve-acrn:5.10.4
+Building and pushing "lfedge/eve-acrn-kernel:5.10.4"
+5.10.4: Pulling from lfedge/eve-acrn-kernel
+Digest: sha256:2e01590fe0a97d700f06136ab7fa6a0b3ba487ec7a40793dee3d407501d457d5
+Status: Image is up to date for lfedge/eve-acrn-kernel:5.10.4
+Building and pushing "lfedge/eve-alpine:5.10.4"
+5.10.4: Pulling from lfedge/eve-alpine
+Digest: sha256:9da6c2fa68a4ca89cd1e6442851aa1819c3ab51269044075762746420265ec52
+Status: Image is up to date for lfedge/eve-alpine:5.10.4
+Building and pushing "lfedge/eve-debug:5.10.4"
+5.10.4: Pulling from lfedge/eve-debug
+Digest: sha256:498133ec41e6e68d1db99a2f96384d525d9891ff32840f47fb6dd028d5c64310
+Status: Image is up to date for lfedge/eve-debug:5.10.4
+Building and pushing "lfedge/eve-dnsmasq:5.10.4"
+5.10.4: Pulling from lfedge/eve-dnsmasq
+Digest: sha256:b93c10dca7d279549f10016eb75b336aa9d7559d78e1f3e3bad6eee5c658c895
+Status: Image is up to date for lfedge/eve-dnsmasq:5.10.4
+Building and pushing "lfedge/eve-dom0-ztools:5.10.4"
+5.10.4: Pulling from lfedge/eve-dom0-ztools
+Digest: sha256:4e2160b297a64b94a1c553f0e3cd7609ea0de494bf5307864e0b235f7381072c
+Status: Image is up to date for lfedge/eve-dom0-ztools:5.10.4
+Building and pushing "lfedge/eve-fw:5.10.4"
+5.10.4: Pulling from lfedge/eve-fw
+Digest: sha256:512cab8201737f2dc84f88be697ec3809dddf36d2e042c7358a34432993d041a
+Status: Image is up to date for lfedge/eve-fw:5.10.4
+Building and pushing "lfedge/eve-gpt-tools:5.10.4"
+5.10.4: Pulling from lfedge/eve-gpt-tools
+Digest: sha256:b7f5393445050a36bf6b10aa1fc962e6e2a04adb612d206c9f8089ab118c8c9e
+Status: Image is up to date for lfedge/eve-gpt-tools:5.10.4
+Building and pushing "lfedge/eve-grub:5.10.4"
+5.10.4: Pulling from lfedge/eve-grub
+Digest: sha256:2d9369be4e302e2d4dbdc34d676f11d35bf49e13f35f30aa6865109466fdfdfd
+Status: Image is up to date for lfedge/eve-grub:5.10.4
+Building and pushing "lfedge/eve-guacd:5.10.4"
+5.10.4: Pulling from lfedge/eve-guacd
+Digest: sha256:1cfd153b8c3dfb9a4a5eb740622ea8f093d8c528e96e8ae7fb9982b8db96745f
+Status: Image is up to date for lfedge/eve-guacd:5.10.4
+Building and pushing "lfedge/eve-k3s:5.10.4"
+5.10.4: Pulling from lfedge/eve-k3s
+Digest: sha256:52420def91df90363763cc923d441e53645b3116062dcbfc1533d471bb735489
+Status: Image is up to date for lfedge/eve-k3s:5.10.4
+Building and pushing "lfedge/eve-kernel:5.10.4"
+5.10.4: Pulling from lfedge/eve-kernel
+Digest: sha256:0129f601f3a505893e5007354d0c13bacf75c9b19d10ae935622972fd6ea9cf0
+Status: Image is up to date for lfedge/eve-kernel:5.10.4
+Building and pushing "lfedge/eve-lisp:5.10.4"
+5.10.4: Pulling from lfedge/eve-lisp
+Digest: sha256:0952a937a37c1566867bfe9c1ec05bd00efe64caf3f4b61705b82aec35230623
+Status: Image is up to date for lfedge/eve-lisp:5.10.4
+Building and pushing "lfedge/eve-mkconf:5.10.4"
+5.10.4: Pulling from lfedge/eve-mkconf
+Digest: sha256:de4019699351b18745d4fe5a228d5bb4b2ec9cb1e0ecf4f3e93b04a248a19cb2
+Status: Image is up to date for lfedge/eve-mkconf:5.10.4
+Building and pushing "lfedge/eve-mkimage-iso-efi:5.10.4"
+5.10.4: Pulling from lfedge/eve-mkimage-iso-efi
+Digest: sha256:078ef181627c4e6106e2bee8a8e005339bbffffba1615f94902ad92d8bef2cad
+Status: Image is up to date for lfedge/eve-mkimage-iso-efi:5.10.4
+Building and pushing "lfedge/eve-mkimage-raw-efi:5.10.4"
+5.10.4: Pulling from lfedge/eve-mkimage-raw-efi
+Digest: sha256:4bea3353e2276e6182d9bf501ea121718b3d9288deccee34add2bb5e89217f29
+Status: Image is up to date for lfedge/eve-mkimage-raw-efi:5.10.4
+Building and pushing "lfedge/eve-mkrootfs-ext4:5.10.4"
+5.10.4: Pulling from lfedge/eve-mkrootfs-ext4
+Digest: sha256:dee50818845838d174998fe661dae1e61828db92bfb2c99cd9ed66877f0a2aa6
+Status: Image is up to date for lfedge/eve-mkrootfs-ext4:5.10.4
+Building and pushing "lfedge/eve-mkrootfs-squash:5.10.4"
+5.10.4: Pulling from lfedge/eve-mkrootfs-squash
+Digest: sha256:1bf3353969940ff21a6df88f17a6b0982bc56981aee981e92e547a53da9b7b9b
+Status: Image is up to date for lfedge/eve-mkrootfs-squash:5.10.4
+Building and pushing "lfedge/eve-new-kernel:5.10.4"
+5.10.4: Pulling from lfedge/eve-new-kernel
+Digest: sha256:44b8314ffc88b1ef8d709314060596276bb484735b9a865470fb3da0706c6cf5
+Status: Image is up to date for lfedge/eve-new-kernel:5.10.4
+Building and pushing "lfedge/eve-strongswan:5.10.4"
+5.10.4: Pulling from lfedge/eve-strongswan
+Digest: sha256:8f72fc29c81748254853d3b467eb4f14b4f4d49bcc77eb8e7b2335f465a2e561
+Status: Image is up to date for lfedge/eve-strongswan:5.10.4
+Building and pushing "lfedge/eve-pillar:5.10.4"
+5.10.4: Pulling from lfedge/eve-pillar
+Digest: sha256:7506a4dc289465513260ad87ad55994311b354388248abace38a3ac0a53da313
+Status: Image is up to date for lfedge/eve-pillar:5.10.4
+Building and pushing "lfedge/eve-uefi:5.10.4"
+5.10.4: Pulling from lfedge/eve-uefi
+Digest: sha256:d3b79affec752d9f4e15b1a1f60921a540c0e995290c32676089061b68e12b6b
+Status: Image is up to date for lfedge/eve-uefi:5.10.4
+Building and pushing "lfedge/eve-xen-tools:5.10.4"
+5.10.4: Pulling from lfedge/eve-xen-tools
+Digest: sha256:524e10aa06b1fec5631175cbf899b700c26993c640325016357563dcfecc6b2a
+Status: Image is up to date for lfedge/eve-xen-tools:5.10.4
+Building and pushing "lfedge/eve-qrexec-lib:5.10.4"
+5.10.4: Pulling from lfedge/eve-qrexec-lib
+Digest: sha256:917796a8e8d6d0d5ef78da33a056dfdbedcbd07225ac4ec358b6d8b7a9ba96b4
+Status: Image is up to date for lfedge/eve-qrexec-lib:5.10.4
+Building and pushing "lfedge/eve-qrexec-dom0:5.10.4"
+5.10.4: Pulling from lfedge/eve-qrexec-dom0
+Digest: sha256:55c57d74dd492fb6c77724e298be8dc22ea3b6b363359a1b9fc09a9cfc8708fe
+Status: Image is up to date for lfedge/eve-qrexec-dom0:5.10.4
+Building and pushing "lfedge/eve-rngd:5.10.4"
+5.10.4: Pulling from lfedge/eve-rngd
+Digest: sha256:63b7e2a955e0ae5b17a2cb467734d8617edb4e4ed3689cde73323b45dfe02e59
+Status: Image is up to date for lfedge/eve-rngd:5.10.4
+Building and pushing "lfedge/eve-rsyslog:5.10.4"
+5.10.4: Pulling from lfedge/eve-rsyslog
+Digest: sha256:0776c866aa55a87d045a193c22cd8e9a7642da9b5a9c1f360bf4184e2cce20ea
+Status: Image is up to date for lfedge/eve-rsyslog:5.10.4
+Building and pushing "lfedge/eve-storage-init:5.10.4"
+5.10.4: Pulling from lfedge/eve-storage-init
+Digest: sha256:8959ecdea7111ea13b6041ce7b80bb8c22320ad9a3920618ca5b52e508c9c92b
+Status: Image is up to date for lfedge/eve-storage-init:5.10.4
+Building and pushing "lfedge/eve-u-boot:5.10.4"
+5.10.4: Pulling from lfedge/eve-u-boot
+Digest: sha256:b782c23849bdc07c0e236535b32b25b8c7cb088778c5490b9ecacaa5c2da87fa
+Status: Image is up to date for lfedge/eve-u-boot:5.10.4
+Building and pushing "lfedge/eve-vtpm:5.10.4"
+5.10.4: Pulling from lfedge/eve-vtpm
+Digest: sha256:5a014ff176e4876348c818c0b6b68ac4413c2e5958b1537d5e3d7d210b1ff204
+Status: Image is up to date for lfedge/eve-vtpm:5.10.4
+Building and pushing "lfedge/eve-watchdog:5.10.4"
+5.10.4: Pulling from lfedge/eve-watchdog
+Digest: sha256:66d6dbd570e396410de8d6633a6dbe9b161a086a795c823b419c6958749b92d6
+Status: Image is up to date for lfedge/eve-watchdog:5.10.4
+Building and pushing "lfedge/eve-wlan:5.10.4"
+5.10.4: Pulling from lfedge/eve-wlan
+Digest: sha256:82b6978a2682ae33972a0f48f61f571a5e2ebb8aed758063f0da22d30a6f9d69
+Status: Image is up to date for lfedge/eve-wlan:5.10.4
+Building and pushing "lfedge/eve-wwan:5.10.4"
+5.10.4: Pulling from lfedge/eve-wwan
+Digest: sha256:667dd40658c3e76791363ed2618635ee67e8363a81a2d415d31337007c33547c
+Status: Image is up to date for lfedge/eve-wwan:5.10.4
+Building and pushing "lfedge/eve-xen:5.10.4"
+5.10.4: Pulling from lfedge/eve-xen
+Digest: sha256:1de546696bcb06bc1840cc1b122c5d2b7b0d02479ff9615f55403c7921fd0428
+Status: Image is up to date for lfedge/eve-xen:5.10.4
+Done building packages
+rm pkg/qrexec-dom0/Dockerfile pkg/xen-tools/Dockerfile pkg/qrexec-lib/Dockerfile pkg/pillar/Dockerfile
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+5dba52dec77020c73c1a5bd81b49006a65afd16074fd2e809b3da5a24366bc0d
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+6d0b206a21f428142b2874c362b8f2eb36668de70785066f358154d122aeeb61
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+454bfa4dd310e439f3b3b9183720e49de2da41adf1d8a4c93c377b349d9a78df
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+a4819b8dad0e0450f6e6c47b7d851e36aa526fd910046baba114ffa1cd448243
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is e86e57e6, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+7905d7a71a1af6dd58f36801dd8f11c6f76abbee20e63650c3569cb606269f26
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+patching file images/rootfs-rpi-xen.yml.in.sed (read from images/rootfs.yml.in)
+./tools/makerootfs.sh images/rootfs-rpi-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-5.10.4-rpi-xen-arm64.squash squash
+Extract kernel image: lfedge/eve-new-kernel:5.10.4-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:02:59+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:02:59+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:03:04+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:04+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:04+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:03:04+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:05+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:05+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:03:05+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:03:09+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:10+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:10+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:03:10+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:03:10+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:03:15+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:15+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:15+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:03:15+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:03:15+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:5.10.4-arm64
+Process init image: lfedge/eve-fw:5.10.4-arm64
+Process init image: lfedge/eve-xen:5.10.4-arm64
+Process init image: lfedge/eve-gpt-tools:5.10.4-arm64
+Process init image: lfedge/eve-dom0-ztools:5.10.4-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:5.10.4-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:03:35+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:03:35+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:03:35+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:5.10.4-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:03:40+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:5.10.4-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:03:44+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:44+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:44+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:03:44+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:45+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:45+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:03:45+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:03:49+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:49+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:03:49+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:03:49+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:49+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:03:49+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:5.10.4-arm64
+  Create OCI config for lfedge/eve-wlan:5.10.4-arm64
+  Create OCI config for lfedge/eve-guacd:5.10.4-arm64
+  Create OCI config for lfedge/eve-pillar:5.10.4-arm64
+  Create OCI config for lfedge/eve-vtpm:5.10.4-arm64
+  Create OCI config for lfedge/eve-watchdog:5.10.4-arm64
+  Create OCI config for lfedge/eve-xen-tools:5.10.4-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15549   0%[====|                                                       ]  1200/15549   7%[=======-                                                    ]  2100/15549  13%[============================-                               ]  7400/15549  47%[========================================-                   ] 10700/15549  68%[============================================-               ] 11600/15549  74%[===========================================================|] 15549/15549 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 219604.53 Kbytes (214.46 Mbytes)
+	33.38% of uncompressed filesystem size (657852.54 Kbytes)
+Inode table size 185370 bytes (181.03 Kbytes)
+	24.76% of uncompressed inode table size (748807 bytes)
+Directory table size 204448 bytes (199.66 Kbytes)
+	46.82% of uncompressed directory table size (436689 bytes)
+Number of duplicate files found 6141
+Number of inodes 18562
+Number of files 11180
+Number of fragments 402
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1775
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8-arm64 boot
+e1e9ee84d7ff57ac7af574e5747253a253613dfb0f0518fa8a518c72f5823e07
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+EVE_HASH=5.10.4 DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 5.10.4-rpi-xen --release latest --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:5.10.4-rpi-xen"
+Sending build context to Docker daemon  240.5MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in e356d89f3742
+ ---> 6774cd328c7b
+Removing intermediate container e356d89f3742
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 717bf7390e6e
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> 2b51f35f8c96
+Removing intermediate container 717bf7390e6e
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:5.10.4-arm64 as iso
+ ---> 13728fca9a4b
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:5.10.4-arm64 as raw
+ ---> 58f411310576
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 87cf2b3968e6
+ ---> f44e1d09a461
+Removing intermediate container 87cf2b3968e6
+Step 7/17 : FROM lfedge/eve-mkconf:5.10.4-arm64 as conf
+ ---> e88d01ce40f9
+Step 8/17 : COPY --from=iso / /
+ ---> ad399c5bf486
+Step 9/17 : COPY --from=raw / /
+ ---> bdafbc9dd30e
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 1725da37df30
+Step 11/17 : COPY installer /bits
+ ---> 6f4400df12b4
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 02c388d8bb4c
+Step 13/17 : COPY runme.sh /
+ ---> 00efb3447fcf
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in e173fed2f357
+ ---> 4e88dcb89a92
+Removing intermediate container e173fed2f357
+Step 15/17 : WORKDIR /bits
+ ---> 5cb0fb022e34
+Removing intermediate container 6050caa19629
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in 5bda53c8ab4f
+ ---> a00e01eeef70
+Removing intermediate container 5bda53c8ab4f
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'db2838f7aa49167c9969b995dd1b85727c8c2ca1' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in ad8e9c8beb1f
+ ---> a0afbfd13649
+Removing intermediate container ad8e9c8beb1f
+Successfully built a0afbfd13649
+Successfully tagged lfedge/eve:5.10.4-rpi-xen-arm64
+Pushing lfedge/eve:5.10.4-rpi-xen-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+a96211a7e250: Preparing
+a1398346dfaa: Preparing
+874750b23ae0: Preparing
+07bf46452d69: Preparing
+0572bac51b62: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+a96211a7e250: Pushed
+a1398346dfaa: Pushed
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+874750b23ae0: Pushed
+e1f32feb3000: Layer already exists
+0572bac51b62: Pushed
+07bf46452d69: Pushed
+5.10.4-rpi-xen-arm64: digest: sha256:5b193b0772fc9a69bfaa3e41d7e89a17b80d61f8d36748f616abeb5f62144fd5 size: 1999
+Pushing lfedge/eve:5.10.4-rpi-xen-arm64 to manifest lfedge/eve:5.10.4-rpi-xen
+time="2020-09-08T08:07:10+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-rpi-xen-amd64\". Skipping image."
+time="2020-09-08T08:07:13+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-rpi-xen-s390x\". Skipping image."
+Digest: sha256:311c10dcf61ea47e82ed68adf88de0585122c967954a09c6f603c1392cd2909b 434
+Not signing lfedge/eve:5.10.4-rpi-xen
+Tagging lfedge/eve:5.10.4-rpi-xen-arm64 as lfedge/eve:latest-arm64
+Pushing lfedge/eve:latest-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+a96211a7e250: Preparing
+a1398346dfaa: Preparing
+874750b23ae0: Preparing
+07bf46452d69: Preparing
+0572bac51b62: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+41c42c83c578: Waiting
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+a1398346dfaa: Layer already exists
+a96211a7e250: Layer already exists
+0572bac51b62: Layer already exists
+874750b23ae0: Layer already exists
+07bf46452d69: Layer already exists
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+latest-arm64: digest: sha256:5b193b0772fc9a69bfaa3e41d7e89a17b80d61f8d36748f616abeb5f62144fd5 size: 1999
+Pushing lfedge/eve:latest-arm64 to manifest lfedge/eve:latest
+time="2020-09-08T08:07:25+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:latest-s390x\". Skipping image."
+Digest: sha256:4cb11b4d7d7bab20ea8e854b7310945c15855cdad8df877e26015773f8540283 743
+Not signing lfedge/eve:latest
+Build, push and release of "latest" complete, all done.
+rm images/rootfs-rpi-xen.yml.in images/rootfs-rpi-xen.yml
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+1dc2f0af67c730dc0ae3168555e9467164f415dd5ae451cc1458adf6d5288756
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+17c3d4627a9055cfdf938de018c513ccfa8ccca59a32b9063307e12c9eee55b7
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+20110db233451f69c3fb88b7c37ad470faece9385ad9b446236c965f2f78666a
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+050afe04d3e7dad6407e593887367d214ede38e4da6be7dd7e41141b98d54fbe
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is fa552298, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+006b28b8929260358aaf0d328de454abf6b8d363b71fe2fcb4818098d6bfaad8
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+patching file images/rootfs-rpi-kvm.yml.in.sed (read from images/rootfs.yml.in)
+./tools/makerootfs.sh images/rootfs-rpi-kvm.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-5.10.4-rpi-kvm-arm64.squash squash
+Extract kernel image: lfedge/eve-new-kernel:5.10.4-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:07:44+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:07:44+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:07:48+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:07:48+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:07:48+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:07:48+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:07:49+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:07:49+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:07:49+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:07:53+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:07:53+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:07:53+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:07:53+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:07:53+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:07:58+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:07:58+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:07:58+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:07:58+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:07:58+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:5.10.4-arm64
+Process init image: lfedge/eve-fw:5.10.4-arm64
+Process init image: lfedge/eve-xen:5.10.4-arm64
+Process init image: lfedge/eve-gpt-tools:5.10.4-arm64
+Process init image: lfedge/eve-dom0-ztools:5.10.4-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:5.10.4-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:08:20+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:08:20+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:08:20+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:5.10.4-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:08:25+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:5.10.4-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:08:31+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:08:31+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:08:31+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:08:31+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:08:31+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:08:31+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:08:31+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:08:35+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:08:35+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:08:35+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:08:35+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:08:36+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:08:36+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:5.10.4-arm64
+  Create OCI config for lfedge/eve-wlan:5.10.4-arm64
+  Create OCI config for lfedge/eve-guacd:5.10.4-arm64
+  Create OCI config for lfedge/eve-pillar:5.10.4-arm64
+  Create OCI config for lfedge/eve-vtpm:5.10.4-arm64
+  Create OCI config for lfedge/eve-watchdog:5.10.4-arm64
+  Create OCI config for lfedge/eve-xen-tools:5.10.4-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15549   0%[=============================|                              ]  7700/15549  49%[===========================================================\] 15549/15549 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 219604.52 Kbytes (214.46 Mbytes)
+	33.38% of uncompressed filesystem size (657852.54 Kbytes)
+Inode table size 185367 bytes (181.02 Kbytes)
+	24.75% of uncompressed inode table size (748807 bytes)
+Directory table size 204441 bytes (199.65 Kbytes)
+	46.82% of uncompressed directory table size (436689 bytes)
+Number of duplicate files found 6141
+Number of inodes 18562
+Number of files 11180
+Number of fragments 402
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1775
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8-arm64 boot
+002e1d4e8accde95bb18d5a162a2638112c76c3233256a3b644c7fa8d9424e89
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+EVE_HASH=5.10.4 DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 5.10.4-rpi-kvm --release latest --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:5.10.4-rpi-kvm"
+Sending build context to Docker daemon  240.5MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in ad6a2fc1d379
+ ---> 04af2a748d6a
+Removing intermediate container ad6a2fc1d379
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in cbc2f6b4aed8
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> fea74a94aa02
+Removing intermediate container cbc2f6b4aed8
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:5.10.4-arm64 as iso
+ ---> 13728fca9a4b
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:5.10.4-arm64 as raw
+ ---> 58f411310576
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 1fb72d558118
+ ---> 671836125fd7
+Removing intermediate container 1fb72d558118
+Step 7/17 : FROM lfedge/eve-mkconf:5.10.4-arm64 as conf
+ ---> e88d01ce40f9
+Step 8/17 : COPY --from=iso / /
+ ---> 8fdb976a8e65
+Step 9/17 : COPY --from=raw / /
+ ---> b3f0a8b6c9ee
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 65fd20228538
+Step 11/17 : COPY installer /bits
+ ---> 612862ec7ea2
+Step 12/17 : COPY OVMF* /firmware/
+ ---> c4c36042a830
+Step 13/17 : COPY runme.sh /
+ ---> e78852ce8e83
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in 43e4a418c3af
+ ---> a67168c8da53
+Removing intermediate container 43e4a418c3af
+Step 15/17 : WORKDIR /bits
+ ---> 90ead8aa3282
+Removing intermediate container 913d68dac2d8
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in 83e464e41feb
+ ---> 40af9427239d
+Removing intermediate container 83e464e41feb
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'db2838f7aa49167c9969b995dd1b85727c8c2ca1' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in d47b3ea114c8
+ ---> 44bb2672b8f9
+Removing intermediate container d47b3ea114c8
+Successfully built 44bb2672b8f9
+Successfully tagged lfedge/eve:5.10.4-rpi-kvm-arm64
+Pushing lfedge/eve:5.10.4-rpi-kvm-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+71582441cdbe: Preparing
+a1838ab7a06e: Preparing
+7c35b12472f0: Preparing
+831a5889a4a6: Preparing
+2deb443e89b6: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+41c42c83c578: Waiting
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+71582441cdbe: Pushed
+a1838ab7a06e: Pushed
+41c42c83c578: Layer already exists
+7c35b12472f0: Pushed
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+2deb443e89b6: Pushed
+831a5889a4a6: Pushed
+5.10.4-rpi-kvm-arm64: digest: sha256:e4e5b6f883c77db69d2ef8e5e5ac050daca9d715e8d936bc120711b3ba27450d size: 1999
+Pushing lfedge/eve:5.10.4-rpi-kvm-arm64 to manifest lfedge/eve:5.10.4-rpi-kvm
+time="2020-09-08T08:11:50+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-rpi-kvm-amd64\". Skipping image."
+time="2020-09-08T08:11:53+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-rpi-kvm-s390x\". Skipping image."
+Digest: sha256:c76904b650b366eb5535daad83987801b3a7683d8913332115a1f7eed74ed083 434
+Not signing lfedge/eve:5.10.4-rpi-kvm
+Tagging lfedge/eve:5.10.4-rpi-kvm-arm64 as lfedge/eve:latest-arm64
+Pushing lfedge/eve:latest-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+71582441cdbe: Preparing
+a1838ab7a06e: Preparing
+7c35b12472f0: Preparing
+831a5889a4a6: Preparing
+2deb443e89b6: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+41c42c83c578: Waiting
+a1838ab7a06e: Layer already exists
+2deb443e89b6: Layer already exists
+7c35b12472f0: Layer already exists
+71582441cdbe: Layer already exists
+831a5889a4a6: Layer already exists
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+latest-arm64: digest: sha256:e4e5b6f883c77db69d2ef8e5e5ac050daca9d715e8d936bc120711b3ba27450d size: 1999
+Pushing lfedge/eve:latest-arm64 to manifest lfedge/eve:latest
+time="2020-09-08T08:12:05+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:latest-s390x\". Skipping image."
+Digest: sha256:6d4c021a9c98c3dce742412d85763089ee3e8123d6e84e6ffe74fd96cc9777ae 743
+Not signing lfedge/eve:latest
+Build, push and release of "latest" complete, all done.
+rm images/rootfs-rpi-kvm.yml images/rootfs-rpi-kvm.yml.in
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+6dc499cf300e95b38effe3ef6c5632a69db03480ca401dbb5a97f266097e07ae
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+1c6463fa31f5bc7c7d72fb4bef82bb6a3cc1d72ca865a4e382760b0797747a3d
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+071cc8e808fa7a2a16532b6ea881f549587d98b4749578b55f787232cd094e1e
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+826e3c8c9408e982b7555dda2b42db818280e81ba5a6cb82c4d0a016e388cbed
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 0be6f51d, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+441eaccb9cf01954fb243e309546df93a1c6bc08c308068a50db49273f4f655c
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+./tools/makerootfs.sh images/rootfs-kvm.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-5.10.4-kvm-arm64.squash squash
+Extract kernel image: lfedge/eve-kernel:5.10.4-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:12:26+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:12:26+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:12:31+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:12:31+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:12:31+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:12:31+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:12:32+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:12:32+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:12:32+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:12:37+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:12:37+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:12:37+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:12:37+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:12:37+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:12:43+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:12:43+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:12:43+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:12:44+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:12:44+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:5.10.4-arm64
+Process init image: lfedge/eve-fw:5.10.4-arm64
+Process init image: lfedge/eve-xen:5.10.4-arm64
+Process init image: lfedge/eve-gpt-tools:5.10.4-arm64
+Process init image: lfedge/eve-dom0-ztools:5.10.4-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:5.10.4-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:13:08+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:13:08+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:13:08+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:5.10.4-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:13:13+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:5.10.4-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:13:18+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:13:19+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:13:19+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:13:19+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:13:19+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:13:19+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:13:19+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:13:24+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:13:24+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:13:24+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:13:24+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:13:25+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:13:25+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:5.10.4-arm64
+  Create OCI config for lfedge/eve-wlan:5.10.4-arm64
+  Create OCI config for lfedge/eve-guacd:5.10.4-arm64
+  Create OCI config for lfedge/eve-pillar:5.10.4-arm64
+  Create OCI config for lfedge/eve-vtpm:5.10.4-arm64
+  Create OCI config for lfedge/eve-watchdog:5.10.4-arm64
+  Create OCI config for lfedge/eve-xen-tools:5.10.4-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15033   0%[======-                                                     ]  1600/15033  10%[==========================================\                 ] 10900/15033  72%[===========================================================|] 15033/15033 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 215632.42 Kbytes (210.58 Mbytes)
+	33.73% of uncompressed filesystem size (639308.84 Kbytes)
+Inode table size 181765 bytes (177.50 Kbytes)
+	24.72% of uncompressed inode table size (735315 bytes)
+Directory table size 198837 bytes (194.18 Kbytes)
+	46.73% of uncompressed directory table size (425498 bytes)
+Number of duplicate files found 6141
+Number of inodes 18148
+Number of files 10793
+Number of fragments 339
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1748
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+EVE_HASH=5.10.4 DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 5.10.4-kvm --release latest --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:5.10.4-kvm"
+Sending build context to Docker daemon  233.5MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in a0dba1c0322c
+ ---> 140d1016fea6
+Removing intermediate container a0dba1c0322c
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 232dbd66abb7
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> 0721da12ecdc
+Removing intermediate container 232dbd66abb7
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:5.10.4-arm64 as iso
+ ---> 13728fca9a4b
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:5.10.4-arm64 as raw
+ ---> 58f411310576
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in cb22c72cd3e2
+ ---> ddcad330ed7f
+Removing intermediate container cb22c72cd3e2
+Step 7/17 : FROM lfedge/eve-mkconf:5.10.4-arm64 as conf
+ ---> e88d01ce40f9
+Step 8/17 : COPY --from=iso / /
+ ---> cc3864c0f297
+Step 9/17 : COPY --from=raw / /
+ ---> c07297f240bf
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 86620b763b59
+Step 11/17 : COPY installer /bits
+ ---> 03b9df83c4aa
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 90cd67372d28
+Step 13/17 : COPY runme.sh /
+ ---> 455987ecb861
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in 98f46fbf0d20
+ ---> b4538b4f912f
+Removing intermediate container 98f46fbf0d20
+Step 15/17 : WORKDIR /bits
+ ---> f55012cdc32a
+Removing intermediate container 9a100fd4996d
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in dc8bffb15a4f
+ ---> 3fa1cec72665
+Removing intermediate container dc8bffb15a4f
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'db2838f7aa49167c9969b995dd1b85727c8c2ca1' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in 709cb69220ee
+ ---> 84848df6e9d4
+Removing intermediate container 709cb69220ee
+Successfully built 84848df6e9d4
+Successfully tagged lfedge/eve:5.10.4-kvm-arm64
+Pushing lfedge/eve:5.10.4-kvm-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+eb55ca0b0391: Preparing
+fd26cc4c4458: Preparing
+efc1ade85e23: Preparing
+1c8e975aca01: Preparing
+d7bd0f92d941: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+41c42c83c578: Waiting
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+eb55ca0b0391: Pushed
+fd26cc4c4458: Pushed
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+efc1ade85e23: Pushed
+e1f32feb3000: Layer already exists
+d7bd0f92d941: Pushed
+1c8e975aca01: Pushed
+5.10.4-kvm-arm64: digest: sha256:8d9bc2bcde5001a2986344159f49f3c1758a58f402278e0d6642e13f92bf8d2d size: 1999
+Pushing lfedge/eve:5.10.4-kvm-arm64 to manifest lfedge/eve:5.10.4-kvm
+time="2020-09-08T08:16:39+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-kvm-s390x\". Skipping image."
+Digest: sha256:c384076acd6db658ce080313ef699ec0f1feb8621351402c15623120db31cb9b 743
+Not signing lfedge/eve:5.10.4-kvm
+Tagging lfedge/eve:5.10.4-kvm-arm64 as lfedge/eve:latest-arm64
+Pushing lfedge/eve:latest-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+eb55ca0b0391: Preparing
+fd26cc4c4458: Preparing
+efc1ade85e23: Preparing
+1c8e975aca01: Preparing
+d7bd0f92d941: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+41c42c83c578: Waiting
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+1c8e975aca01: Layer already exists
+efc1ade85e23: Layer already exists
+d7bd0f92d941: Layer already exists
+fd26cc4c4458: Layer already exists
+eb55ca0b0391: Layer already exists
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+latest-arm64: digest: sha256:8d9bc2bcde5001a2986344159f49f3c1758a58f402278e0d6642e13f92bf8d2d size: 1999
+Pushing lfedge/eve:latest-arm64 to manifest lfedge/eve:latest
+time="2020-09-08T08:16:50+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:latest-s390x\". Skipping image."
+Digest: sha256:7c09c4be7724cf175617470b283e3735285749190b99228c20350965ca12fecb 743
+Not signing lfedge/eve:latest
+Build, push and release of "latest" complete, all done.
+rm images/rootfs-kvm.yml images/rootfs-kvm.yml.in
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+4a49a5d59d7e546be30d3fdfcebfc71caf3bd8aeeff3e350a59f186ab6334760
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+b6a61e88fa1add64bc0fdadccfccf6f3042cc99d460d655f7f06305bb8656759
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+64641f04a13a473c1c46ecda0c8de0c64965fbc60124cb061ab71dc61645ed14
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+37a77322caea78186c0597ac1fa2fe8a27b9f5ad6b51e6f07c47678cd158321a
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 1d9bf8dc, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+1c52299105c41ebbf45943dac72d134f10dcb7896783b43b3215a8e4df0c5c45
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+./tools/makerootfs.sh images/rootfs-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-5.10.4-xen-arm64.squash squash
+Extract kernel image: lfedge/eve-kernel:5.10.4-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:17:09+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:17:09+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:17:13+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:13+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:13+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:17:13+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:13+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:13+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:17:14+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:17:17+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:18+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:18+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:17:18+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:17:18+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:17:23+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:23+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:23+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:17:23+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:17:23+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:5.10.4-arm64
+Process init image: lfedge/eve-fw:5.10.4-arm64
+Process init image: lfedge/eve-xen:5.10.4-arm64
+Process init image: lfedge/eve-gpt-tools:5.10.4-arm64
+Process init image: lfedge/eve-dom0-ztools:5.10.4-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:5.10.4-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:17:41+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:17:41+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:17:41+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:5.10.4-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:17:45+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:5.10.4-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:17:50+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:50+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:50+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:17:50+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:50+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:50+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:17:50+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:17:55+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:55+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:17:55+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:17:55+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:55+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:17:55+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:5.10.4-arm64
+  Create OCI config for lfedge/eve-wlan:5.10.4-arm64
+  Create OCI config for lfedge/eve-guacd:5.10.4-arm64
+  Create OCI config for lfedge/eve-pillar:5.10.4-arm64
+  Create OCI config for lfedge/eve-vtpm:5.10.4-arm64
+  Create OCI config for lfedge/eve-watchdog:5.10.4-arm64
+  Create OCI config for lfedge/eve-xen-tools:5.10.4-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[==============================\                             ]  7800/15033  51%[============================================-               ] 11400/15033  75%[=============================================/              ] 11500/15033  76%[=============================================\              ] 11600/15033  77%[==============================================\             ] 11800/15033  78%[===========================================================|] 15033/15033 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 215632.47 Kbytes (210.58 Mbytes)
+	33.73% of uncompressed filesystem size (639308.84 Kbytes)
+Inode table size 181779 bytes (177.52 Kbytes)
+	24.72% of uncompressed inode table size (735315 bytes)
+Directory table size 198865 bytes (194.20 Kbytes)
+	46.74% of uncompressed directory table size (425498 bytes)
+Number of duplicate files found 6141
+Number of inodes 18148
+Number of files 10793
+Number of fragments 339
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1748
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+EVE_HASH=5.10.4 DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 5.10.4-xen --release latest --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:5.10.4-xen"
+Sending build context to Docker daemon  233.5MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in 86411b55f22a
+ ---> 2429bf672b7f
+Removing intermediate container 86411b55f22a
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 30671cd0972a
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> 8e235ebac19a
+Removing intermediate container 30671cd0972a
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:5.10.4-arm64 as iso
+ ---> 13728fca9a4b
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:5.10.4-arm64 as raw
+ ---> 58f411310576
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 1a2299e16967
+ ---> 962f1a28bdb6
+Removing intermediate container 1a2299e16967
+Step 7/17 : FROM lfedge/eve-mkconf:5.10.4-arm64 as conf
+ ---> e88d01ce40f9
+Step 8/17 : COPY --from=iso / /
+ ---> 6dc830f9975b
+Step 9/17 : COPY --from=raw / /
+ ---> 2cb307d40ebd
+Step 10/17 : COPY --from=tools /out/ /
+ ---> b17b9e5ec7b6
+Step 11/17 : COPY installer /bits
+ ---> 264302a1d345
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 400f2369339c
+Step 13/17 : COPY runme.sh /
+ ---> b288946cf1af
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in a5ed5d74981f
+ ---> c71c13cb3492
+Removing intermediate container a5ed5d74981f
+Step 15/17 : WORKDIR /bits
+ ---> 3c54f15d3d3d
+Removing intermediate container 1444f67533b8
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in c7fdc1d44f2e
+ ---> 6d2aeb29eeca
+Removing intermediate container c7fdc1d44f2e
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'db2838f7aa49167c9969b995dd1b85727c8c2ca1' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in a23bfa98d1b4
+ ---> 81c7b31892c5
+Removing intermediate container a23bfa98d1b4
+Successfully built 81c7b31892c5
+Successfully tagged lfedge/eve:5.10.4-xen-arm64
+Pushing lfedge/eve:5.10.4-xen-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+31ec6c043a97: Preparing
+2dd06a92db19: Preparing
+60b1e3398f0e: Preparing
+8d4210e1cafa: Preparing
+6dfd67a01729: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+41c42c83c578: Waiting
+2dd06a92db19: Pushed
+31ec6c043a97: Pushed
+60b1e3398f0e: Pushed
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+6dfd67a01729: Pushed
+8d4210e1cafa: Pushed
+5.10.4-xen-arm64: digest: sha256:4a315b5e81cc371a4a01288bc51c1b62457552b32d95e61f55a6ac78cb5b3748 size: 1999
+Pushing lfedge/eve:5.10.4-xen-arm64 to manifest lfedge/eve:5.10.4-xen
+time="2020-09-08T08:21:16+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:5.10.4-xen-s390x\". Skipping image."
+Digest: sha256:60c1777a830319ff3cc616770ee17ae5301e6b5d9c90e1b3bdb35f368e1e630c 743
+Not signing lfedge/eve:5.10.4-xen
+Tagging lfedge/eve:5.10.4-xen-arm64 as lfedge/eve:latest-arm64
+Pushing lfedge/eve:latest-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+31ec6c043a97: Preparing
+2dd06a92db19: Preparing
+60b1e3398f0e: Preparing
+8d4210e1cafa: Preparing
+6dfd67a01729: Preparing
+41c42c83c578: Preparing
+f635c01a184c: Preparing
+e1f32feb3000: Preparing
+41c42c83c578: Waiting
+f635c01a184c: Waiting
+e1f32feb3000: Waiting
+60b1e3398f0e: Layer already exists
+8d4210e1cafa: Layer already exists
+6dfd67a01729: Layer already exists
+31ec6c043a97: Layer already exists
+2dd06a92db19: Layer already exists
+41c42c83c578: Layer already exists
+f635c01a184c: Layer already exists
+e1f32feb3000: Layer already exists
+latest-arm64: digest: sha256:4a315b5e81cc371a4a01288bc51c1b62457552b32d95e61f55a6ac78cb5b3748 size: 1999
+Pushing lfedge/eve:latest-arm64 to manifest lfedge/eve:latest
+time="2020-09-08T08:21:27+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:latest-s390x\". Skipping image."
+Digest: sha256:60c1777a830319ff3cc616770ee17ae5301e6b5d9c90e1b3bdb35f368e1e630c 743
+Not signing lfedge/eve:latest
+Build, push and release of "latest" complete, all done.
+rm images/rootfs-xen.yml images/rootfs-xen.yml.in
+Skipping repository .go/pkg/dep/sources/https---github.com-linuxkit-linuxkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-hyperkit
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-context
+Skipping repository .go/pkg/dep/sources/https---github.com-theupdateframework-notary
+Skipping repository .go/pkg/dep/sources/https---github.com-mitchellh-go--ps
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-appengine
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonschema
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-net
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonpointer
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-tool
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--ansiterm
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-vpnkit
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-anonuuid
+Skipping repository .go/pkg/dep/sources/https---github.com-Azure-go--autorest
+Skipping repository .go/pkg/dep/sources/https---github.com-moul-gotty--client
+Skipping repository .go/pkg/dep/sources/https---github.com-Microsoft-go--winio
+Skipping repository .go/pkg/dep/sources/https---github.com-agl-ed25519
+Skipping repository .go/pkg/dep/sources/https---github.com-aws-aws--sdk--go
+Skipping repository .go/pkg/dep/sources/https---github.com-containerd-containerd
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-go--digest
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-image--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-opencontainers-runtime--spec
+Skipping repository .go/pkg/dep/sources/https---github.com-packethost-packngo
+Skipping repository .go/pkg/dep/sources/https---github.com-pkg-errors
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--sdk--for--go
+Skipping repository .go/pkg/dep/sources/https---github.com-radu--matei-azure--vhd--utils
+Skipping repository .go/pkg/dep/sources/https---github.com-renstrom-fuzzysearch
+Skipping repository .go/pkg/dep/sources/https---github.com-rn-iso9660wrap
+Skipping repository .go/pkg/dep/sources/https---github.com-creack-goselect
+Skipping repository .go/pkg/dep/sources/https---github.com-dgrijalva-jwt--go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-distribution
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-docker
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--connections
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--units
+Skipping repository .go/pkg/dep/sources/https---github.com-jmespath-go--jmespath
+Skipping repository .go/pkg/dep/sources/https---github.com-scaleway-go--scaleway
+Skipping repository .go/pkg/dep/sources/https---github.com-go--ini-ini
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-mux
+Skipping repository .go/pkg/dep/sources/https---github.com-gogo-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-gorilla-websocket
+Skipping repository .go/pkg/dep/sources/https---github.com-vmware-govmomi
+Skipping repository .go/pkg/dep/sources/https---github.com-sirupsen-logrus
+Skipping repository .go/pkg/dep/sources/https---gopkg.in-yaml.v2
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-protobuf
+Skipping repository .go/pkg/dep/sources/https---github.com-docker-go--p9p
+Skipping repository .go/pkg/dep/sources/https---github.com-google-uuid
+Skipping repository .go/pkg/dep/sources/https---github.com-gophercloud-gophercloud
+Skipping repository .go/pkg/dep/sources/https---github.com-xeipuuv-gojsonreference
+Skipping repository .go/pkg/dep/sources/https---github.com-moby-datakit
+Skipping repository .go/pkg/dep/sources/https---github.com-surma-gocpio
+Skipping repository .go/pkg/dep/sources/https---github.com-miekg-pkcs11
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sync
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-oauth2
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-gocloud
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-sys
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-crypto
+Skipping repository .go/pkg/dep/sources/https---code.googlesource.com-google--api--go--client
+Skipping repository .go/pkg/dep/sources/https---github.com-census--instrumentation-opencensus--go
+Skipping repository .go/pkg/dep/sources/https---github.com-googleapis-gax--go
+Skipping repository .go/pkg/dep/sources/https---github.com-grpc-grpc--go
+Skipping repository .go/pkg/dep/sources/https---github.com-konsorten-go--windows--terminal--sequences
+Skipping repository .go/pkg/dep/sources/https---github.com-golang-groupcache
+Skipping repository .go/pkg/dep/sources/https---github.com-google-go--genproto
+Skipping repository .go/pkg/dep/sources/https---go.googlesource.com-text
+Removing .go/src
+Removing .go/bin
+Removing build-tools/bin/linuxkit
+Removing build-tools/bin/manifest-tool
+Removing dist/
+HEAD is now at d7206d73 volume config propagation
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+Building and pushing "lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8"
+4671ddb5582e8c788d6953ce113ca1f53af81fe8: Pulling from lfedge/eve-acrn
+Digest: sha256:7d8badd1ec2a820dd5c442f6e9ee0a369d786609f4c029e300efb9065a88e944
+Status: Image is up to date for lfedge/eve-acrn:4671ddb5582e8c788d6953ce113ca1f53af81fe8
+Building and pushing "lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9"
+1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9: Pulling from lfedge/eve-acrn-kernel
+Digest: sha256:4e919dabba56fe57cea76b45a0e81a6c0b964b5f4d622e8f38f9e989d78cd6a2
+Status: Image is up to date for lfedge/eve-acrn-kernel:1dcbb693d67ce409e081bf5fdaa3b3c6cd1cf7c9
+Building and pushing "lfedge/eve-alpine:ac1dc159510afa61334222cedf085c7730e4583c"
+ac1dc159510afa61334222cedf085c7730e4583c: Pulling from lfedge/eve-alpine
+Digest: sha256:0301df2c319a44eb818a07c6f9067912ee43f60389275b79412f5871d0d7c043
+Status: Image is up to date for lfedge/eve-alpine:ac1dc159510afa61334222cedf085c7730e4583c
+Building and pushing "lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b"
+2ff5b19ea565a13fa93a634abdef20e04276b73b: Pulling from lfedge/eve-debug
+Digest: sha256:5635f14ff52bd253d475322d9082e33364662ab71b14717dd67a9bf7e3eb84ea
+Status: Image is up to date for lfedge/eve-debug:2ff5b19ea565a13fa93a634abdef20e04276b73b
+Building and pushing "lfedge/eve-dnsmasq:daf64b1cfa970979aa461faf7024beea9b5d6ded"
+daf64b1cfa970979aa461faf7024beea9b5d6ded: Pulling from lfedge/eve-dnsmasq
+Digest: sha256:154f733a60bc10438f9e6125442bb0f4424995d099b830385371c3430e1813f7
+Status: Image is up to date for lfedge/eve-dnsmasq:daf64b1cfa970979aa461faf7024beea9b5d6ded
+Building and pushing "lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150"
+a07ef92f97cd47f670b39c1234652f72b55b5150: Pulling from lfedge/eve-dom0-ztools
+Digest: sha256:7f7ade8ddd86b597c622e7890cd72f4aef677edef57c57e3d30974a4ef79c82e
+Status: Image is up to date for lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150
+Building and pushing "lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0"
+60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0: Pulling from lfedge/eve-fw
+Digest: sha256:66ab18a572b7e443201cfc837ac02d97b4006ade3c8e2791ccee30576556327e
+Status: Image is up to date for lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0
+Building and pushing "lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab"
+dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab: Pulling from lfedge/eve-gpt-tools
+Digest: sha256:97df1b94442d3c2d3277099dd352c5ca3da8c5df8ceb0643f312efabb17c0dd8
+Status: Image is up to date for lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab
+Building and pushing "lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76"
+d77ecff8639aa6d3b7a06641b21907a8afc74f76: Pulling from lfedge/eve-grub
+Digest: sha256:32077f0063ba66e2df4702de8139d908db4c30ff88d526181e75897e96a48606
+Status: Image is up to date for lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76
+Building and pushing "lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274"
+dd7929360fb06d46443fd98e676c90acfdb20274: Pulling from lfedge/eve-guacd
+Digest: sha256:7a3f8f788a37aa5eae1e98aaadba2c541e02848962805e172551b8e532f564a4
+Status: Image is up to date for lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274
+Building and pushing "lfedge/eve-k3s:79e371429133b192504b24408d3da3f58d72bfe9"
+79e371429133b192504b24408d3da3f58d72bfe9: Pulling from lfedge/eve-k3s
+Digest: sha256:5183eff6ae936631ae5a90baf6cc6913bd9403c3a0d8b3e72d6630ee5f4edcd0
+Status: Image is up to date for lfedge/eve-k3s:79e371429133b192504b24408d3da3f58d72bfe9
+Building and pushing "lfedge/eve-kernel:53be1b7e70e3d43582b7ad33bbe9fe9e72145d07"
+53be1b7e70e3d43582b7ad33bbe9fe9e72145d07: Pulling from lfedge/eve-kernel
+Digest: sha256:8127e91bea95a29e99239698461720747fbf63300c62655c708ee7a61259e8aa
+Status: Image is up to date for lfedge/eve-kernel:53be1b7e70e3d43582b7ad33bbe9fe9e72145d07
+Building and pushing "lfedge/eve-lisp:59d3a218f6d6d22b7f09c0307333b61e98f5963b"
+59d3a218f6d6d22b7f09c0307333b61e98f5963b: Pulling from lfedge/eve-lisp
+Digest: sha256:32d3ca70081cb542efdd8a82fe53dbf8b5c4e9fedba5b83b145b9fecf82de384
+Status: Image is up to date for lfedge/eve-lisp:59d3a218f6d6d22b7f09c0307333b61e98f5963b
+Building and pushing "lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9"
+b9a89148618d45bd26a93a68701f5d0588e501a9: Pulling from lfedge/eve-mkconf
+Digest: sha256:62bd4b02798c2ee42a4bb295dcb67c8a25dfe731466327ac11b163a4928d716d
+Status: Image is up to date for lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9
+Building and pushing "lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43"
+af5f5e0bb9162ed3a324a74e574a850c84a59e43: Pulling from lfedge/eve-mkimage-iso-efi
+Digest: sha256:3c9ba509237d230c04c1509234ce34ccd5ca6840ed58e2b5846bbca10452ab20
+Status: Image is up to date for lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43
+Building and pushing "lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8"
+73d534381d5d3df4fb08cacb03022ce4754efda8: Pulling from lfedge/eve-mkimage-raw-efi
+Digest: sha256:6bbb7737177f8683dcadc4e489b5b28dd66e4f389051fcbe7b22d22993aba53b
+Status: Image is up to date for lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8
+Building and pushing "lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3"
+17ec5bda58c7f6d3717b88d3da55df4516cdb6f3: Pulling from lfedge/eve-mkrootfs-ext4
+Digest: sha256:b867059462b3864d19c8f185331bc5ea7c351a90f69b4f7b97d925ec294d03eb
+Status: Image is up to date for lfedge/eve-mkrootfs-ext4:17ec5bda58c7f6d3717b88d3da55df4516cdb6f3
+Building and pushing "lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0"
+70b1faff4c3b512c91a1b7157fbddabbd41992f0: Pulling from lfedge/eve-mkrootfs-squash
+Digest: sha256:bd251f51068e34d09a6b0aad4162484fe8dc09a2a3ca14b57134e49a4838e9b8
+Status: Image is up to date for lfedge/eve-mkrootfs-squash:70b1faff4c3b512c91a1b7157fbddabbd41992f0
+Building and pushing "lfedge/eve-new-kernel:b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe"
+b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe: Pulling from lfedge/eve-new-kernel
+Digest: sha256:0013fa0b78ccaa1e0df49a00a6123bcf41891eec87e9302b4ae6b6e9a1478820
+Status: Image is up to date for lfedge/eve-new-kernel:b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe
+Building and pushing "lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252"
+6dda5ee56b295a0115e7c09a0ca23aa925426252: Pulling from lfedge/eve-strongswan
+Digest: sha256:981b13f775e13852c196038eee1fb7163340e9281a5b8a017bf75e1ad10ba8c3
+Status: Image is up to date for lfedge/eve-strongswan:6dda5ee56b295a0115e7c09a0ca23aa925426252
+Building and pushing "lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5"
+c55afec4daa43fb11295c85a43948e43e4ef27d5: Pulling from lfedge/eve-pillar
+Digest: sha256:6d0c453667e363f7ab475cec23d4ccbbd1b9403470c94baa7aac7faf02a9379a
+Status: Image is up to date for lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5
+Building and pushing "lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410"
+279fad09317f1f87099e91ab2dac7c0ecfad5410: Pulling from lfedge/eve-uefi
+Digest: sha256:3f18f853755fbbd25b3992d3ddc3a12972e28a4d72356087bdd51a03287de6e9
+Status: Image is up to date for lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410
+Building and pushing "lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c"
+96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c: Pulling from lfedge/eve-xen-tools
+Digest: sha256:8f2ce9a2e08cd9b0c3a7b0f09ec5ebf840e9944ca3f074bb183b257380c38fca
+Status: Image is up to date for lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c
+Building and pushing "lfedge/eve-qrexec-lib:afa37ce2cd7e147e843bc9aeb5446423e32d0d21"
+afa37ce2cd7e147e843bc9aeb5446423e32d0d21: Pulling from lfedge/eve-qrexec-lib
+Digest: sha256:15d2eca5b4c6ce8d647fc4cf8cb12721e54c87d13b33852cafd723df8522e753
+Status: Image is up to date for lfedge/eve-qrexec-lib:afa37ce2cd7e147e843bc9aeb5446423e32d0d21
+Building and pushing "lfedge/eve-qrexec-dom0:138c28c9c5d3e07412767ed3d6a995e9596e2de4"
+138c28c9c5d3e07412767ed3d6a995e9596e2de4: Pulling from lfedge/eve-qrexec-dom0
+Digest: sha256:5c2ebd967339b2bbbe0a24a13eb18d154c4e1b5d11ee77a12b14166096025ac7
+Status: Image is up to date for lfedge/eve-qrexec-dom0:138c28c9c5d3e07412767ed3d6a995e9596e2de4
+Building and pushing "lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7"
+6e16dad8553a6c2939854abfa9f34a5f2604bce7: Pulling from lfedge/eve-rngd
+Digest: sha256:d18f87ec9e50c7a996e1a9c78589b5dba52e53d59c81998503e782d65875a6dc
+Status: Image is up to date for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7
+Building and pushing "lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32"
+118b0517ed541a371513f334bba21e7e48873c32: Pulling from lfedge/eve-rsyslog
+Digest: sha256:f5daa0a49fbc1ca4708c76d8eec90e06421058de2350be11d1fcb271a03d9887
+Status: Image is up to date for lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32
+Building and pushing "lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb"
+68376e9bbc518492142ba1b793efb49e0a7692cb: Pulling from lfedge/eve-storage-init
+Digest: sha256:b42072a34eabfee143f00027547eeb44de02eff9c4f5cf594e04aa70e7515f36
+Status: Image is up to date for lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb
+Building and pushing "lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8"
+d4c47072ebe9022d8bfd9e41077b755afd7520d8: Pulling from lfedge/eve-u-boot
+Digest: sha256:62f98c18dcc35d7bdc1286c198b943c9916f92bfb60b0faad81c22c173f4344c
+Status: Image is up to date for lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8
+Building and pushing "lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f"
+11365a20a21fa000e9d48614e9303c8f0e81477f: Pulling from lfedge/eve-vtpm
+Digest: sha256:04a0292c68d3e35c25320befcb19735faa248b4ecd7211d84eb03f6ce3659bef
+Status: Image is up to date for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f
+Building and pushing "lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6"
+c6d62b026fda60aa851ce2d16ff7ac4794232ea6: Pulling from lfedge/eve-watchdog
+Digest: sha256:7c694db21a774402a89c37cf478175dc37936aa5250e1829b054c3da4e56dda4
+Status: Image is up to date for lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6
+Building and pushing "lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44"
+ac31bb78810451ef1333b3970f29bebc0a6c9c44: Pulling from lfedge/eve-wlan
+Digest: sha256:c3d7e2a6b381a6bdd4c1a1d1e44b46bb348990777cc828cb575f79a515d35830
+Status: Image is up to date for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44
+Building and pushing "lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84"
+b965c9a213f70969ff43db464b3b4b09dfb22b84: Pulling from lfedge/eve-wwan
+Digest: sha256:c19b297c463a41ed500d4ba9c64e8e4a0a288017fc1b8fa971cc3aeea0495a72
+Status: Image is up to date for lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84
+Building and pushing "lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b"
+2780aaccfc99a5b48c9f2460298369bb50d0ce8b: Pulling from lfedge/eve-xen
+Digest: sha256:a548bd421334b9bc3a18a743bfa672b50fb1a5844cfeb19bc4c875c71fd74bf2
+Status: Image is up to date for lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b
+Done building packages
+rm pkg/qrexec-dom0/Dockerfile pkg/xen-tools/Dockerfile pkg/qrexec-lib/Dockerfile pkg/pillar/Dockerfile
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+b73030532ee728954e0552039eaaee9fd6e63e0caa65fd0237432c2fa19864f4
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+b9d22e3dfe7baab49cf9478fadb592d26c7c28e5a3acb3ae99577328921de6e4
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+1c41962c5be4aeb7f67cc0a46706ab589311aee60161e976c77103e84b3a0171
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+0632574007fbe3323ffd5074e04d6953c826996a3dea0cb3ce8a9e52d8670619
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 3956827a, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+8688b297853fcee5388294c83807153362794e0fb8eea4446ae001acd9bbed80
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+patching file images/rootfs-rpi-xen.yml.in.sed (read from images/rootfs.yml.in)
+./tools/makerootfs.sh images/rootfs-rpi-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64.squash squash
+Extract kernel image: lfedge/eve-new-kernel:b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:24:34+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:24:34+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:24:38+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:24:38+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:24:38+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:24:38+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:24:39+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:24:39+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:24:39+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:24:43+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:24:43+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:24:43+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:24:43+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:24:43+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:24:48+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:24:48+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:24:48+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:24:49+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:24:49+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b-arm64
+Process init image: lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab-arm64
+Process init image: lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:25:10+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:25:10+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:25:10+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:25:15+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:25:20+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:25:20+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:25:20+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:25:20+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:25:20+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:25:20+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:25:20+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:25:23+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:25:23+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:25:23+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:25:23+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:25:24+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:25:24+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274-arm64
+  Create OCI config for lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6-arm64
+  Create OCI config for lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15549   0%[===================/                                        ]  5200/15549  33%[=============================================\              ] 12000/15549  77%[===========================================================|] 15549/15549 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 220727.61 Kbytes (215.55 Mbytes)
+	33.55% of uncompressed filesystem size (657845.13 Kbytes)
+Inode table size 185447 bytes (181.10 Kbytes)
+	24.77% of uncompressed inode table size (748807 bytes)
+Directory table size 204445 bytes (199.65 Kbytes)
+	46.82% of uncompressed directory table size (436689 bytes)
+Number of duplicate files found 6127
+Number of inodes 18562
+Number of files 11180
+Number of fragments 404
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1775
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8-arm64 boot
+189a02a041022a55028d75fdd8efebd474b4d389642cdf20acf1c5e0e1b07927
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 0.0.0-snapshot-HEAD-d7206d73-rpi-xen --release snapshot --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen"
+Sending build context to Docker daemon  241.6MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in 18f6d3a344e8
+ ---> 7617bdb4351e
+Removing intermediate container 18f6d3a344e8
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 999a707d2505
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> 28589de8cae9
+Removing intermediate container 999a707d2505
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43-arm64 as iso
+ ---> 357a532f5f40
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 as raw
+ ---> 3b7f2dedd364
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 950115bffa65
+ ---> b7dfa8026a0a
+Removing intermediate container 950115bffa65
+Step 7/17 : FROM lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9-arm64 as conf
+ ---> ac9fa4d52a61
+Step 8/17 : COPY --from=iso / /
+ ---> 568c478f2826
+Step 9/17 : COPY --from=raw / /
+ ---> 0daa646f8693
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 220c214cdc2d
+Step 11/17 : COPY installer /bits
+ ---> 2049b77ff134
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 95a05bcd680c
+Step 13/17 : COPY runme.sh /
+ ---> 39692b141bfe
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in cde9b8d460da
+ ---> 847007d6b615
+Removing intermediate container cde9b8d460da
+Step 15/17 : WORKDIR /bits
+ ---> 012dd320131f
+Removing intermediate container a4bc3224045a
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in ef3afc075855
+ ---> 75ee3a94d611
+Removing intermediate container ef3afc075855
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'd7206d73688044c7e829e9be73bcb4f5301a3442' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in e9a65a5d1c41
+ ---> cd4ce9baa0c4
+Removing intermediate container e9a65a5d1c41
+Successfully built cd4ce9baa0c4
+Successfully tagged lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+059fc9c2b14a: Preparing
+88d6cbf885e9: Preparing
+44631944d910: Preparing
+52b06a18b188: Preparing
+a5f320208cd8: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+41396e0b608d: Waiting
+059fc9c2b14a: Pushed
+88d6cbf885e9: Pushed
+41c4e3da37ae: Layer already exists
+44631944d910: Pushed
+41396e0b608d: Layer already exists
+b9f76b43ed40: Layer already exists
+a5f320208cd8: Pushed
+52b06a18b188: Pushed
+0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64: digest: sha256:46bd6aeb701b8c71ece9c7fb5f1def641341dfee9a73a01cd4328e7b4f3f0125 size: 1999
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64 to manifest lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen
+time="2020-09-08T08:28:38+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-amd64\". Skipping image."
+time="2020-09-08T08:28:42+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-s390x\". Skipping image."
+Digest: sha256:f830d07f6b56dc3f01f7330a6cc9150d3c1b7ce479207e9feaf24c8bbd5962f8 434
+Not signing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen
+Tagging lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-xen-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+059fc9c2b14a: Preparing
+88d6cbf885e9: Preparing
+44631944d910: Preparing
+52b06a18b188: Preparing
+a5f320208cd8: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+41396e0b608d: Waiting
+44631944d910: Layer already exists
+52b06a18b188: Layer already exists
+a5f320208cd8: Layer already exists
+059fc9c2b14a: Layer already exists
+88d6cbf885e9: Layer already exists
+41c4e3da37ae: Layer already exists
+b9f76b43ed40: Layer already exists
+41396e0b608d: Layer already exists
+snapshot-arm64: digest: sha256:46bd6aeb701b8c71ece9c7fb5f1def641341dfee9a73a01cd4328e7b4f3f0125 size: 1999
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2020-09-08T08:28:53+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:bd6c9061a288e85078834ecc0051315a4d35c18238398210a35c661475104d7d 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+rm images/rootfs-rpi-xen.yml.in images/rootfs-rpi-xen.yml
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+60509e7d582bcb5411c1a9a043b215cf72771b6d600967b061a7ea2e4ec1f22a
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+46d438790dbb3ee390f3e0b14203592b443b50b8a2c65bbdfbd227db0539e729
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+26d4d534134492e2d94a79aa587296c72b281a9ee7d950047384f27edb225c81
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+bb00719cbc0d8dccbce30d5cec4976b35195056f5a11cd4bcf12f5790b94aa0b
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 4addcbea, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+3338b850b9f92679f8fe1103d4ecb4056a2c5fa990a998e41a982b0ec6fdc726
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+patching file images/rootfs-rpi-kvm.yml.in.sed (read from images/rootfs.yml.in)
+./tools/makerootfs.sh images/rootfs-rpi-kvm.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64.squash squash
+Extract kernel image: lfedge/eve-new-kernel:b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:29:16+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:29:16+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:29:20+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:20+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:20+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:29:20+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:21+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:21+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:29:21+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:29:25+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:25+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:25+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:29:25+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:29:25+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:29:30+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:30+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:30+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:29:31+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:29:31+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b-arm64
+Process init image: lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab-arm64
+Process init image: lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:29:49+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:29:49+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:29:49+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:29:53+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:29:59+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:59+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:29:59+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:29:59+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:59+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:29:59+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:29:59+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:30:05+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:30:06+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:30:06+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:30:06+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:30:06+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:30:06+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274-arm64
+  Create OCI config for lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6-arm64
+  Create OCI config for lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[|                                                           ]     0/15549   0%[====|                                                       ]  1200/15549   7%[=======-                                                    ]  2100/15549  13%[============================-                               ]  7400/15549  47%[=============================|                              ]  7700/15549  49%[===============================/                            ]  8400/15549  54%[============================================\               ] 11700/15549  75%[=============================================\              ] 12000/15549  77%[===========================================================|] 15549/15549 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 220727.54 Kbytes (215.55 Mbytes)
+	33.55% of uncompressed filesystem size (657845.13 Kbytes)
+Inode table size 185430 bytes (181.08 Kbytes)
+	24.76% of uncompressed inode table size (748807 bytes)
+Directory table size 204438 bytes (199.65 Kbytes)
+	46.82% of uncompressed directory table size (436689 bytes)
+Number of duplicate files found 6127
+Number of inodes 18562
+Number of files 11180
+Number of fragments 404
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1775
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-u-boot:d4c47072ebe9022d8bfd9e41077b755afd7520d8-arm64 boot
+d68c1a1010737a712f4eb6049407ac1358079cd3bbff86fc523a0eaea8323a65
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 0.0.0-snapshot-HEAD-d7206d73-rpi-kvm --release snapshot --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm"
+Sending build context to Docker daemon  241.6MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in 7037c29ca6a5
+ ---> cb40964fafce
+Removing intermediate container 7037c29ca6a5
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 873d06795a40
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> ce88682caa85
+Removing intermediate container 873d06795a40
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43-arm64 as iso
+ ---> 357a532f5f40
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 as raw
+ ---> 3b7f2dedd364
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 1bec82e25d98
+ ---> fbdbf2573f38
+Removing intermediate container 1bec82e25d98
+Step 7/17 : FROM lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9-arm64 as conf
+ ---> ac9fa4d52a61
+Step 8/17 : COPY --from=iso / /
+ ---> 666ff97470b2
+Step 9/17 : COPY --from=raw / /
+ ---> 3d60d9d17210
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 746476673237
+Step 11/17 : COPY installer /bits
+ ---> 7bc620eac1f7
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 2b7cf8a48c79
+Step 13/17 : COPY runme.sh /
+ ---> f21a4ccf5b10
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in 229820ac9cd2
+ ---> 59557343e263
+Removing intermediate container 229820ac9cd2
+Step 15/17 : WORKDIR /bits
+ ---> 37bc8787d4b8
+Removing intermediate container a50e3d9198e2
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in 913d4241551f
+ ---> 9189883a3016
+Removing intermediate container 913d4241551f
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'd7206d73688044c7e829e9be73bcb4f5301a3442' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in beea3d2ccbec
+ ---> 1f89f99b6d80
+Removing intermediate container beea3d2ccbec
+Successfully built 1f89f99b6d80
+Successfully tagged lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+27b7343df38d: Preparing
+3d6b91e412b0: Preparing
+c09326b384b0: Preparing
+c2de21bcd8d2: Preparing
+efb87d8ca3c8: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+41396e0b608d: Waiting
+3d6b91e412b0: Pushed
+27b7343df38d: Pushed
+41c4e3da37ae: Layer already exists
+b9f76b43ed40: Layer already exists
+c09326b384b0: Pushed
+41396e0b608d: Layer already exists
+efb87d8ca3c8: Pushed
+c2de21bcd8d2: Pushed
+0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64: digest: sha256:b7f3ec5e55d3ebdaf1e9cd6c32e7da011026191cf90cac53b661723106750284 size: 1999
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64 to manifest lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm
+time="2020-09-08T08:33:23+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-amd64\". Skipping image."
+time="2020-09-08T08:33:26+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-s390x\". Skipping image."
+Digest: sha256:5e98bac27dcee080fa646f17c7dacdfd5a32433964d53ab10a6d6630d30d1f39 434
+Not signing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm
+Tagging lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-rpi-kvm-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+27b7343df38d: Preparing
+3d6b91e412b0: Preparing
+c09326b384b0: Preparing
+c2de21bcd8d2: Preparing
+efb87d8ca3c8: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41396e0b608d: Waiting
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+27b7343df38d: Layer already exists
+c09326b384b0: Layer already exists
+3d6b91e412b0: Layer already exists
+c2de21bcd8d2: Layer already exists
+efb87d8ca3c8: Layer already exists
+41c4e3da37ae: Layer already exists
+b9f76b43ed40: Layer already exists
+41396e0b608d: Layer already exists
+snapshot-arm64: digest: sha256:b7f3ec5e55d3ebdaf1e9cd6c32e7da011026191cf90cac53b661723106750284 size: 1999
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2020-09-08T08:33:37+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:763b52c1877b6cdcd039b213082dcbc689782446200c2f98d8b6855cbca4d63f 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+rm images/rootfs-rpi-kvm.yml images/rootfs-rpi-kvm.yml.in
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+679e55b1228b048b9b2d1cfebe858d6a02c5f3c06e02a4db1c09a60a9410fa8c
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+f3c1cc10758402eed3740c7ae91f8130d097f9d12955771e4d872b5cf397b7b6
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+b48335e2881cd1d9602e2c495ab823f848242cc42cb99d8228490e472bf18b57
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+72c2950ccbc8aa63d1e0335ce58c8b32995bf44ef8676207e8476af21fec314f
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 5cacf8ab, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+3912638d2b11a0475d05c926b782266da9fb1da3f739e66b18cca25d9f2a6ab9
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+patching file images/rootfs-kvm.yml.in.sed (read from images/rootfs.yml.in)
+./tools/makerootfs.sh images/rootfs-kvm.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-snapshot-HEAD-d7206d73-kvm-arm64.squash squash
+Extract kernel image: lfedge/eve-new-kernel:b3f036b5a6acb7660eaafedc58a8cbbe0de61cbe-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:33:59+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:33:59+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:34:03+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:03+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:03+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:34:03+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:03+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:03+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:34:03+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:34:09+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:09+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:09+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:34:09+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:34:09+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:34:14+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:14+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:14+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:34:14+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:34:14+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b-arm64
+Process init image: lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab-arm64
+Process init image: lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:34:32+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:34:32+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:34:32+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:34:37+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:34:42+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:43+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:43+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:34:43+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:43+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:43+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:34:43+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:34:46+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:47+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:34:47+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:34:47+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:47+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:34:47+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274-arm64
+  Create OCI config for lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6-arm64
+  Create OCI config for lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15549   0%[===========================================================|] 15549/15549 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 220727.60 Kbytes (215.55 Mbytes)
+	33.55% of uncompressed filesystem size (657845.13 Kbytes)
+Inode table size 185458 bytes (181.11 Kbytes)
+	24.77% of uncompressed inode table size (748807 bytes)
+Directory table size 204426 bytes (199.63 Kbytes)
+	46.81% of uncompressed directory table size (436689 bytes)
+Number of duplicate files found 6127
+Number of inodes 18562
+Number of files 11180
+Number of fragments 404
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1775
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 0.0.0-snapshot-HEAD-d7206d73-kvm --release snapshot --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm"
+Sending build context to Docker daemon  238.7MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in 74a3247e6b93
+ ---> ac6f334a5f89
+Removing intermediate container 74a3247e6b93
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 1dd321a16716
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> e29704a6981e
+Removing intermediate container 1dd321a16716
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43-arm64 as iso
+ ---> 357a532f5f40
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 as raw
+ ---> 3b7f2dedd364
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in dbde479d7a42
+ ---> acad8adb30cb
+Removing intermediate container dbde479d7a42
+Step 7/17 : FROM lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9-arm64 as conf
+ ---> ac9fa4d52a61
+Step 8/17 : COPY --from=iso / /
+ ---> 1be167b065a9
+Step 9/17 : COPY --from=raw / /
+ ---> 761123b09950
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 2e992db226c7
+Step 11/17 : COPY installer /bits
+ ---> 788da7ce7204
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 60f672d3aaac
+Step 13/17 : COPY runme.sh /
+ ---> 39a5adea35cb
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in 13985340faf0
+ ---> 41e29d12c32c
+Removing intermediate container 13985340faf0
+Step 15/17 : WORKDIR /bits
+ ---> 7013ff9421c7
+Removing intermediate container 37f7fcb70e32
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in 2fcde2f87336
+ ---> ce1c64fb34f4
+Removing intermediate container 2fcde2f87336
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'd7206d73688044c7e829e9be73bcb4f5301a3442' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in e0e14975f388
+ ---> 358c149b105e
+Removing intermediate container e0e14975f388
+Successfully built 358c149b105e
+Successfully tagged lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-arm64
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+dd80f3c5c3f8: Preparing
+85df91b6748a: Preparing
+24b70a489de5: Preparing
+4b05d6d9900b: Preparing
+38f1688df586: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+41396e0b608d: Waiting
+85df91b6748a: Pushed
+41c4e3da37ae: Layer already exists
+24b70a489de5: Pushed
+b9f76b43ed40: Layer already exists
+dd80f3c5c3f8: Pushed
+41396e0b608d: Layer already exists
+38f1688df586: Pushed
+4b05d6d9900b: Pushed
+0.0.0-snapshot-HEAD-d7206d73-kvm-arm64: digest: sha256:4231dc3a878ecd4d23df19dd787ab991b6af060a28eed8aaf60ad88fbd3a6cf3 size: 1999
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-arm64 to manifest lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm
+time="2020-09-08T08:37:59+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-amd64\". Skipping image."
+time="2020-09-08T08:38:03+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-s390x\". Skipping image."
+Digest: sha256:dfbb6cd67bf64dfe7b67ded1cb4b75fc3d78b025db86a7085ef5db1bb8ef56a6 434
+Not signing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm
+Tagging lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-kvm-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+dd80f3c5c3f8: Preparing
+85df91b6748a: Preparing
+24b70a489de5: Preparing
+4b05d6d9900b: Preparing
+38f1688df586: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+41396e0b608d: Waiting
+38f1688df586: Layer already exists
+85df91b6748a: Layer already exists
+24b70a489de5: Layer already exists
+4b05d6d9900b: Layer already exists
+dd80f3c5c3f8: Layer already exists
+41c4e3da37ae: Layer already exists
+b9f76b43ed40: Layer already exists
+41396e0b608d: Layer already exists
+snapshot-arm64: digest: sha256:4231dc3a878ecd4d23df19dd787ab991b6af060a28eed8aaf60ad88fbd3a6cf3 size: 1999
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2020-09-08T08:38:14+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:27b2ca971fe58377e44a876857a9ce3c654f9e7f1668bf472e7acb41b7f49dc4 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+rm images/rootfs-kvm.yml images/rootfs-kvm.yml.in
+Creating go builder image for user zededa-ci
+eve-build-zededa-ci docker container is ready to use
+mkdir -p /home/zededa-ci/src/eve/dist/arm64
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF.fd
+91dab8c19881349743d0255d9746177a3c64ac99a6b3f06b94374648b3f03703
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_CODE.fd
+tar: OVMF_CODE.fd: Not found in archive
+tar: Exiting with failure status due to previous errors
+6f4580d2ab49bba3a9ac080a8cca87fb3254be21b6a562f20511104d9d1ee3ea
+cd /home/zededa-ci/src/eve/dist/arm64 ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-uefi:279fad09317f1f87099e91ab2dac7c0ecfad5410-arm64 OVMF_VARS.fd
+e88290464f418bd57d3c34cc9cc45ee4f7d12714032ec7c129f1b45a6beb300e
+mkdir -p /home/zededa-ci/src/eve/dist/arm64/installer
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64 EFI
+bbf6cf333e0e91775d413f8386bf4dc6546a2ecefd384c40566cd9d06c74bf83
+./tools/makeconfig.sh /home/zededa-ci/src/eve/dist/arm64/installer/config.img conf/authorized_keys conf/DevicePortConfig conf/grub.cfg conf/onboard.cert.pem conf/onboard.key.pem conf/root-certificate.pem conf/server conf/v2tlsbaseroot-certificates.pem
+1024+0 records in
+1024+0 records out
+mkfs.fat 4.1 (2017-01-24)
+/config.img has 64 heads and 32 sectors per track,
+hidden sectors 0x0000;
+logical sector size is 512,
+using 0xf8 media descriptor, with 2048 sectors;
+drive number 0x80;
+filesystem has 2 12-bit FATs and 4 sectors per cluster.
+FAT size is 2 sectors, and provides 502 clusters.
+There is 1 reserved sector.
+Root directory contains 512 slots and uses 32 sectors.
+Volume ID is 6dfbb78e, volume label EVE        .
+cd /home/zededa-ci/src/eve/dist/arm64/installer ; _() { C=`docker create $1 fake` ; shift ; docker export $C | tar -xf - "$@" ; docker rm $C ; } ; _ lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 initrd.img EFI
+765f42900313159dc50e615a7a3b110cc21a8c112b2f7e155bdbe4a51715c167
+Done building /home/zededa-ci/src/eve/build-tools/bin/linuxkit
+./tools/makerootfs.sh images/rootfs-xen.yml /home/zededa-ci/src/eve/dist/arm64/installer/rootfs-0.0.0-snapshot-HEAD-d7206d73-xen-arm64.squash squash
+Extract kernel image: lfedge/eve-kernel:53be1b7e70e3d43582b7ad33bbe9fe9e72145d07-arm64
+Add init containers:
+Process init image: linuxkit/init:v0.5-arm64
+time="2020-09-08T08:38:36+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:38:36+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/runc:f79954950022fea76b8b6f10de58cb48e4fb3878-arm64
+time="2020-09-08T08:38:40+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:38:40+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:38:40+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Sun Aug 16 13:47:33 +0100 2020"
+time="2020-09-08T08:38:40+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:38:40+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:38:40+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:32:34 -0700 2020"
+time="2020-09-08T08:38:40+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+Process init image: linuxkit/containerd:6ef473a228db6f6ee163f9b9a051102a1552a4ef-arm64
+time="2020-09-08T08:38:44+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:38:44+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:38:44+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sat Jun 6 08:35:43 -0700 2020"
+time="2020-09-08T08:38:44+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:38:44+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/getty:v0.5-arm64
+time="2020-09-08T08:38:49+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:38:49+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:38:49+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Thu Jul 30 20:41:57 +0100 2020"
+time="2020-09-08T08:38:49+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:38:49+02:00" level=warning msg="targets/riyaz metadata is nearing expiry, you should re-sign the role metadata"
+Process init image: linuxkit/memlogd:v0.5-arm64
+Process init image: lfedge/eve-grub:d77ecff8639aa6d3b7a06641b21907a8afc74f76-arm64
+Process init image: lfedge/eve-fw:60af30b13b43cdc50b6cbb6e30a5e4d1feb154e0-arm64
+Process init image: lfedge/eve-xen:2780aaccfc99a5b48c9f2460298369bb50d0ce8b-arm64
+Process init image: lfedge/eve-gpt-tools:dc2fd01eff18e24f6a60f08be4f9a2b54c8da3ab-arm64
+Process init image: lfedge/eve-dom0-ztools:a07ef92f97cd47f670b39c1234652f72b55b5150-arm64
+Add onboot containers:
+  Create OCI config for lfedge/eve-storage-init:68376e9bbc518492142ba1b793efb49e0a7692cb-arm64
+  Create OCI config for linuxkit/sysctl:v0.5-arm64
+time="2020-09-08T08:39:10+02:00" level=warning msg="Error getting targets/rolf: valid signatures did not meet threshold for targets/rolf"
+time="2020-09-08T08:39:10+02:00" level=warning msg="targets/justin metadata is nearing expiry, you should re-sign the role metadata"
+time="2020-09-08T08:39:10+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for lfedge/eve-rngd:6e16dad8553a6c2939854abfa9f34a5f2604bce7-arm64
+  Create OCI config for linuxkit/modprobe:v0.5-arm64
+time="2020-09-08T08:39:15+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+Add service containers:
+  Create OCI config for lfedge/eve-rsyslog:118b0517ed541a371513f334bba21e7e48873c32-arm64
+  Create OCI config for linuxkit/openntpd:v0.5-arm64
+time="2020-09-08T08:39:19+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:39:19+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:39:19+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri Jul 24 16:25:30 +0100 2020"
+time="2020-09-08T08:39:19+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:39:20+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:39:20+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Mon May 25 15:06:33 -0700 2020"
+time="2020-09-08T08:39:20+02:00" level=warning msg="targets/ian metadata is nearing expiry, you should re-sign the role metadata"
+  Create OCI config for linuxkit/sshd:v0.5-arm64
+time="2020-09-08T08:39:24+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:39:24+02:00" level=error msg="Metadata for targets/justin expired"
+time="2020-09-08T08:39:24+02:00" level=warning msg="Error getting targets/justin: targets/justin expired at Fri May 29 15:28:54 +0100 2020"
+time="2020-09-08T08:39:24+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:39:24+02:00" level=error msg="Metadata for targets/riyaz expired"
+time="2020-09-08T08:39:24+02:00" level=warning msg="Error getting targets/riyaz: targets/riyaz expired at Sun Jul 19 14:46:17 -0700 2020"
+  Create OCI config for lfedge/eve-wwan:b965c9a213f70969ff43db464b3b4b09dfb22b84-arm64
+  Create OCI config for lfedge/eve-wlan:ac31bb78810451ef1333b3970f29bebc0a6c9c44-arm64
+  Create OCI config for lfedge/eve-guacd:dd7929360fb06d46443fd98e676c90acfdb20274-arm64
+  Create OCI config for lfedge/eve-pillar:c55afec4daa43fb11295c85a43948e43e4ef27d5-arm64
+  Create OCI config for lfedge/eve-vtpm:11365a20a21fa000e9d48614e9303c8f0e81477f-arm64
+  Create OCI config for lfedge/eve-watchdog:c6d62b026fda60aa851ce2d16ff7ac4794232ea6-arm64
+  Create OCI config for lfedge/eve-xen-tools:96826ff7ffea44ae5e8c5cedbfa12ee9f910bf4c-arm64
+Add files:
+  /etc/eve-release
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /rootfs.img, block size 131072.
+[/                                                           ]     0/15033   0%[==============================|                             ]  7800/15033  51%[===========================================================-] 15033/15033 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 216755.44 Kbytes (211.68 Mbytes)
+	33.91% of uncompressed filesystem size (639301.43 Kbytes)
+Inode table size 181825 bytes (177.56 Kbytes)
+	24.73% of uncompressed inode table size (735315 bytes)
+Directory table size 198860 bytes (194.20 Kbytes)
+	46.74% of uncompressed directory table size (425498 bytes)
+Number of duplicate files found 6127
+Number of inodes 18148
+Number of files 10793
+Number of fragments 341
+Number of symbolic links  5603
+Number of device nodes 4
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1748
+Number of ids (unique uids + gids) 3
+Number of uids 1
+	root (0)
+Number of gids 3
+	root (0)
+	shadow (42)
+	tty (5)
+cp pkg/eve/build.yml pkg/eve/runme.sh images/*.yml /home/zededa-ci/src/eve/dist/arm64
+DOCKER_ARCH_TAG=arm64 ./tools/parse-pkgs.sh pkg/eve/Dockerfile.in > /home/zededa-ci/src/eve/dist/arm64/Dockerfile
+/home/zededa-ci/src/eve/build-tools/bin/linuxkit pkg push --disable-content-trust --hash-path /home/zededa-ci/src/eve --hash 0.0.0-snapshot-HEAD-d7206d73-xen --release snapshot --force --disable-cache /home/zededa-ci/src/eve/dist/arm64
+Building and pushing "lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen"
+Sending build context to Docker daemon  234.7MB
+Step 1/17 : FROM alpine:3.9.4 as tools
+ ---> ce544de9ee2c
+Step 2/17 : RUN mkdir -p /out/etc/apk /out/boot && cp -r /etc/apk/* /out/etc/apk/
+ ---> Running in df81dcb52a20
+ ---> 811d1e2d3903
+Removing intermediate container df81dcb52a20
+Step 3/17 : RUN apk add --no-cache --initdb -p /out qemu-img=3.1.0-r3 tar=1.32-r0
+ ---> Running in 9c982f056051
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/aarch64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/aarch64/APKINDEX.tar.gz
+(1/19) Installing libaio (0.3.111-r0)
+(2/19) Installing musl (1.1.20-r5)
+(3/19) Installing busybox (1.29.3-r10)
+Executing busybox-1.29.3-r10.post-install
+(4/19) Installing libffi (3.2.1-r6)
+(5/19) Installing libintl (0.19.8.1-r4)
+(6/19) Installing libuuid (2.33-r0)
+(7/19) Installing libblkid (2.33-r0)
+(8/19) Installing libmount (2.33-r0)
+(9/19) Installing pcre (8.42-r1)
+(10/19) Installing zlib (1.2.11-r1)
+(11/19) Installing glib (2.58.1-r3)
+(12/19) Installing gmp (6.1.2-r1)
+(13/19) Installing nettle (3.4.1-r0)
+(14/19) Installing p11-kit (0.23.14-r0)
+(15/19) Installing libtasn1 (4.14-r0)
+(16/19) Installing libunistring (0.9.10-r0)
+(17/19) Installing gnutls (3.6.15-r0)
+(18/19) Installing qemu-img (3.1.0-r3)
+(19/19) Installing tar (1.32-r0)
+Executing busybox-1.29.3-r10.trigger
+Executing glib-2.58.1-r3.trigger
+OK: 16 MiB in 19 packages
+ ---> 4f66e9290ebd
+Removing intermediate container 9c982f056051
+Step 4/17 : FROM lfedge/eve-mkimage-iso-efi:af5f5e0bb9162ed3a324a74e574a850c84a59e43-arm64 as iso
+ ---> 357a532f5f40
+Step 5/17 : FROM lfedge/eve-mkimage-raw-efi:73d534381d5d3df4fb08cacb03022ce4754efda8-arm64 as raw
+ ---> 3b7f2dedd364
+Step 6/17 : RUN rm /initrd.img
+ ---> Running in 5fa1cb62f2b4
+ ---> e50c06881291
+Removing intermediate container 5fa1cb62f2b4
+Step 7/17 : FROM lfedge/eve-mkconf:b9a89148618d45bd26a93a68701f5d0588e501a9-arm64 as conf
+ ---> ac9fa4d52a61
+Step 8/17 : COPY --from=iso / /
+ ---> 462deb172c5b
+Step 9/17 : COPY --from=raw / /
+ ---> c9faddb2f113
+Step 10/17 : COPY --from=tools /out/ /
+ ---> 5d78597b19cf
+Step 11/17 : COPY installer /bits
+ ---> 09e07169249f
+Step 12/17 : COPY OVMF* /firmware/
+ ---> 494b142cc539
+Step 13/17 : COPY runme.sh /
+ ---> 43289ec8e57a
+Step 14/17 : RUN mkdir /in /out
+ ---> Running in 9a50d3b245d8
+ ---> d7ccd28e1c3c
+Removing intermediate container 9a50d3b245d8
+Step 15/17 : WORKDIR /bits
+ ---> 7abc452de0e9
+Removing intermediate container 0b6ba58d302c
+Step 16/17 : ENTRYPOINT /runme.sh
+ ---> Running in d96216bc5c47
+ ---> 37d79c323814
+Removing intermediate container d96216bc5c47
+Step 17/17 : LABEL org.mobyproject.linuxkit.revision 'unknown' org.mobyproject.linuxkit.version 'unknown' org.opencontainers.image.revision 'd7206d73688044c7e829e9be73bcb4f5301a3442' org.opencontainers.image.source 'https://github.com/linuxkit/linuxkit'
+ ---> Running in f1f0e6e66a74
+ ---> 6f284432fdc9
+Removing intermediate container f1f0e6e66a74
+Successfully built 6f284432fdc9
+Successfully tagged lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-arm64
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+1e788aa6fd9f: Preparing
+a5bef786026c: Preparing
+6d6c075b81b3: Preparing
+0984126ca205: Preparing
+eecea1eda5d0: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+41c4e3da37ae: Waiting
+b9f76b43ed40: Waiting
+41396e0b608d: Waiting
+a5bef786026c: Pushed
+41c4e3da37ae: Layer already exists
+1e788aa6fd9f: Pushed
+6d6c075b81b3: Pushed
+41396e0b608d: Layer already exists
+b9f76b43ed40: Layer already exists
+eecea1eda5d0: Pushed
+0984126ca205: Retrying in 5 seconds
+0984126ca205: Retrying in 4 seconds
+0984126ca205: Retrying in 3 seconds
+0984126ca205: Retrying in 2 seconds
+0984126ca205: Retrying in 1 second
+0984126ca205: Pushed
+0.0.0-snapshot-HEAD-d7206d73-xen-arm64: digest: sha256:20106406f8048b4631960fe01b816449d47975e2d58907d9225e9cdb779c9af0 size: 1999
+Pushing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-arm64 to manifest lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen
+time="2020-09-08T08:42:46+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-amd64\". Skipping image."
+time="2020-09-08T08:42:49+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-s390x\". Skipping image."
+Digest: sha256:8c6ca627330fb898590a6efd9fc342c6f3f5b09a7eb17c70fd2994f9c6072901 434
+Not signing lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen
+Tagging lfedge/eve:0.0.0-snapshot-HEAD-d7206d73-xen-arm64 as lfedge/eve:snapshot-arm64
+Pushing lfedge/eve:snapshot-arm64
+The push refers to a repository [docker.io/lfedge/eve]
+1e788aa6fd9f: Preparing
+a5bef786026c: Preparing
+6d6c075b81b3: Preparing
+0984126ca205: Preparing
+eecea1eda5d0: Preparing
+41c4e3da37ae: Preparing
+b9f76b43ed40: Preparing
+41396e0b608d: Preparing
+b9f76b43ed40: Waiting
+41c4e3da37ae: Waiting
+41396e0b608d: Waiting
+a5bef786026c: Layer already exists
+1e788aa6fd9f: Layer already exists
+0984126ca205: Layer already exists
+eecea1eda5d0: Layer already exists
+6d6c075b81b3: Layer already exists
+41c4e3da37ae: Layer already exists
+b9f76b43ed40: Layer already exists
+41396e0b608d: Layer already exists
+snapshot-arm64: digest: sha256:20106406f8048b4631960fe01b816449d47975e2d58907d9225e9cdb779c9af0 size: 1999
+Pushing lfedge/eve:snapshot-arm64 to manifest lfedge/eve:snapshot
+time="2020-09-08T08:43:00+02:00" level=warning msg="Couldn't find or access image reference \"lfedge/eve:snapshot-s390x\". Skipping image."
+Digest: sha256:52e5b8f5d52b06c699fcfecf2910ccc1aaf4d6130813c971d45f3711981fe8d6 743
+Not signing lfedge/eve:snapshot
+Build, push and release of "snapshot" complete, all done.
+rm images/rootfs-xen.yml images/rootfs-xen.yml.in
+FINISHED
